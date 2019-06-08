@@ -29,4 +29,33 @@ let myDocument = html(lang: "en-US") {
 }
 ```
 
-By generating all words in the language according to the HTML specification, we can make sure that only valid HTML can be generated.
+By generating all words in the language according to the HTML specification, we can make sure that only valid HTML can be expressed.
+
+For example, the above would generate this HTML:
+
+```html
+<html lang="en-US">
+  <head>
+    <meta http-equiv="Content-Type" charset="utf-8" content="text/html" />
+  </head>
+  <body data-foo="bar">
+    <article class="readme modern">
+      <header>
+        <h1>
+          This is a great article.
+        </h1>
+      </header>
+      <p>
+        Hello World!
+      </p>
+      <p>
+        This is a
+        <a href="https://swift.org">
+          link to the Swift website
+        </a>
+        .
+      </p>
+    </article>
+  </body>
+</html>
+```
