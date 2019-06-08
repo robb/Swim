@@ -17,6 +17,8 @@ let myDocument = html(lang: "en-US") {
 
             p {
                 "Hello World!"
+                br()
+                "How are you?"
             }
 
             p {
@@ -47,6 +49,8 @@ For example, the above would generate this HTML:
       </header>
       <p>
         Hello World!
+        <br/>
+        How are you?
       </p>
       <p>
         This is a

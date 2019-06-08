@@ -17,6 +17,8 @@ final class HTMLTests: XCTestCase {
 
                     p {
                         "Hello World!"
+                        br()
+                        "How are you?"
                     }
 
                     p {
