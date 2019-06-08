@@ -112,6 +112,10 @@ public func \#(tag.name.asSwiftIdentifier)(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }

@@ -95,6 +95,10 @@ public func a(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -171,6 +175,10 @@ public func abbr(
     ]
 
     var combined = attributes.compactMapValues { $0 }
+
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
 
     for (key, value) in customData {
         combined["data-\(key)"] = value
@@ -249,6 +257,10 @@ public func acronym(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -325,6 +337,10 @@ public func address(
     ]
 
     var combined = attributes.compactMapValues { $0 }
+
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
 
     for (key, value) in customData {
         combined["data-\(key)"] = value
@@ -414,6 +430,10 @@ public func applet(
     ]
 
     var combined = attributes.compactMapValues { $0 }
+
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
 
     for (key, value) in customData {
         combined["data-\(key)"] = value
@@ -525,6 +545,10 @@ public func area(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -602,6 +626,10 @@ public func article(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -678,6 +706,10 @@ public func aside(
     ]
 
     var combined = attributes.compactMapValues { $0 }
+
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
 
     for (key, value) in customData {
         combined["data-\(key)"] = value
@@ -780,6 +812,10 @@ public func audio(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -856,6 +892,10 @@ public func b(
     ]
 
     var combined = attributes.compactMapValues { $0 }
+
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
 
     for (key, value) in customData {
         combined["data-\(key)"] = value
@@ -940,6 +980,10 @@ public func base(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -1020,6 +1064,10 @@ public func basefont(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -1097,6 +1145,10 @@ public func bdi(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -1173,6 +1225,10 @@ public func bdo(
     ]
 
     var combined = attributes.compactMapValues { $0 }
+
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
 
     for (key, value) in customData {
         combined["data-\(key)"] = value
@@ -1254,6 +1310,10 @@ public func bgsound(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -1331,6 +1391,10 @@ public func big(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -1407,6 +1471,10 @@ public func blink(
     ]
 
     var combined = attributes.compactMapValues { $0 }
+
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
 
     for (key, value) in customData {
         combined["data-\(key)"] = value
@@ -1487,6 +1555,10 @@ public func blockquote(
     ]
 
     var combined = attributes.compactMapValues { $0 }
+
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
 
     for (key, value) in customData {
         combined["data-\(key)"] = value
@@ -1571,6 +1643,10 @@ public func body(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -1647,6 +1723,10 @@ public func br(
     ]
 
     var combined = attributes.compactMapValues { $0 }
+
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
 
     for (key, value) in customData {
         combined["data-\(key)"] = value
@@ -1758,6 +1838,10 @@ public func button(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -1841,6 +1925,10 @@ public func canvas(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -1921,6 +2009,10 @@ public func caption(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -1997,6 +2089,10 @@ public func center(
     ]
 
     var combined = attributes.compactMapValues { $0 }
+
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
 
     for (key, value) in customData {
         combined["data-\(key)"] = value
@@ -2075,6 +2171,10 @@ public func cite(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -2151,6 +2251,10 @@ public func code(
     ]
 
     var combined = attributes.compactMapValues { $0 }
+
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
 
     for (key, value) in customData {
         combined["data-\(key)"] = value
@@ -2238,6 +2342,10 @@ public func col(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -2323,6 +2431,10 @@ public func colgroup(
     ]
 
     var combined = attributes.compactMapValues { $0 }
+
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
 
     for (key, value) in customData {
         combined["data-\(key)"] = value
@@ -2416,6 +2528,10 @@ public func command(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -2492,6 +2608,10 @@ public func content(
     ]
 
     var combined = attributes.compactMapValues { $0 }
+
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
 
     for (key, value) in customData {
         combined["data-\(key)"] = value
@@ -2573,6 +2693,10 @@ public func data(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -2650,6 +2774,10 @@ public func datalist(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -2726,6 +2854,10 @@ public func dd(
     ]
 
     var combined = attributes.compactMapValues { $0 }
+
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
 
     for (key, value) in customData {
         combined["data-\(key)"] = value
@@ -2810,6 +2942,10 @@ public func del(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -2890,6 +3026,10 @@ public func details(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -2966,6 +3106,10 @@ public func dfn(
     ]
 
     var combined = attributes.compactMapValues { $0 }
+
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
 
     for (key, value) in customData {
         combined["data-\(key)"] = value
@@ -3044,6 +3188,10 @@ public func dialog(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -3120,6 +3268,10 @@ public func dir(
     ]
 
     var combined = attributes.compactMapValues { $0 }
+
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
 
     for (key, value) in customData {
         combined["data-\(key)"] = value
@@ -3198,6 +3350,10 @@ public func div(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -3274,6 +3430,10 @@ public func dl(
     ]
 
     var combined = attributes.compactMapValues { $0 }
+
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
 
     for (key, value) in customData {
         combined["data-\(key)"] = value
@@ -3352,6 +3512,10 @@ public func dt(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -3429,6 +3593,10 @@ public func element(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -3505,6 +3673,10 @@ public func em(
     ]
 
     var combined = attributes.compactMapValues { $0 }
+
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
 
     for (key, value) in customData {
         combined["data-\(key)"] = value
@@ -3595,6 +3767,10 @@ public func embed(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -3681,6 +3857,10 @@ public func fieldset(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -3758,6 +3938,10 @@ public func figcaption(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -3834,6 +4018,10 @@ public func figure(
     ]
 
     var combined = attributes.compactMapValues { $0 }
+
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
 
     for (key, value) in customData {
         combined["data-\(key)"] = value
@@ -3915,6 +4103,10 @@ public func font(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -3991,6 +4183,10 @@ public func footer(
     ]
 
     var combined = attributes.compactMapValues { $0 }
+
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
 
     for (key, value) in customData {
         combined["data-\(key)"] = value
@@ -4096,6 +4292,10 @@ public func form(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -4172,6 +4372,10 @@ public func frame(
     ]
 
     var combined = attributes.compactMapValues { $0 }
+
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
 
     for (key, value) in customData {
         combined["data-\(key)"] = value
@@ -4250,6 +4454,10 @@ public func frameset(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -4326,6 +4534,10 @@ public func h1(
     ]
 
     var combined = attributes.compactMapValues { $0 }
+
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
 
     for (key, value) in customData {
         combined["data-\(key)"] = value
@@ -4404,6 +4616,10 @@ public func head(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -4481,6 +4697,10 @@ public func header(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -4557,6 +4777,10 @@ public func hgroup(
     ]
 
     var combined = attributes.compactMapValues { $0 }
+
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
 
     for (key, value) in customData {
         combined["data-\(key)"] = value
@@ -4641,6 +4865,10 @@ public func hr(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -4721,6 +4949,10 @@ public func html(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -4797,6 +5029,10 @@ public func i(
     ]
 
     var combined = attributes.compactMapValues { $0 }
+
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
 
     for (key, value) in customData {
         combined["data-\(key)"] = value
@@ -4911,6 +5147,10 @@ public func iframe(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -4987,6 +5227,10 @@ public func image(
     ]
 
     var combined = attributes.compactMapValues { $0 }
+
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
 
     for (key, value) in customData {
         combined["data-\(key)"] = value
@@ -5112,6 +5356,10 @@ public func img(
     ]
 
     var combined = attributes.compactMapValues { $0 }
+
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
 
     for (key, value) in customData {
         combined["data-\(key)"] = value
@@ -5286,6 +5534,10 @@ public func input(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -5369,6 +5621,10 @@ public func ins(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -5446,6 +5702,10 @@ public func isindex(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -5522,6 +5782,10 @@ public func kbd(
     ]
 
     var combined = attributes.compactMapValues { $0 }
+
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
 
     for (key, value) in customData {
         combined["data-\(key)"] = value
@@ -5618,6 +5882,10 @@ public func keygen(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -5701,6 +5969,10 @@ public func label(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -5777,6 +6049,10 @@ public func legend(
     ]
 
     var combined = attributes.compactMapValues { $0 }
+
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
 
     for (key, value) in customData {
         combined["data-\(key)"] = value
@@ -5857,6 +6133,10 @@ public func li(
     ]
 
     var combined = attributes.compactMapValues { $0 }
+
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
 
     for (key, value) in customData {
         combined["data-\(key)"] = value
@@ -5962,6 +6242,10 @@ public func link(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -6039,6 +6323,10 @@ public func listing(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -6115,6 +6403,10 @@ public func main(
     ]
 
     var combined = attributes.compactMapValues { $0 }
+
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
 
     for (key, value) in customData {
         combined["data-\(key)"] = value
@@ -6196,6 +6488,10 @@ public func map(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -6272,6 +6568,10 @@ public func mark(
     ]
 
     var combined = attributes.compactMapValues { $0 }
+
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
 
     for (key, value) in customData {
         combined["data-\(key)"] = value
@@ -6356,6 +6656,10 @@ public func marquee(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -6436,6 +6740,10 @@ public func menu(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -6512,6 +6820,10 @@ public func menuitem(
     ]
 
     var combined = attributes.compactMapValues { $0 }
+
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
 
     for (key, value) in customData {
         combined["data-\(key)"] = value
@@ -6601,6 +6913,10 @@ public func meta(
     ]
 
     var combined = attributes.compactMapValues { $0 }
+
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
 
     for (key, value) in customData {
         combined["data-\(key)"] = value
@@ -6700,6 +7016,10 @@ public func meter(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -6776,6 +7096,10 @@ public func multicol(
     ]
 
     var combined = attributes.compactMapValues { $0 }
+
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
 
     for (key, value) in customData {
         combined["data-\(key)"] = value
@@ -6854,6 +7178,10 @@ public func nav(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -6930,6 +7258,10 @@ public func nextid(
     ]
 
     var combined = attributes.compactMapValues { $0 }
+
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
 
     for (key, value) in customData {
         combined["data-\(key)"] = value
@@ -7008,6 +7340,10 @@ public func nobr(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -7084,6 +7420,10 @@ public func noembed(
     ]
 
     var combined = attributes.compactMapValues { $0 }
+
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
 
     for (key, value) in customData {
         combined["data-\(key)"] = value
@@ -7162,6 +7502,10 @@ public func noframes(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -7238,6 +7582,10 @@ public func noscript(
     ]
 
     var combined = attributes.compactMapValues { $0 }
+
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
 
     for (key, value) in customData {
         combined["data-\(key)"] = value
@@ -7340,6 +7688,10 @@ public func object(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -7423,6 +7775,10 @@ public func ol(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -7502,6 +7858,10 @@ public func optgroup(
     ]
 
     var combined = attributes.compactMapValues { $0 }
+
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
 
     for (key, value) in customData {
         combined["data-\(key)"] = value
@@ -7589,6 +7949,10 @@ public func option(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -7675,6 +8039,10 @@ public func output(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -7751,6 +8119,10 @@ public func p(
     ]
 
     var combined = attributes.compactMapValues { $0 }
+
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
 
     for (key, value) in customData {
         combined["data-\(key)"] = value
@@ -7835,6 +8207,10 @@ public func param(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -7911,6 +8287,10 @@ public func picture(
     ]
 
     var combined = attributes.compactMapValues { $0 }
+
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
 
     for (key, value) in customData {
         combined["data-\(key)"] = value
@@ -7989,6 +8369,10 @@ public func plaintext(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -8065,6 +8449,10 @@ public func pre(
     ]
 
     var combined = attributes.compactMapValues { $0 }
+
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
 
     for (key, value) in customData {
         combined["data-\(key)"] = value
@@ -8152,6 +8540,10 @@ public func progress(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -8232,6 +8624,10 @@ public func q(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -8308,6 +8704,10 @@ public func rb(
     ]
 
     var combined = attributes.compactMapValues { $0 }
+
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
 
     for (key, value) in customData {
         combined["data-\(key)"] = value
@@ -8386,6 +8786,10 @@ public func rp(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -8462,6 +8866,10 @@ public func rt(
     ]
 
     var combined = attributes.compactMapValues { $0 }
+
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
 
     for (key, value) in customData {
         combined["data-\(key)"] = value
@@ -8540,6 +8948,10 @@ public func rtc(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -8616,6 +9028,10 @@ public func ruby(
     ]
 
     var combined = attributes.compactMapValues { $0 }
+
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
 
     for (key, value) in customData {
         combined["data-\(key)"] = value
@@ -8694,6 +9110,10 @@ public func s(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -8770,6 +9190,10 @@ public func samp(
     ]
 
     var combined = attributes.compactMapValues { $0 }
+
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
 
     for (key, value) in customData {
         combined["data-\(key)"] = value
@@ -8878,6 +9302,10 @@ public func script(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -8954,6 +9382,10 @@ public func section(
     ]
 
     var combined = attributes.compactMapValues { $0 }
+
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
 
     for (key, value) in customData {
         combined["data-\(key)"] = value
@@ -9056,6 +9488,10 @@ public func select(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -9132,6 +9568,10 @@ public func shadow(
     ]
 
     var combined = attributes.compactMapValues { $0 }
+
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
 
     for (key, value) in customData {
         combined["data-\(key)"] = value
@@ -9210,6 +9650,10 @@ public func slot(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -9286,6 +9730,10 @@ public func small(
     ]
 
     var combined = attributes.compactMapValues { $0 }
+
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
 
     for (key, value) in customData {
         combined["data-\(key)"] = value
@@ -9379,6 +9827,10 @@ public func source(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -9455,6 +9907,10 @@ public func spacer(
     ]
 
     var combined = attributes.compactMapValues { $0 }
+
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
 
     for (key, value) in customData {
         combined["data-\(key)"] = value
@@ -9533,6 +9989,10 @@ public func span(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -9610,6 +10070,10 @@ public func strike(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -9686,6 +10150,10 @@ public func strong(
     ]
 
     var combined = attributes.compactMapValues { $0 }
+
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
 
     for (key, value) in customData {
         combined["data-\(key)"] = value
@@ -9773,6 +10241,10 @@ public func style(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -9849,6 +10321,10 @@ public func sub(
     ]
 
     var combined = attributes.compactMapValues { $0 }
+
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
 
     for (key, value) in customData {
         combined["data-\(key)"] = value
@@ -9927,6 +10403,10 @@ public func summary(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -10003,6 +10483,10 @@ public func sup(
     ]
 
     var combined = attributes.compactMapValues { $0 }
+
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
 
     for (key, value) in customData {
         combined["data-\(key)"] = value
@@ -10096,6 +10580,10 @@ public func table(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -10178,6 +10666,10 @@ public func tbody(
     ]
 
     var combined = attributes.compactMapValues { $0 }
+
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
 
     for (key, value) in customData {
         combined["data-\(key)"] = value
@@ -10274,6 +10766,10 @@ public func td(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -10350,6 +10846,10 @@ public func template(
     ]
 
     var combined = attributes.compactMapValues { $0 }
+
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
 
     for (key, value) in customData {
         combined["data-\(key)"] = value
@@ -10476,6 +10976,10 @@ public func textarea(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -10558,6 +11062,10 @@ public func tfoot(
     ]
 
     var combined = attributes.compactMapValues { $0 }
+
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
 
     for (key, value) in customData {
         combined["data-\(key)"] = value
@@ -10657,6 +11165,10 @@ public func th(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -10736,6 +11248,10 @@ public func thead(
     ]
 
     var combined = attributes.compactMapValues { $0 }
+
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
 
     for (key, value) in customData {
         combined["data-\(key)"] = value
@@ -10817,6 +11333,10 @@ public func time(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -10893,6 +11413,10 @@ public func title(
     ]
 
     var combined = attributes.compactMapValues { $0 }
+
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
 
     for (key, value) in customData {
         combined["data-\(key)"] = value
@@ -10976,6 +11500,10 @@ public func tr(
     ]
 
     var combined = attributes.compactMapValues { $0 }
+
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
 
     for (key, value) in customData {
         combined["data-\(key)"] = value
@@ -11069,6 +11597,10 @@ public func track(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -11145,6 +11677,10 @@ public func tt(
     ]
 
     var combined = attributes.compactMapValues { $0 }
+
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
 
     for (key, value) in customData {
         combined["data-\(key)"] = value
@@ -11223,6 +11759,10 @@ public func u(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -11300,6 +11840,10 @@ public func ul(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -11376,6 +11920,10 @@ public func `var`(
     ]
 
     var combined = attributes.compactMapValues { $0 }
+
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
 
     for (key, value) in customData {
         combined["data-\(key)"] = value
@@ -11487,6 +12035,10 @@ public func video(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -11564,6 +12116,10 @@ public func wbr(
 
     var combined = attributes.compactMapValues { $0 }
 
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
     for (key, value) in customData {
         combined["data-\(key)"] = value
     }
@@ -11640,6 +12196,10 @@ public func xmp(
     ]
 
     var combined = attributes.compactMapValues { $0 }
+
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
 
     for (key, value) in customData {
         combined["data-\(key)"] = value
