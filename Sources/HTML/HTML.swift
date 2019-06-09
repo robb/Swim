@@ -65,6 +65,10 @@ public struct NodeBuilder {
     public static func buildBlock(_ components: NodeBuilderComponent...) -> [Node] {
         return components.flatMap { $0.asNodeArray }
     }
+
+    public static func buildIf(_ component: NodeBuilderComponent?...) -> [Node] {
+        return component.flatMap { $0?.asNodeArray ?? [] }
+    }
 }
 
 public protocol NodeBuilderComponent {

@@ -16,9 +16,11 @@ final class HTMLTests: XCTestCase {
                     }
 
                     p {
-                        "Hello World!"
-                        br()
-                        "How are you?"
+                        if Double.zero == Double.zero {
+                            "Hello World!"
+                            br()
+                            "How are you?"
+                        }
                     }
 
                     p {
@@ -30,7 +32,7 @@ final class HTMLTests: XCTestCase {
             }
         }
 
-        XCTAssertFalse(root.debugDescription.isEmpty)
+        XCTAssertTrue(root.debugDescription.contains("Hello World!"))
     }
 
     static var allTests = [
