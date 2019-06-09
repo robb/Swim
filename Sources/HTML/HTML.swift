@@ -60,51 +60,31 @@ public enum Node: CustomDebugStringConvertible {
     }
 }
 
-extension Array: ExpressibleByUnicodeScalarLiteral where Element == Node {
-    public typealias UnicodeScalarLiteralType = String
-}
-
-extension Array: ExpressibleByExtendedGraphemeClusterLiteral where Element == Node {
-    public typealias ExtendedGraphemeClusterLiteralType = String
-}
-
-extension Array: ExpressibleByStringLiteral where Element == Node {
-    public typealias StringLiteralType = String
-
-    public init(stringLiteral value: String) {
-        self = [ .text(value) ]
-    }
-}
-
 @_functionBuilder
 public struct NodeBuilder {
-    public static func buildBlock(_ content: String) -> [Node] {
-        return [ .text(content) ]
+    public static func buildBlock(_ components: NodeBuilderComponent...) -> [Node] {
+        return components.flatMap { $0.asNodeArray }
     }
+}
 
-    public static func buildBlock(_ content: String...) -> [Node] {
-        return content.flatMap(buildBlock)
+public protocol NodeBuilderComponent {
+    var asNodeArray: [Node] { get }
+}
+
+extension Node: NodeBuilderComponent {
+    public var asNodeArray: [Node] {
+        [ self ]
     }
+}
 
-    public static func buildBlock(_ content: Node) -> [Node] {
-        return [ content ]
+extension Array: NodeBuilderComponent where Element == Node {
+    public var asNodeArray: [Node] {
+        self
     }
+}
 
-    public static func buildBlock(_ content: [Node]...) -> [Node] {
-        return content.flatMap { $0 }
-    }
-
-    public static func buildIf(_ content: [Node]?) -> [Node] {
-        if let content = content { return content }
-
-        return []
-    }
-
-    public static func buildEither(first: [Node]) -> [Node] {
-        return first
-    }
-
-    public static func buildEither(second: [Node]) -> [Node] {
-        return second
+extension String: NodeBuilderComponent {
+    public var asNodeArray: [Node] {
+        [ Node.text(self) ]
     }
 }

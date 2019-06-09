@@ -103,8 +103,8 @@ public func \#(tag.name.asSwiftIdentifier)(
     \#(attributeDeclarations),
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> [Node] = { [] }
-    ) -> [Node] {
+    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    ) -> Node {
 
     let attributes = [
         \#(attibuteCapture)
@@ -120,7 +120,7 @@ public func \#(tag.name.asSwiftIdentifier)(
         combined["data-\(key)"] = value
     }
 
-    return [ .tag(name: "\#(tag.name)", attributes: combined, children: children()) ]
+    return .tag(name: "\#(tag.name)", attributes: combined, children: children().asNodeArray)
 }
 
 """#
