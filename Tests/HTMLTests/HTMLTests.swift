@@ -32,7 +32,49 @@ final class HTMLTests: XCTestCase {
             }
         }
 
-        XCTAssertTrue(root.debugDescription.contains("Hello World!"))
+        XCTAssertTrue(String(describing: root).contains("Hello World!"))
+    }
+
+    func testWhitespaceTrimming() {
+        func XCTAssertComponents(_ node: Node, _ components: String..., message: @autoclosure () -> String = "", file: StaticString = #file, line: UInt = #line) {
+            let splitByWhitespace = String(describing: node)
+                .split { $0.isWhitespace }
+                .map(String.init)
+
+            XCTAssertEqual(splitByWhitespace, components, message(), file: file, line: line)
+        }
+
+        let all = p {
+            %span { %"Hallo Welt"% }%
+        }
+
+        XCTAssertComponents(all, "<p><span>Hallo", "Welt</span></p>")
+
+        let leading = p {
+            %span { %"Hallo Welt" }
+        }
+
+        XCTAssertComponents(leading, "<p><span>Hallo", "Welt", "</span>", "</p>")
+
+        let trailing = p {
+            span { "Hallo Welt"% }%
+        }
+
+        XCTAssertComponents(trailing, "<p>", "<span>", "Hallo", "Welt</span></p>")
+
+        let none = p {
+            span { "Hallo Welt" }
+        }
+
+        XCTAssertComponents(none, "<p>", "<span>", "Hallo", "Welt", "</span>", "</p>")
+
+        let infix = p {
+            span { "Hallo" %% "Welt" }
+            %%
+            span { "Hallo" %% "Welt" }
+        }
+
+        XCTAssertComponents(infix, "<p>", "<span>", "HalloWelt", "</span><span>", "HalloWelt", "</span>", "</p>")
     }
 
     static var allTests = [

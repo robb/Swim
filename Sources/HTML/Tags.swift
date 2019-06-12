@@ -103,7 +103,7 @@ public func a(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "a", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "a", attributes: combined, children: children().asNodeArray)
 }
 
 /// abbr
@@ -184,7 +184,7 @@ public func abbr(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "abbr", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "abbr", attributes: combined, children: children().asNodeArray)
 }
 
 /// acronym
@@ -265,7 +265,7 @@ public func acronym(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "acronym", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "acronym", attributes: combined, children: children().asNodeArray)
 }
 
 /// address
@@ -346,7 +346,7 @@ public func address(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "address", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "address", attributes: combined, children: children().asNodeArray)
 }
 
 /// applet
@@ -439,7 +439,7 @@ public func applet(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "applet", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "applet", attributes: combined, children: children().asNodeArray)
 }
 
 /// area
@@ -553,7 +553,7 @@ public func area(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "area", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "area", attributes: combined, children: children().asNodeArray)
 }
 
 /// article
@@ -634,7 +634,7 @@ public func article(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "article", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "article", attributes: combined, children: children().asNodeArray)
 }
 
 /// aside
@@ -715,7 +715,7 @@ public func aside(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "aside", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "aside", attributes: combined, children: children().asNodeArray)
 }
 
 /// audio
@@ -820,7 +820,7 @@ public func audio(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "audio", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "audio", attributes: combined, children: children().asNodeArray)
 }
 
 /// b
@@ -901,7 +901,7 @@ public func b(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "b", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "b", attributes: combined, children: children().asNodeArray)
 }
 
 /// base
@@ -988,7 +988,7 @@ public func base(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "base", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "base", attributes: combined, children: children().asNodeArray)
 }
 
 /// basefont
@@ -1072,7 +1072,7 @@ public func basefont(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "basefont", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "basefont", attributes: combined, children: children().asNodeArray)
 }
 
 /// bdi
@@ -1153,7 +1153,7 @@ public func bdi(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "bdi", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "bdi", attributes: combined, children: children().asNodeArray)
 }
 
 /// bdo
@@ -1234,7 +1234,7 @@ public func bdo(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "bdo", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "bdo", attributes: combined, children: children().asNodeArray)
 }
 
 /// bgsound
@@ -1318,7 +1318,7 @@ public func bgsound(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "bgsound", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "bgsound", attributes: combined, children: children().asNodeArray)
 }
 
 /// big
@@ -1399,7 +1399,7 @@ public func big(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "big", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "big", attributes: combined, children: children().asNodeArray)
 }
 
 /// blink
@@ -1480,7 +1480,7 @@ public func blink(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "blink", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "blink", attributes: combined, children: children().asNodeArray)
 }
 
 /// blockquote
@@ -1564,7 +1564,7 @@ public func blockquote(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "blockquote", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "blockquote", attributes: combined, children: children().asNodeArray)
 }
 
 /// body
@@ -1651,7 +1651,7 @@ public func body(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "body", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "body", attributes: combined, children: children().asNodeArray)
 }
 
 /// br
@@ -1732,7 +1732,7 @@ public func br(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "br", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "br", attributes: combined, children: children().asNodeArray)
 }
 
 /// button
@@ -1846,7 +1846,7 @@ public func button(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "button", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "button", attributes: combined, children: children().asNodeArray)
 }
 
 /// canvas
@@ -1933,7 +1933,7 @@ public func canvas(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "canvas", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "canvas", attributes: combined, children: children().asNodeArray)
 }
 
 /// caption
@@ -2017,7 +2017,7 @@ public func caption(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "caption", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "caption", attributes: combined, children: children().asNodeArray)
 }
 
 /// center
@@ -2098,7 +2098,7 @@ public func center(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "center", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "center", attributes: combined, children: children().asNodeArray)
 }
 
 /// cite
@@ -2179,7 +2179,7 @@ public func cite(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "cite", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "cite", attributes: combined, children: children().asNodeArray)
 }
 
 /// code
@@ -2260,7 +2260,7 @@ public func code(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "code", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "code", attributes: combined, children: children().asNodeArray)
 }
 
 /// col
@@ -2350,7 +2350,7 @@ public func col(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "col", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "col", attributes: combined, children: children().asNodeArray)
 }
 
 /// colgroup
@@ -2440,7 +2440,7 @@ public func colgroup(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "colgroup", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "colgroup", attributes: combined, children: children().asNodeArray)
 }
 
 /// command
@@ -2536,7 +2536,7 @@ public func command(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "command", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "command", attributes: combined, children: children().asNodeArray)
 }
 
 /// content
@@ -2617,7 +2617,7 @@ public func content(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "content", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "content", attributes: combined, children: children().asNodeArray)
 }
 
 /// data
@@ -2701,7 +2701,7 @@ public func data(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "data", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "data", attributes: combined, children: children().asNodeArray)
 }
 
 /// datalist
@@ -2782,7 +2782,7 @@ public func datalist(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "datalist", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "datalist", attributes: combined, children: children().asNodeArray)
 }
 
 /// dd
@@ -2863,7 +2863,7 @@ public func dd(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "dd", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "dd", attributes: combined, children: children().asNodeArray)
 }
 
 /// del
@@ -2950,7 +2950,7 @@ public func del(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "del", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "del", attributes: combined, children: children().asNodeArray)
 }
 
 /// details
@@ -3034,7 +3034,7 @@ public func details(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "details", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "details", attributes: combined, children: children().asNodeArray)
 }
 
 /// dfn
@@ -3115,7 +3115,7 @@ public func dfn(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "dfn", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "dfn", attributes: combined, children: children().asNodeArray)
 }
 
 /// dialog
@@ -3196,7 +3196,7 @@ public func dialog(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "dialog", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "dialog", attributes: combined, children: children().asNodeArray)
 }
 
 /// dir
@@ -3277,7 +3277,7 @@ public func dir(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "dir", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "dir", attributes: combined, children: children().asNodeArray)
 }
 
 /// div
@@ -3358,7 +3358,7 @@ public func div(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "div", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "div", attributes: combined, children: children().asNodeArray)
 }
 
 /// dl
@@ -3439,7 +3439,7 @@ public func dl(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "dl", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "dl", attributes: combined, children: children().asNodeArray)
 }
 
 /// dt
@@ -3520,7 +3520,7 @@ public func dt(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "dt", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "dt", attributes: combined, children: children().asNodeArray)
 }
 
 /// element
@@ -3601,7 +3601,7 @@ public func element(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "element", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "element", attributes: combined, children: children().asNodeArray)
 }
 
 /// em
@@ -3682,7 +3682,7 @@ public func em(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "em", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "em", attributes: combined, children: children().asNodeArray)
 }
 
 /// embed
@@ -3775,7 +3775,7 @@ public func embed(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "embed", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "embed", attributes: combined, children: children().asNodeArray)
 }
 
 /// fieldset
@@ -3865,7 +3865,7 @@ public func fieldset(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "fieldset", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "fieldset", attributes: combined, children: children().asNodeArray)
 }
 
 /// figcaption
@@ -3946,7 +3946,7 @@ public func figcaption(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "figcaption", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "figcaption", attributes: combined, children: children().asNodeArray)
 }
 
 /// figure
@@ -4027,7 +4027,7 @@ public func figure(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "figure", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "figure", attributes: combined, children: children().asNodeArray)
 }
 
 /// font
@@ -4111,7 +4111,7 @@ public func font(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "font", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "font", attributes: combined, children: children().asNodeArray)
 }
 
 /// footer
@@ -4192,7 +4192,7 @@ public func footer(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "footer", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "footer", attributes: combined, children: children().asNodeArray)
 }
 
 /// form
@@ -4300,7 +4300,7 @@ public func form(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "form", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "form", attributes: combined, children: children().asNodeArray)
 }
 
 /// frame
@@ -4381,7 +4381,7 @@ public func frame(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "frame", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "frame", attributes: combined, children: children().asNodeArray)
 }
 
 /// frameset
@@ -4462,7 +4462,7 @@ public func frameset(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "frameset", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "frameset", attributes: combined, children: children().asNodeArray)
 }
 
 /// h1
@@ -4543,7 +4543,7 @@ public func h1(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "h1", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "h1", attributes: combined, children: children().asNodeArray)
 }
 
 /// h2
@@ -4624,7 +4624,7 @@ public func h2(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "h2", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "h2", attributes: combined, children: children().asNodeArray)
 }
 
 /// h3
@@ -4705,7 +4705,7 @@ public func h3(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "h3", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "h3", attributes: combined, children: children().asNodeArray)
 }
 
 /// h4
@@ -4786,7 +4786,7 @@ public func h4(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "h4", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "h4", attributes: combined, children: children().asNodeArray)
 }
 
 /// h5
@@ -4867,7 +4867,7 @@ public func h5(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "h5", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "h5", attributes: combined, children: children().asNodeArray)
 }
 
 /// h6
@@ -4948,7 +4948,7 @@ public func h6(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "h6", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "h6", attributes: combined, children: children().asNodeArray)
 }
 
 /// head
@@ -5029,7 +5029,7 @@ public func head(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "head", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "head", attributes: combined, children: children().asNodeArray)
 }
 
 /// header
@@ -5110,7 +5110,7 @@ public func header(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "header", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "header", attributes: combined, children: children().asNodeArray)
 }
 
 /// hgroup
@@ -5191,7 +5191,7 @@ public func hgroup(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "hgroup", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "hgroup", attributes: combined, children: children().asNodeArray)
 }
 
 /// hr
@@ -5278,7 +5278,7 @@ public func hr(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "hr", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "hr", attributes: combined, children: children().asNodeArray)
 }
 
 /// html
@@ -5362,7 +5362,7 @@ public func html(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "html", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "html", attributes: combined, children: children().asNodeArray)
 }
 
 /// i
@@ -5443,7 +5443,7 @@ public func i(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "i", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "i", attributes: combined, children: children().asNodeArray)
 }
 
 /// iframe
@@ -5560,7 +5560,7 @@ public func iframe(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "iframe", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "iframe", attributes: combined, children: children().asNodeArray)
 }
 
 /// image
@@ -5641,7 +5641,7 @@ public func image(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "image", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "image", attributes: combined, children: children().asNodeArray)
 }
 
 /// img
@@ -5770,7 +5770,7 @@ public func img(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "img", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "img", attributes: combined, children: children().asNodeArray)
 }
 
 /// input
@@ -5947,7 +5947,7 @@ public func input(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "input", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "input", attributes: combined, children: children().asNodeArray)
 }
 
 /// ins
@@ -6034,7 +6034,7 @@ public func ins(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "ins", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "ins", attributes: combined, children: children().asNodeArray)
 }
 
 /// isindex
@@ -6115,7 +6115,7 @@ public func isindex(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "isindex", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "isindex", attributes: combined, children: children().asNodeArray)
 }
 
 /// kbd
@@ -6196,7 +6196,7 @@ public func kbd(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "kbd", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "kbd", attributes: combined, children: children().asNodeArray)
 }
 
 /// keygen
@@ -6295,7 +6295,7 @@ public func keygen(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "keygen", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "keygen", attributes: combined, children: children().asNodeArray)
 }
 
 /// label
@@ -6382,7 +6382,7 @@ public func label(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "label", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "label", attributes: combined, children: children().asNodeArray)
 }
 
 /// legend
@@ -6463,7 +6463,7 @@ public func legend(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "legend", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "legend", attributes: combined, children: children().asNodeArray)
 }
 
 /// li
@@ -6547,7 +6547,7 @@ public func li(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "li", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "li", attributes: combined, children: children().asNodeArray)
 }
 
 /// link
@@ -6655,7 +6655,7 @@ public func link(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "link", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "link", attributes: combined, children: children().asNodeArray)
 }
 
 /// listing
@@ -6736,7 +6736,7 @@ public func listing(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "listing", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "listing", attributes: combined, children: children().asNodeArray)
 }
 
 /// main
@@ -6817,7 +6817,7 @@ public func main(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "main", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "main", attributes: combined, children: children().asNodeArray)
 }
 
 /// map
@@ -6901,7 +6901,7 @@ public func map(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "map", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "map", attributes: combined, children: children().asNodeArray)
 }
 
 /// mark
@@ -6982,7 +6982,7 @@ public func mark(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "mark", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "mark", attributes: combined, children: children().asNodeArray)
 }
 
 /// marquee
@@ -7069,7 +7069,7 @@ public func marquee(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "marquee", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "marquee", attributes: combined, children: children().asNodeArray)
 }
 
 /// menu
@@ -7153,7 +7153,7 @@ public func menu(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "menu", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "menu", attributes: combined, children: children().asNodeArray)
 }
 
 /// menuitem
@@ -7234,7 +7234,7 @@ public func menuitem(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "menuitem", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "menuitem", attributes: combined, children: children().asNodeArray)
 }
 
 /// meta
@@ -7327,7 +7327,7 @@ public func meta(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "meta", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "meta", attributes: combined, children: children().asNodeArray)
 }
 
 /// meter
@@ -7429,7 +7429,7 @@ public func meter(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "meter", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "meter", attributes: combined, children: children().asNodeArray)
 }
 
 /// multicol
@@ -7510,7 +7510,7 @@ public func multicol(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "multicol", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "multicol", attributes: combined, children: children().asNodeArray)
 }
 
 /// nav
@@ -7591,7 +7591,7 @@ public func nav(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "nav", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "nav", attributes: combined, children: children().asNodeArray)
 }
 
 /// nextid
@@ -7672,7 +7672,7 @@ public func nextid(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "nextid", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "nextid", attributes: combined, children: children().asNodeArray)
 }
 
 /// nobr
@@ -7753,7 +7753,7 @@ public func nobr(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "nobr", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "nobr", attributes: combined, children: children().asNodeArray)
 }
 
 /// noembed
@@ -7834,7 +7834,7 @@ public func noembed(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "noembed", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "noembed", attributes: combined, children: children().asNodeArray)
 }
 
 /// noframes
@@ -7915,7 +7915,7 @@ public func noframes(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "noframes", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "noframes", attributes: combined, children: children().asNodeArray)
 }
 
 /// noscript
@@ -7996,7 +7996,7 @@ public func noscript(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "noscript", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "noscript", attributes: combined, children: children().asNodeArray)
 }
 
 /// object
@@ -8101,7 +8101,7 @@ public func object(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "object", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "object", attributes: combined, children: children().asNodeArray)
 }
 
 /// ol
@@ -8188,7 +8188,7 @@ public func ol(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "ol", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "ol", attributes: combined, children: children().asNodeArray)
 }
 
 /// optgroup
@@ -8272,7 +8272,7 @@ public func optgroup(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "optgroup", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "optgroup", attributes: combined, children: children().asNodeArray)
 }
 
 /// option
@@ -8362,7 +8362,7 @@ public func option(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "option", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "option", attributes: combined, children: children().asNodeArray)
 }
 
 /// output
@@ -8452,7 +8452,7 @@ public func output(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "output", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "output", attributes: combined, children: children().asNodeArray)
 }
 
 /// p
@@ -8533,7 +8533,7 @@ public func p(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "p", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "p", attributes: combined, children: children().asNodeArray)
 }
 
 /// param
@@ -8620,7 +8620,7 @@ public func param(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "param", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "param", attributes: combined, children: children().asNodeArray)
 }
 
 /// picture
@@ -8701,7 +8701,7 @@ public func picture(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "picture", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "picture", attributes: combined, children: children().asNodeArray)
 }
 
 /// plaintext
@@ -8782,7 +8782,7 @@ public func plaintext(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "plaintext", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "plaintext", attributes: combined, children: children().asNodeArray)
 }
 
 /// pre
@@ -8863,7 +8863,7 @@ public func pre(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "pre", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "pre", attributes: combined, children: children().asNodeArray)
 }
 
 /// progress
@@ -8953,7 +8953,7 @@ public func progress(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "progress", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "progress", attributes: combined, children: children().asNodeArray)
 }
 
 /// q
@@ -9037,7 +9037,7 @@ public func q(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "q", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "q", attributes: combined, children: children().asNodeArray)
 }
 
 /// rb
@@ -9118,7 +9118,7 @@ public func rb(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "rb", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "rb", attributes: combined, children: children().asNodeArray)
 }
 
 /// rp
@@ -9199,7 +9199,7 @@ public func rp(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "rp", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "rp", attributes: combined, children: children().asNodeArray)
 }
 
 /// rt
@@ -9280,7 +9280,7 @@ public func rt(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "rt", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "rt", attributes: combined, children: children().asNodeArray)
 }
 
 /// rtc
@@ -9361,7 +9361,7 @@ public func rtc(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "rtc", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "rtc", attributes: combined, children: children().asNodeArray)
 }
 
 /// ruby
@@ -9442,7 +9442,7 @@ public func ruby(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "ruby", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "ruby", attributes: combined, children: children().asNodeArray)
 }
 
 /// s
@@ -9523,7 +9523,7 @@ public func s(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "s", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "s", attributes: combined, children: children().asNodeArray)
 }
 
 /// samp
@@ -9604,7 +9604,7 @@ public func samp(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "samp", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "samp", attributes: combined, children: children().asNodeArray)
 }
 
 /// script
@@ -9715,7 +9715,7 @@ public func script(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "script", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "script", attributes: combined, children: children().asNodeArray)
 }
 
 /// section
@@ -9796,7 +9796,7 @@ public func section(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "section", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "section", attributes: combined, children: children().asNodeArray)
 }
 
 /// select
@@ -9901,7 +9901,7 @@ public func select(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "select", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "select", attributes: combined, children: children().asNodeArray)
 }
 
 /// shadow
@@ -9982,7 +9982,7 @@ public func shadow(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "shadow", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "shadow", attributes: combined, children: children().asNodeArray)
 }
 
 /// slot
@@ -10063,7 +10063,7 @@ public func slot(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "slot", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "slot", attributes: combined, children: children().asNodeArray)
 }
 
 /// small
@@ -10144,7 +10144,7 @@ public func small(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "small", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "small", attributes: combined, children: children().asNodeArray)
 }
 
 /// source
@@ -10240,7 +10240,7 @@ public func source(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "source", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "source", attributes: combined, children: children().asNodeArray)
 }
 
 /// spacer
@@ -10321,7 +10321,7 @@ public func spacer(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "spacer", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "spacer", attributes: combined, children: children().asNodeArray)
 }
 
 /// span
@@ -10402,7 +10402,7 @@ public func span(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "span", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "span", attributes: combined, children: children().asNodeArray)
 }
 
 /// strike
@@ -10483,7 +10483,7 @@ public func strike(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "strike", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "strike", attributes: combined, children: children().asNodeArray)
 }
 
 /// strong
@@ -10564,7 +10564,7 @@ public func strong(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "strong", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "strong", attributes: combined, children: children().asNodeArray)
 }
 
 /// style
@@ -10654,7 +10654,7 @@ public func style(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "style", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "style", attributes: combined, children: children().asNodeArray)
 }
 
 /// sub
@@ -10735,7 +10735,7 @@ public func sub(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "sub", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "sub", attributes: combined, children: children().asNodeArray)
 }
 
 /// summary
@@ -10816,7 +10816,7 @@ public func summary(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "summary", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "summary", attributes: combined, children: children().asNodeArray)
 }
 
 /// sup
@@ -10897,7 +10897,7 @@ public func sup(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "sup", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "sup", attributes: combined, children: children().asNodeArray)
 }
 
 /// table
@@ -10993,7 +10993,7 @@ public func table(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "table", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "table", attributes: combined, children: children().asNodeArray)
 }
 
 /// tbody
@@ -11080,7 +11080,7 @@ public func tbody(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "tbody", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "tbody", attributes: combined, children: children().asNodeArray)
 }
 
 /// td
@@ -11179,7 +11179,7 @@ public func td(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "td", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "td", attributes: combined, children: children().asNodeArray)
 }
 
 /// template
@@ -11260,7 +11260,7 @@ public func template(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "template", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "template", attributes: combined, children: children().asNodeArray)
 }
 
 /// textarea
@@ -11389,7 +11389,7 @@ public func textarea(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "textarea", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "textarea", attributes: combined, children: children().asNodeArray)
 }
 
 /// tfoot
@@ -11476,7 +11476,7 @@ public func tfoot(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "tfoot", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "tfoot", attributes: combined, children: children().asNodeArray)
 }
 
 /// th
@@ -11578,7 +11578,7 @@ public func th(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "th", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "th", attributes: combined, children: children().asNodeArray)
 }
 
 /// thead
@@ -11662,7 +11662,7 @@ public func thead(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "thead", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "thead", attributes: combined, children: children().asNodeArray)
 }
 
 /// time
@@ -11746,7 +11746,7 @@ public func time(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "time", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "time", attributes: combined, children: children().asNodeArray)
 }
 
 /// title
@@ -11827,7 +11827,7 @@ public func title(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "title", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "title", attributes: combined, children: children().asNodeArray)
 }
 
 /// tr
@@ -11914,7 +11914,7 @@ public func tr(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "tr", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "tr", attributes: combined, children: children().asNodeArray)
 }
 
 /// track
@@ -12010,7 +12010,7 @@ public func track(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "track", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "track", attributes: combined, children: children().asNodeArray)
 }
 
 /// tt
@@ -12091,7 +12091,7 @@ public func tt(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "tt", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "tt", attributes: combined, children: children().asNodeArray)
 }
 
 /// u
@@ -12172,7 +12172,7 @@ public func u(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "u", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "u", attributes: combined, children: children().asNodeArray)
 }
 
 /// ul
@@ -12253,7 +12253,7 @@ public func ul(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "ul", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "ul", attributes: combined, children: children().asNodeArray)
 }
 
 /// var
@@ -12334,7 +12334,7 @@ public func `var`(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "var", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "var", attributes: combined, children: children().asNodeArray)
 }
 
 /// video
@@ -12448,7 +12448,7 @@ public func video(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "video", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "video", attributes: combined, children: children().asNodeArray)
 }
 
 /// wbr
@@ -12529,7 +12529,7 @@ public func wbr(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "wbr", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "wbr", attributes: combined, children: children().asNodeArray)
 }
 
 /// xmp
@@ -12610,6 +12610,6 @@ public func xmp(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "xmp", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "xmp", attributes: combined, children: children().asNodeArray)
 }
 

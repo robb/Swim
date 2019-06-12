@@ -1,65 +1,109 @@
 import Foundation
 
-public enum Node: CustomDebugStringConvertible {
-    case comment(String)
-    case tag(name: String, attributes: [String: String], children: [Node])
-    case text(String)
+public struct TrimMode: OptionSet {
+    public let rawValue: Int
 
-    var children: [Node] {
-        switch self {
-        case let .tag(_, _, children):
-            return children
-        case .comment, .text:
-            return []
+    static let none   = TrimMode(rawValue: 0)
+    static let before = TrimMode(rawValue: 1 << 0)
+    static let after  = TrimMode(rawValue: 1 << 1)
+
+    public init(rawValue: Int) {
+        self.rawValue = rawValue
+    }
+}
+
+public protocol Node: NodeBuilderComponent, TextOutputStreamable {
+    var trimMode: TrimMode { get set }
+}
+
+extension Node {
+    var trimLeadingWhitespace: Bool {
+        trimMode.contains(.before)
+    }
+
+    var trimTrailingWhitespace: Bool {
+        trimMode.contains(.after)
+    }
+}
+
+extension Node {
+    public var asNodeArray: [Node] {
+        return [ self ]
+    }
+}
+
+public struct Comment: Node {
+    public var value: String
+
+    public var trimMode: TrimMode = .none
+
+    public func write<Target>(to target: inout Target) where Target : TextOutputStream {
+        target.write("<!-- ")
+        target.write(value)
+        target.write("-->")
+    }
+}
+
+public struct Tag: Node {
+    public var name: String
+
+    public var attributes: [String: String]
+
+    public var children: [Node]
+
+    public var trimMode: TrimMode = .none
+
+    public func write<Target>(to target: inout Target) where Target : TextOutputStream {
+        target.write("<")
+        target.write(name)
+
+        for (key, value) in attributes {
+            target.write(" ")
+            target.write(key)
+            target.write("=")
+            target.write("\"")
+            target.write(value)
+            target.write("\"")
         }
-    }
 
-    public var debugDescription: String {
-        var buffer = "" as TextOutputStream
+        if children.isEmpty {
+            target.write("/>")
+        } else {
+            target.write(">")
 
-        write(to: &buffer)
+            var trimTrailingWhitespace = false
 
-        return buffer as! String
-    }
-
-    public func write(to stream: inout TextOutputStream) {
-        switch self {
-        case let .comment(value):
-            stream.write("<!-- ")
-            stream.write(value)
-            stream.write("-->")
-
-        case let .tag(name, attributes, children):
-            stream.write("<")
-            stream.write(name)
-
-            for (key, value) in attributes {
-                stream.write(" ")
-                stream.write(key)
-                stream.write("=")
-                stream.write("\"")
-                stream.write(value)
-                stream.write("\"")
-            }
-
-            if children.isEmpty {
-                stream.write("/>")
-            } else {
-                stream.write(">")
-
-                for child in children {
-                    child.write(to: &stream)
+            for child in children {
+                defer {
+                    trimTrailingWhitespace = child.trimTrailingWhitespace
                 }
 
-                stream.write("</")
-                stream.write(name)
-                stream.write(">")
+                if !trimTrailingWhitespace && !child.trimLeadingWhitespace {
+                    target.write("\n")
+                }
+
+                child.write(to: &target)
             }
 
+            if !trimTrailingWhitespace {
+                target.write("\n")
+            }
 
-        case let .text(value):
-            stream.write(value)
+            target.write("</")
+            target.write(name)
+            target.write(">")
         }
+    }
+}
+
+
+public struct Text: Node {
+    public var value: String
+
+    public var trimMode: TrimMode = .none
+
+    public func write<Target>(to target: inout Target) where Target : TextOutputStream {
+        target.write(value)
     }
 }
 
@@ -78,12 +122,6 @@ public protocol NodeBuilderComponent {
     var asNodeArray: [Node] { get }
 }
 
-extension Node: NodeBuilderComponent {
-    public var asNodeArray: [Node] {
-        [ self ]
-    }
-}
-
 extension Array: NodeBuilderComponent where Element == Node {
     public var asNodeArray: [Node] {
         self
@@ -92,6 +130,6 @@ extension Array: NodeBuilderComponent where Element == Node {
 
 extension String: NodeBuilderComponent {
     public var asNodeArray: [Node] {
-        [ Node.text(self) ]
+        [ Text(value: self) ]
     }
 }

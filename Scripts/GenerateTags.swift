@@ -120,7 +120,7 @@ public func \#(tag.name.asSwiftIdentifier)(
         combined["data-\(key)"] = value
     }
 
-    return .tag(name: "\#(tag.name)", attributes: combined, children: children().asNodeArray)
+    return Tag(name: "\#(tag.name)", attributes: combined, children: children().asNodeArray)
 }
 
 """#
