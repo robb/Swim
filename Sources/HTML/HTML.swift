@@ -14,49 +14,52 @@ public enum Node: CustomDebugStringConvertible {
         }
     }
 
-    func serialize(buffer: inout String, indentationLevel: Int = 0) {
-        func pad(string: String) -> String {
-            return String(repeating: " " as Character, count: 2 * indentationLevel) + string + "\n"
-        }
+    public var debugDescription: String {
+        var buffer = "" as TextOutputStream
 
-        switch self {
-        case let .comment(value):
-            buffer += "<!-- \(value) -->"
-        case let .tag(name, attributes, children):
-            let serializedAttributes = attributes
-                .map { key, value in "\(key)=\"\(value)\"" }
-                .joined(separator: " ")
+        write(to: &buffer)
 
-            if children.isEmpty {
-                if serializedAttributes.isEmpty {
-                    buffer += pad(string: "<\(name)/>")
-                } else {
-                    buffer += pad(string: "<\(name) \(serializedAttributes) />")
-                }
-            } else {
-                if serializedAttributes.isEmpty {
-                    buffer += pad(string: "<\(name)>")
-                } else {
-                    buffer += pad(string: "<\(name) \(serializedAttributes)>")
-                }
-
-                for child in children {
-                    child.serialize(buffer: &buffer, indentationLevel: indentationLevel + 1)
-                }
-
-                buffer += pad(string: "</\(name)>")
-            }
-        case let .text(value):
-            buffer += pad(string: value)
-        }
+        return buffer as! String
     }
 
-    public var debugDescription: String {
-        var buffer = ""
+    public func write(to stream: inout TextOutputStream) {
+        switch self {
+        case let .comment(value):
+            stream.write("<!-- ")
+            stream.write(value)
+            stream.write("-->")
 
-        serialize(buffer: &buffer)
+        case let .tag(name, attributes, children):
+            stream.write("<")
+            stream.write(name)
 
-        return buffer
+            for (key, value) in attributes {
+                stream.write(" ")
+                stream.write(key)
+                stream.write("=")
+                stream.write("\"")
+                stream.write(value)
+                stream.write("\"")
+            }
+
+            if children.isEmpty {
+                stream.write("/>")
+            } else {
+                stream.write(">")
+
+                for child in children {
+                    child.write(to: &stream)
+                }
+
+                stream.write("</")
+                stream.write(name)
+                stream.write(">")
+            }
+
+
+        case let .text(value):
+            stream.write(value)
+        }
     }
 }
 
