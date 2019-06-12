@@ -45,36 +45,46 @@ final class HTMLTests: XCTestCase {
         }
 
         let all = p {
-            %span { %"Hallo Welt"% }%
+            %div { %"Hallo Welt"% }%
         }
 
-        XCTAssertComponents(all, "<p><span>Hallo", "Welt</span></p>")
+        XCTAssertComponents(all, "<p><div>Hallo", "Welt</div></p>")
 
         let leading = p {
-            %span { %"Hallo Welt" }
+            %div { %"Hallo Welt" }
         }
 
-        XCTAssertComponents(leading, "<p><span>Hallo", "Welt", "</span>", "</p>")
+        XCTAssertComponents(leading, "<p><div>Hallo", "Welt", "</div>", "</p>")
 
         let trailing = p {
-            span { "Hallo Welt"% }%
+            div { "Hallo Welt"% }%
         }
 
-        XCTAssertComponents(trailing, "<p>", "<span>", "Hallo", "Welt</span></p>")
+        XCTAssertComponents(trailing, "<p>", "<div>", "Hallo", "Welt</div></p>")
 
         let none = p {
-            span { "Hallo Welt" }
+            div { "Hallo Welt" }
         }
 
-        XCTAssertComponents(none, "<p>", "<span>", "Hallo", "Welt", "</span>", "</p>")
+        XCTAssertComponents(none, "<p>", "<div>", "Hallo", "Welt", "</div>", "</p>")
 
         let infix = p {
-            span { "Hallo" %% "Welt" }
+            div { "Hallo" %% "Welt" }
             %%
-            span { "Hallo" %% "Welt" }
+            div { "Hallo" %% "Welt" }
         }
 
-        XCTAssertComponents(infix, "<p>", "<span>", "HalloWelt", "</span><span>", "HalloWelt", "</span>", "</p>")
+        XCTAssertComponents(infix, "<p>", "<div>", "HalloWelt", "</div><div>", "HalloWelt", "</div>", "</p>")
+
+        let textMode = p {
+            span {
+                mark {
+                    "Test"
+                }
+            }
+        }
+
+        XCTAssertComponents(textMode, "<p>", "<span><mark>Test</mark></span>", "</p>")
     }
 
     static var allTests = [

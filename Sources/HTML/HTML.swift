@@ -99,10 +99,22 @@ public struct Tag: Node {
         }
     }
 
+    private static let textLevelTags: Set<String> = [
+        "a", "abbr", "b", "bdi", "bdo", "br", "cite", "code", "data", "dfn", "em",
+        "i", "kbd", "mark", "q", "rb", "rp", "rt", "rtc", "ruby", "s", "samp", "small",
+        "span", "strong", "sub", "sup", "time", "tt", "u", "var", "wbr",
+    ]
+
     public init(name: String, attributes: [String: String] = [:], children: [Node]) {
         self.name = name
         self.attributes = attributes
         self.children = children
+
+        if Tag.textLevelTags.contains(name) && !children.isEmpty {
+            self.children[0].trimMode.insert(.before)
+
+            self.children[self.children.endIndex - 1].trimMode.insert(.after)
+        }
     }
 }
 
