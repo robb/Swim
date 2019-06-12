@@ -212,6 +212,26 @@
         "description": "The HTML `<h1>`–`<h6>` elements represent six levels of section headings. `<h1>` is the highest section level and `<h6>` is the lowest."
     },
     {
+        "name": "h2",
+        "description": "The HTML `<h1>`–`<h6>` elements represent six levels of section headings. `<h1>` is the highest section level and `<h6>` is the lowest."
+    },
+    {
+        "name": "h3",
+        "description": "The HTML `<h1>`–`<h6>` elements represent six levels of section headings. `<h1>` is the highest section level and `<h6>` is the lowest."
+    },
+    {
+        "name": "h4",
+        "description": "The HTML `<h1>`–`<h6>` elements represent six levels of section headings. `<h1>` is the highest section level and `<h6>` is the lowest."
+    },
+    {
+        "name": "h5",
+        "description": "The HTML `<h1>`–`<h6>` elements represent six levels of section headings. `<h1>` is the highest section level and `<h6>` is the lowest."
+    },
+    {
+        "name": "h6",
+        "description": "The HTML `<h1>`–`<h6>` elements represent six levels of section headings. `<h1>` is the highest section level and `<h6>` is the lowest."
+    },
+    {
         "name": "head",
         "description": "The HTML `<head>` element contains machine-readable information (metadata) about the document, like its title, scripts, and style sheets."
     },

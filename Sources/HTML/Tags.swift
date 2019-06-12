@@ -4546,6 +4546,411 @@ public func h1(
     return .tag(name: "h1", attributes: combined, children: children().asNodeArray)
 }
 
+/// h2
+///
+/// The HTML `<h1>`–`<h6>` elements represent six levels of section headings. `<h1>` is the highest section level and `<h6>` is the lowest.
+///
+/// - Parameters:
+///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
+///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
+///      - `class`: Often used with CSS to style elements with common properties.
+///      - contenteditable: Indicates whether the element's content is editable.
+///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
+///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
+///      - draggable: Defines whether the element can be dragged.
+///      - dropzone: Indicates that the element accept the dropping of content on it.
+///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
+///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
+///      - itemprop: 
+///      - lang: Defines the language used in the element.
+///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
+///      - spellcheck: Indicates whether spell checking is allowed for the element.
+///      - style: Defines CSS styles which will override styles previously set.
+///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
+///      - title: Text to be displayed in a tooltip when hovering over the element.
+///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+public func h2(
+    accesskey: String? = nil,
+    autocapitalize: String? = nil,
+    `class`: String? = nil,
+    contenteditable: String? = nil,
+    contextmenu: String? = nil,
+    dir: String? = nil,
+    draggable: String? = nil,
+    dropzone: String? = nil,
+    hidden: String? = nil,
+    id: String? = nil,
+    itemprop: String? = nil,
+    lang: String? = nil,
+    slot: String? = nil,
+    spellcheck: String? = nil,
+    style: String? = nil,
+    tabindex: String? = nil,
+    title: String? = nil,
+    translate: String? = nil,
+    customData: [String: String] = [:],
+    classes classList: String...,
+    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    ) -> Node {
+
+    let attributes = [
+        "accesskey": accesskey,
+        "autocapitalize": autocapitalize,
+        "class": `class`,
+        "contenteditable": contenteditable,
+        "contextmenu": contextmenu,
+        "dir": dir,
+        "draggable": draggable,
+        "dropzone": dropzone,
+        "hidden": hidden,
+        "id": id,
+        "itemprop": itemprop,
+        "lang": lang,
+        "slot": slot,
+        "spellcheck": spellcheck,
+        "style": style,
+        "tabindex": tabindex,
+        "title": title,
+        "translate": translate
+    ]
+
+    var combined = attributes.compactMapValues { $0 }
+
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
+    for (key, value) in customData {
+        combined["data-\(key)"] = value
+    }
+
+    return .tag(name: "h2", attributes: combined, children: children().asNodeArray)
+}
+
+/// h3
+///
+/// The HTML `<h1>`–`<h6>` elements represent six levels of section headings. `<h1>` is the highest section level and `<h6>` is the lowest.
+///
+/// - Parameters:
+///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
+///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
+///      - `class`: Often used with CSS to style elements with common properties.
+///      - contenteditable: Indicates whether the element's content is editable.
+///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
+///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
+///      - draggable: Defines whether the element can be dragged.
+///      - dropzone: Indicates that the element accept the dropping of content on it.
+///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
+///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
+///      - itemprop: 
+///      - lang: Defines the language used in the element.
+///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
+///      - spellcheck: Indicates whether spell checking is allowed for the element.
+///      - style: Defines CSS styles which will override styles previously set.
+///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
+///      - title: Text to be displayed in a tooltip when hovering over the element.
+///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+public func h3(
+    accesskey: String? = nil,
+    autocapitalize: String? = nil,
+    `class`: String? = nil,
+    contenteditable: String? = nil,
+    contextmenu: String? = nil,
+    dir: String? = nil,
+    draggable: String? = nil,
+    dropzone: String? = nil,
+    hidden: String? = nil,
+    id: String? = nil,
+    itemprop: String? = nil,
+    lang: String? = nil,
+    slot: String? = nil,
+    spellcheck: String? = nil,
+    style: String? = nil,
+    tabindex: String? = nil,
+    title: String? = nil,
+    translate: String? = nil,
+    customData: [String: String] = [:],
+    classes classList: String...,
+    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    ) -> Node {
+
+    let attributes = [
+        "accesskey": accesskey,
+        "autocapitalize": autocapitalize,
+        "class": `class`,
+        "contenteditable": contenteditable,
+        "contextmenu": contextmenu,
+        "dir": dir,
+        "draggable": draggable,
+        "dropzone": dropzone,
+        "hidden": hidden,
+        "id": id,
+        "itemprop": itemprop,
+        "lang": lang,
+        "slot": slot,
+        "spellcheck": spellcheck,
+        "style": style,
+        "tabindex": tabindex,
+        "title": title,
+        "translate": translate
+    ]
+
+    var combined = attributes.compactMapValues { $0 }
+
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
+    for (key, value) in customData {
+        combined["data-\(key)"] = value
+    }
+
+    return .tag(name: "h3", attributes: combined, children: children().asNodeArray)
+}
+
+/// h4
+///
+/// The HTML `<h1>`–`<h6>` elements represent six levels of section headings. `<h1>` is the highest section level and `<h6>` is the lowest.
+///
+/// - Parameters:
+///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
+///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
+///      - `class`: Often used with CSS to style elements with common properties.
+///      - contenteditable: Indicates whether the element's content is editable.
+///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
+///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
+///      - draggable: Defines whether the element can be dragged.
+///      - dropzone: Indicates that the element accept the dropping of content on it.
+///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
+///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
+///      - itemprop: 
+///      - lang: Defines the language used in the element.
+///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
+///      - spellcheck: Indicates whether spell checking is allowed for the element.
+///      - style: Defines CSS styles which will override styles previously set.
+///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
+///      - title: Text to be displayed in a tooltip when hovering over the element.
+///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+public func h4(
+    accesskey: String? = nil,
+    autocapitalize: String? = nil,
+    `class`: String? = nil,
+    contenteditable: String? = nil,
+    contextmenu: String? = nil,
+    dir: String? = nil,
+    draggable: String? = nil,
+    dropzone: String? = nil,
+    hidden: String? = nil,
+    id: String? = nil,
+    itemprop: String? = nil,
+    lang: String? = nil,
+    slot: String? = nil,
+    spellcheck: String? = nil,
+    style: String? = nil,
+    tabindex: String? = nil,
+    title: String? = nil,
+    translate: String? = nil,
+    customData: [String: String] = [:],
+    classes classList: String...,
+    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    ) -> Node {
+
+    let attributes = [
+        "accesskey": accesskey,
+        "autocapitalize": autocapitalize,
+        "class": `class`,
+        "contenteditable": contenteditable,
+        "contextmenu": contextmenu,
+        "dir": dir,
+        "draggable": draggable,
+        "dropzone": dropzone,
+        "hidden": hidden,
+        "id": id,
+        "itemprop": itemprop,
+        "lang": lang,
+        "slot": slot,
+        "spellcheck": spellcheck,
+        "style": style,
+        "tabindex": tabindex,
+        "title": title,
+        "translate": translate
+    ]
+
+    var combined = attributes.compactMapValues { $0 }
+
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
+    for (key, value) in customData {
+        combined["data-\(key)"] = value
+    }
+
+    return .tag(name: "h4", attributes: combined, children: children().asNodeArray)
+}
+
+/// h5
+///
+/// The HTML `<h1>`–`<h6>` elements represent six levels of section headings. `<h1>` is the highest section level and `<h6>` is the lowest.
+///
+/// - Parameters:
+///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
+///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
+///      - `class`: Often used with CSS to style elements with common properties.
+///      - contenteditable: Indicates whether the element's content is editable.
+///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
+///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
+///      - draggable: Defines whether the element can be dragged.
+///      - dropzone: Indicates that the element accept the dropping of content on it.
+///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
+///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
+///      - itemprop: 
+///      - lang: Defines the language used in the element.
+///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
+///      - spellcheck: Indicates whether spell checking is allowed for the element.
+///      - style: Defines CSS styles which will override styles previously set.
+///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
+///      - title: Text to be displayed in a tooltip when hovering over the element.
+///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+public func h5(
+    accesskey: String? = nil,
+    autocapitalize: String? = nil,
+    `class`: String? = nil,
+    contenteditable: String? = nil,
+    contextmenu: String? = nil,
+    dir: String? = nil,
+    draggable: String? = nil,
+    dropzone: String? = nil,
+    hidden: String? = nil,
+    id: String? = nil,
+    itemprop: String? = nil,
+    lang: String? = nil,
+    slot: String? = nil,
+    spellcheck: String? = nil,
+    style: String? = nil,
+    tabindex: String? = nil,
+    title: String? = nil,
+    translate: String? = nil,
+    customData: [String: String] = [:],
+    classes classList: String...,
+    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    ) -> Node {
+
+    let attributes = [
+        "accesskey": accesskey,
+        "autocapitalize": autocapitalize,
+        "class": `class`,
+        "contenteditable": contenteditable,
+        "contextmenu": contextmenu,
+        "dir": dir,
+        "draggable": draggable,
+        "dropzone": dropzone,
+        "hidden": hidden,
+        "id": id,
+        "itemprop": itemprop,
+        "lang": lang,
+        "slot": slot,
+        "spellcheck": spellcheck,
+        "style": style,
+        "tabindex": tabindex,
+        "title": title,
+        "translate": translate
+    ]
+
+    var combined = attributes.compactMapValues { $0 }
+
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
+    for (key, value) in customData {
+        combined["data-\(key)"] = value
+    }
+
+    return .tag(name: "h5", attributes: combined, children: children().asNodeArray)
+}
+
+/// h6
+///
+/// The HTML `<h1>`–`<h6>` elements represent six levels of section headings. `<h1>` is the highest section level and `<h6>` is the lowest.
+///
+/// - Parameters:
+///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
+///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
+///      - `class`: Often used with CSS to style elements with common properties.
+///      - contenteditable: Indicates whether the element's content is editable.
+///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
+///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
+///      - draggable: Defines whether the element can be dragged.
+///      - dropzone: Indicates that the element accept the dropping of content on it.
+///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
+///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
+///      - itemprop: 
+///      - lang: Defines the language used in the element.
+///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
+///      - spellcheck: Indicates whether spell checking is allowed for the element.
+///      - style: Defines CSS styles which will override styles previously set.
+///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
+///      - title: Text to be displayed in a tooltip when hovering over the element.
+///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+public func h6(
+    accesskey: String? = nil,
+    autocapitalize: String? = nil,
+    `class`: String? = nil,
+    contenteditable: String? = nil,
+    contextmenu: String? = nil,
+    dir: String? = nil,
+    draggable: String? = nil,
+    dropzone: String? = nil,
+    hidden: String? = nil,
+    id: String? = nil,
+    itemprop: String? = nil,
+    lang: String? = nil,
+    slot: String? = nil,
+    spellcheck: String? = nil,
+    style: String? = nil,
+    tabindex: String? = nil,
+    title: String? = nil,
+    translate: String? = nil,
+    customData: [String: String] = [:],
+    classes classList: String...,
+    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    ) -> Node {
+
+    let attributes = [
+        "accesskey": accesskey,
+        "autocapitalize": autocapitalize,
+        "class": `class`,
+        "contenteditable": contenteditable,
+        "contextmenu": contextmenu,
+        "dir": dir,
+        "draggable": draggable,
+        "dropzone": dropzone,
+        "hidden": hidden,
+        "id": id,
+        "itemprop": itemprop,
+        "lang": lang,
+        "slot": slot,
+        "spellcheck": spellcheck,
+        "style": style,
+        "tabindex": tabindex,
+        "title": title,
+        "translate": translate
+    ]
+
+    var combined = attributes.compactMapValues { $0 }
+
+    if !classList.isEmpty {
+        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    }
+
+    for (key, value) in customData {
+        combined["data-\(key)"] = value
+    }
+
+    return .tag(name: "h6", attributes: combined, children: children().asNodeArray)
+}
+
 /// head
 ///
 /// The HTML `<head>` element contains machine-readable information (metadata) about the document, like its title, scripts, and style sheets.
