@@ -42,6 +42,10 @@ public struct Comment: Node {
         target.write(value)
         target.write("-->")
     }
+
+    public init(value: String) {
+        self.value = value
+    }
 }
 
 public struct Tag: Node {
@@ -94,8 +98,13 @@ public struct Tag: Node {
             target.write(">")
         }
     }
-}
 
+    public init(name: String, attributes: [String: String] = [:], children: [Node]) {
+        self.name = name
+        self.attributes = attributes
+        self.children = children
+    }
+}
 
 public struct Text: Node {
     public var value: String
@@ -104,6 +113,10 @@ public struct Text: Node {
 
     public func write<Target>(to target: inout Target) where Target : TextOutputStream {
         target.write(value)
+    }
+
+    public init(value: String) {
+        self.value = value
     }
 }
 
