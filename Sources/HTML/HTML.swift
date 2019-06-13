@@ -3,9 +3,11 @@ import Foundation
 public struct TrimMode: OptionSet {
     public let rawValue: Int
 
-    static let none   = TrimMode(rawValue: 0)
-    static let before = TrimMode(rawValue: 1 << 0)
-    static let after  = TrimMode(rawValue: 1 << 1)
+    static let none            = TrimMode(rawValue: 0)
+    static let leadingSibling  = TrimMode(rawValue: 1 << 0)
+    static let trailingSibling = TrimMode(rawValue: 1 << 1)
+    static let leadingParent   = TrimMode(rawValue: 1 << 2)
+    static let trailingParent  = TrimMode(rawValue: 1 << 3)
 
     public init(rawValue: Int) {
         self.rawValue = rawValue
@@ -14,16 +16,6 @@ public struct TrimMode: OptionSet {
 
 public protocol Node: NodeBuilderComponent, TextOutputStreamable {
     var trimMode: TrimMode { get set }
-}
-
-extension Node {
-    var trimLeadingWhitespace: Bool {
-        trimMode.contains(.before)
-    }
-
-    var trimTrailingWhitespace: Bool {
-        trimMode.contains(.after)
-    }
 }
 
 extension Node {
@@ -64,8 +56,7 @@ public struct Tag: Node {
         for (key, value) in attributes {
             target.write(" ")
             target.write(key)
-            target.write("=")
-            target.write("\"")
+            target.write("=\"")
             target.write(value)
             target.write("\"")
         }
@@ -75,21 +66,23 @@ public struct Tag: Node {
         } else {
             target.write(">")
 
-            var trimTrailingWhitespace = false
+            if !children.first!.trimMode.contains(.leadingParent) {
+                target.write("\n")
+            }
+
+            var trimTrailingWhitespace = true
 
             for child in children {
-                defer {
-                    trimTrailingWhitespace = child.trimTrailingWhitespace
-                }
-
-                if !trimTrailingWhitespace && !child.trimLeadingWhitespace {
+                if !trimTrailingWhitespace && !child.trimMode.contains(.leadingSibling) {
                     target.write("\n")
                 }
 
                 child.write(to: &target)
+
+                trimTrailingWhitespace = child.trimMode.contains(.trailingSibling)
             }
 
-            if !trimTrailingWhitespace {
+            if !children.last!.trimMode.contains(.trailingParent) {
                 target.write("\n")
             }
 
@@ -111,10 +104,10 @@ public struct Tag: Node {
         self.children = children
 
         if Tag.textLevelTags.contains(name) && !children.isEmpty {
-            self.trimMode = [ .before, .after ]
+            self.trimMode = [ .leadingParent, .trailingParent ]
 
-            self.children[0].trimMode.insert(.before)
-            self.children[self.children.endIndex - 1].trimMode.insert(.after)
+            self.children[0].trimMode.insert(.leadingParent)
+            self.children[self.children.endIndex - 1].trimMode.insert(.trailingParent)
         }
     }
 }

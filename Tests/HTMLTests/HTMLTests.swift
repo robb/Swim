@@ -69,9 +69,9 @@ final class HTMLTests: XCTestCase {
         XCTAssertComponents(none, "<p>", "<div>", "Hallo", "Welt", "</div>", "</p>")
 
         let infix = p {
-            div { "" %% "Hallo" %% "Welt" }
+            div { "H" %% "allo" %% "Welt" }
             %%
-            div { "Hallo" %% "Welt" %% "" }
+            div { "Hallo" %% "Wel" %% "t" }
         }
 
         XCTAssertComponents(infix, "<p>", "<div>", "HalloWelt", "</div><div>", "HalloWelt", "</div>", "</p>")

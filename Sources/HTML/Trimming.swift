@@ -7,11 +7,11 @@ public func %% (lhs: NodeBuilderComponent, rhs: NodeBuilderComponent) -> NodeBui
     var r = rhs.asNodeArray
 
     if !l.isEmpty {
-        l[l.endIndex - 1].trimMode.insert(.after)
+        l[l.endIndex - 1].trimMode.insert(.trailingSibling)
     }
 
     if !r.isEmpty {
-        r[0].trimMode.insert(.before)
+        r[0].trimMode.insert(.leadingSibling)
     }
 
     return l + r
@@ -23,7 +23,7 @@ public prefix func % (node: NodeBuilderComponent) -> NodeBuilderComponent {
     var n = node.asNodeArray
 
     if !n.isEmpty {
-        n[0].trimMode.insert(.before)
+        n[0].trimMode.insert(.leadingParent)
     }
 
     return n
@@ -35,7 +35,7 @@ public postfix func % (node: NodeBuilderComponent) -> NodeBuilderComponent {
     var n = node.asNodeArray
 
     if !n.isEmpty {
-        n[0].trimMode.insert(.after)
+        n[0].trimMode.insert(.trailingParent)
     }
 
     return n
