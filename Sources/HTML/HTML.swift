@@ -3,11 +3,11 @@ import Foundation
 public struct TrimMode: OptionSet {
     public let rawValue: Int
 
-    static let none            = TrimMode(rawValue: 0)
-    static let leadingSibling  = TrimMode(rawValue: 1 << 0)
-    static let trailingSibling = TrimMode(rawValue: 1 << 1)
-    static let leadingParent   = TrimMode(rawValue: 1 << 2)
-    static let trailingParent  = TrimMode(rawValue: 1 << 3)
+    public static let none            = TrimMode(rawValue: 0)
+    public static let leadingSibling  = TrimMode(rawValue: 1 << 0)
+    public static let trailingSibling = TrimMode(rawValue: 1 << 1)
+    public static let leadingParent   = TrimMode(rawValue: 1 << 2)
+    public static let trailingParent  = TrimMode(rawValue: 1 << 3)
 
     public init(rawValue: Int) {
         self.rawValue = rawValue
