@@ -1,6 +1,6 @@
 import Foundation
 
-infix operator %%
+infix operator %% : AdditionPrecedence
 
 public func %% (lhs: NodeBuilderComponent, rhs: NodeBuilderComponent) -> NodeBuilderComponent {
     var l = lhs.asNodeArray
