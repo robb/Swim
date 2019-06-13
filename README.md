@@ -1,6 +1,8 @@
 # HTML DSL
 
-A quickly thrown together DSL for building HTML nodes with Swift's new function builders.
+A DSL for building HTML documents with Swift [function builders].
+
+Currently in use on [my personal website].
 
 ```swift
 let myDocument = html(lang: "en-US") {
@@ -63,3 +65,6 @@ For example, the above would generate this HTML:
   </body>
 </html>
 ```
+
+[function builders]: https://github.com/apple/swift-evolution/blob/9992cf3c11c2d5e0ea20bee98657d93902d5b174/proposals/XXXX-function-builders.md
+[my personal website]: http://github.com/robb/robb.swift
