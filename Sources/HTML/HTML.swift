@@ -111,8 +111,9 @@ public struct Tag: Node {
         self.children = children
 
         if Tag.textLevelTags.contains(name) && !children.isEmpty {
-            self.children[0].trimMode.insert(.before)
+            self.trimMode = [ .before, .after ]
 
+            self.children[0].trimMode.insert(.before)
             self.children[self.children.endIndex - 1].trimMode.insert(.after)
         }
     }

@@ -76,15 +76,17 @@ final class HTMLTests: XCTestCase {
 
         XCTAssertComponents(infix, "<p>", "<div>", "HalloWelt", "</div><div>", "HalloWelt", "</div>", "</p>")
 
-        let textMode = p {
-            span {
-                mark {
-                    "Test"
+        let textMode = div {
+            p {
+                span {
+                    mark {
+                        "Test"
+                    }
                 }
             }
         }
 
-        XCTAssertComponents(textMode, "<p>", "<span><mark>Test</mark></span>", "</p>")
+        XCTAssertComponents(textMode, "<div>", "<p><span><mark>Test</mark></span></p>", "</div>")
     }
 
     static var allTests = [
