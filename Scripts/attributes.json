@@ -1,14 +1,14 @@
 [
     {
         "name": "accept-charset",
-        "description": "List of types the server accepts, typically a file type.",
+        "description": "List of supported charsets.",
         "tags": [
             "form"
         ]
     },
     {
         "name": "accept",
-        "description": "List of supported charsets.",
+        "description": "List of types the server accepts, typically a file type.",
         "tags": [
             "form",
             "input"
