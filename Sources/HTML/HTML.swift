@@ -53,7 +53,7 @@ public struct Tag: Node {
         target.write("<")
         target.write(name)
 
-        for (key, value) in attributes {
+        for (key, value) in attributes.sorted(by: { $0 < $1 }) {
             target.write(" ")
             target.write(key)
             target.write("=\"")
