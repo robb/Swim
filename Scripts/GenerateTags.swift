@@ -104,8 +104,7 @@ public func \#(tag.name.asSwiftIdentifier)(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         \#(attibuteCapture)
     ]

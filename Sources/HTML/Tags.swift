@@ -61,8 +61,7 @@ public func a(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -151,8 +150,7 @@ public func abbr(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -232,8 +230,7 @@ public func acronym(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -313,8 +310,7 @@ public func address(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -402,8 +398,7 @@ public func applet(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "align": align,
@@ -509,8 +504,7 @@ public func area(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "alt": alt,
@@ -601,8 +595,7 @@ public func article(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -682,8 +675,7 @@ public func aside(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -779,8 +771,7 @@ public func audio(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -868,8 +859,7 @@ public func b(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -953,8 +943,7 @@ public func base(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -1038,8 +1027,7 @@ public func basefont(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -1120,8 +1108,7 @@ public func bdi(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -1201,8 +1188,7 @@ public func bdo(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -1284,8 +1270,7 @@ public func bgsound(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -1366,8 +1351,7 @@ public func big(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -1447,8 +1431,7 @@ public func blink(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -1530,8 +1513,7 @@ public func blockquote(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -1616,8 +1598,7 @@ public func body(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -1699,8 +1680,7 @@ public func br(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -1802,8 +1782,7 @@ public func button(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -1898,8 +1877,7 @@ public func canvas(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -1983,8 +1961,7 @@ public func caption(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "align": align,
@@ -2065,8 +2042,7 @@ public func center(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -2146,8 +2122,7 @@ public func cite(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -2227,8 +2202,7 @@ public func code(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -2314,8 +2288,7 @@ public func col(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "align": align,
@@ -2404,8 +2377,7 @@ public func colgroup(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "align": align,
@@ -2498,8 +2470,7 @@ public func command(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -2584,8 +2555,7 @@ public func content(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -2667,8 +2637,7 @@ public func data(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -2749,8 +2718,7 @@ public func datalist(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -2830,8 +2798,7 @@ public func dd(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -2915,8 +2882,7 @@ public func del(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -3000,8 +2966,7 @@ public func details(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -3082,8 +3047,7 @@ public func dfn(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -3163,8 +3127,7 @@ public func dialog(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -3244,8 +3207,7 @@ public func dir(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -3325,8 +3287,7 @@ public func div(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -3406,8 +3367,7 @@ public func dl(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -3487,8 +3447,7 @@ public func dt(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -3568,8 +3527,7 @@ public func element(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -3649,8 +3607,7 @@ public func em(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -3738,8 +3695,7 @@ public func embed(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -3829,8 +3785,7 @@ public func fieldset(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -3913,8 +3868,7 @@ public func figcaption(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -3994,8 +3948,7 @@ public func figure(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -4077,8 +4030,7 @@ public func font(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -4159,8 +4111,7 @@ public func footer(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -4200,8 +4151,8 @@ public func footer(
 /// The HTML `<form>` element represents a document section that contains interactive controls for submitting information to a web server.
 ///
 /// - Parameters:
-///      - accept: List of supported charsets.
-///      - acceptCharset: List of types the server accepts, typically a file type.
+///      - accept: List of types the server accepts, typically a file type.
+///      - acceptCharset: List of supported charsets.
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - action: The URI of a program that processes the information submitted via the form.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
@@ -4258,8 +4209,7 @@ public func form(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accept": accept,
         "accept-charset": acceptCharset,
@@ -4348,8 +4298,7 @@ public func frame(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -4429,8 +4378,7 @@ public func frameset(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -4510,8 +4458,7 @@ public func h1(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -4591,8 +4538,7 @@ public func h2(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -4672,8 +4618,7 @@ public func h3(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -4753,8 +4698,7 @@ public func h4(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -4834,8 +4778,7 @@ public func h5(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -4915,8 +4858,7 @@ public func h6(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -4996,8 +4938,7 @@ public func head(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -5077,8 +5018,7 @@ public func header(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -5158,8 +5098,7 @@ public func hgroup(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -5243,8 +5182,7 @@ public func hr(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "align": align,
@@ -5328,8 +5266,7 @@ public func html(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -5410,8 +5347,7 @@ public func i(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -5515,8 +5451,7 @@ public func iframe(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "align": align,
@@ -5608,8 +5543,7 @@ public func image(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -5721,8 +5655,7 @@ public func img(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "align": align,
@@ -5778,7 +5711,7 @@ public func img(
 /// The HTML `<input>` element is used to create interactive controls for web-based forms in order to accept data from the user; a wide variety of types of input data and control widgets are available, depending on the device and user agent.
 ///
 /// - Parameters:
-///      - accept: List of supported charsets.
+///      - accept: List of types the server accepts, typically a file type.
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - alt: Alternative text in case an image can't be displayed.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
@@ -5882,8 +5815,7 @@ public func input(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accept": accept,
         "accesskey": accesskey,
@@ -5999,8 +5931,7 @@ public func ins(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -6082,8 +6013,7 @@ public func isindex(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -6163,8 +6093,7 @@ public func kbd(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -6256,8 +6185,7 @@ public func keygen(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -6347,8 +6275,7 @@ public func label(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -6430,8 +6357,7 @@ public func legend(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -6513,8 +6439,7 @@ public func li(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -6613,8 +6538,7 @@ public func link(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -6703,8 +6627,7 @@ public func listing(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -6784,8 +6707,7 @@ public func main(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -6867,8 +6789,7 @@ public func map(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -6949,8 +6870,7 @@ public func mark(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -7034,8 +6954,7 @@ public func marquee(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -7119,8 +7038,7 @@ public func menu(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -7201,8 +7119,7 @@ public func menuitem(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -7290,8 +7207,7 @@ public func meta(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -7389,8 +7305,7 @@ public func meter(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -7477,8 +7392,7 @@ public func multicol(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -7558,8 +7472,7 @@ public func nav(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -7639,8 +7552,7 @@ public func nextid(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -7720,8 +7632,7 @@ public func nobr(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -7801,8 +7712,7 @@ public func noembed(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -7882,8 +7792,7 @@ public func noframes(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -7963,8 +7872,7 @@ public func noscript(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -8060,8 +7968,7 @@ public func object(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -8153,8 +8060,7 @@ public func ol(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -8238,8 +8144,7 @@ public func optgroup(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -8326,8 +8231,7 @@ public func option(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -8416,8 +8320,7 @@ public func output(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -8500,8 +8403,7 @@ public func p(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -8585,8 +8487,7 @@ public func param(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -8668,8 +8569,7 @@ public func picture(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -8749,8 +8649,7 @@ public func plaintext(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -8830,8 +8729,7 @@ public func pre(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -8917,8 +8815,7 @@ public func progress(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -9003,8 +8900,7 @@ public func q(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -9085,8 +8981,7 @@ public func rb(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -9166,8 +9061,7 @@ public func rp(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -9247,8 +9141,7 @@ public func rt(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -9328,8 +9221,7 @@ public func rtc(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -9409,8 +9301,7 @@ public func ruby(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -9490,8 +9381,7 @@ public func s(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -9571,8 +9461,7 @@ public func samp(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -9672,8 +9561,7 @@ public func script(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "async": async,
@@ -9763,8 +9651,7 @@ public func section(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -9860,8 +9747,7 @@ public func select(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -9949,8 +9835,7 @@ public func shadow(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -10030,8 +9915,7 @@ public func slot(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -10111,8 +9995,7 @@ public func small(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -10202,8 +10085,7 @@ public func source(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -10288,8 +10170,7 @@ public func spacer(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -10369,8 +10250,7 @@ public func span(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -10450,8 +10330,7 @@ public func strike(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -10531,8 +10410,7 @@ public func strong(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -10618,8 +10496,7 @@ public func style(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -10702,8 +10579,7 @@ public func sub(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -10783,8 +10659,7 @@ public func summary(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -10864,8 +10739,7 @@ public func sup(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -10955,8 +10829,7 @@ public func table(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "align": align,
@@ -11045,8 +10918,7 @@ public func tbody(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "align": align,
@@ -11140,8 +11012,7 @@ public func td(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "align": align,
@@ -11227,8 +11098,7 @@ public func template(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -11340,8 +11210,7 @@ public func textarea(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -11441,8 +11310,7 @@ public func tfoot(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "align": align,
@@ -11538,8 +11406,7 @@ public func th(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "align": align,
@@ -11628,8 +11495,7 @@ public func thead(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "align": align,
@@ -11712,8 +11578,7 @@ public func time(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -11794,8 +11659,7 @@ public func title(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -11879,8 +11743,7 @@ public func tr(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "align": align,
@@ -11972,8 +11835,7 @@ public func track(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -12058,8 +11920,7 @@ public func tt(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -12139,8 +12000,7 @@ public func u(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -12220,8 +12080,7 @@ public func ul(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -12301,8 +12160,7 @@ public func `var`(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -12404,8 +12262,7 @@ public func video(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -12496,8 +12353,7 @@ public func wbr(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
@@ -12577,8 +12433,7 @@ public func xmp(
     customData: [String: String] = [:],
     classes classList: String...,
     @NodeBuilder children: () -> NodeBuilderComponent = { [] }
-    ) -> Node {
-
+) -> Node {
     let attributes = [
         "accesskey": accesskey,
         "autocapitalize": autocapitalize,
