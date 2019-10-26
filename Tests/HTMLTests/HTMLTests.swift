@@ -35,6 +35,52 @@ final class HTMLTests: XCTestCase {
         XCTAssertTrue(String(describing: root).contains("Hello World!"))
     }
 
+    func testIfBlock() {
+        let root = html {
+            h1 { "Test:" }
+
+            if 2 == 2 {
+                p { "Success" }
+            }
+        }
+
+        XCTAssertTrue(String(describing: root).contains("Success"))
+    }
+
+    func testElseBlock() {
+        let one = 1
+
+        let root = html {
+            h1 { "Test:" }
+
+            if one == 2 {
+                p { "Failure" }
+            } else {
+                p { "Success" }
+            }
+        }
+
+        XCTAssertTrue(String(describing: root).contains("Success"))
+    }
+
+    func testElseIfBlock() {
+        let one = 1
+
+        let root = html {
+            h1 { "Test:" }
+
+            if one == 2 {
+                p { "Failure" }
+            } else if one == 1 {
+                p { "Success" }
+            } else {
+                p { "Failure" }
+            }
+        }
+
+        XCTAssertTrue(String(describing: root).contains("Success"))
+    }
+
     func testWhitespaceTrimming() {
         func XCTAssertComponents(_ node: Node, _ components: String..., message: @autoclosure () -> String = "", file: StaticString = #file, line: UInt = #line) {
             let splitByWhitespace = String(describing: node)

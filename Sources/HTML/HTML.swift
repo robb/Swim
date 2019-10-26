@@ -129,11 +129,19 @@ public struct Text: Node {
 @_functionBuilder
 public struct NodeBuilder {
     public static func buildBlock(_ components: NodeBuilderComponent...) -> [Node] {
-        return components.flatMap { $0.asNodeArray }
+        components.flatMap { $0.asNodeArray }
     }
 
-    public static func buildIf(_ component: NodeBuilderComponent?...) -> [Node] {
-        return component.flatMap { $0?.asNodeArray ?? [] }
+    public static func buildIf(_ component: NodeBuilderComponent?) -> [Node] {
+        component.asNodeArray
+    }
+
+    public static func buildEither(first: NodeBuilderComponent) -> [Node] {
+        first.asNodeArray
+    }
+
+    public static func buildEither(second: NodeBuilderComponent) -> [Node] {
+        second.asNodeArray
     }
 }
 
@@ -144,6 +152,12 @@ public protocol NodeBuilderComponent {
 extension Array: NodeBuilderComponent where Element == Node {
     public var asNodeArray: [Node] {
         self
+    }
+}
+
+extension Optional: NodeBuilderComponent where Wrapped == NodeBuilderComponent {
+    public var asNodeArray: [Node] {
+        map { $0.asNodeArray } ?? []
     }
 }
 
