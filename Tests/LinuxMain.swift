@@ -3,5 +3,6 @@ import XCTest
 import HTMLTests
 
 var tests = [XCTestCaseEntry]()
-tests += HTMLTests.allTests()
+tests += HTMLTests.__allTests()
+
 XCTMain(tests)

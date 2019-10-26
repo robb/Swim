@@ -134,8 +134,4 @@ final class HTMLTests: XCTestCase {
 
         XCTAssertComponents(textMode, "<div>", "<p><span><mark>Test</mark></span></p>", "</div>")
     }
-
-    static var allTests = [
-        ("testExample", testExample),
-    ]
 }
