@@ -2,41 +2,27 @@ import Foundation
 
 infix operator %% : AdditionPrecedence
 
-public func %% (lhs: NodeBuilderComponent, rhs: NodeBuilderComponent) -> NodeBuilderComponent {
-    var l = lhs.asNodeArray
-    var r = rhs.asNodeArray
-
-    if !l.isEmpty {
-        l[l.endIndex - 1].trimMode.insert(.trailingSibling)
+public func %% (lhs: Node, rhs: Node) -> Node {
+    switch (lhs, rhs) {
+    case (.trim, .trim):
+        return .trim
+    default:
+        return .fragment(children: [ lhs, .trim, rhs ])
     }
-
-    if !r.isEmpty {
-        r[0].trimMode.insert(.leadingSibling)
-    }
-
-    return l + r
 }
 
 prefix operator %
 
-public prefix func % (node: NodeBuilderComponent) -> NodeBuilderComponent {
-    var n = node.asNodeArray
+public prefix func % (node: Node) -> Node {
+    guard node != .trim else { return .trim }
 
-    if !n.isEmpty {
-        n[0].trimMode.insert(.leadingParent)
-    }
-
-    return n
+    return .fragment(children: [ .trim, node ])
 }
 
 postfix operator %
 
-public postfix func % (node: NodeBuilderComponent) -> NodeBuilderComponent {
-    var n = node.asNodeArray
+public postfix func % (node: Node) -> Node {
+    guard node != .trim else { return .trim }
 
-    if !n.isEmpty {
-        n[0].trimMode.insert(.trailingParent)
-    }
-
-    return n
+    return .fragment(children: [ node, .trim ])
 }

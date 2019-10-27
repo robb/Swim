@@ -81,47 +81,49 @@ final class HTMLTests: XCTestCase {
         XCTAssertTrue(String(describing: root).contains("Success"))
     }
 
-    func testWhitespaceTrimming() {
-        func XCTAssertComponents(_ node: Node, _ components: String..., message: @autoclosure () -> String = "", file: StaticString = #file, line: UInt = #line) {
-            let splitByWhitespace = String(describing: node)
-                .split { $0.isWhitespace }
-                .map(String.init)
-
-            XCTAssertEqual(splitByWhitespace, components, message(), file: file, line: line)
-        }
-
+    func testAllWhitespaceTrimming() {
         let all = p {
             %div { %"Hallo Welt"% }%
         }
 
         XCTAssertComponents(all, "<p><div>Hallo", "Welt</div></p>")
+    }
 
+    func testLeadingWhitespaceTrimming() {
         let leading = p {
             %div { %"Hallo Welt" }
         }
 
         XCTAssertComponents(leading, "<p><div>Hallo", "Welt", "</div>", "</p>")
+    }
 
+    func testTrailingWhitespaceTrimming() {
         let trailing = p {
             div { "Hallo Welt"% }%
         }
 
         XCTAssertComponents(trailing, "<p>", "<div>", "Hallo", "Welt</div></p>")
+    }
 
+    func testNoWhitespaceTrimming() {
         let none = p {
             div { "Hallo Welt" }
         }
 
         XCTAssertComponents(none, "<p>", "<div>", "Hallo", "Welt", "</div>", "</p>")
+    }
 
+    func testInfixWhitespaceTrimming() {
         let infix = p {
             div { "H" %% "allo" %% "Welt" }
-            %%
-            div { "Hallo" %% "Wel" %% "t" }
+                %%
+                div { "Hallo" %% "Wel" %% "t" }
         }
 
         XCTAssertComponents(infix, "<p>", "<div>", "HalloWelt", "</div><div>", "HalloWelt", "</div>", "</p>")
+    }
 
+    func testImplicitWhitespaceTrimming() {
         let textMode = div {
             p {
                 span {
@@ -132,6 +134,14 @@ final class HTMLTests: XCTestCase {
             }
         }
 
-        XCTAssertComponents(textMode, "<div>", "<p><span><mark>Test</mark></span></p>", "</div>")
+        XCTAssertComponents(textMode, "<div>", "<p>", "<span><mark>Test</mark></span>", "</p>", "</div>")
     }
+}
+
+func XCTAssertComponents(_ node: Node, _ components: String..., message: @autoclosure () -> String = "", file: StaticString = #file, line: UInt = #line) {
+    let splitByWhitespace = String(describing: node)
+        .split { $0.isWhitespace }
+        .map(String.init)
+
+    XCTAssertEqual(splitByWhitespace, components, message(), file: file, line: line)
 }

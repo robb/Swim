@@ -60,7 +60,7 @@ public func a(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -102,7 +102,7 @@ public func a(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "a", attributes: combined, children: children().asNodeArray)
+    return .element(name: "a", attributes: combined, child: children().asNode())
 }
 
 /// abbr
@@ -149,7 +149,7 @@ public func abbr(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -182,7 +182,7 @@ public func abbr(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "abbr", attributes: combined, children: children().asNodeArray)
+    return .element(name: "abbr", attributes: combined, child: children().asNode())
 }
 
 /// acronym
@@ -229,7 +229,7 @@ public func acronym(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -262,7 +262,7 @@ public func acronym(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "acronym", attributes: combined, children: children().asNodeArray)
+    return .element(name: "acronym", attributes: combined, child: children().asNode())
 }
 
 /// address
@@ -309,7 +309,7 @@ public func address(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -342,7 +342,7 @@ public func address(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "address", attributes: combined, children: children().asNodeArray)
+    return .element(name: "address", attributes: combined, child: children().asNode())
 }
 
 /// applet
@@ -397,7 +397,7 @@ public func applet(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -434,7 +434,7 @@ public func applet(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "applet", attributes: combined, children: children().asNodeArray)
+    return .element(name: "applet", attributes: combined, child: children().asNode())
 }
 
 /// area
@@ -503,7 +503,7 @@ public func area(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -547,7 +547,7 @@ public func area(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "area", attributes: combined, children: children().asNodeArray)
+    return .element(name: "area", attributes: combined, child: children().asNode())
 }
 
 /// article
@@ -594,7 +594,7 @@ public func article(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -627,7 +627,7 @@ public func article(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "article", attributes: combined, children: children().asNodeArray)
+    return .element(name: "article", attributes: combined, child: children().asNode())
 }
 
 /// aside
@@ -674,7 +674,7 @@ public func aside(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -707,7 +707,7 @@ public func aside(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "aside", attributes: combined, children: children().asNodeArray)
+    return .element(name: "aside", attributes: combined, child: children().asNode())
 }
 
 /// audio
@@ -770,7 +770,7 @@ public func audio(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -811,7 +811,7 @@ public func audio(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "audio", attributes: combined, children: children().asNodeArray)
+    return .element(name: "audio", attributes: combined, child: children().asNode())
 }
 
 /// b
@@ -858,7 +858,7 @@ public func b(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -891,7 +891,7 @@ public func b(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "b", attributes: combined, children: children().asNodeArray)
+    return .element(name: "b", attributes: combined, child: children().asNode())
 }
 
 /// base
@@ -942,7 +942,7 @@ public func base(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -977,7 +977,7 @@ public func base(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "base", attributes: combined, children: children().asNodeArray)
+    return .element(name: "base", attributes: combined, child: children().asNode())
 }
 
 /// basefont
@@ -1026,7 +1026,7 @@ public func basefont(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -1060,7 +1060,7 @@ public func basefont(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "basefont", attributes: combined, children: children().asNodeArray)
+    return .element(name: "basefont", attributes: combined, child: children().asNode())
 }
 
 /// bdi
@@ -1107,7 +1107,7 @@ public func bdi(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -1140,7 +1140,7 @@ public func bdi(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "bdi", attributes: combined, children: children().asNodeArray)
+    return .element(name: "bdi", attributes: combined, child: children().asNode())
 }
 
 /// bdo
@@ -1187,7 +1187,7 @@ public func bdo(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -1220,7 +1220,7 @@ public func bdo(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "bdo", attributes: combined, children: children().asNodeArray)
+    return .element(name: "bdo", attributes: combined, child: children().asNode())
 }
 
 /// bgsound
@@ -1269,7 +1269,7 @@ public func bgsound(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -1303,7 +1303,7 @@ public func bgsound(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "bgsound", attributes: combined, children: children().asNodeArray)
+    return .element(name: "bgsound", attributes: combined, child: children().asNode())
 }
 
 /// big
@@ -1350,7 +1350,7 @@ public func big(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -1383,7 +1383,7 @@ public func big(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "big", attributes: combined, children: children().asNodeArray)
+    return .element(name: "big", attributes: combined, child: children().asNode())
 }
 
 /// blink
@@ -1430,7 +1430,7 @@ public func blink(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -1463,7 +1463,7 @@ public func blink(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "blink", attributes: combined, children: children().asNodeArray)
+    return .element(name: "blink", attributes: combined, child: children().asNode())
 }
 
 /// blockquote
@@ -1512,7 +1512,7 @@ public func blockquote(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -1546,7 +1546,7 @@ public func blockquote(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "blockquote", attributes: combined, children: children().asNodeArray)
+    return .element(name: "blockquote", attributes: combined, child: children().asNode())
 }
 
 /// body
@@ -1597,7 +1597,7 @@ public func body(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -1632,7 +1632,7 @@ public func body(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "body", attributes: combined, children: children().asNodeArray)
+    return .element(name: "body", attributes: combined, child: children().asNode())
 }
 
 /// br
@@ -1679,7 +1679,7 @@ public func br(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -1712,7 +1712,7 @@ public func br(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "br", attributes: combined, children: children().asNodeArray)
+    return .element(name: "br", attributes: combined, child: children().asNode())
 }
 
 /// button
@@ -1781,7 +1781,7 @@ public func button(
     value: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -1825,7 +1825,7 @@ public func button(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "button", attributes: combined, children: children().asNodeArray)
+    return .element(name: "button", attributes: combined, child: children().asNode())
 }
 
 /// canvas
@@ -1876,7 +1876,7 @@ public func canvas(
     width: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -1911,7 +1911,7 @@ public func canvas(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "canvas", attributes: combined, children: children().asNodeArray)
+    return .element(name: "canvas", attributes: combined, child: children().asNode())
 }
 
 /// caption
@@ -1960,7 +1960,7 @@ public func caption(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -1994,7 +1994,7 @@ public func caption(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "caption", attributes: combined, children: children().asNodeArray)
+    return .element(name: "caption", attributes: combined, child: children().asNode())
 }
 
 /// center
@@ -2041,7 +2041,7 @@ public func center(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -2074,7 +2074,7 @@ public func center(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "center", attributes: combined, children: children().asNodeArray)
+    return .element(name: "center", attributes: combined, child: children().asNode())
 }
 
 /// cite
@@ -2121,7 +2121,7 @@ public func cite(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -2154,7 +2154,7 @@ public func cite(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "cite", attributes: combined, children: children().asNodeArray)
+    return .element(name: "cite", attributes: combined, child: children().asNode())
 }
 
 /// code
@@ -2201,7 +2201,7 @@ public func code(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -2234,7 +2234,7 @@ public func code(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "code", attributes: combined, children: children().asNodeArray)
+    return .element(name: "code", attributes: combined, child: children().asNode())
 }
 
 /// col
@@ -2287,7 +2287,7 @@ public func col(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -2323,7 +2323,7 @@ public func col(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "col", attributes: combined, children: children().asNodeArray)
+    return .element(name: "col", attributes: combined, child: children().asNode())
 }
 
 /// colgroup
@@ -2376,7 +2376,7 @@ public func colgroup(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -2412,7 +2412,7 @@ public func colgroup(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "colgroup", attributes: combined, children: children().asNodeArray)
+    return .element(name: "colgroup", attributes: combined, child: children().asNode())
 }
 
 /// command
@@ -2469,7 +2469,7 @@ public func command(
     type: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -2507,7 +2507,7 @@ public func command(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "command", attributes: combined, children: children().asNodeArray)
+    return .element(name: "command", attributes: combined, child: children().asNode())
 }
 
 /// content
@@ -2554,7 +2554,7 @@ public func content(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -2587,7 +2587,7 @@ public func content(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "content", attributes: combined, children: children().asNodeArray)
+    return .element(name: "content", attributes: combined, child: children().asNode())
 }
 
 /// data
@@ -2636,7 +2636,7 @@ public func data(
     value: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -2670,7 +2670,7 @@ public func data(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "data", attributes: combined, children: children().asNodeArray)
+    return .element(name: "data", attributes: combined, child: children().asNode())
 }
 
 /// datalist
@@ -2717,7 +2717,7 @@ public func datalist(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -2750,7 +2750,7 @@ public func datalist(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "datalist", attributes: combined, children: children().asNodeArray)
+    return .element(name: "datalist", attributes: combined, child: children().asNode())
 }
 
 /// dd
@@ -2797,7 +2797,7 @@ public func dd(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -2830,7 +2830,7 @@ public func dd(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "dd", attributes: combined, children: children().asNodeArray)
+    return .element(name: "dd", attributes: combined, child: children().asNode())
 }
 
 /// del
@@ -2881,7 +2881,7 @@ public func del(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -2916,7 +2916,7 @@ public func del(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "del", attributes: combined, children: children().asNodeArray)
+    return .element(name: "del", attributes: combined, child: children().asNode())
 }
 
 /// details
@@ -2965,7 +2965,7 @@ public func details(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -2999,7 +2999,7 @@ public func details(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "details", attributes: combined, children: children().asNodeArray)
+    return .element(name: "details", attributes: combined, child: children().asNode())
 }
 
 /// dfn
@@ -3046,7 +3046,7 @@ public func dfn(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -3079,7 +3079,7 @@ public func dfn(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "dfn", attributes: combined, children: children().asNodeArray)
+    return .element(name: "dfn", attributes: combined, child: children().asNode())
 }
 
 /// dialog
@@ -3126,7 +3126,7 @@ public func dialog(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -3159,7 +3159,7 @@ public func dialog(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "dialog", attributes: combined, children: children().asNodeArray)
+    return .element(name: "dialog", attributes: combined, child: children().asNode())
 }
 
 /// dir
@@ -3206,7 +3206,7 @@ public func dir(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -3239,7 +3239,7 @@ public func dir(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "dir", attributes: combined, children: children().asNodeArray)
+    return .element(name: "dir", attributes: combined, child: children().asNode())
 }
 
 /// div
@@ -3286,7 +3286,7 @@ public func div(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -3319,7 +3319,7 @@ public func div(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "div", attributes: combined, children: children().asNodeArray)
+    return .element(name: "div", attributes: combined, child: children().asNode())
 }
 
 /// dl
@@ -3366,7 +3366,7 @@ public func dl(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -3399,7 +3399,7 @@ public func dl(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "dl", attributes: combined, children: children().asNodeArray)
+    return .element(name: "dl", attributes: combined, child: children().asNode())
 }
 
 /// dt
@@ -3446,7 +3446,7 @@ public func dt(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -3479,7 +3479,7 @@ public func dt(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "dt", attributes: combined, children: children().asNodeArray)
+    return .element(name: "dt", attributes: combined, child: children().asNode())
 }
 
 /// element
@@ -3526,7 +3526,7 @@ public func element(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -3559,7 +3559,7 @@ public func element(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "element", attributes: combined, children: children().asNodeArray)
+    return .element(name: "element", attributes: combined, child: children().asNode())
 }
 
 /// em
@@ -3606,7 +3606,7 @@ public func em(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -3639,7 +3639,7 @@ public func em(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "em", attributes: combined, children: children().asNodeArray)
+    return .element(name: "em", attributes: combined, child: children().asNode())
 }
 
 /// embed
@@ -3694,7 +3694,7 @@ public func embed(
     width: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -3731,7 +3731,7 @@ public func embed(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "embed", attributes: combined, children: children().asNodeArray)
+    return .element(name: "embed", attributes: combined, child: children().asNode())
 }
 
 /// fieldset
@@ -3784,7 +3784,7 @@ public func fieldset(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -3820,7 +3820,7 @@ public func fieldset(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "fieldset", attributes: combined, children: children().asNodeArray)
+    return .element(name: "fieldset", attributes: combined, child: children().asNode())
 }
 
 /// figcaption
@@ -3867,7 +3867,7 @@ public func figcaption(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -3900,7 +3900,7 @@ public func figcaption(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "figcaption", attributes: combined, children: children().asNodeArray)
+    return .element(name: "figcaption", attributes: combined, child: children().asNode())
 }
 
 /// figure
@@ -3947,7 +3947,7 @@ public func figure(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -3980,7 +3980,7 @@ public func figure(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "figure", attributes: combined, children: children().asNodeArray)
+    return .element(name: "figure", attributes: combined, child: children().asNode())
 }
 
 /// font
@@ -4029,7 +4029,7 @@ public func font(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -4063,7 +4063,7 @@ public func font(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "font", attributes: combined, children: children().asNodeArray)
+    return .element(name: "font", attributes: combined, child: children().asNode())
 }
 
 /// footer
@@ -4110,7 +4110,7 @@ public func footer(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -4143,7 +4143,7 @@ public func footer(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "footer", attributes: combined, children: children().asNodeArray)
+    return .element(name: "footer", attributes: combined, child: children().asNode())
 }
 
 /// form
@@ -4208,7 +4208,7 @@ public func form(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accept": accept,
@@ -4250,7 +4250,7 @@ public func form(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "form", attributes: combined, children: children().asNodeArray)
+    return .element(name: "form", attributes: combined, child: children().asNode())
 }
 
 /// frame
@@ -4297,7 +4297,7 @@ public func frame(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -4330,7 +4330,7 @@ public func frame(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "frame", attributes: combined, children: children().asNodeArray)
+    return .element(name: "frame", attributes: combined, child: children().asNode())
 }
 
 /// frameset
@@ -4377,7 +4377,7 @@ public func frameset(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -4410,7 +4410,7 @@ public func frameset(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "frameset", attributes: combined, children: children().asNodeArray)
+    return .element(name: "frameset", attributes: combined, child: children().asNode())
 }
 
 /// h1
@@ -4457,7 +4457,7 @@ public func h1(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -4490,7 +4490,7 @@ public func h1(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "h1", attributes: combined, children: children().asNodeArray)
+    return .element(name: "h1", attributes: combined, child: children().asNode())
 }
 
 /// h2
@@ -4537,7 +4537,7 @@ public func h2(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -4570,7 +4570,7 @@ public func h2(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "h2", attributes: combined, children: children().asNodeArray)
+    return .element(name: "h2", attributes: combined, child: children().asNode())
 }
 
 /// h3
@@ -4617,7 +4617,7 @@ public func h3(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -4650,7 +4650,7 @@ public func h3(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "h3", attributes: combined, children: children().asNodeArray)
+    return .element(name: "h3", attributes: combined, child: children().asNode())
 }
 
 /// h4
@@ -4697,7 +4697,7 @@ public func h4(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -4730,7 +4730,7 @@ public func h4(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "h4", attributes: combined, children: children().asNodeArray)
+    return .element(name: "h4", attributes: combined, child: children().asNode())
 }
 
 /// h5
@@ -4777,7 +4777,7 @@ public func h5(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -4810,7 +4810,7 @@ public func h5(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "h5", attributes: combined, children: children().asNodeArray)
+    return .element(name: "h5", attributes: combined, child: children().asNode())
 }
 
 /// h6
@@ -4857,7 +4857,7 @@ public func h6(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -4890,7 +4890,7 @@ public func h6(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "h6", attributes: combined, children: children().asNodeArray)
+    return .element(name: "h6", attributes: combined, child: children().asNode())
 }
 
 /// head
@@ -4937,7 +4937,7 @@ public func head(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -4970,7 +4970,7 @@ public func head(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "head", attributes: combined, children: children().asNodeArray)
+    return .element(name: "head", attributes: combined, child: children().asNode())
 }
 
 /// header
@@ -5017,7 +5017,7 @@ public func header(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -5050,7 +5050,7 @@ public func header(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "header", attributes: combined, children: children().asNodeArray)
+    return .element(name: "header", attributes: combined, child: children().asNode())
 }
 
 /// hgroup
@@ -5097,7 +5097,7 @@ public func hgroup(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -5130,7 +5130,7 @@ public func hgroup(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "hgroup", attributes: combined, children: children().asNodeArray)
+    return .element(name: "hgroup", attributes: combined, child: children().asNode())
 }
 
 /// hr
@@ -5181,7 +5181,7 @@ public func hr(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -5216,7 +5216,7 @@ public func hr(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "hr", attributes: combined, children: children().asNodeArray)
+    return .element(name: "hr", attributes: combined, child: children().asNode())
 }
 
 /// html
@@ -5265,7 +5265,7 @@ public func html(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -5299,7 +5299,7 @@ public func html(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "html", attributes: combined, children: children().asNodeArray)
+    return .element(name: "html", attributes: combined, child: children().asNode())
 }
 
 /// i
@@ -5346,7 +5346,7 @@ public func i(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -5379,7 +5379,7 @@ public func i(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "i", attributes: combined, children: children().asNodeArray)
+    return .element(name: "i", attributes: combined, child: children().asNode())
 }
 
 /// iframe
@@ -5450,7 +5450,7 @@ public func iframe(
     width: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -5495,7 +5495,7 @@ public func iframe(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "iframe", attributes: combined, children: children().asNodeArray)
+    return .element(name: "iframe", attributes: combined, child: children().asNode())
 }
 
 /// image
@@ -5542,7 +5542,7 @@ public func image(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -5575,7 +5575,7 @@ public func image(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "image", attributes: combined, children: children().asNodeArray)
+    return .element(name: "image", attributes: combined, child: children().asNode())
 }
 
 /// img
@@ -5654,7 +5654,7 @@ public func img(
     width: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -5703,7 +5703,7 @@ public func img(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "img", attributes: combined, children: children().asNodeArray)
+    return .element(name: "img", attributes: combined, child: children().asNode())
 }
 
 /// input
@@ -5814,7 +5814,7 @@ public func input(
     width: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accept": accept,
@@ -5879,7 +5879,7 @@ public func input(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "input", attributes: combined, children: children().asNodeArray)
+    return .element(name: "input", attributes: combined, child: children().asNode())
 }
 
 /// ins
@@ -5930,7 +5930,7 @@ public func ins(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -5965,7 +5965,7 @@ public func ins(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "ins", attributes: combined, children: children().asNodeArray)
+    return .element(name: "ins", attributes: combined, child: children().asNode())
 }
 
 /// isindex
@@ -6012,7 +6012,7 @@ public func isindex(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -6045,7 +6045,7 @@ public func isindex(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "isindex", attributes: combined, children: children().asNodeArray)
+    return .element(name: "isindex", attributes: combined, child: children().asNode())
 }
 
 /// kbd
@@ -6092,7 +6092,7 @@ public func kbd(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -6125,7 +6125,7 @@ public func kbd(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "kbd", attributes: combined, children: children().asNodeArray)
+    return .element(name: "kbd", attributes: combined, child: children().asNode())
 }
 
 /// keygen
@@ -6184,7 +6184,7 @@ public func keygen(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -6223,7 +6223,7 @@ public func keygen(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "keygen", attributes: combined, children: children().asNodeArray)
+    return .element(name: "keygen", attributes: combined, child: children().asNode())
 }
 
 /// label
@@ -6274,7 +6274,7 @@ public func label(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -6309,7 +6309,7 @@ public func label(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "label", attributes: combined, children: children().asNodeArray)
+    return .element(name: "label", attributes: combined, child: children().asNode())
 }
 
 /// legend
@@ -6356,7 +6356,7 @@ public func legend(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -6389,7 +6389,7 @@ public func legend(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "legend", attributes: combined, children: children().asNodeArray)
+    return .element(name: "legend", attributes: combined, child: children().asNode())
 }
 
 /// li
@@ -6438,7 +6438,7 @@ public func li(
     value: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -6472,7 +6472,7 @@ public func li(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "li", attributes: combined, children: children().asNodeArray)
+    return .element(name: "li", attributes: combined, child: children().asNode())
 }
 
 /// link
@@ -6537,7 +6537,7 @@ public func link(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -6579,7 +6579,7 @@ public func link(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "link", attributes: combined, children: children().asNodeArray)
+    return .element(name: "link", attributes: combined, child: children().asNode())
 }
 
 /// listing
@@ -6626,7 +6626,7 @@ public func listing(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -6659,7 +6659,7 @@ public func listing(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "listing", attributes: combined, children: children().asNodeArray)
+    return .element(name: "listing", attributes: combined, child: children().asNode())
 }
 
 /// main
@@ -6706,7 +6706,7 @@ public func main(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -6739,7 +6739,7 @@ public func main(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "main", attributes: combined, children: children().asNodeArray)
+    return .element(name: "main", attributes: combined, child: children().asNode())
 }
 
 /// map
@@ -6788,7 +6788,7 @@ public func map(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -6822,7 +6822,7 @@ public func map(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "map", attributes: combined, children: children().asNodeArray)
+    return .element(name: "map", attributes: combined, child: children().asNode())
 }
 
 /// mark
@@ -6869,7 +6869,7 @@ public func mark(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -6902,7 +6902,7 @@ public func mark(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "mark", attributes: combined, children: children().asNodeArray)
+    return .element(name: "mark", attributes: combined, child: children().asNode())
 }
 
 /// marquee
@@ -6953,7 +6953,7 @@ public func marquee(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -6988,7 +6988,7 @@ public func marquee(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "marquee", attributes: combined, children: children().asNodeArray)
+    return .element(name: "marquee", attributes: combined, child: children().asNode())
 }
 
 /// menu
@@ -7037,7 +7037,7 @@ public func menu(
     type: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -7071,7 +7071,7 @@ public func menu(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "menu", attributes: combined, children: children().asNodeArray)
+    return .element(name: "menu", attributes: combined, child: children().asNode())
 }
 
 /// menuitem
@@ -7118,7 +7118,7 @@ public func menuitem(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -7151,7 +7151,7 @@ public func menuitem(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "menuitem", attributes: combined, children: children().asNodeArray)
+    return .element(name: "menuitem", attributes: combined, child: children().asNode())
 }
 
 /// meta
@@ -7206,7 +7206,7 @@ public func meta(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -7243,7 +7243,7 @@ public func meta(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "meta", attributes: combined, children: children().asNodeArray)
+    return .element(name: "meta", attributes: combined, child: children().asNode())
 }
 
 /// meter
@@ -7304,7 +7304,7 @@ public func meter(
     value: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -7344,7 +7344,7 @@ public func meter(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "meter", attributes: combined, children: children().asNodeArray)
+    return .element(name: "meter", attributes: combined, child: children().asNode())
 }
 
 /// multicol
@@ -7391,7 +7391,7 @@ public func multicol(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -7424,7 +7424,7 @@ public func multicol(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "multicol", attributes: combined, children: children().asNodeArray)
+    return .element(name: "multicol", attributes: combined, child: children().asNode())
 }
 
 /// nav
@@ -7471,7 +7471,7 @@ public func nav(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -7504,7 +7504,7 @@ public func nav(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "nav", attributes: combined, children: children().asNodeArray)
+    return .element(name: "nav", attributes: combined, child: children().asNode())
 }
 
 /// nextid
@@ -7551,7 +7551,7 @@ public func nextid(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -7584,7 +7584,7 @@ public func nextid(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "nextid", attributes: combined, children: children().asNodeArray)
+    return .element(name: "nextid", attributes: combined, child: children().asNode())
 }
 
 /// nobr
@@ -7631,7 +7631,7 @@ public func nobr(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -7664,7 +7664,7 @@ public func nobr(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "nobr", attributes: combined, children: children().asNodeArray)
+    return .element(name: "nobr", attributes: combined, child: children().asNode())
 }
 
 /// noembed
@@ -7711,7 +7711,7 @@ public func noembed(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -7744,7 +7744,7 @@ public func noembed(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "noembed", attributes: combined, children: children().asNodeArray)
+    return .element(name: "noembed", attributes: combined, child: children().asNode())
 }
 
 /// noframes
@@ -7791,7 +7791,7 @@ public func noframes(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -7824,7 +7824,7 @@ public func noframes(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "noframes", attributes: combined, children: children().asNodeArray)
+    return .element(name: "noframes", attributes: combined, child: children().asNode())
 }
 
 /// noscript
@@ -7871,7 +7871,7 @@ public func noscript(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -7904,7 +7904,7 @@ public func noscript(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "noscript", attributes: combined, children: children().asNodeArray)
+    return .element(name: "noscript", attributes: combined, child: children().asNode())
 }
 
 /// object
@@ -7967,7 +7967,7 @@ public func object(
     width: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -8008,7 +8008,7 @@ public func object(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "object", attributes: combined, children: children().asNodeArray)
+    return .element(name: "object", attributes: combined, child: children().asNode())
 }
 
 /// ol
@@ -8059,7 +8059,7 @@ public func ol(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -8094,7 +8094,7 @@ public func ol(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "ol", attributes: combined, children: children().asNodeArray)
+    return .element(name: "ol", attributes: combined, child: children().asNode())
 }
 
 /// optgroup
@@ -8143,7 +8143,7 @@ public func optgroup(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -8177,7 +8177,7 @@ public func optgroup(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "optgroup", attributes: combined, children: children().asNodeArray)
+    return .element(name: "optgroup", attributes: combined, child: children().asNode())
 }
 
 /// option
@@ -8230,7 +8230,7 @@ public func option(
     value: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -8266,7 +8266,7 @@ public func option(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "option", attributes: combined, children: children().asNodeArray)
+    return .element(name: "option", attributes: combined, child: children().asNode())
 }
 
 /// output
@@ -8319,7 +8319,7 @@ public func output(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -8355,7 +8355,7 @@ public func output(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "output", attributes: combined, children: children().asNodeArray)
+    return .element(name: "output", attributes: combined, child: children().asNode())
 }
 
 /// p
@@ -8402,7 +8402,7 @@ public func p(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -8435,7 +8435,7 @@ public func p(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "p", attributes: combined, children: children().asNodeArray)
+    return .element(name: "p", attributes: combined, child: children().asNode())
 }
 
 /// param
@@ -8486,7 +8486,7 @@ public func param(
     value: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -8521,7 +8521,7 @@ public func param(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "param", attributes: combined, children: children().asNodeArray)
+    return .element(name: "param", attributes: combined, child: children().asNode())
 }
 
 /// picture
@@ -8568,7 +8568,7 @@ public func picture(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -8601,7 +8601,7 @@ public func picture(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "picture", attributes: combined, children: children().asNodeArray)
+    return .element(name: "picture", attributes: combined, child: children().asNode())
 }
 
 /// plaintext
@@ -8648,7 +8648,7 @@ public func plaintext(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -8681,7 +8681,7 @@ public func plaintext(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "plaintext", attributes: combined, children: children().asNodeArray)
+    return .element(name: "plaintext", attributes: combined, child: children().asNode())
 }
 
 /// pre
@@ -8728,7 +8728,7 @@ public func pre(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -8761,7 +8761,7 @@ public func pre(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "pre", attributes: combined, children: children().asNodeArray)
+    return .element(name: "pre", attributes: combined, child: children().asNode())
 }
 
 /// progress
@@ -8814,7 +8814,7 @@ public func progress(
     value: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -8850,7 +8850,7 @@ public func progress(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "progress", attributes: combined, children: children().asNodeArray)
+    return .element(name: "progress", attributes: combined, child: children().asNode())
 }
 
 /// q
@@ -8899,7 +8899,7 @@ public func q(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -8933,7 +8933,7 @@ public func q(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "q", attributes: combined, children: children().asNodeArray)
+    return .element(name: "q", attributes: combined, child: children().asNode())
 }
 
 /// rb
@@ -8980,7 +8980,7 @@ public func rb(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -9013,7 +9013,7 @@ public func rb(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "rb", attributes: combined, children: children().asNodeArray)
+    return .element(name: "rb", attributes: combined, child: children().asNode())
 }
 
 /// rp
@@ -9060,7 +9060,7 @@ public func rp(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -9093,7 +9093,7 @@ public func rp(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "rp", attributes: combined, children: children().asNodeArray)
+    return .element(name: "rp", attributes: combined, child: children().asNode())
 }
 
 /// rt
@@ -9140,7 +9140,7 @@ public func rt(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -9173,7 +9173,7 @@ public func rt(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "rt", attributes: combined, children: children().asNodeArray)
+    return .element(name: "rt", attributes: combined, child: children().asNode())
 }
 
 /// rtc
@@ -9220,7 +9220,7 @@ public func rtc(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -9253,7 +9253,7 @@ public func rtc(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "rtc", attributes: combined, children: children().asNodeArray)
+    return .element(name: "rtc", attributes: combined, child: children().asNode())
 }
 
 /// ruby
@@ -9300,7 +9300,7 @@ public func ruby(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -9333,7 +9333,7 @@ public func ruby(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "ruby", attributes: combined, children: children().asNodeArray)
+    return .element(name: "ruby", attributes: combined, child: children().asNode())
 }
 
 /// s
@@ -9380,7 +9380,7 @@ public func s(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -9413,7 +9413,7 @@ public func s(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "s", attributes: combined, children: children().asNodeArray)
+    return .element(name: "s", attributes: combined, child: children().asNode())
 }
 
 /// samp
@@ -9460,7 +9460,7 @@ public func samp(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -9493,7 +9493,7 @@ public func samp(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "samp", attributes: combined, children: children().asNodeArray)
+    return .element(name: "samp", attributes: combined, child: children().asNode())
 }
 
 /// script
@@ -9560,7 +9560,7 @@ public func script(
     type: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -9603,7 +9603,7 @@ public func script(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "script", attributes: combined, children: children().asNodeArray)
+    return .element(name: "script", attributes: combined, child: children().asNode())
 }
 
 /// section
@@ -9650,7 +9650,7 @@ public func section(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -9683,7 +9683,7 @@ public func section(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "section", attributes: combined, children: children().asNodeArray)
+    return .element(name: "section", attributes: combined, child: children().asNode())
 }
 
 /// select
@@ -9746,7 +9746,7 @@ public func select(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -9787,7 +9787,7 @@ public func select(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "select", attributes: combined, children: children().asNodeArray)
+    return .element(name: "select", attributes: combined, child: children().asNode())
 }
 
 /// shadow
@@ -9834,7 +9834,7 @@ public func shadow(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -9867,7 +9867,7 @@ public func shadow(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "shadow", attributes: combined, children: children().asNodeArray)
+    return .element(name: "shadow", attributes: combined, child: children().asNode())
 }
 
 /// slot
@@ -9914,7 +9914,7 @@ public func slot(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -9947,7 +9947,7 @@ public func slot(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "slot", attributes: combined, children: children().asNodeArray)
+    return .element(name: "slot", attributes: combined, child: children().asNode())
 }
 
 /// small
@@ -9994,7 +9994,7 @@ public func small(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -10027,7 +10027,7 @@ public func small(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "small", attributes: combined, children: children().asNodeArray)
+    return .element(name: "small", attributes: combined, child: children().asNode())
 }
 
 /// source
@@ -10084,7 +10084,7 @@ public func source(
     type: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -10122,7 +10122,7 @@ public func source(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "source", attributes: combined, children: children().asNodeArray)
+    return .element(name: "source", attributes: combined, child: children().asNode())
 }
 
 /// spacer
@@ -10169,7 +10169,7 @@ public func spacer(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -10202,7 +10202,7 @@ public func spacer(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "spacer", attributes: combined, children: children().asNodeArray)
+    return .element(name: "spacer", attributes: combined, child: children().asNode())
 }
 
 /// span
@@ -10249,7 +10249,7 @@ public func span(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -10282,7 +10282,7 @@ public func span(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "span", attributes: combined, children: children().asNodeArray)
+    return .element(name: "span", attributes: combined, child: children().asNode())
 }
 
 /// strike
@@ -10329,7 +10329,7 @@ public func strike(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -10362,7 +10362,7 @@ public func strike(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "strike", attributes: combined, children: children().asNodeArray)
+    return .element(name: "strike", attributes: combined, child: children().asNode())
 }
 
 /// strong
@@ -10409,7 +10409,7 @@ public func strong(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -10442,7 +10442,7 @@ public func strong(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "strong", attributes: combined, children: children().asNodeArray)
+    return .element(name: "strong", attributes: combined, child: children().asNode())
 }
 
 /// style
@@ -10495,7 +10495,7 @@ public func style(
     type: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -10531,7 +10531,7 @@ public func style(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "style", attributes: combined, children: children().asNodeArray)
+    return .element(name: "style", attributes: combined, child: children().asNode())
 }
 
 /// sub
@@ -10578,7 +10578,7 @@ public func sub(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -10611,7 +10611,7 @@ public func sub(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "sub", attributes: combined, children: children().asNodeArray)
+    return .element(name: "sub", attributes: combined, child: children().asNode())
 }
 
 /// summary
@@ -10658,7 +10658,7 @@ public func summary(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -10691,7 +10691,7 @@ public func summary(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "summary", attributes: combined, children: children().asNodeArray)
+    return .element(name: "summary", attributes: combined, child: children().asNode())
 }
 
 /// sup
@@ -10738,7 +10738,7 @@ public func sup(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -10771,7 +10771,7 @@ public func sup(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "sup", attributes: combined, children: children().asNodeArray)
+    return .element(name: "sup", attributes: combined, child: children().asNode())
 }
 
 /// table
@@ -10828,7 +10828,7 @@ public func table(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -10866,7 +10866,7 @@ public func table(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "table", attributes: combined, children: children().asNodeArray)
+    return .element(name: "table", attributes: combined, child: children().asNode())
 }
 
 /// tbody
@@ -10917,7 +10917,7 @@ public func tbody(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -10952,7 +10952,7 @@ public func tbody(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "tbody", attributes: combined, children: children().asNodeArray)
+    return .element(name: "tbody", attributes: combined, child: children().asNode())
 }
 
 /// td
@@ -11011,7 +11011,7 @@ public func td(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -11050,7 +11050,7 @@ public func td(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "td", attributes: combined, children: children().asNodeArray)
+    return .element(name: "td", attributes: combined, child: children().asNode())
 }
 
 /// template
@@ -11097,7 +11097,7 @@ public func template(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -11130,7 +11130,7 @@ public func template(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "template", attributes: combined, children: children().asNodeArray)
+    return .element(name: "template", attributes: combined, child: children().asNode())
 }
 
 /// textarea
@@ -11209,7 +11209,7 @@ public func textarea(
     wrap: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -11258,7 +11258,7 @@ public func textarea(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "textarea", attributes: combined, children: children().asNodeArray)
+    return .element(name: "textarea", attributes: combined, child: children().asNode())
 }
 
 /// tfoot
@@ -11309,7 +11309,7 @@ public func tfoot(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -11344,7 +11344,7 @@ public func tfoot(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "tfoot", attributes: combined, children: children().asNodeArray)
+    return .element(name: "tfoot", attributes: combined, child: children().asNode())
 }
 
 /// th
@@ -11405,7 +11405,7 @@ public func th(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -11445,7 +11445,7 @@ public func th(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "th", attributes: combined, children: children().asNodeArray)
+    return .element(name: "th", attributes: combined, child: children().asNode())
 }
 
 /// thead
@@ -11494,7 +11494,7 @@ public func thead(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -11528,7 +11528,7 @@ public func thead(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "thead", attributes: combined, children: children().asNodeArray)
+    return .element(name: "thead", attributes: combined, child: children().asNode())
 }
 
 /// time
@@ -11577,7 +11577,7 @@ public func time(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -11611,7 +11611,7 @@ public func time(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "time", attributes: combined, children: children().asNodeArray)
+    return .element(name: "time", attributes: combined, child: children().asNode())
 }
 
 /// title
@@ -11658,7 +11658,7 @@ public func title(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -11691,7 +11691,7 @@ public func title(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "title", attributes: combined, children: children().asNodeArray)
+    return .element(name: "title", attributes: combined, child: children().asNode())
 }
 
 /// tr
@@ -11742,7 +11742,7 @@ public func tr(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -11777,7 +11777,7 @@ public func tr(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "tr", attributes: combined, children: children().asNodeArray)
+    return .element(name: "tr", attributes: combined, child: children().asNode())
 }
 
 /// track
@@ -11834,7 +11834,7 @@ public func track(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -11872,7 +11872,7 @@ public func track(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "track", attributes: combined, children: children().asNodeArray)
+    return .element(name: "track", attributes: combined, child: children().asNode())
 }
 
 /// tt
@@ -11919,7 +11919,7 @@ public func tt(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -11952,7 +11952,7 @@ public func tt(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "tt", attributes: combined, children: children().asNodeArray)
+    return .element(name: "tt", attributes: combined, child: children().asNode())
 }
 
 /// u
@@ -11999,7 +11999,7 @@ public func u(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -12032,7 +12032,7 @@ public func u(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "u", attributes: combined, children: children().asNodeArray)
+    return .element(name: "u", attributes: combined, child: children().asNode())
 }
 
 /// ul
@@ -12079,7 +12079,7 @@ public func ul(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -12112,7 +12112,7 @@ public func ul(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "ul", attributes: combined, children: children().asNodeArray)
+    return .element(name: "ul", attributes: combined, child: children().asNode())
 }
 
 /// var
@@ -12159,7 +12159,7 @@ public func `var`(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -12192,7 +12192,7 @@ public func `var`(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "var", attributes: combined, children: children().asNodeArray)
+    return .element(name: "var", attributes: combined, child: children().asNode())
 }
 
 /// video
@@ -12261,7 +12261,7 @@ public func video(
     width: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -12305,7 +12305,7 @@ public func video(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "video", attributes: combined, children: children().asNodeArray)
+    return .element(name: "video", attributes: combined, child: children().asNode())
 }
 
 /// wbr
@@ -12352,7 +12352,7 @@ public func wbr(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -12385,7 +12385,7 @@ public func wbr(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "wbr", attributes: combined, children: children().asNodeArray)
+    return .element(name: "wbr", attributes: combined, child: children().asNode())
 }
 
 /// xmp
@@ -12432,7 +12432,7 @@ public func xmp(
     translate: String? = nil,
     customData: [String: String] = [:],
     classes classList: String...,
-    @NodeBuilder children: () -> NodeBuilderComponent = { [] }
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
 ) -> Node {
     let attributes = [
         "accesskey": accesskey,
@@ -12465,6 +12465,6 @@ public func xmp(
         combined["data-\(key)"] = value
     }
 
-    return Tag(name: "xmp", attributes: combined, children: children().asNodeArray)
+    return .element(name: "xmp", attributes: combined, child: children().asNode())
 }
 
