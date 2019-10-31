@@ -6,11 +6,18 @@ extension HTMLTests {
     //   `swift test --generate-linuxmain`
     // to regenerate.
     static let __allTests__HTMLTests = [
+        ("testAllWhitespaceTrimming", testAllWhitespaceTrimming),
         ("testElseBlock", testElseBlock),
         ("testElseIfBlock", testElseIfBlock),
         ("testExample", testExample),
         ("testIfBlock", testIfBlock),
-        ("testWhitespaceTrimming", testWhitespaceTrimming),
+        ("testImplicitWhitespaceTrimming", testImplicitWhitespaceTrimming),
+        ("testInfixWhitespaceTrimming", testInfixWhitespaceTrimming),
+        ("testLeadingWhitespaceTrimming", testLeadingWhitespaceTrimming),
+        ("testNoWhitespaceTrimming", testNoWhitespaceTrimming),
+        ("testTrailingWhitespaceTrimming", testTrailingWhitespaceTrimming),
+        ("testVisitorTextExtraction", testVisitorTextExtraction),
+        ("testVisitorUppercase", testVisitorUppercase),
     ]
 }
 
