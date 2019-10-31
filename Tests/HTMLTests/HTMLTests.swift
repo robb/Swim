@@ -136,6 +136,80 @@ final class HTMLTests: XCTestCase {
 
         XCTAssertComponents(textMode, "<div>", "<p>", "<span><mark>Test</mark></span>", "</p>", "</div>")
     }
+
+    func testVisitorUppercase() {
+        struct UppercaseVisitor: Visitor {
+            func visitText(text: String) -> Node {
+                .text(text.uppercased())
+            }
+        }
+
+        let root = body {
+            p {
+                "Hello World!"
+            }
+            p {
+                "This should be uppercased"
+            }
+            p {
+                "Lorem ipsum"
+            }
+        }
+
+        let visitor = UppercaseVisitor()
+
+        let modified = visitor.visitNode(root)
+
+        XCTAssertTrue(String(describing: modified).contains("THIS SHOULD BE UPPERCASED"))
+    }
+
+    func testVisitorTextExtraction() {
+        struct TextExtractionVisitor: Visitor {
+            typealias Result = [String]
+
+            func visitElement(name: String, attributes: [String : String], child: Node) -> [String] {
+                visitNode(child)
+            }
+
+            func visitText(text: String) -> [String] {
+                [ text ]
+            }
+
+            func visitComment(text: String) -> [String] {
+                []
+            }
+
+            func visitDocumentType(name: String) -> [String] {
+                []
+            }
+
+            func visitFragment(children: [Node]) -> [String] {
+                children.flatMap(visitNode)
+            }
+
+            func visitTrim() -> [String] {
+                []
+            }
+        }
+
+        let root = body {
+            p {
+                "Hello World!"
+            }
+            p {
+                "This should be extracted"
+            }
+            p {
+                "Lorem ipsum"
+            }
+        }
+
+        let visitor = TextExtractionVisitor()
+
+        let modified = visitor.visitNode(root)
+
+        XCTAssertEqual(modified, [ "Hello World!", "This should be extracted", "Lorem ipsum" ])
+    }
 }
 
 func XCTAssertComponents(_ node: Node, _ components: String..., message: @autoclosure () -> String = "", file: StaticString = #file, line: UInt = #line) {

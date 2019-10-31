@@ -1,0 +1,64 @@
+import Foundation
+
+public protocol Visitor {
+    associatedtype Result
+
+    func visitElement(name: String, attributes: [String: String], child: Node) -> Result
+
+    func visitText(text: String) -> Result
+
+    func visitComment(text: String) -> Result
+
+    func visitDocumentType(name: String) -> Result
+
+    func visitFragment(children: [Node]) -> Result
+
+    func visitNode(_ node: Node) -> Result
+
+    func visitTrim() -> Result
+}
+
+extension Visitor {
+    func visitNode(_ node: Node) -> Result {
+        switch node {
+        case .element(let name, let attributes, let child):
+            return visitElement(name: name, attributes: attributes, child: child)
+        case .text(let text):
+            return visitText(text: text)
+        case .comment(let text):
+            return visitComment(text: text)
+        case .documentType(let name):
+            return visitDocumentType(name: name)
+        case .fragment(let children):
+            return visitFragment(children: children)
+        case .trim:
+            return visitTrim()
+        }
+    }
+}
+
+extension Visitor where Result == Node {
+    func visitElement(name: String, attributes: [String: String], child: Node) -> Result {
+        .element(name: name, attributes: attributes, child: visitNode(child))
+    }
+
+    func visitText(text: String) -> Result {
+        .text(text)
+    }
+
+    func visitComment(text: String) -> Result {
+        .comment(text)
+    }
+
+    func visitDocumentType(name: String) -> Result {
+        .documentType(name)
+    }
+
+    func visitFragment(children: [Node]) -> Result {
+        .fragment(children: children.map(visitNode))
+    }
+
+    func visitTrim() -> Result {
+        .trim
+    }
+}
