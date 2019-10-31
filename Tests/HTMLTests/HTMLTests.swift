@@ -215,6 +215,7 @@ final class HTMLTests: XCTestCase {
 func XCTAssertComponents(_ node: Node, _ components: String..., message: @autoclosure () -> String = "", file: StaticString = #file, line: UInt = #line) {
     let splitByWhitespace = String(describing: node)
         .split { $0.isWhitespace }
+        .filter { !$0.isEmpty }
         .map(String.init)
 
     XCTAssertEqual(splitByWhitespace, components, message(), file: file, line: line)

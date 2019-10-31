@@ -37,11 +37,12 @@ public enum Node: Equatable {
 extension Node: TextOutputStreamable {
     public func write<Target>(to target: inout Target) where Target : TextOutputStream {
         var flag = false
+        var depth = 0
 
-        write(to: &target, didVisitTrim: &flag)
+        write(to: &target, depth: &depth, didVisitTrim: &flag)
     }
 
-    private func write<Target>(to target: inout Target, didVisitTrim: inout Bool) where Target : TextOutputStream {
+    private func write<Target>(to target: inout Target, depth: inout Int, didVisitTrim: inout Bool) where Target : TextOutputStream {
         defer {
             if !isFragment {
                 didVisitTrim = self == .trim
@@ -52,6 +53,7 @@ extension Node: TextOutputStreamable {
         case let .element(name, attributes, child):
             if !didVisitTrim {
                 target.write("\n")
+                target.write(String(repeating: "\t", count: depth))
             }
 
             target.write("<")
@@ -71,10 +73,14 @@ extension Node: TextOutputStreamable {
                 target.write(">")
 
                 didVisitTrim = false
-                child.write(to: &target, didVisitTrim: &didVisitTrim)
+
+                depth += 1
+                child.write(to: &target, depth: &depth, didVisitTrim: &didVisitTrim)
+                depth -= 1
 
                 if !didVisitTrim {
                     target.write("\n")
+                    target.write(String(repeating: "\t", count: depth))
                 }
 
                 target.write("</")
@@ -84,6 +90,7 @@ extension Node: TextOutputStreamable {
         case let .text(value):
             if !didVisitTrim {
                 target.write("\n")
+                target.write(String(repeating: "\t", count: depth))
             }
 
             target.write(value)
@@ -97,7 +104,7 @@ extension Node: TextOutputStreamable {
             target.write(">")
         case let .fragment(children):
             for child in children {
-                child.write(to: &target, didVisitTrim: &didVisitTrim)
+                child.write(to: &target, depth: &depth, didVisitTrim: &didVisitTrim)
             }
         case .trim:
             break
