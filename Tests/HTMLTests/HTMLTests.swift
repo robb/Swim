@@ -210,6 +210,29 @@ final class HTMLTests: XCTestCase {
 
         XCTAssertEqual(modified, [ "Hello World!", "This should be extracted", "Lorem ipsum" ])
     }
+
+    func testStringNodeConversion() {
+        let text = "Hallo Welt"
+
+        let root = p {
+            text
+            b {
+                [ text, text ]
+            }
+        }
+
+        XCTAssertTrue(String(describing: root).contains(text))
+    }
+
+    func testArrayNodeConversion() {
+        let numbers = [ 1, 2, 3 ]
+
+        let root = p {
+            numbers.map { "\($0)" }
+        }
+
+        XCTAssertTrue(String(describing: root).contains("1"))
+    }
 }
 
 func XCTAssertComponents(_ node: Node, _ components: String..., message: @autoclosure () -> String = "", file: StaticString = #file, line: UInt = #line) {
