@@ -19,7 +19,7 @@ public protocol Visitor {
 }
 
 extension Visitor {
-    func visitNode(_ node: Node) -> Result {
+    public func visitNode(_ node: Node) -> Result {
         switch node {
         case .element(let name, let attributes, let child):
             return visitElement(name: name, attributes: attributes, child: child)
@@ -37,7 +37,7 @@ extension Visitor {
     }
 }
 
-extension Visitor where Result == Node {
+public extension Visitor where Result == Node {
     func visitElement(name: String, attributes: [String: String], child: Node) -> Result {
         .element(name: name, attributes: attributes, child: visitNode(child))
     }
