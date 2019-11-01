@@ -29,11 +29,7 @@ public struct NodeBuilder {
     }
 
     public static func buildIf(_ component: Node?) -> Node {
-        if let component = component {
-            return component
-        } else {
-            return .fragment(children: [])
-        }
+        component ?? .fragment(children: [])
     }
 
     public static func buildEither(first: Node) -> Node {
@@ -42,5 +38,11 @@ public struct NodeBuilder {
 
     public static func buildEither(second: Node) -> Node {
         second
+    }
+}
+
+extension NodeBuilder {
+    public static func buildBlock(_ components: NodeConvertible...) -> Node {
+        .fragment(children: components.map { $0.asNode() })
     }
 }
