@@ -1,0 +1,16 @@
+name: Swift
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: macOS-latest
+
+    steps:
+    - name: Select Xcode
+      run: sudo xcode-select -switch /Applications/Xcode_11.1.app
+    - uses: actions/checkout@v1
+    - name: Build
+      run: swift build -v
+    - name: Run tests
+      run: swift test -v
