@@ -2,7 +2,7 @@ import Foundation
 
 public enum Node: Equatable {
     // The `Node`'s name, attribute and children.
-    indirect case element(String, [String: String], Node)
+    indirect case element(String, [String: String], Node?)
 
     // The `Node`'s text contents.
     case text(String)
@@ -19,19 +19,6 @@ public enum Node: Equatable {
     // Indicates that no whitespace should be added between the surrounding
     // nodes.
     case trim
-
-    fileprivate var isEmpty: Bool {
-        switch self {
-        case .element, .comment:
-            return false
-        case .text(let string), .documentType(let string):
-            return string.isEmpty
-        case .fragment(let children):
-            return children.allSatisfy { $0.isEmpty }
-        case .trim:
-            return true
-        }
-    }
 }
 
 extension Node: TextOutputStreamable {
@@ -67,9 +54,7 @@ extension Node: TextOutputStreamable {
                 target.write("\"")
             }
 
-            if child.isEmpty {
-                target.write("/>")
-            } else {
+            if let child = child {
                 target.write(">")
 
                 didVisitTrim = false
@@ -86,6 +71,8 @@ extension Node: TextOutputStreamable {
                 target.write("</")
                 target.write(name)
                 target.write(">")
+            } else {
+                target.write("/>")
             }
         case let .text(value):
             if !didVisitTrim {
@@ -119,8 +106,8 @@ extension Node {
         "span", "strong", "sub", "sup", "time", "tt", "u", "var", "wbr",
     ]
 
-    public static func element(name: String, attributes: [String: String] = [:], child: Node) -> Node {
-        if Node.textLevelTags.contains(name) && !child.isEmpty {
+    public static func element(name: String, attributes: [String: String] = [:], child: Node?) -> Node {
+        if Node.textLevelTags.contains(name), let child = child {
             return Node.element(name, attributes, %child%)
         }
 

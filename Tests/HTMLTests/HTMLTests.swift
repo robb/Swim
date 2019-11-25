@@ -35,6 +35,16 @@ final class HTMLTests: XCTestCase {
         XCTAssertTrue(String(describing: root).contains("Hello World!"))
     }
 
+    func testEmptyElements() {
+        let emptyElement = br()
+
+        XCTAssertEqual(String(describing: emptyElement), "\n<br/>")
+
+        let nonEmptyElement = p()
+
+        XCTAssertEqual(String(describing: nonEmptyElement), "\n<p>\n</p>")
+    }
+
     func testIfBlock() {
         let root = html {
             h1 { "Test:" }
@@ -167,8 +177,8 @@ final class HTMLTests: XCTestCase {
         struct TextExtractionVisitor: Visitor {
             typealias Result = [String]
 
-            func visitElement(name: String, attributes: [String : String], child: Node) -> [String] {
-                visitNode(child)
+            func visitElement(name: String, attributes: [String : String], child: Node?) -> [String] {
+                child.map(visitNode) ?? []
             }
 
             func visitText(text: String) -> [String] {

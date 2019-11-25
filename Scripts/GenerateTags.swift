@@ -44,6 +44,8 @@ struct Tag: Decodable, Hashable {
     var name: String
 
     var description: String?
+
+    var isEmpty: Bool?
 }
 
 struct Attribute: Decodable, Hashable {
@@ -92,6 +94,10 @@ for tag in tags {
         }
         .joined(separator: ",\n        ")
 
+    let childrenArgument = tag.isEmpty == true ? "" : ",\n    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }"
+
+    let childrenInvocation = tag.isEmpty == true ? "nil" : "children().asNode()"
+
     let definition = #"""
 /// \#(tag.name)
 ///
@@ -102,8 +108,7 @@ for tag in tags {
 public func \#(tag.name.asSwiftIdentifier)(
     \#(attributeDeclarations),
     customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    classes classList: String...\#(childrenArgument)
 ) -> Node {
     let attributes = [
         \#(attibuteCapture)
@@ -119,7 +124,7 @@ public func \#(tag.name.asSwiftIdentifier)(
         combined["data-\(key)"] = value
     }
 
-    return .element(name: "\#(tag.name)", attributes: combined, child: children().asNode())
+    return .element(name: "\#(tag.name)", attributes: combined, child: \#(childrenInvocation))
 }
 
 """#
