@@ -3,7 +3,7 @@ import Foundation
 public protocol Visitor {
     associatedtype Result
 
-    func visitElement(name: String, attributes: [String: String], child: Node) -> Result
+    func visitElement(name: String, attributes: [String: String], child: Node?) -> Result
 
     func visitText(text: String) -> Result
 
@@ -38,8 +38,8 @@ extension Visitor {
 }
 
 public extension Visitor where Result == Node {
-    func visitElement(name: String, attributes: [String: String], child: Node) -> Result {
-        .element(name: name, attributes: attributes, child: visitNode(child))
+    func visitElement(name: String, attributes: [String: String], child: Node?) -> Result {
+        .element(name: name, attributes: attributes, child: child.map(visitNode))
     }
 
     func visitText(text: String) -> Result {
