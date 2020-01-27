@@ -39,7 +39,7 @@ extension Visitor {
 
 public extension Visitor where Result == Node {
     func visitElement(name: String, attributes: [String: String], child: Node?) -> Result {
-        .element(name: name, attributes: attributes, child: child.map(visitNode))
+        .element(name, attributes, child.map(visitNode))
     }
 
     func visitText(text: String) -> Result {
@@ -55,7 +55,7 @@ public extension Visitor where Result == Node {
     }
 
     func visitFragment(children: [Node]) -> Result {
-        .fragment(children: children.map(visitNode))
+        .fragment(children.map(visitNode))
     }
 
     func visitTrim() -> Result {

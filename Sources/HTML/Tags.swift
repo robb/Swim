@@ -1,3 +1,5 @@
+// This output is machine generated and should not be edited manually.
+
 /// a
 ///
 /// The HTML `<a>` element (or anchor element), along with it's href attribute, creates a hyperlink to other web pages, files, locations within the same page, email addresses, or any other URL.
@@ -5,7 +7,7 @@
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -17,6 +19,9 @@
 ///      - hreflang: Specifies the language of the linked resource.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - media: Specifies a hint of the media for which the linked resource was designed.
 ///      - ping: The ping attribute specifies a space-separated list of URLs to be notified if a user follows the hyperlink.
@@ -34,17 +39,20 @@ public func a(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     download: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     href: String? = nil,
     hreflang: String? = nil,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     media: String? = nil,
     ping: String? = nil,
@@ -58,52 +66,49 @@ public func a(
     target: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "download": download,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "href": href,
-        "hreflang": hreflang,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "media": media,
-        "ping": ping,
-        "referrerpolicy": referrerpolicy,
-        "rel": rel,
-        "shape": shape,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "target": target,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["download"] = download
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["href"] = href
+    attributes["hreflang"] = hreflang
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["media"] = media
+    attributes["ping"] = ping
+    attributes["referrerpolicy"] = referrerpolicy
+    attributes["rel"] = rel
+    attributes["shape"] = shape
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["target"] = target
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "a", attributes: combined, child: children().asNode())
+    return .element("a", attributes, %children().asNode()%)
 }
+
+
 
 /// abbr
 ///
@@ -112,7 +117,7 @@ public func a(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -121,6 +126,9 @@ public func a(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -132,14 +140,17 @@ public func abbr(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -147,43 +158,40 @@ public func abbr(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "abbr", attributes: combined, child: children().asNode())
+    return .element("abbr", attributes, %children().asNode()%)
 }
+
+
 
 /// acronym
 ///
@@ -192,7 +200,7 @@ public func abbr(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -201,6 +209,9 @@ public func abbr(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -212,14 +223,17 @@ public func acronym(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -227,43 +241,40 @@ public func acronym(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "acronym", attributes: combined, child: children().asNode())
+    return .element("acronym", attributes, children().asNode())
 }
+
+
 
 /// address
 ///
@@ -272,7 +283,7 @@ public func acronym(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -281,6 +292,9 @@ public func acronym(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -292,14 +306,17 @@ public func address(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -307,43 +324,40 @@ public func address(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "address", attributes: combined, child: children().asNode())
+    return .element("address", attributes, children().asNode())
 }
+
+
 
 /// applet
 ///
@@ -354,7 +368,7 @@ public func address(
 ///      - align: Specifies the horizontal alignment of the element.
 ///      - alt: Alternative text in case an image can't be displayed.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - code: Specifies the URL of the applet's class file to be loaded and executed.
 ///      - codebase: This attribute gives the absolute or relative URL of the directory where applets' .class files referenced by the code attribute are stored.
 ///      - contenteditable: Indicates whether the element's content is editable.
@@ -365,6 +379,9 @@ public func address(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -380,14 +397,17 @@ public func applet(
     `class`: String? = nil,
     code: String? = nil,
     codebase: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -395,47 +415,44 @@ public func applet(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "align": align,
-        "alt": alt,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "code": code,
-        "codebase": codebase,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["align"] = align
+    attributes["alt"] = alt
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["code"] = code
+    attributes["codebase"] = codebase
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "applet", attributes: combined, child: children().asNode())
+    return .element("applet", attributes, children().asNode())
 }
+
+
 
 /// area
 ///
@@ -445,7 +462,7 @@ public func applet(
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - alt: Alternative text in case an image can't be displayed.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - coords: A set of values specifying the coordinates of the hot-spot region.
@@ -458,6 +475,9 @@ public func applet(
 ///      - hreflang: Specifies the language of the linked resource.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - media: Specifies a hint of the media for which the linked resource was designed.
 ///      - ping: The ping attribute specifies a space-separated list of URLs to be notified if a user follows the hyperlink.
@@ -476,18 +496,21 @@ public func area(
     alt: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     coords: String? = nil,
     dir: String? = nil,
     download: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     href: String? = nil,
     hreflang: String? = nil,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     media: String? = nil,
     ping: String? = nil,
@@ -501,53 +524,50 @@ public func area(
     target: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...
+    customAttributes: [String: String] = [:]
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "alt": alt,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "coords": coords,
-        "dir": dir,
-        "download": download,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "href": href,
-        "hreflang": hreflang,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "media": media,
-        "ping": ping,
-        "referrerpolicy": referrerpolicy,
-        "rel": rel,
-        "shape": shape,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "target": target,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["alt"] = alt
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["coords"] = coords
+    attributes["dir"] = dir
+    attributes["download"] = download
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["href"] = href
+    attributes["hreflang"] = hreflang
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["media"] = media
+    attributes["ping"] = ping
+    attributes["referrerpolicy"] = referrerpolicy
+    attributes["rel"] = rel
+    attributes["shape"] = shape
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["target"] = target
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "area", attributes: combined, child: nil)
+    return .element("area", attributes, nil)
 }
+
+
 
 /// article
 ///
@@ -556,7 +576,7 @@ public func area(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -565,6 +585,9 @@ public func area(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -576,14 +599,17 @@ public func article(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -591,43 +617,40 @@ public func article(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "article", attributes: combined, child: children().asNode())
+    return .element("article", attributes, children().asNode())
 }
+
+
 
 /// aside
 ///
@@ -636,7 +659,7 @@ public func article(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -645,6 +668,9 @@ public func article(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -656,14 +682,17 @@ public func aside(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -671,43 +700,40 @@ public func aside(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "aside", attributes: combined, child: children().asNode())
+    return .element("aside", attributes, children().asNode())
 }
+
+
 
 /// audio
 ///
@@ -718,7 +744,7 @@ public func aside(
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
 ///      - autoplay: The audio or video should play as soon as possible.
 ///      - buffered: Contains the time range of already buffered media.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - controls: Indicates whether the browser should show playback controls to the user.
@@ -729,6 +755,9 @@ public func aside(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - loop: Indicates whether the media should start playing from the start when it's finished.
 ///      - muted: Indicates whether the audio will be initially silenced on page load.
@@ -743,22 +772,25 @@ public func aside(
 public func audio(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
-    autoplay: String? = nil,
+    autoplay: Bool = false,
     buffered: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
-    controls: String? = nil,
+    controls: Bool = false,
     crossorigin: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
-    loop: String? = nil,
-    muted: String? = nil,
+    loop: Bool = false,
+    muted: Bool = false,
     preload: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -767,51 +799,48 @@ public func audio(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "autoplay": autoplay,
-        "buffered": buffered,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "controls": controls,
-        "crossorigin": crossorigin,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "loop": loop,
-        "muted": muted,
-        "preload": preload,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "src": src,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["autoplay"] = autoplay ? "" : nil
+    attributes["buffered"] = buffered
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["controls"] = controls ? "" : nil
+    attributes["crossorigin"] = crossorigin
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["loop"] = loop ? "" : nil
+    attributes["muted"] = muted ? "" : nil
+    attributes["preload"] = preload
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["src"] = src
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "audio", attributes: combined, child: children().asNode())
+    return .element("audio", attributes, children().asNode())
 }
+
+
 
 /// b
 ///
@@ -820,7 +849,7 @@ public func audio(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -829,6 +858,9 @@ public func audio(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -840,14 +872,17 @@ public func b(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -855,43 +890,40 @@ public func b(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "b", attributes: combined, child: children().asNode())
+    return .element("b", attributes, %children().asNode()%)
 }
+
+
 
 /// base
 ///
@@ -900,7 +932,7 @@ public func b(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -910,6 +942,9 @@ public func b(
 ///      - href: The URL of a linked resource.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -922,15 +957,18 @@ public func base(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     href: String? = nil,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -939,44 +977,41 @@ public func base(
     target: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...
+    customAttributes: [String: String] = [:]
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "href": href,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "target": target,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["href"] = href
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["target"] = target
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "base", attributes: combined, child: nil)
+    return .element("base", attributes, nil)
 }
+
+
 
 /// basefont
 ///
@@ -985,7 +1020,7 @@ public func base(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - color: This attribute sets the text color using either a named color or a color specified in the hexadecimal #RRGGBB format.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
@@ -995,6 +1030,9 @@ public func base(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -1007,14 +1045,17 @@ public func basefont(
     autocapitalize: String? = nil,
     `class`: String? = nil,
     color: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -1022,44 +1063,41 @@ public func basefont(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "color": color,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["color"] = color
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "basefont", attributes: combined, child: children().asNode())
+    return .element("basefont", attributes, children().asNode())
 }
+
+
 
 /// bdi
 ///
@@ -1068,7 +1106,7 @@ public func basefont(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -1077,6 +1115,9 @@ public func basefont(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -1088,14 +1129,17 @@ public func bdi(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -1103,43 +1147,40 @@ public func bdi(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "bdi", attributes: combined, child: children().asNode())
+    return .element("bdi", attributes, %children().asNode()%)
 }
+
+
 
 /// bdo
 ///
@@ -1148,7 +1189,7 @@ public func bdi(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -1157,6 +1198,9 @@ public func bdi(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -1168,14 +1212,17 @@ public func bdo(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -1183,43 +1230,40 @@ public func bdo(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "bdo", attributes: combined, child: children().asNode())
+    return .element("bdo", attributes, %children().asNode()%)
 }
+
+
 
 /// bgsound
 ///
@@ -1228,7 +1272,7 @@ public func bdo(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -1237,6 +1281,9 @@ public func bdo(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - loop: Indicates whether the media should start playing from the start when it's finished.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
@@ -1249,60 +1296,60 @@ public func bgsound(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
-    loop: String? = nil,
+    loop: Bool = false,
     slot: String? = nil,
     spellcheck: String? = nil,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "loop": loop,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["loop"] = loop ? "" : nil
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "bgsound", attributes: combined, child: children().asNode())
+    return .element("bgsound", attributes, children().asNode())
 }
+
+
 
 /// big
 ///
@@ -1311,7 +1358,7 @@ public func bgsound(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -1320,6 +1367,9 @@ public func bgsound(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -1331,14 +1381,17 @@ public func big(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -1346,43 +1399,40 @@ public func big(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "big", attributes: combined, child: children().asNode())
+    return .element("big", attributes, children().asNode())
 }
+
+
 
 /// blink
 ///
@@ -1391,7 +1441,7 @@ public func big(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -1400,6 +1450,9 @@ public func big(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -1411,14 +1464,17 @@ public func blink(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -1426,43 +1482,40 @@ public func blink(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "blink", attributes: combined, child: children().asNode())
+    return .element("blink", attributes, children().asNode())
 }
+
+
 
 /// blockquote
 ///
@@ -1472,7 +1525,7 @@ public func blink(
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
 ///      - cite: Contains a URI which points to the source of the quote or change.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -1481,6 +1534,9 @@ public func blink(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -1493,14 +1549,17 @@ public func blockquote(
     autocapitalize: String? = nil,
     cite: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -1508,44 +1567,41 @@ public func blockquote(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "cite": cite,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["cite"] = cite
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "blockquote", attributes: combined, child: children().asNode())
+    return .element("blockquote", attributes, children().asNode())
 }
+
+
 
 /// body
 ///
@@ -1556,7 +1612,7 @@ public func blockquote(
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
 ///      - background: Specifies the URL of an image file.
 ///      - bgcolor: Background color of the element.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -1565,6 +1621,9 @@ public func blockquote(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -1578,14 +1637,17 @@ public func body(
     background: String? = nil,
     bgcolor: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -1593,45 +1655,42 @@ public func body(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "background": background,
-        "bgcolor": bgcolor,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["background"] = background
+    attributes["bgcolor"] = bgcolor
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "body", attributes: combined, child: children().asNode())
+    return .element("body", attributes, children().asNode())
 }
+
+
 
 /// br
 ///
@@ -1640,7 +1699,7 @@ public func body(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -1649,6 +1708,9 @@ public func body(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -1660,14 +1722,17 @@ public func br(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -1675,42 +1740,39 @@ public func br(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...
+    customAttributes: [String: String] = [:]
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "br", attributes: combined, child: nil)
+    return .element("br", attributes, nil)
 }
+
+
 
 /// button
 ///
@@ -1720,7 +1782,7 @@ public func br(
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
 ///      - autofocus: The element should be automatically focused after the page loaded.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -1736,6 +1798,9 @@ public func br(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - name: Name of the element. For example used by the server to identify the fields in form submits.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
@@ -1749,23 +1814,26 @@ public func br(
 public func button(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
-    autofocus: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
-    disabled: String? = nil,
+    disabled: Bool = false,
     draggable: String? = nil,
     dropzone: String? = nil,
     form: String? = nil,
     formaction: String? = nil,
     formenctype: String? = nil,
     formmethod: String? = nil,
-    formnovalidate: String? = nil,
+    formnovalidate: Bool = false,
     formtarget: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     name: String? = nil,
     slot: String? = nil,
@@ -1776,54 +1844,51 @@ public func button(
     translate: String? = nil,
     type: String? = nil,
     value: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "autofocus": autofocus,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "disabled": disabled,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "form": form,
-        "formaction": formaction,
-        "formenctype": formenctype,
-        "formmethod": formmethod,
-        "formnovalidate": formnovalidate,
-        "formtarget": formtarget,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "name": name,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate,
-        "type": type,
-        "value": value
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["disabled"] = disabled ? "" : nil
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["form"] = form
+    attributes["formaction"] = formaction
+    attributes["formenctype"] = formenctype
+    attributes["formmethod"] = formmethod
+    attributes["formnovalidate"] = formnovalidate ? "" : nil
+    attributes["formtarget"] = formtarget
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["name"] = name
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
+    attributes["type"] = type
+    attributes["value"] = value
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "button", attributes: combined, child: children().asNode())
+    return .element("button", attributes, children().asNode())
 }
+
+
 
 /// canvas
 ///
@@ -1832,7 +1897,7 @@ public func button(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -1842,6 +1907,9 @@ public func button(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -1854,15 +1922,18 @@ public func canvas(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
     height: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -1871,45 +1942,42 @@ public func canvas(
     title: String? = nil,
     translate: String? = nil,
     width: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "height": height,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate,
-        "width": width
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["height"] = height
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
+    attributes["width"] = width
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "canvas", attributes: combined, child: children().asNode())
+    return .element("canvas", attributes, children().asNode())
 }
+
+
 
 /// caption
 ///
@@ -1919,7 +1987,7 @@ public func canvas(
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - align: Specifies the horizontal alignment of the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -1928,6 +1996,9 @@ public func canvas(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -1940,14 +2011,17 @@ public func caption(
     align: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -1955,44 +2029,41 @@ public func caption(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "align": align,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["align"] = align
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "caption", attributes: combined, child: children().asNode())
+    return .element("caption", attributes, children().asNode())
 }
+
+
 
 /// center
 ///
@@ -2001,7 +2072,7 @@ public func caption(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -2010,6 +2081,9 @@ public func caption(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -2021,14 +2095,17 @@ public func center(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -2036,43 +2113,40 @@ public func center(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "center", attributes: combined, child: children().asNode())
+    return .element("center", attributes, children().asNode())
 }
+
+
 
 /// cite
 ///
@@ -2081,7 +2155,7 @@ public func center(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -2090,6 +2164,9 @@ public func center(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -2101,14 +2178,17 @@ public func cite(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -2116,43 +2196,40 @@ public func cite(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "cite", attributes: combined, child: children().asNode())
+    return .element("cite", attributes, %children().asNode()%)
 }
+
+
 
 /// code
 ///
@@ -2161,7 +2238,7 @@ public func cite(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -2170,6 +2247,9 @@ public func cite(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -2181,14 +2261,17 @@ public func code(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -2196,43 +2279,40 @@ public func code(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "code", attributes: combined, child: children().asNode())
+    return .element("code", attributes, %children().asNode()%)
 }
+
+
 
 /// col
 ///
@@ -2243,7 +2323,7 @@ public func code(
 ///      - align: Specifies the horizontal alignment of the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
 ///      - bgcolor: Background color of the element.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -2252,6 +2332,9 @@ public func code(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - span: 
@@ -2266,14 +2349,17 @@ public func col(
     autocapitalize: String? = nil,
     bgcolor: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     span: String? = nil,
@@ -2282,45 +2368,42 @@ public func col(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...
+    customAttributes: [String: String] = [:]
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "align": align,
-        "autocapitalize": autocapitalize,
-        "bgcolor": bgcolor,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "span": span,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["align"] = align
+    attributes["autocapitalize"] = autocapitalize
+    attributes["bgcolor"] = bgcolor
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["span"] = span
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "col", attributes: combined, child: nil)
+    return .element("col", attributes, nil)
 }
+
+
 
 /// colgroup
 ///
@@ -2331,7 +2414,7 @@ public func col(
 ///      - align: Specifies the horizontal alignment of the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
 ///      - bgcolor: Background color of the element.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -2340,6 +2423,9 @@ public func col(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - span: 
@@ -2354,14 +2440,17 @@ public func colgroup(
     autocapitalize: String? = nil,
     bgcolor: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     span: String? = nil,
@@ -2370,46 +2459,43 @@ public func colgroup(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "align": align,
-        "autocapitalize": autocapitalize,
-        "bgcolor": bgcolor,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "span": span,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["align"] = align
+    attributes["autocapitalize"] = autocapitalize
+    attributes["bgcolor"] = bgcolor
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["span"] = span
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "colgroup", attributes: combined, child: children().asNode())
+    return .element("colgroup", attributes, children().asNode())
 }
+
+
 
 /// command
 ///
@@ -2419,7 +2505,7 @@ public func colgroup(
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
 ///      - checked: Indicates whether the element should be checked on page load.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -2430,6 +2516,9 @@ public func colgroup(
 ///      - icon: Specifies a picture which represents the command.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - radiogroup: 
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
@@ -2442,18 +2531,21 @@ public func colgroup(
 public func command(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
-    checked: String? = nil,
+    checked: Bool = false,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
-    disabled: String? = nil,
+    disabled: Bool = false,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     icon: String? = nil,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     radiogroup: String? = nil,
     slot: String? = nil,
@@ -2463,48 +2555,45 @@ public func command(
     title: String? = nil,
     translate: String? = nil,
     type: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "checked": checked,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "disabled": disabled,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "icon": icon,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "radiogroup": radiogroup,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate,
-        "type": type
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["checked"] = checked ? "" : nil
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["disabled"] = disabled ? "" : nil
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["icon"] = icon
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["radiogroup"] = radiogroup
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
+    attributes["type"] = type
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "command", attributes: combined, child: children().asNode())
+    return .element("command", attributes, children().asNode())
 }
+
+
 
 /// content
 ///
@@ -2513,7 +2602,7 @@ public func command(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -2522,6 +2611,9 @@ public func command(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -2533,14 +2625,17 @@ public func content(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -2548,43 +2643,40 @@ public func content(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "content", attributes: combined, child: children().asNode())
+    return .element("content", attributes, children().asNode())
 }
+
+
 
 /// data
 ///
@@ -2593,7 +2685,7 @@ public func content(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -2602,6 +2694,9 @@ public func content(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -2614,14 +2709,17 @@ public func data(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -2630,44 +2728,41 @@ public func data(
     title: String? = nil,
     translate: String? = nil,
     value: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate,
-        "value": value
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
+    attributes["value"] = value
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "data", attributes: combined, child: children().asNode())
+    return .element("data", attributes, %children().asNode()%)
 }
+
+
 
 /// datalist
 ///
@@ -2676,7 +2771,7 @@ public func data(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -2685,6 +2780,9 @@ public func data(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -2696,14 +2794,17 @@ public func datalist(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -2711,43 +2812,40 @@ public func datalist(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "datalist", attributes: combined, child: children().asNode())
+    return .element("datalist", attributes, children().asNode())
 }
+
+
 
 /// dd
 ///
@@ -2756,7 +2854,7 @@ public func datalist(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -2765,6 +2863,9 @@ public func datalist(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -2776,14 +2877,17 @@ public func dd(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -2791,43 +2895,40 @@ public func dd(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "dd", attributes: combined, child: children().asNode())
+    return .element("dd", attributes, children().asNode())
 }
+
+
 
 /// del
 ///
@@ -2837,7 +2938,7 @@ public func dd(
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
 ///      - cite: Contains a URI which points to the source of the quote or change.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - datetime: Indicates the date and time associated with the element.
@@ -2847,6 +2948,9 @@ public func dd(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -2859,15 +2963,18 @@ public func del(
     autocapitalize: String? = nil,
     cite: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     datetime: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -2875,45 +2982,42 @@ public func del(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "cite": cite,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "datetime": datetime,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["cite"] = cite
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["datetime"] = datetime
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "del", attributes: combined, child: children().asNode())
+    return .element("del", attributes, children().asNode())
 }
+
+
 
 /// details
 ///
@@ -2922,7 +3026,7 @@ public func del(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -2931,8 +3035,11 @@ public func del(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
-///      - `open`: Indicates whether the details will be shown on page load.
+///      - open: Indicates whether the details will be shown on page load.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
 ///      - style: Defines CSS styles which will override styles previously set.
@@ -2943,60 +3050,60 @@ public func details(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
-    `open`: String? = nil,
+    `open`: Bool = false,
     slot: String? = nil,
     spellcheck: String? = nil,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "open": `open`,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["open"] = `open` ? "" : nil
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "details", attributes: combined, child: children().asNode())
+    return .element("details", attributes, children().asNode())
 }
+
+
 
 /// dfn
 ///
@@ -3005,7 +3112,7 @@ public func details(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -3014,6 +3121,9 @@ public func details(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -3025,14 +3135,17 @@ public func dfn(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -3040,43 +3153,40 @@ public func dfn(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "dfn", attributes: combined, child: children().asNode())
+    return .element("dfn", attributes, %children().asNode()%)
 }
+
+
 
 /// dialog
 ///
@@ -3085,7 +3195,7 @@ public func dfn(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -3094,6 +3204,9 @@ public func dfn(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -3105,14 +3218,17 @@ public func dialog(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -3120,43 +3236,40 @@ public func dialog(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "dialog", attributes: combined, child: children().asNode())
+    return .element("dialog", attributes, children().asNode())
 }
+
+
 
 /// dir
 ///
@@ -3165,7 +3278,7 @@ public func dialog(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -3174,6 +3287,9 @@ public func dialog(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -3185,14 +3301,17 @@ public func dir(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -3200,43 +3319,40 @@ public func dir(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "dir", attributes: combined, child: children().asNode())
+    return .element("dir", attributes, children().asNode())
 }
+
+
 
 /// div
 ///
@@ -3245,7 +3361,7 @@ public func dir(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -3254,6 +3370,9 @@ public func dir(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -3265,14 +3384,17 @@ public func div(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -3280,43 +3402,40 @@ public func div(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "div", attributes: combined, child: children().asNode())
+    return .element("div", attributes, children().asNode())
 }
+
+
 
 /// dl
 ///
@@ -3325,7 +3444,7 @@ public func div(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -3334,6 +3453,9 @@ public func div(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -3345,14 +3467,17 @@ public func dl(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -3360,43 +3485,40 @@ public func dl(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "dl", attributes: combined, child: children().asNode())
+    return .element("dl", attributes, children().asNode())
 }
+
+
 
 /// dt
 ///
@@ -3405,7 +3527,7 @@ public func dl(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -3414,6 +3536,9 @@ public func dl(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -3425,14 +3550,17 @@ public func dt(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -3440,43 +3568,40 @@ public func dt(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "dt", attributes: combined, child: children().asNode())
+    return .element("dt", attributes, children().asNode())
 }
+
+
 
 /// element
 ///
@@ -3485,7 +3610,7 @@ public func dt(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -3494,6 +3619,9 @@ public func dt(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -3505,14 +3633,17 @@ public func element(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -3520,43 +3651,40 @@ public func element(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "element", attributes: combined, child: children().asNode())
+    return .element("element", attributes, children().asNode())
 }
+
+
 
 /// em
 ///
@@ -3565,7 +3693,7 @@ public func element(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -3574,6 +3702,9 @@ public func element(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -3585,14 +3716,17 @@ public func em(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -3600,43 +3734,40 @@ public func em(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "em", attributes: combined, child: children().asNode())
+    return .element("em", attributes, %children().asNode()%)
 }
+
+
 
 /// embed
 ///
@@ -3645,7 +3776,7 @@ public func em(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -3655,6 +3786,9 @@ public func em(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -3669,15 +3803,18 @@ public func embed(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
     height: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -3688,46 +3825,43 @@ public func embed(
     translate: String? = nil,
     type: String? = nil,
     width: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...
+    customAttributes: [String: String] = [:]
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "height": height,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "src": src,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate,
-        "type": type,
-        "width": width
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["height"] = height
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["src"] = src
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
+    attributes["type"] = type
+    attributes["width"] = width
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "embed", attributes: combined, child: nil)
+    return .element("embed", attributes, nil)
 }
+
+
 
 /// fieldset
 ///
@@ -3736,7 +3870,7 @@ public func embed(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -3747,6 +3881,9 @@ public func embed(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - name: Name of the element. For example used by the server to identify the fields in form submits.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
@@ -3759,16 +3896,19 @@ public func fieldset(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
-    disabled: String? = nil,
+    disabled: Bool = false,
     draggable: String? = nil,
     dropzone: String? = nil,
     form: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     name: String? = nil,
     slot: String? = nil,
@@ -3777,46 +3917,43 @@ public func fieldset(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "disabled": disabled,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "form": form,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "name": name,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["disabled"] = disabled ? "" : nil
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["form"] = form
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["name"] = name
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "fieldset", attributes: combined, child: children().asNode())
+    return .element("fieldset", attributes, children().asNode())
 }
+
+
 
 /// figcaption
 ///
@@ -3825,7 +3962,7 @@ public func fieldset(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -3834,6 +3971,9 @@ public func fieldset(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -3845,14 +3985,17 @@ public func figcaption(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -3860,43 +4003,40 @@ public func figcaption(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "figcaption", attributes: combined, child: children().asNode())
+    return .element("figcaption", attributes, children().asNode())
 }
+
+
 
 /// figure
 ///
@@ -3905,7 +4045,7 @@ public func figcaption(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -3914,6 +4054,9 @@ public func figcaption(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -3925,14 +4068,17 @@ public func figure(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -3940,43 +4086,40 @@ public func figure(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "figure", attributes: combined, child: children().asNode())
+    return .element("figure", attributes, children().asNode())
 }
+
+
 
 /// font
 ///
@@ -3985,7 +4128,7 @@ public func figure(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - color: This attribute sets the text color using either a named color or a color specified in the hexadecimal #RRGGBB format.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
@@ -3995,6 +4138,9 @@ public func figure(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -4007,14 +4153,17 @@ public func font(
     autocapitalize: String? = nil,
     `class`: String? = nil,
     color: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -4022,44 +4171,41 @@ public func font(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "color": color,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["color"] = color
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "font", attributes: combined, child: children().asNode())
+    return .element("font", attributes, children().asNode())
 }
+
+
 
 /// footer
 ///
@@ -4068,7 +4214,7 @@ public func font(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -4077,6 +4223,9 @@ public func font(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -4088,14 +4237,17 @@ public func footer(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -4103,43 +4255,40 @@ public func footer(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "footer", attributes: combined, child: children().asNode())
+    return .element("footer", attributes, children().asNode())
 }
+
+
 
 /// form
 ///
@@ -4147,12 +4296,12 @@ public func footer(
 ///
 /// - Parameters:
 ///      - accept: List of types the server accepts, typically a file type.
-///      - acceptCharset: List of supported charsets.
+///      - accept-charset: List of supported charsets.
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - action: The URI of a program that processes the information submitted via the form.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
 ///      - autocomplete: Indicates whether controls in this form can by default have their values automatically completed by the browser.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -4162,6 +4311,9 @@ public func footer(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - method: Defines which HTTP method to use when submitting the form. Can be GET (default) or POST.
 ///      - name: Name of the element. For example used by the server to identify the fields in form submits.
@@ -4181,19 +4333,22 @@ public func form(
     autocapitalize: String? = nil,
     autocomplete: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
     enctype: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     method: String? = nil,
     name: String? = nil,
-    novalidate: String? = nil,
+    novalidate: Bool = false,
     slot: String? = nil,
     spellcheck: String? = nil,
     style: String? = nil,
@@ -4201,52 +4356,49 @@ public func form(
     target: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accept": accept,
-        "accept-charset": acceptCharset,
-        "accesskey": accesskey,
-        "action": action,
-        "autocapitalize": autocapitalize,
-        "autocomplete": autocomplete,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "enctype": enctype,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "method": method,
-        "name": name,
-        "novalidate": novalidate,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "target": target,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accept"] = accept
+    attributes["accept-charset"] = acceptCharset
+    attributes["accesskey"] = accesskey
+    attributes["action"] = action
+    attributes["autocapitalize"] = autocapitalize
+    attributes["autocomplete"] = autocomplete
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["enctype"] = enctype
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["method"] = method
+    attributes["name"] = name
+    attributes["novalidate"] = novalidate ? "" : nil
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["target"] = target
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "form", attributes: combined, child: children().asNode())
+    return .element("form", attributes, children().asNode())
 }
+
+
 
 /// frame
 ///
@@ -4255,7 +4407,7 @@ public func form(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -4264,6 +4416,9 @@ public func form(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -4275,14 +4430,17 @@ public func frame(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -4290,43 +4448,40 @@ public func frame(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "frame", attributes: combined, child: children().asNode())
+    return .element("frame", attributes, children().asNode())
 }
+
+
 
 /// frameset
 ///
@@ -4335,7 +4490,7 @@ public func frame(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -4344,6 +4499,9 @@ public func frame(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -4355,14 +4513,17 @@ public func frameset(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -4370,43 +4531,40 @@ public func frameset(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "frameset", attributes: combined, child: children().asNode())
+    return .element("frameset", attributes, children().asNode())
 }
+
+
 
 /// h1
 ///
@@ -4415,7 +4573,7 @@ public func frameset(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -4424,6 +4582,9 @@ public func frameset(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -4435,14 +4596,17 @@ public func h1(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -4450,43 +4614,40 @@ public func h1(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "h1", attributes: combined, child: children().asNode())
+    return .element("h1", attributes, children().asNode())
 }
+
+
 
 /// h2
 ///
@@ -4495,7 +4656,7 @@ public func h1(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -4504,6 +4665,9 @@ public func h1(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -4515,14 +4679,17 @@ public func h2(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -4530,43 +4697,40 @@ public func h2(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "h2", attributes: combined, child: children().asNode())
+    return .element("h2", attributes, children().asNode())
 }
+
+
 
 /// h3
 ///
@@ -4575,7 +4739,7 @@ public func h2(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -4584,6 +4748,9 @@ public func h2(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -4595,14 +4762,17 @@ public func h3(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -4610,43 +4780,40 @@ public func h3(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "h3", attributes: combined, child: children().asNode())
+    return .element("h3", attributes, children().asNode())
 }
+
+
 
 /// h4
 ///
@@ -4655,7 +4822,7 @@ public func h3(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -4664,6 +4831,9 @@ public func h3(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -4675,14 +4845,17 @@ public func h4(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -4690,43 +4863,40 @@ public func h4(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "h4", attributes: combined, child: children().asNode())
+    return .element("h4", attributes, children().asNode())
 }
+
+
 
 /// h5
 ///
@@ -4735,7 +4905,7 @@ public func h4(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -4744,6 +4914,9 @@ public func h4(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -4755,14 +4928,17 @@ public func h5(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -4770,43 +4946,40 @@ public func h5(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "h5", attributes: combined, child: children().asNode())
+    return .element("h5", attributes, children().asNode())
 }
+
+
 
 /// h6
 ///
@@ -4815,7 +4988,7 @@ public func h5(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -4824,6 +4997,9 @@ public func h5(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -4835,14 +5011,17 @@ public func h6(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -4850,43 +5029,40 @@ public func h6(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "h6", attributes: combined, child: children().asNode())
+    return .element("h6", attributes, children().asNode())
 }
+
+
 
 /// head
 ///
@@ -4895,7 +5071,7 @@ public func h6(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -4904,6 +5080,9 @@ public func h6(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -4915,14 +5094,17 @@ public func head(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -4930,43 +5112,40 @@ public func head(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "head", attributes: combined, child: children().asNode())
+    return .element("head", attributes, children().asNode())
 }
+
+
 
 /// header
 ///
@@ -4975,7 +5154,7 @@ public func head(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -4984,6 +5163,9 @@ public func head(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -4995,14 +5177,17 @@ public func header(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -5010,43 +5195,40 @@ public func header(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "header", attributes: combined, child: children().asNode())
+    return .element("header", attributes, children().asNode())
 }
+
+
 
 /// hgroup
 ///
@@ -5055,7 +5237,7 @@ public func header(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -5064,6 +5246,9 @@ public func header(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -5075,14 +5260,17 @@ public func hgroup(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -5090,43 +5278,40 @@ public func hgroup(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "hgroup", attributes: combined, child: children().asNode())
+    return .element("hgroup", attributes, children().asNode())
 }
+
+
 
 /// hr
 ///
@@ -5136,7 +5321,7 @@ public func hgroup(
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - align: Specifies the horizontal alignment of the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - color: This attribute sets the text color using either a named color or a color specified in the hexadecimal #RRGGBB format.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
@@ -5146,6 +5331,9 @@ public func hgroup(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -5159,14 +5347,17 @@ public func hr(
     autocapitalize: String? = nil,
     `class`: String? = nil,
     color: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -5174,44 +5365,41 @@ public func hr(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...
+    customAttributes: [String: String] = [:]
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "align": align,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "color": color,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["align"] = align
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["color"] = color
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "hr", attributes: combined, child: nil)
+    return .element("hr", attributes, nil)
 }
+
+
 
 /// html
 ///
@@ -5220,7 +5408,7 @@ public func hr(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -5229,6 +5417,9 @@ public func hr(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - manifest: Specifies the URL of the document's cache manifest.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
@@ -5241,14 +5432,17 @@ public func html(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     manifest: String? = nil,
     slot: String? = nil,
@@ -5257,44 +5451,41 @@ public func html(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "manifest": manifest,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["manifest"] = manifest
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "html", attributes: combined, child: children().asNode())
+    return .element("html", attributes, children().asNode())
 }
+
+
 
 /// i
 ///
@@ -5303,7 +5494,7 @@ public func html(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -5312,6 +5503,9 @@ public func html(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -5323,14 +5517,17 @@ public func i(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -5338,43 +5535,40 @@ public func i(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "i", attributes: combined, child: children().asNode())
+    return .element("i", attributes, %children().asNode()%)
 }
+
+
 
 /// iframe
 ///
@@ -5385,7 +5579,7 @@ public func i(
 ///      - align: Specifies the horizontal alignment of the element.
 ///      - allow: Specifies a feature-policy for the iframe.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - csp: Specifies the Content Security Policy that an embedded document must agree to enforce upon itself.
@@ -5397,6 +5591,9 @@ public func i(
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - importance: Indicates the relative fetch priority for the resource.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - loading: Indicates if the element should be loaded lazily.
 ///      - name: Name of the element. For example used by the server to identify the fields in form submits.
@@ -5417,17 +5614,20 @@ public func iframe(
     allow: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     csp: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
     height: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
     importance: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     loading: String? = nil,
     name: String? = nil,
@@ -5442,55 +5642,52 @@ public func iframe(
     title: String? = nil,
     translate: String? = nil,
     width: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "align": align,
-        "allow": allow,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "csp": csp,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "height": height,
-        "hidden": hidden,
-        "id": id,
-        "importance": importance,
-        "itemprop": itemprop,
-        "lang": lang,
-        "loading": loading,
-        "name": name,
-        "referrerpolicy": referrerpolicy,
-        "sandbox": sandbox,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "src": src,
-        "srcdoc": srcdoc,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate,
-        "width": width
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["align"] = align
+    attributes["allow"] = allow
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["csp"] = csp
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["height"] = height
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["importance"] = importance
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["loading"] = loading
+    attributes["name"] = name
+    attributes["referrerpolicy"] = referrerpolicy
+    attributes["sandbox"] = sandbox
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["src"] = src
+    attributes["srcdoc"] = srcdoc
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
+    attributes["width"] = width
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "iframe", attributes: combined, child: children().asNode())
+    return .element("iframe", attributes, children().asNode())
 }
+
+
 
 /// image
 ///
@@ -5499,7 +5696,7 @@ public func iframe(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -5508,6 +5705,9 @@ public func iframe(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -5519,14 +5719,17 @@ public func image(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -5534,43 +5737,40 @@ public func image(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "image", attributes: combined, child: children().asNode())
+    return .element("image", attributes, children().asNode())
 }
+
+
 
 /// img
 ///
@@ -5582,7 +5782,7 @@ public func image(
 ///      - alt: Alternative text in case an image can't be displayed.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
 ///      - border: The border width.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - crossorigin: How the element handles cross-origin requests
@@ -5597,6 +5797,9 @@ public func image(
 ///      - intrinsicsize: This attribute tells the browser to ignore the actual intrinsic size of the image and pretend it’s the size specified in the attribute.
 ///      - ismap: Indicates that the image is part of a server-side image map.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - loading: Indicates if the element should be loaded lazily.
 ///      - referrerpolicy: Specifies which referrer is sent when fetching the resource.
@@ -5618,7 +5821,7 @@ public func img(
     autocapitalize: String? = nil,
     border: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     crossorigin: String? = nil,
     decoding: String? = nil,
@@ -5626,12 +5829,15 @@ public func img(
     draggable: String? = nil,
     dropzone: String? = nil,
     height: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
     importance: String? = nil,
     intrinsicsize: String? = nil,
-    ismap: String? = nil,
-    itemprop: String? = nil,
+    ismap: Bool = false,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     loading: String? = nil,
     referrerpolicy: String? = nil,
@@ -5646,58 +5852,55 @@ public func img(
     translate: String? = nil,
     usemap: String? = nil,
     width: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...
+    customAttributes: [String: String] = [:]
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "align": align,
-        "alt": alt,
-        "autocapitalize": autocapitalize,
-        "border": border,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "crossorigin": crossorigin,
-        "decoding": decoding,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "height": height,
-        "hidden": hidden,
-        "id": id,
-        "importance": importance,
-        "intrinsicsize": intrinsicsize,
-        "ismap": ismap,
-        "itemprop": itemprop,
-        "lang": lang,
-        "loading": loading,
-        "referrerpolicy": referrerpolicy,
-        "sizes": sizes,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "src": src,
-        "srcset": srcset,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate,
-        "usemap": usemap,
-        "width": width
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["align"] = align
+    attributes["alt"] = alt
+    attributes["autocapitalize"] = autocapitalize
+    attributes["border"] = border
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["crossorigin"] = crossorigin
+    attributes["decoding"] = decoding
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["height"] = height
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["importance"] = importance
+    attributes["intrinsicsize"] = intrinsicsize
+    attributes["ismap"] = ismap ? "" : nil
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["loading"] = loading
+    attributes["referrerpolicy"] = referrerpolicy
+    attributes["sizes"] = sizes
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["src"] = src
+    attributes["srcset"] = srcset
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
+    attributes["usemap"] = usemap
+    attributes["width"] = width
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "img", attributes: combined, child: nil)
+    return .element("img", attributes, nil)
 }
+
+
 
 /// input
 ///
@@ -5711,7 +5914,7 @@ public func img(
 ///      - autocomplete: Indicates whether controls in this form can by default have their values automatically completed by the browser.
 ///      - autofocus: The element should be automatically focused after the page loaded.
 ///      - checked: Indicates whether the element should be checked on page load.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -5729,6 +5932,9 @@ public func img(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - list: Identifies a list of pre-defined options to suggest to the user.
 ///      - max: Indicates the maximum value allowed.
@@ -5740,7 +5946,7 @@ public func img(
 ///      - pattern: Defines a regular expression which the element's value will be validated against.
 ///      - placeholder: Provides a hint to the user of what can be entered in the field.
 ///      - readonly: Indicates whether the element can be edited.
-///      - `required`: Indicates whether this element is required to fill out or not.
+///      - required: Indicates whether this element is required to fill out or not.
 ///      - size: Defines the width of the element (in pixels). If the element's type attribute is text or password then it's the number of characters.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -5760,38 +5966,41 @@ public func input(
     alt: String? = nil,
     autocapitalize: String? = nil,
     autocomplete: String? = nil,
-    autofocus: String? = nil,
-    checked: String? = nil,
+    autofocus: Bool = false,
+    checked: Bool = false,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     dirname: String? = nil,
-    disabled: String? = nil,
+    disabled: Bool = false,
     draggable: String? = nil,
     dropzone: String? = nil,
     form: String? = nil,
     formaction: String? = nil,
     formenctype: String? = nil,
     formmethod: String? = nil,
-    formnovalidate: String? = nil,
+    formnovalidate: Bool = false,
     formtarget: String? = nil,
     height: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     list: String? = nil,
     max: String? = nil,
     maxlength: String? = nil,
     min: String? = nil,
     minlength: String? = nil,
-    multiple: String? = nil,
+    multiple: Bool = false,
     name: String? = nil,
     pattern: String? = nil,
     placeholder: String? = nil,
-    readonly: String? = nil,
-    `required`: String? = nil,
+    readonly: Bool = false,
+    `required`: Bool = false,
     size: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -5805,74 +6014,71 @@ public func input(
     usemap: String? = nil,
     value: String? = nil,
     width: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...
+    customAttributes: [String: String] = [:]
 ) -> Node {
-    let attributes = [
-        "accept": accept,
-        "accesskey": accesskey,
-        "alt": alt,
-        "autocapitalize": autocapitalize,
-        "autocomplete": autocomplete,
-        "autofocus": autofocus,
-        "checked": checked,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "dirname": dirname,
-        "disabled": disabled,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "form": form,
-        "formaction": formaction,
-        "formenctype": formenctype,
-        "formmethod": formmethod,
-        "formnovalidate": formnovalidate,
-        "formtarget": formtarget,
-        "height": height,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "list": list,
-        "max": max,
-        "maxlength": maxlength,
-        "min": min,
-        "minlength": minlength,
-        "multiple": multiple,
-        "name": name,
-        "pattern": pattern,
-        "placeholder": placeholder,
-        "readonly": readonly,
-        "required": `required`,
-        "size": size,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "src": src,
-        "step": step,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate,
-        "type": type,
-        "usemap": usemap,
-        "value": value,
-        "width": width
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accept"] = accept
+    attributes["accesskey"] = accesskey
+    attributes["alt"] = alt
+    attributes["autocapitalize"] = autocapitalize
+    attributes["autocomplete"] = autocomplete
+    attributes["autofocus"] = autofocus ? "" : nil
+    attributes["checked"] = checked ? "" : nil
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["dirname"] = dirname
+    attributes["disabled"] = disabled ? "" : nil
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["form"] = form
+    attributes["formaction"] = formaction
+    attributes["formenctype"] = formenctype
+    attributes["formmethod"] = formmethod
+    attributes["formnovalidate"] = formnovalidate ? "" : nil
+    attributes["formtarget"] = formtarget
+    attributes["height"] = height
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["list"] = list
+    attributes["max"] = max
+    attributes["maxlength"] = maxlength
+    attributes["min"] = min
+    attributes["minlength"] = minlength
+    attributes["multiple"] = multiple ? "" : nil
+    attributes["name"] = name
+    attributes["pattern"] = pattern
+    attributes["placeholder"] = placeholder
+    attributes["readonly"] = readonly ? "" : nil
+    attributes["required"] = `required` ? "" : nil
+    attributes["size"] = size
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["src"] = src
+    attributes["step"] = step
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
+    attributes["type"] = type
+    attributes["usemap"] = usemap
+    attributes["value"] = value
+    attributes["width"] = width
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "input", attributes: combined, child: nil)
+    return .element("input", attributes, nil)
 }
+
+
 
 /// ins
 ///
@@ -5882,7 +6088,7 @@ public func input(
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
 ///      - cite: Contains a URI which points to the source of the quote or change.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - datetime: Indicates the date and time associated with the element.
@@ -5892,6 +6098,9 @@ public func input(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -5904,15 +6113,18 @@ public func ins(
     autocapitalize: String? = nil,
     cite: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     datetime: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -5920,45 +6132,42 @@ public func ins(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "cite": cite,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "datetime": datetime,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["cite"] = cite
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["datetime"] = datetime
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "ins", attributes: combined, child: children().asNode())
+    return .element("ins", attributes, children().asNode())
 }
+
+
 
 /// isindex
 ///
@@ -5967,7 +6176,7 @@ public func ins(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -5976,6 +6185,9 @@ public func ins(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -5987,14 +6199,17 @@ public func isindex(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -6002,43 +6217,40 @@ public func isindex(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "isindex", attributes: combined, child: children().asNode())
+    return .element("isindex", attributes, children().asNode())
 }
+
+
 
 /// kbd
 ///
@@ -6047,7 +6259,7 @@ public func isindex(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -6056,6 +6268,9 @@ public func isindex(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -6067,14 +6282,17 @@ public func kbd(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -6082,43 +6300,40 @@ public func kbd(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "kbd", attributes: combined, child: children().asNode())
+    return .element("kbd", attributes, %children().asNode()%)
 }
+
+
 
 /// keygen
 ///
@@ -6129,7 +6344,7 @@ public func kbd(
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
 ///      - autofocus: The element should be automatically focused after the page loaded.
 ///      - challenge: A challenge string that is submitted along with the public key.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -6140,6 +6355,9 @@ public func kbd(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - keytype: Specifies the type of key generated.
 ///      - lang: Defines the language used in the element.
 ///      - name: Name of the element. For example used by the server to identify the fields in form submits.
@@ -6152,19 +6370,22 @@ public func kbd(
 public func keygen(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
-    autofocus: String? = nil,
+    autofocus: Bool = false,
     challenge: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
-    disabled: String? = nil,
+    disabled: Bool = false,
     draggable: String? = nil,
     dropzone: String? = nil,
     form: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     keytype: String? = nil,
     lang: String? = nil,
     name: String? = nil,
@@ -6174,49 +6395,46 @@ public func keygen(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "autofocus": autofocus,
-        "challenge": challenge,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "disabled": disabled,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "form": form,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "keytype": keytype,
-        "lang": lang,
-        "name": name,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
+    attributes["challenge"] = challenge
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["disabled"] = disabled ? "" : nil
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["form"] = form
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["keytype"] = keytype
+    attributes["lang"] = lang
+    attributes["name"] = name
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "keygen", attributes: combined, child: children().asNode())
+    return .element("keygen", attributes, children().asNode())
 }
+
+
 
 /// label
 ///
@@ -6225,17 +6443,20 @@ public func keygen(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
 ///      - draggable: Defines whether the element can be dragged.
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - `for`: Describes elements which belongs to this one.
+///      - for: Describes elements which belongs to this one.
 ///      - form: Indicates the form that is the owner of the element.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -6247,16 +6468,19 @@ public func label(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
     `for`: String? = nil,
     form: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -6264,45 +6488,42 @@ public func label(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "for": `for`,
-        "form": form,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["for"] = `for`
+    attributes["form"] = form
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "label", attributes: combined, child: children().asNode())
+    return .element("label", attributes, children().asNode())
 }
+
+
 
 /// legend
 ///
@@ -6311,7 +6532,7 @@ public func label(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -6320,6 +6541,9 @@ public func label(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -6331,14 +6555,17 @@ public func legend(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -6346,43 +6573,40 @@ public func legend(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "legend", attributes: combined, child: children().asNode())
+    return .element("legend", attributes, children().asNode())
 }
+
+
 
 /// li
 ///
@@ -6391,7 +6615,7 @@ public func legend(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -6400,6 +6624,9 @@ public func legend(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -6412,14 +6639,17 @@ public func li(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -6428,44 +6658,41 @@ public func li(
     title: String? = nil,
     translate: String? = nil,
     value: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate,
-        "value": value
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
+    attributes["value"] = value
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "li", attributes: combined, child: children().asNode())
+    return .element("li", attributes, children().asNode())
 }
+
+
 
 /// link
 ///
@@ -6474,7 +6701,7 @@ public func li(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - crossorigin: How the element handles cross-origin requests
@@ -6488,6 +6715,9 @@ public func li(
 ///      - importance: Indicates the relative fetch priority for the resource.
 ///      - integrity: Specifies a Subresource Integrity value that allows browsers to verify what they fetch.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - media: Specifies a hint of the media for which the linked resource was designed.
 ///      - referrerpolicy: Specifies which referrer is sent when fetching the resource.
@@ -6503,19 +6733,22 @@ public func link(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     crossorigin: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     href: String? = nil,
     hreflang: String? = nil,
     id: String? = nil,
     importance: String? = nil,
     integrity: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     media: String? = nil,
     referrerpolicy: String? = nil,
@@ -6527,51 +6760,48 @@ public func link(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...
+    customAttributes: [String: String] = [:]
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "crossorigin": crossorigin,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "href": href,
-        "hreflang": hreflang,
-        "id": id,
-        "importance": importance,
-        "integrity": integrity,
-        "itemprop": itemprop,
-        "lang": lang,
-        "media": media,
-        "referrerpolicy": referrerpolicy,
-        "rel": rel,
-        "sizes": sizes,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["crossorigin"] = crossorigin
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["href"] = href
+    attributes["hreflang"] = hreflang
+    attributes["id"] = id
+    attributes["importance"] = importance
+    attributes["integrity"] = integrity
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["media"] = media
+    attributes["referrerpolicy"] = referrerpolicy
+    attributes["rel"] = rel
+    attributes["sizes"] = sizes
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "link", attributes: combined, child: nil)
+    return .element("link", attributes, nil)
 }
+
+
 
 /// listing
 ///
@@ -6580,7 +6810,7 @@ public func link(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -6589,6 +6819,9 @@ public func link(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -6600,14 +6833,17 @@ public func listing(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -6615,43 +6851,40 @@ public func listing(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "listing", attributes: combined, child: children().asNode())
+    return .element("listing", attributes, children().asNode())
 }
+
+
 
 /// main
 ///
@@ -6660,7 +6893,7 @@ public func listing(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -6669,6 +6902,9 @@ public func listing(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -6680,14 +6916,17 @@ public func main(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -6695,43 +6934,40 @@ public func main(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "main", attributes: combined, child: children().asNode())
+    return .element("main", attributes, children().asNode())
 }
+
+
 
 /// map
 ///
@@ -6740,7 +6976,7 @@ public func main(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -6749,6 +6985,9 @@ public func main(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - name: Name of the element. For example used by the server to identify the fields in form submits.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
@@ -6761,14 +7000,17 @@ public func map(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     name: String? = nil,
     slot: String? = nil,
@@ -6777,44 +7019,41 @@ public func map(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "name": name,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["name"] = name
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "map", attributes: combined, child: children().asNode())
+    return .element("map", attributes, children().asNode())
 }
+
+
 
 /// mark
 ///
@@ -6823,7 +7062,7 @@ public func map(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -6832,6 +7071,9 @@ public func map(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -6843,14 +7085,17 @@ public func mark(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -6858,43 +7103,40 @@ public func mark(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "mark", attributes: combined, child: children().asNode())
+    return .element("mark", attributes, %children().asNode()%)
 }
+
+
 
 /// marquee
 ///
@@ -6904,7 +7146,7 @@ public func mark(
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
 ///      - bgcolor: Background color of the element.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -6913,6 +7155,9 @@ public func mark(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - loop: Indicates whether the media should start playing from the start when it's finished.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
@@ -6926,61 +7171,61 @@ public func marquee(
     autocapitalize: String? = nil,
     bgcolor: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
-    loop: String? = nil,
+    loop: Bool = false,
     slot: String? = nil,
     spellcheck: String? = nil,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "bgcolor": bgcolor,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "loop": loop,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["bgcolor"] = bgcolor
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["loop"] = loop ? "" : nil
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "marquee", attributes: combined, child: children().asNode())
+    return .element("marquee", attributes, children().asNode())
 }
+
+
 
 /// menu
 ///
@@ -6989,7 +7234,7 @@ public func marquee(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -6998,6 +7243,9 @@ public func marquee(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -7010,14 +7258,17 @@ public func menu(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -7026,44 +7277,41 @@ public func menu(
     title: String? = nil,
     translate: String? = nil,
     type: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate,
-        "type": type
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
+    attributes["type"] = type
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "menu", attributes: combined, child: children().asNode())
+    return .element("menu", attributes, children().asNode())
 }
+
+
 
 /// menuitem
 ///
@@ -7072,7 +7320,7 @@ public func menu(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -7081,6 +7329,9 @@ public func menu(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -7092,14 +7343,17 @@ public func menuitem(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -7107,43 +7361,40 @@ public func menuitem(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "menuitem", attributes: combined, child: children().asNode())
+    return .element("menuitem", attributes, children().asNode())
 }
+
+
 
 /// meta
 ///
@@ -7153,7 +7404,7 @@ public func menuitem(
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
 ///      - charset: Declares the character encoding of the page or script.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - content: A value associated with http-equiv or name depending on the context.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
@@ -7161,9 +7412,12 @@ public func menuitem(
 ///      - draggable: Defines whether the element can be dragged.
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - httpEquiv: Defines a pragma directive.
+///      - http-equiv: Defines a pragma directive.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - name: Name of the element. For example used by the server to identify the fields in form submits.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
@@ -7178,15 +7432,18 @@ public func meta(
     charset: String? = nil,
     `class`: String? = nil,
     content: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     httpEquiv: String? = nil,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     name: String? = nil,
     slot: String? = nil,
@@ -7195,46 +7452,43 @@ public func meta(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...
+    customAttributes: [String: String] = [:]
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "charset": charset,
-        "class": `class`,
-        "content": content,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "http-equiv": httpEquiv,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "name": name,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["charset"] = charset
+    attributes["class"] = `class`
+    attributes["content"] = content
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["http-equiv"] = httpEquiv
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["name"] = name
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "meta", attributes: combined, child: nil)
+    return .element("meta", attributes, nil)
 }
+
+
 
 /// meter
 ///
@@ -7243,7 +7497,7 @@ public func meta(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -7254,6 +7508,9 @@ public func meta(
 ///      - high: Indicates the lower bound of the upper range.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - low: Indicates the upper bound of the lower range.
 ///      - max: Indicates the maximum value allowed.
@@ -7270,16 +7527,19 @@ public func meter(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
     form: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     high: String? = nil,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     low: String? = nil,
     max: String? = nil,
@@ -7292,50 +7552,47 @@ public func meter(
     title: String? = nil,
     translate: String? = nil,
     value: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "form": form,
-        "hidden": hidden,
-        "high": high,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "low": low,
-        "max": max,
-        "min": min,
-        "optimum": optimum,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate,
-        "value": value
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["form"] = form
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["high"] = high
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["low"] = low
+    attributes["max"] = max
+    attributes["min"] = min
+    attributes["optimum"] = optimum
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
+    attributes["value"] = value
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "meter", attributes: combined, child: children().asNode())
+    return .element("meter", attributes, children().asNode())
 }
+
+
 
 /// multicol
 ///
@@ -7344,7 +7601,7 @@ public func meter(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -7353,6 +7610,9 @@ public func meter(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -7364,14 +7624,17 @@ public func multicol(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -7379,43 +7642,40 @@ public func multicol(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "multicol", attributes: combined, child: children().asNode())
+    return .element("multicol", attributes, children().asNode())
 }
+
+
 
 /// nav
 ///
@@ -7424,7 +7684,7 @@ public func multicol(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -7433,6 +7693,9 @@ public func multicol(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -7444,14 +7707,17 @@ public func nav(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -7459,43 +7725,40 @@ public func nav(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "nav", attributes: combined, child: children().asNode())
+    return .element("nav", attributes, children().asNode())
 }
+
+
 
 /// nextid
 ///
@@ -7504,7 +7767,7 @@ public func nav(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -7513,6 +7776,9 @@ public func nav(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -7524,14 +7790,17 @@ public func nextid(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -7539,43 +7808,40 @@ public func nextid(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "nextid", attributes: combined, child: children().asNode())
+    return .element("nextid", attributes, children().asNode())
 }
+
+
 
 /// nobr
 ///
@@ -7584,7 +7850,7 @@ public func nextid(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -7593,6 +7859,9 @@ public func nextid(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -7604,14 +7873,17 @@ public func nobr(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -7619,43 +7891,40 @@ public func nobr(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "nobr", attributes: combined, child: children().asNode())
+    return .element("nobr", attributes, children().asNode())
 }
+
+
 
 /// noembed
 ///
@@ -7664,7 +7933,7 @@ public func nobr(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -7673,6 +7942,9 @@ public func nobr(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -7684,14 +7956,17 @@ public func noembed(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -7699,43 +7974,40 @@ public func noembed(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "noembed", attributes: combined, child: children().asNode())
+    return .element("noembed", attributes, children().asNode())
 }
+
+
 
 /// noframes
 ///
@@ -7744,7 +8016,7 @@ public func noembed(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -7753,6 +8025,9 @@ public func noembed(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -7764,14 +8039,17 @@ public func noframes(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -7779,43 +8057,40 @@ public func noframes(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "noframes", attributes: combined, child: children().asNode())
+    return .element("noframes", attributes, children().asNode())
 }
+
+
 
 /// noscript
 ///
@@ -7824,7 +8099,7 @@ public func noframes(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -7833,6 +8108,9 @@ public func noframes(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -7844,14 +8122,17 @@ public func noscript(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -7859,43 +8140,40 @@ public func noscript(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "noscript", attributes: combined, child: children().asNode())
+    return .element("noscript", attributes, children().asNode())
 }
+
+
 
 /// object
 ///
@@ -7905,7 +8183,7 @@ public func noscript(
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
 ///      - border: The border width.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - data: Specifies the URL of the resource.
@@ -7917,6 +8195,9 @@ public func noscript(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - name: Name of the element. For example used by the server to identify the fields in form submits.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
@@ -7933,7 +8214,7 @@ public func object(
     autocapitalize: String? = nil,
     border: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     data: String? = nil,
     dir: String? = nil,
@@ -7941,9 +8222,12 @@ public func object(
     dropzone: String? = nil,
     form: String? = nil,
     height: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     name: String? = nil,
     slot: String? = nil,
@@ -7955,51 +8239,48 @@ public func object(
     type: String? = nil,
     usemap: String? = nil,
     width: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "border": border,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "data": data,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "form": form,
-        "height": height,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "name": name,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate,
-        "type": type,
-        "usemap": usemap,
-        "width": width
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["border"] = border
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["data"] = data
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["form"] = form
+    attributes["height"] = height
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["name"] = name
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
+    attributes["type"] = type
+    attributes["usemap"] = usemap
+    attributes["width"] = width
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "object", attributes: combined, child: children().asNode())
+    return .element("object", attributes, children().asNode())
 }
+
+
 
 /// ol
 ///
@@ -8008,7 +8289,7 @@ public func object(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -8017,6 +8298,9 @@ public func object(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - reversed: Indicates whether the list should be displayed in a descending order instead of a ascending.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
@@ -8030,16 +8314,19 @@ public func ol(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
-    reversed: String? = nil,
+    reversed: Bool = false,
     slot: String? = nil,
     spellcheck: String? = nil,
     start: String? = nil,
@@ -8047,45 +8334,42 @@ public func ol(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "reversed": reversed,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "start": start,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["reversed"] = reversed ? "" : nil
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["start"] = start
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "ol", attributes: combined, child: children().asNode())
+    return .element("ol", attributes, children().asNode())
 }
+
+
 
 /// optgroup
 ///
@@ -8094,7 +8378,7 @@ public func ol(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -8104,6 +8388,9 @@ public func ol(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -8115,15 +8402,18 @@ public func optgroup(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
-    disabled: String? = nil,
+    disabled: Bool = false,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -8131,44 +8421,41 @@ public func optgroup(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "disabled": disabled,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["disabled"] = disabled ? "" : nil
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "optgroup", attributes: combined, child: children().asNode())
+    return .element("optgroup", attributes, children().asNode())
 }
+
+
 
 /// option
 ///
@@ -8177,7 +8464,7 @@ public func optgroup(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -8187,6 +8474,9 @@ public func optgroup(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - selected: Defines a value which will be selected on page load.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
@@ -8200,17 +8490,20 @@ public func option(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
-    disabled: String? = nil,
+    disabled: Bool = false,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
-    selected: String? = nil,
+    selected: Bool = false,
     slot: String? = nil,
     spellcheck: String? = nil,
     style: String? = nil,
@@ -8218,46 +8511,43 @@ public func option(
     title: String? = nil,
     translate: String? = nil,
     value: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "disabled": disabled,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "selected": selected,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate,
-        "value": value
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["disabled"] = disabled ? "" : nil
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["selected"] = selected ? "" : nil
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
+    attributes["value"] = value
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "option", attributes: combined, child: children().asNode())
+    return .element("option", attributes, children().asNode())
 }
+
+
 
 /// output
 ///
@@ -8266,17 +8556,20 @@ public func option(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
 ///      - draggable: Defines whether the element can be dragged.
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - `for`: Describes elements which belongs to this one.
+///      - for: Describes elements which belongs to this one.
 ///      - form: Indicates the form that is the owner of the element.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - name: Name of the element. For example used by the server to identify the fields in form submits.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
@@ -8289,16 +8582,19 @@ public func output(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
     `for`: String? = nil,
     form: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     name: String? = nil,
     slot: String? = nil,
@@ -8307,46 +8603,43 @@ public func output(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "for": `for`,
-        "form": form,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "name": name,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["for"] = `for`
+    attributes["form"] = form
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["name"] = name
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "output", attributes: combined, child: children().asNode())
+    return .element("output", attributes, children().asNode())
 }
+
+
 
 /// p
 ///
@@ -8355,7 +8648,7 @@ public func output(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -8364,6 +8657,9 @@ public func output(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -8375,14 +8671,17 @@ public func p(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -8390,43 +8689,40 @@ public func p(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "p", attributes: combined, child: children().asNode())
+    return .element("p", attributes, children().asNode())
 }
+
+
 
 /// param
 ///
@@ -8435,7 +8731,7 @@ public func p(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -8444,6 +8740,9 @@ public func p(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - name: Name of the element. For example used by the server to identify the fields in form submits.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
@@ -8457,14 +8756,17 @@ public func param(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     name: String? = nil,
     slot: String? = nil,
@@ -8474,44 +8776,41 @@ public func param(
     title: String? = nil,
     translate: String? = nil,
     value: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...
+    customAttributes: [String: String] = [:]
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "name": name,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate,
-        "value": value
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["name"] = name
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
+    attributes["value"] = value
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "param", attributes: combined, child: nil)
+    return .element("param", attributes, nil)
 }
+
+
 
 /// picture
 ///
@@ -8520,7 +8819,7 @@ public func param(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -8529,6 +8828,9 @@ public func param(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -8540,14 +8842,17 @@ public func picture(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -8555,43 +8860,40 @@ public func picture(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "picture", attributes: combined, child: children().asNode())
+    return .element("picture", attributes, children().asNode())
 }
+
+
 
 /// plaintext
 ///
@@ -8600,7 +8902,7 @@ public func picture(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -8609,6 +8911,9 @@ public func picture(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -8620,14 +8925,17 @@ public func plaintext(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -8635,43 +8943,40 @@ public func plaintext(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "plaintext", attributes: combined, child: children().asNode())
+    return .element("plaintext", attributes, children().asNode())
 }
+
+
 
 /// pre
 ///
@@ -8680,7 +8985,7 @@ public func plaintext(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -8689,6 +8994,9 @@ public func plaintext(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -8700,14 +9008,17 @@ public func pre(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -8715,43 +9026,40 @@ public func pre(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "pre", attributes: combined, child: children().asNode())
+    return .element("pre", attributes, children().asNode())
 }
+
+
 
 /// progress
 ///
@@ -8760,7 +9068,7 @@ public func pre(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -8770,6 +9078,9 @@ public func pre(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - max: Indicates the maximum value allowed.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
@@ -8783,15 +9094,18 @@ public func progress(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
     form: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     max: String? = nil,
     slot: String? = nil,
@@ -8801,46 +9115,43 @@ public func progress(
     title: String? = nil,
     translate: String? = nil,
     value: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "form": form,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "max": max,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate,
-        "value": value
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["form"] = form
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["max"] = max
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
+    attributes["value"] = value
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "progress", attributes: combined, child: children().asNode())
+    return .element("progress", attributes, children().asNode())
 }
+
+
 
 /// q
 ///
@@ -8850,7 +9161,7 @@ public func progress(
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
 ///      - cite: Contains a URI which points to the source of the quote or change.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -8859,6 +9170,9 @@ public func progress(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -8871,14 +9185,17 @@ public func q(
     autocapitalize: String? = nil,
     cite: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -8886,44 +9203,41 @@ public func q(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "cite": cite,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["cite"] = cite
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "q", attributes: combined, child: children().asNode())
+    return .element("q", attributes, %children().asNode()%)
 }
+
+
 
 /// rb
 ///
@@ -8932,7 +9246,7 @@ public func q(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -8941,6 +9255,9 @@ public func q(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -8952,14 +9269,17 @@ public func rb(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -8967,43 +9287,40 @@ public func rb(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "rb", attributes: combined, child: children().asNode())
+    return .element("rb", attributes, %children().asNode()%)
 }
+
+
 
 /// rp
 ///
@@ -9012,7 +9329,7 @@ public func rb(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -9021,6 +9338,9 @@ public func rb(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -9032,14 +9352,17 @@ public func rp(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -9047,43 +9370,40 @@ public func rp(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "rp", attributes: combined, child: children().asNode())
+    return .element("rp", attributes, %children().asNode()%)
 }
+
+
 
 /// rt
 ///
@@ -9092,7 +9412,7 @@ public func rp(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -9101,6 +9421,9 @@ public func rp(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -9112,14 +9435,17 @@ public func rt(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -9127,43 +9453,40 @@ public func rt(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "rt", attributes: combined, child: children().asNode())
+    return .element("rt", attributes, %children().asNode()%)
 }
+
+
 
 /// rtc
 ///
@@ -9172,7 +9495,7 @@ public func rt(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -9181,6 +9504,9 @@ public func rt(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -9192,14 +9518,17 @@ public func rtc(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -9207,43 +9536,40 @@ public func rtc(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "rtc", attributes: combined, child: children().asNode())
+    return .element("rtc", attributes, %children().asNode()%)
 }
+
+
 
 /// ruby
 ///
@@ -9252,7 +9578,7 @@ public func rtc(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -9261,6 +9587,9 @@ public func rtc(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -9272,14 +9601,17 @@ public func ruby(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -9287,43 +9619,40 @@ public func ruby(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "ruby", attributes: combined, child: children().asNode())
+    return .element("ruby", attributes, %children().asNode()%)
 }
+
+
 
 /// s
 ///
@@ -9332,7 +9661,7 @@ public func ruby(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -9341,6 +9670,9 @@ public func ruby(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -9352,14 +9684,17 @@ public func s(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -9367,43 +9702,40 @@ public func s(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "s", attributes: combined, child: children().asNode())
+    return .element("s", attributes, %children().asNode()%)
 }
+
+
 
 /// samp
 ///
@@ -9412,7 +9744,7 @@ public func s(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -9421,6 +9753,9 @@ public func s(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -9432,14 +9767,17 @@ public func samp(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -9447,43 +9785,40 @@ public func samp(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "samp", attributes: combined, child: children().asNode())
+    return .element("samp", attributes, %children().asNode()%)
 }
+
+
 
 /// script
 ///
@@ -9494,11 +9829,11 @@ public func samp(
 ///      - async: Indicates that the script should be executed asynchronously.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
 ///      - charset: Declares the character encoding of the page or script.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - crossorigin: How the element handles cross-origin requests
-///      - `defer`: Indicates that the script should be executed after the page has been parsed.
+///      - defer: Indicates that the script should be executed after the page has been parsed.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
 ///      - draggable: Defines whether the element can be dragged.
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
@@ -9507,6 +9842,9 @@ public func samp(
 ///      - importance: Indicates the relative fetch priority for the resource.
 ///      - integrity: Specifies a Subresource Integrity value that allows browsers to verify what they fetch.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - language: Defines the script language used in the element.
 ///      - referrerpolicy: Specifies which referrer is sent when fetching the resource.
@@ -9520,22 +9858,25 @@ public func samp(
 ///      - type: Defines the type of the element.
 public func script(
     accesskey: String? = nil,
-    async: String? = nil,
+    async: Bool = false,
     autocapitalize: String? = nil,
     charset: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     crossorigin: String? = nil,
-    `defer`: String? = nil,
+    `defer`: Bool = false,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
     importance: String? = nil,
     integrity: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     language: String? = nil,
     referrerpolicy: String? = nil,
@@ -9547,53 +9888,50 @@ public func script(
     title: String? = nil,
     translate: String? = nil,
     type: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "async": async,
-        "autocapitalize": autocapitalize,
-        "charset": charset,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "crossorigin": crossorigin,
-        "defer": `defer`,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "importance": importance,
-        "integrity": integrity,
-        "itemprop": itemprop,
-        "lang": lang,
-        "language": language,
-        "referrerpolicy": referrerpolicy,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "src": src,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate,
-        "type": type
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["async"] = async ? "" : nil
+    attributes["autocapitalize"] = autocapitalize
+    attributes["charset"] = charset
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["crossorigin"] = crossorigin
+    attributes["defer"] = `defer` ? "" : nil
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["importance"] = importance
+    attributes["integrity"] = integrity
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["language"] = language
+    attributes["referrerpolicy"] = referrerpolicy
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["src"] = src
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
+    attributes["type"] = type
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "script", attributes: combined, child: children().asNode())
+    return .element("script", attributes, children().asNode())
 }
+
+
 
 /// section
 ///
@@ -9602,7 +9940,7 @@ public func script(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -9611,6 +9949,9 @@ public func script(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -9622,14 +9963,17 @@ public func section(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -9637,43 +9981,40 @@ public func section(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "section", attributes: combined, child: children().asNode())
+    return .element("section", attributes, children().asNode())
 }
+
+
 
 /// select
 ///
@@ -9684,7 +10025,7 @@ public func section(
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
 ///      - autocomplete: Indicates whether controls in this form can by default have their values automatically completed by the browser.
 ///      - autofocus: The element should be automatically focused after the page loaded.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -9695,10 +10036,13 @@ public func section(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - multiple: Indicates whether multiple values can be entered in an input of the type email or file.
 ///      - name: Name of the element. For example used by the server to identify the fields in form submits.
-///      - `required`: Indicates whether this element is required to fill out or not.
+///      - required: Indicates whether this element is required to fill out or not.
 ///      - size: Defines the width of the element (in pixels). If the element's type attribute is text or password then it's the number of characters.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -9710,22 +10054,25 @@ public func select(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     autocomplete: String? = nil,
-    autofocus: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
-    disabled: String? = nil,
+    disabled: Bool = false,
     draggable: String? = nil,
     dropzone: String? = nil,
     form: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
-    multiple: String? = nil,
+    multiple: Bool = false,
     name: String? = nil,
-    `required`: String? = nil,
+    `required`: Bool = false,
     size: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -9733,51 +10080,48 @@ public func select(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "autocomplete": autocomplete,
-        "autofocus": autofocus,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "disabled": disabled,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "form": form,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "multiple": multiple,
-        "name": name,
-        "required": `required`,
-        "size": size,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["autocomplete"] = autocomplete
+    attributes["autofocus"] = autofocus ? "" : nil
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["disabled"] = disabled ? "" : nil
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["form"] = form
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["multiple"] = multiple ? "" : nil
+    attributes["name"] = name
+    attributes["required"] = `required` ? "" : nil
+    attributes["size"] = size
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "select", attributes: combined, child: children().asNode())
+    return .element("select", attributes, children().asNode())
 }
+
+
 
 /// shadow
 ///
@@ -9786,7 +10130,7 @@ public func select(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -9795,6 +10139,9 @@ public func select(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -9806,14 +10153,17 @@ public func shadow(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -9821,43 +10171,40 @@ public func shadow(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "shadow", attributes: combined, child: children().asNode())
+    return .element("shadow", attributes, children().asNode())
 }
+
+
 
 /// slot
 ///
@@ -9866,7 +10213,7 @@ public func shadow(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -9875,6 +10222,9 @@ public func shadow(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -9886,14 +10236,17 @@ public func slot(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -9901,43 +10254,40 @@ public func slot(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "slot", attributes: combined, child: children().asNode())
+    return .element("slot", attributes, children().asNode())
 }
+
+
 
 /// small
 ///
@@ -9946,7 +10296,7 @@ public func slot(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -9955,6 +10305,9 @@ public func slot(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -9966,14 +10319,17 @@ public func small(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -9981,43 +10337,40 @@ public func small(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "small", attributes: combined, child: children().asNode())
+    return .element("small", attributes, %children().asNode()%)
 }
+
+
 
 /// source
 ///
@@ -10026,7 +10379,7 @@ public func small(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -10035,6 +10388,9 @@ public func small(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - media: Specifies a hint of the media for which the linked resource was designed.
 ///      - sizes: 
@@ -10051,14 +10407,17 @@ public func source(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     media: String? = nil,
     sizes: String? = nil,
@@ -10071,47 +10430,44 @@ public func source(
     title: String? = nil,
     translate: String? = nil,
     type: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...
+    customAttributes: [String: String] = [:]
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "media": media,
-        "sizes": sizes,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "src": src,
-        "srcset": srcset,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate,
-        "type": type
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["media"] = media
+    attributes["sizes"] = sizes
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["src"] = src
+    attributes["srcset"] = srcset
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
+    attributes["type"] = type
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "source", attributes: combined, child: nil)
+    return .element("source", attributes, nil)
 }
+
+
 
 /// spacer
 ///
@@ -10120,7 +10476,7 @@ public func source(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -10129,6 +10485,9 @@ public func source(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -10140,14 +10499,17 @@ public func spacer(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -10155,43 +10517,40 @@ public func spacer(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "spacer", attributes: combined, child: children().asNode())
+    return .element("spacer", attributes, children().asNode())
 }
+
+
 
 /// span
 ///
@@ -10200,7 +10559,7 @@ public func spacer(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -10209,6 +10568,9 @@ public func spacer(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -10220,14 +10582,17 @@ public func span(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -10235,43 +10600,40 @@ public func span(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "span", attributes: combined, child: children().asNode())
+    return .element("span", attributes, %children().asNode()%)
 }
+
+
 
 /// strike
 ///
@@ -10280,7 +10642,7 @@ public func span(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -10289,6 +10651,9 @@ public func span(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -10300,14 +10665,17 @@ public func strike(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -10315,43 +10683,40 @@ public func strike(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "strike", attributes: combined, child: children().asNode())
+    return .element("strike", attributes, children().asNode())
 }
+
+
 
 /// strong
 ///
@@ -10360,7 +10725,7 @@ public func strike(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -10369,6 +10734,9 @@ public func strike(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -10380,14 +10748,17 @@ public func strong(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -10395,43 +10766,40 @@ public func strong(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "strong", attributes: combined, child: children().asNode())
+    return .element("strong", attributes, %children().asNode()%)
 }
+
+
 
 /// style
 ///
@@ -10440,7 +10808,7 @@ public func strong(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -10449,6 +10817,9 @@ public func strong(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - media: Specifies a hint of the media for which the linked resource was designed.
 ///      - scoped: 
@@ -10463,17 +10834,20 @@ public func style(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     media: String? = nil,
-    scoped: String? = nil,
+    scoped: Bool = false,
     slot: String? = nil,
     spellcheck: String? = nil,
     style: String? = nil,
@@ -10481,46 +10855,43 @@ public func style(
     title: String? = nil,
     translate: String? = nil,
     type: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "media": media,
-        "scoped": scoped,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate,
-        "type": type
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["media"] = media
+    attributes["scoped"] = scoped ? "" : nil
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
+    attributes["type"] = type
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "style", attributes: combined, child: children().asNode())
+    return .element("style", attributes, children().asNode())
 }
+
+
 
 /// sub
 ///
@@ -10529,7 +10900,7 @@ public func style(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -10538,6 +10909,9 @@ public func style(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -10549,14 +10923,17 @@ public func sub(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -10564,43 +10941,40 @@ public func sub(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "sub", attributes: combined, child: children().asNode())
+    return .element("sub", attributes, %children().asNode()%)
 }
+
+
 
 /// summary
 ///
@@ -10609,7 +10983,7 @@ public func sub(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -10618,6 +10992,9 @@ public func sub(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -10629,14 +11006,17 @@ public func summary(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -10644,43 +11024,40 @@ public func summary(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "summary", attributes: combined, child: children().asNode())
+    return .element("summary", attributes, children().asNode())
 }
+
+
 
 /// sup
 ///
@@ -10689,7 +11066,7 @@ public func summary(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -10698,6 +11075,9 @@ public func summary(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -10709,14 +11089,17 @@ public func sup(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -10724,43 +11107,40 @@ public func sup(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "sup", attributes: combined, child: children().asNode())
+    return .element("sup", attributes, %children().asNode()%)
 }
+
+
 
 /// table
 ///
@@ -10773,7 +11153,7 @@ public func sup(
 ///      - background: Specifies the URL of an image file.
 ///      - bgcolor: Background color of the element.
 ///      - border: The border width.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -10782,6 +11162,9 @@ public func sup(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -10798,14 +11181,17 @@ public func table(
     bgcolor: String? = nil,
     border: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -10814,48 +11200,45 @@ public func table(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "align": align,
-        "autocapitalize": autocapitalize,
-        "background": background,
-        "bgcolor": bgcolor,
-        "border": border,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "summary": summary,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["align"] = align
+    attributes["autocapitalize"] = autocapitalize
+    attributes["background"] = background
+    attributes["bgcolor"] = bgcolor
+    attributes["border"] = border
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["summary"] = summary
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "table", attributes: combined, child: children().asNode())
+    return .element("table", attributes, children().asNode())
 }
+
+
 
 /// tbody
 ///
@@ -10866,7 +11249,7 @@ public func table(
 ///      - align: Specifies the horizontal alignment of the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
 ///      - bgcolor: Background color of the element.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -10875,6 +11258,9 @@ public func table(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -10888,14 +11274,17 @@ public func tbody(
     autocapitalize: String? = nil,
     bgcolor: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -10903,45 +11292,42 @@ public func tbody(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "align": align,
-        "autocapitalize": autocapitalize,
-        "bgcolor": bgcolor,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["align"] = align
+    attributes["autocapitalize"] = autocapitalize
+    attributes["bgcolor"] = bgcolor
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "tbody", attributes: combined, child: children().asNode())
+    return .element("tbody", attributes, children().asNode())
 }
+
+
 
 /// td
 ///
@@ -10953,7 +11339,7 @@ public func tbody(
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
 ///      - background: Specifies the URL of an image file.
 ///      - bgcolor: Background color of the element.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - colspan: The colspan attribute defines the number of columns a cell should span.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
@@ -10964,6 +11350,9 @@ public func tbody(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - rowspan: Defines the number of rows a table cell should span over.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
@@ -10980,15 +11369,18 @@ public func td(
     bgcolor: String? = nil,
     `class`: String? = nil,
     colspan: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
     headers: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     rowspan: String? = nil,
     slot: String? = nil,
@@ -10997,49 +11389,46 @@ public func td(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "align": align,
-        "autocapitalize": autocapitalize,
-        "background": background,
-        "bgcolor": bgcolor,
-        "class": `class`,
-        "colspan": colspan,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "headers": headers,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "rowspan": rowspan,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["align"] = align
+    attributes["autocapitalize"] = autocapitalize
+    attributes["background"] = background
+    attributes["bgcolor"] = bgcolor
+    attributes["class"] = `class`
+    attributes["colspan"] = colspan
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["headers"] = headers
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["rowspan"] = rowspan
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "td", attributes: combined, child: children().asNode())
+    return .element("td", attributes, children().asNode())
 }
+
+
 
 /// template
 ///
@@ -11048,7 +11437,7 @@ public func td(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -11057,6 +11446,9 @@ public func td(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -11068,14 +11460,17 @@ public func template(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -11083,43 +11478,40 @@ public func template(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "template", attributes: combined, child: children().asNode())
+    return .element("template", attributes, children().asNode())
 }
+
+
 
 /// textarea
 ///
@@ -11130,7 +11522,7 @@ public func template(
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
 ///      - autocomplete: Indicates whether controls in this form can by default have their values automatically completed by the browser.
 ///      - autofocus: The element should be automatically focused after the page loaded.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - cols: Defines the number of columns in a textarea.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
@@ -11145,13 +11537,16 @@ public func template(
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - inputmode: Provides a hint as to the type of data that might be entered by the user while editing the element or its contents. The attribute can be used with form controls (such as the value of textarea elements), or in elements in an editing host (e.g., using contenteditable attribute).
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - maxlength: Defines the maximum number of characters allowed in the element.
 ///      - minlength: Defines the minimum number of characters allowed in the element.
 ///      - name: Name of the element. For example used by the server to identify the fields in form submits.
 ///      - placeholder: Provides a hint to the user of what can be entered in the field.
 ///      - readonly: Indicates whether the element can be edited.
-///      - `required`: Indicates whether this element is required to fill out or not.
+///      - required: Indicates whether this element is required to fill out or not.
 ///      - rows: Defines the number of rows in a text area.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -11164,29 +11559,32 @@ public func textarea(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     autocomplete: String? = nil,
-    autofocus: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     cols: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     dirname: String? = nil,
-    disabled: String? = nil,
+    disabled: Bool = false,
     draggable: String? = nil,
     dropzone: String? = nil,
     enterkeyhint: String? = nil,
     form: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
     inputmode: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     maxlength: String? = nil,
     minlength: String? = nil,
     name: String? = nil,
     placeholder: String? = nil,
-    readonly: String? = nil,
-    `required`: String? = nil,
+    readonly: Bool = false,
+    `required`: Bool = false,
     rows: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -11195,59 +11593,56 @@ public func textarea(
     title: String? = nil,
     translate: String? = nil,
     wrap: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "autocomplete": autocomplete,
-        "autofocus": autofocus,
-        "class": `class`,
-        "cols": cols,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "dirname": dirname,
-        "disabled": disabled,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "enterkeyhint": enterkeyhint,
-        "form": form,
-        "hidden": hidden,
-        "id": id,
-        "inputmode": inputmode,
-        "itemprop": itemprop,
-        "lang": lang,
-        "maxlength": maxlength,
-        "minlength": minlength,
-        "name": name,
-        "placeholder": placeholder,
-        "readonly": readonly,
-        "required": `required`,
-        "rows": rows,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate,
-        "wrap": wrap
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["autocomplete"] = autocomplete
+    attributes["autofocus"] = autofocus ? "" : nil
+    attributes["class"] = `class`
+    attributes["cols"] = cols
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["dirname"] = dirname
+    attributes["disabled"] = disabled ? "" : nil
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["enterkeyhint"] = enterkeyhint
+    attributes["form"] = form
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["maxlength"] = maxlength
+    attributes["minlength"] = minlength
+    attributes["name"] = name
+    attributes["placeholder"] = placeholder
+    attributes["readonly"] = readonly ? "" : nil
+    attributes["required"] = `required` ? "" : nil
+    attributes["rows"] = rows
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
+    attributes["wrap"] = wrap
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "textarea", attributes: combined, child: children().asNode())
+    return .element("textarea", attributes, children().asNode())
 }
+
+
 
 /// tfoot
 ///
@@ -11258,7 +11653,7 @@ public func textarea(
 ///      - align: Specifies the horizontal alignment of the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
 ///      - bgcolor: Background color of the element.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -11267,6 +11662,9 @@ public func textarea(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -11280,14 +11678,17 @@ public func tfoot(
     autocapitalize: String? = nil,
     bgcolor: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -11295,45 +11696,42 @@ public func tfoot(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "align": align,
-        "autocapitalize": autocapitalize,
-        "bgcolor": bgcolor,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["align"] = align
+    attributes["autocapitalize"] = autocapitalize
+    attributes["bgcolor"] = bgcolor
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "tfoot", attributes: combined, child: children().asNode())
+    return .element("tfoot", attributes, children().asNode())
 }
+
+
 
 /// th
 ///
@@ -11345,7 +11743,7 @@ public func tfoot(
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
 ///      - background: Specifies the URL of an image file.
 ///      - bgcolor: Background color of the element.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - colspan: The colspan attribute defines the number of columns a cell should span.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
@@ -11356,6 +11754,9 @@ public func tfoot(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - rowspan: Defines the number of rows a table cell should span over.
 ///      - scope: Defines the cells that the header test (defined in the th element) relates to.
@@ -11373,15 +11774,18 @@ public func th(
     bgcolor: String? = nil,
     `class`: String? = nil,
     colspan: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
     headers: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     rowspan: String? = nil,
     scope: String? = nil,
@@ -11391,50 +11795,47 @@ public func th(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "align": align,
-        "autocapitalize": autocapitalize,
-        "background": background,
-        "bgcolor": bgcolor,
-        "class": `class`,
-        "colspan": colspan,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "headers": headers,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "rowspan": rowspan,
-        "scope": scope,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["align"] = align
+    attributes["autocapitalize"] = autocapitalize
+    attributes["background"] = background
+    attributes["bgcolor"] = bgcolor
+    attributes["class"] = `class`
+    attributes["colspan"] = colspan
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["headers"] = headers
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["rowspan"] = rowspan
+    attributes["scope"] = scope
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "th", attributes: combined, child: children().asNode())
+    return .element("th", attributes, children().asNode())
 }
+
+
 
 /// thead
 ///
@@ -11444,7 +11845,7 @@ public func th(
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - align: Specifies the horizontal alignment of the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -11453,6 +11854,9 @@ public func th(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -11465,14 +11869,17 @@ public func thead(
     align: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -11480,44 +11887,41 @@ public func thead(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "align": align,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["align"] = align
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "thead", attributes: combined, child: children().asNode())
+    return .element("thead", attributes, children().asNode())
 }
+
+
 
 /// time
 ///
@@ -11526,7 +11930,7 @@ public func thead(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - datetime: Indicates the date and time associated with the element.
@@ -11536,6 +11940,9 @@ public func thead(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -11547,15 +11954,18 @@ public func time(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     datetime: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -11563,44 +11973,41 @@ public func time(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "datetime": datetime,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["datetime"] = datetime
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "time", attributes: combined, child: children().asNode())
+    return .element("time", attributes, %children().asNode()%)
 }
+
+
 
 /// title
 ///
@@ -11609,7 +12016,7 @@ public func time(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -11618,6 +12025,9 @@ public func time(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -11629,14 +12039,17 @@ public func title(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -11644,43 +12057,40 @@ public func title(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "title", attributes: combined, child: children().asNode())
+    return .element("title", attributes, children().asNode())
 }
+
+
 
 /// tr
 ///
@@ -11691,7 +12101,7 @@ public func title(
 ///      - align: Specifies the horizontal alignment of the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
 ///      - bgcolor: Background color of the element.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -11700,6 +12110,9 @@ public func title(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -11713,14 +12126,17 @@ public func tr(
     autocapitalize: String? = nil,
     bgcolor: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -11728,45 +12144,42 @@ public func tr(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "align": align,
-        "autocapitalize": autocapitalize,
-        "bgcolor": bgcolor,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["align"] = align
+    attributes["autocapitalize"] = autocapitalize
+    attributes["bgcolor"] = bgcolor
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "tr", attributes: combined, child: children().asNode())
+    return .element("tr", attributes, children().asNode())
 }
+
+
 
 /// track
 ///
@@ -11775,16 +12188,19 @@ public func tr(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - `default`: Indicates that the track should be enabled unless the user's preferences indicate something different.
+///      - default: Indicates that the track should be enabled unless the user's preferences indicate something different.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
 ///      - draggable: Defines whether the element can be dragged.
 ///      - dropzone: Indicates that the element accept the dropping of content on it.
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - kind: Specifies the kind of text track.
 ///      - label: Specifies a user-readable title of the text track.
 ///      - lang: Defines the language used in the element.
@@ -11800,15 +12216,18 @@ public func track(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
-    `default`: String? = nil,
+    `default`: Bool = false,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     kind: String? = nil,
     label: String? = nil,
     lang: String? = nil,
@@ -11820,47 +12239,44 @@ public func track(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...
+    customAttributes: [String: String] = [:]
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "default": `default`,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "kind": kind,
-        "label": label,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "src": src,
-        "srclang": srclang,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["default"] = `default` ? "" : nil
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["kind"] = kind
+    attributes["label"] = label
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["src"] = src
+    attributes["srclang"] = srclang
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "track", attributes: combined, child: nil)
+    return .element("track", attributes, nil)
 }
+
+
 
 /// tt
 ///
@@ -11869,7 +12285,7 @@ public func track(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -11878,6 +12294,9 @@ public func track(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -11889,14 +12308,17 @@ public func tt(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -11904,43 +12326,40 @@ public func tt(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "tt", attributes: combined, child: children().asNode())
+    return .element("tt", attributes, %children().asNode()%)
 }
+
+
 
 /// u
 ///
@@ -11949,7 +12368,7 @@ public func tt(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -11958,6 +12377,9 @@ public func tt(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -11969,14 +12391,17 @@ public func u(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -11984,43 +12409,40 @@ public func u(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "u", attributes: combined, child: children().asNode())
+    return .element("u", attributes, %children().asNode()%)
 }
+
+
 
 /// ul
 ///
@@ -12029,7 +12451,7 @@ public func u(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -12038,6 +12460,9 @@ public func u(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -12049,14 +12474,17 @@ public func ul(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -12064,43 +12492,40 @@ public func ul(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "ul", attributes: combined, child: children().asNode())
+    return .element("ul", attributes, children().asNode())
 }
+
+
 
 /// var
 ///
@@ -12109,7 +12534,7 @@ public func ul(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -12118,6 +12543,9 @@ public func ul(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -12129,14 +12557,17 @@ public func `var`(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -12144,43 +12575,40 @@ public func `var`(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "var", attributes: combined, child: children().asNode())
+    return .element("var", attributes, %children().asNode()%)
 }
+
+
 
 /// video
 ///
@@ -12191,7 +12619,7 @@ public func `var`(
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
 ///      - autoplay: The audio or video should play as soon as possible.
 ///      - buffered: Contains the time range of already buffered media.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - controls: Indicates whether the browser should show playback controls to the user.
@@ -12203,6 +12631,9 @@ public func `var`(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - loop: Indicates whether the media should start playing from the start when it's finished.
 ///      - muted: Indicates whether the audio will be initially silenced on page load.
@@ -12219,23 +12650,26 @@ public func `var`(
 public func video(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
-    autoplay: String? = nil,
+    autoplay: Bool = false,
     buffered: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
-    controls: String? = nil,
+    controls: Bool = false,
     crossorigin: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
     height: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
-    loop: String? = nil,
-    muted: String? = nil,
+    loop: Bool = false,
+    muted: Bool = false,
     poster: String? = nil,
     preload: String? = nil,
     slot: String? = nil,
@@ -12246,54 +12680,51 @@ public func video(
     title: String? = nil,
     translate: String? = nil,
     width: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "autoplay": autoplay,
-        "buffered": buffered,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "controls": controls,
-        "crossorigin": crossorigin,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "height": height,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "loop": loop,
-        "muted": muted,
-        "poster": poster,
-        "preload": preload,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "src": src,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate,
-        "width": width
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["autoplay"] = autoplay ? "" : nil
+    attributes["buffered"] = buffered
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["controls"] = controls ? "" : nil
+    attributes["crossorigin"] = crossorigin
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["height"] = height
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["loop"] = loop ? "" : nil
+    attributes["muted"] = muted ? "" : nil
+    attributes["poster"] = poster
+    attributes["preload"] = preload
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["src"] = src
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
+    attributes["width"] = width
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "video", attributes: combined, child: children().asNode())
+    return .element("video", attributes, children().asNode())
 }
+
+
 
 /// wbr
 ///
@@ -12302,7 +12733,7 @@ public func video(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -12311,6 +12742,9 @@ public func video(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -12322,14 +12756,17 @@ public func wbr(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -12337,42 +12774,39 @@ public func wbr(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...
+    customAttributes: [String: String] = [:]
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "wbr", attributes: combined, child: nil)
+    return .element("wbr", attributes, nil)
 }
+
+
 
 /// xmp
 ///
@@ -12381,7 +12815,7 @@ public func wbr(
 /// - Parameters:
 ///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
 ///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - `class`: Often used with CSS to style elements with common properties.
+///      - class: Often used with CSS to style elements with common properties.
 ///      - contenteditable: Indicates whether the element's content is editable.
 ///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
 ///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
@@ -12390,6 +12824,9 @@ public func wbr(
 ///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
 ///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
 ///      - itemprop: 
+///      - itemscope: 
+///      - itemref: 
+///      - itemtype: 
 ///      - lang: Defines the language used in the element.
 ///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
 ///      - spellcheck: Indicates whether spell checking is allowed for the element.
@@ -12401,14 +12838,17 @@ public func xmp(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     `class`: String? = nil,
-    contenteditable: String? = nil,
+    contenteditable: Bool = false,
     contextmenu: String? = nil,
     dir: String? = nil,
     draggable: String? = nil,
     dropzone: String? = nil,
-    hidden: String? = nil,
+    hidden: Bool = false,
     id: String? = nil,
-    itemprop: String? = nil,
+    itemprop: Bool = false,
+    itemscope: Bool = false,
+    itemref: String? = nil,
+    itemtype: String? = nil,
     lang: String? = nil,
     slot: String? = nil,
     spellcheck: String? = nil,
@@ -12416,41 +12856,36 @@ public func xmp(
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    customData: [String: String] = [:],
-    classes classList: String...,
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment(children: []) }
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
-    let attributes = [
-        "accesskey": accesskey,
-        "autocapitalize": autocapitalize,
-        "class": `class`,
-        "contenteditable": contenteditable,
-        "contextmenu": contextmenu,
-        "dir": dir,
-        "draggable": draggable,
-        "dropzone": dropzone,
-        "hidden": hidden,
-        "id": id,
-        "itemprop": itemprop,
-        "lang": lang,
-        "slot": slot,
-        "spellcheck": spellcheck,
-        "style": style,
-        "tabindex": tabindex,
-        "title": title,
-        "translate": translate
-    ]
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["contextmenu"] = contextmenu
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable
+    attributes["dropzone"] = dropzone
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemref"] = itemref
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck
+    attributes["style"] = style
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
 
-    var combined = attributes.compactMapValues { $0 }
-
-    if !classList.isEmpty {
-        combined["class"] = (combined["class"] ?? "") + classList.joined(separator: " ")
+    for (key, value) in customAttributes {
+        attributes[key] = value
     }
 
-    for (key, value) in customData {
-        combined["data-\(key)"] = value
-    }
-
-    return .element(name: "xmp", attributes: combined, child: children().asNode())
+    return .element("xmp", attributes, children().asNode())
 }
 
