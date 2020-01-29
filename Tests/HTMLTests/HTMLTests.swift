@@ -35,6 +35,16 @@ final class HTMLTests: XCTestCase {
         XCTAssertTrue(String(describing: root).contains("Hello World!"))
     }
 
+    func testBooleanAttribute() {
+        let root = div(itemscope: true, itemtype: "https://schema.org/Article") {
+            "This is an article."
+        }
+
+        print(String(describing: root))
+
+        XCTAssertTrue(String(describing: root).contains(" itemscope "))
+    }
+
     func testEmptyElements() {
         let emptyElement = br()
 
