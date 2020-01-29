@@ -49,7 +49,7 @@ public func a(
     href: String? = nil,
     hreflang: String? = nil,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -83,7 +83,7 @@ public func a(
     attributes["href"] = href
     attributes["hreflang"] = hreflang
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -147,7 +147,7 @@ public func abbr(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -172,7 +172,7 @@ public func abbr(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -230,7 +230,7 @@ public func acronym(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -255,7 +255,7 @@ public func acronym(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -313,7 +313,7 @@ public func address(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -338,7 +338,7 @@ public func address(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -404,7 +404,7 @@ public func applet(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -433,7 +433,7 @@ public func applet(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -507,7 +507,7 @@ public func area(
     href: String? = nil,
     hreflang: String? = nil,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -542,7 +542,7 @@ public func area(
     attributes["href"] = href
     attributes["hreflang"] = hreflang
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -606,7 +606,7 @@ public func article(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -631,7 +631,7 @@ public func article(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -689,7 +689,7 @@ public func aside(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -714,7 +714,7 @@ public func aside(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -784,7 +784,7 @@ public func audio(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -817,7 +817,7 @@ public func audio(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -879,7 +879,7 @@ public func b(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -904,7 +904,7 @@ public func b(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -965,7 +965,7 @@ public func base(
     hidden: Bool = false,
     href: String? = nil,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -991,7 +991,7 @@ public func base(
     attributes["hidden"] = hidden ? "" : nil
     attributes["href"] = href
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -1052,7 +1052,7 @@ public func basefont(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -1078,7 +1078,7 @@ public func basefont(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -1136,7 +1136,7 @@ public func bdi(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -1161,7 +1161,7 @@ public func bdi(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -1219,7 +1219,7 @@ public func bdo(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -1244,7 +1244,7 @@ public func bdo(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -1303,7 +1303,7 @@ public func bgsound(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -1329,7 +1329,7 @@ public func bgsound(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -1388,7 +1388,7 @@ public func big(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -1413,7 +1413,7 @@ public func big(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -1471,7 +1471,7 @@ public func blink(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -1496,7 +1496,7 @@ public func blink(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -1556,7 +1556,7 @@ public func blockquote(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -1582,7 +1582,7 @@ public func blockquote(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -1644,7 +1644,7 @@ public func body(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -1671,7 +1671,7 @@ public func body(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -1729,7 +1729,7 @@ public func br(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -1753,7 +1753,7 @@ public func br(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -1830,7 +1830,7 @@ public func button(
     formtarget: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -1866,7 +1866,7 @@ public func button(
     attributes["formtarget"] = formtarget
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -1930,7 +1930,7 @@ public func canvas(
     height: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -1957,7 +1957,7 @@ public func canvas(
     attributes["height"] = height
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -2018,7 +2018,7 @@ public func caption(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -2044,7 +2044,7 @@ public func caption(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -2102,7 +2102,7 @@ public func center(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -2127,7 +2127,7 @@ public func center(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -2185,7 +2185,7 @@ public func cite(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -2210,7 +2210,7 @@ public func cite(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -2268,7 +2268,7 @@ public func code(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -2293,7 +2293,7 @@ public func code(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -2356,7 +2356,7 @@ public func col(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -2383,7 +2383,7 @@ public func col(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -2447,7 +2447,7 @@ public func colgroup(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -2475,7 +2475,7 @@ public func colgroup(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -2542,7 +2542,7 @@ public func command(
     hidden: Bool = false,
     icon: String? = nil,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -2572,7 +2572,7 @@ public func command(
     attributes["hidden"] = hidden ? "" : nil
     attributes["icon"] = icon
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -2632,7 +2632,7 @@ public func content(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -2657,7 +2657,7 @@ public func content(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -2716,7 +2716,7 @@ public func data(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -2742,7 +2742,7 @@ public func data(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -2801,7 +2801,7 @@ public func datalist(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -2826,7 +2826,7 @@ public func datalist(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -2884,7 +2884,7 @@ public func dd(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -2909,7 +2909,7 @@ public func dd(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -2971,7 +2971,7 @@ public func del(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -2998,7 +2998,7 @@ public func del(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -3057,7 +3057,7 @@ public func details(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -3083,7 +3083,7 @@ public func details(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -3142,7 +3142,7 @@ public func dfn(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -3167,7 +3167,7 @@ public func dfn(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -3225,7 +3225,7 @@ public func dialog(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -3250,7 +3250,7 @@ public func dialog(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -3308,7 +3308,7 @@ public func dir(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -3333,7 +3333,7 @@ public func dir(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -3391,7 +3391,7 @@ public func div(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -3416,7 +3416,7 @@ public func div(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -3474,7 +3474,7 @@ public func dl(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -3499,7 +3499,7 @@ public func dl(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -3557,7 +3557,7 @@ public func dt(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -3582,7 +3582,7 @@ public func dt(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -3640,7 +3640,7 @@ public func element(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -3665,7 +3665,7 @@ public func element(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -3723,7 +3723,7 @@ public func em(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -3748,7 +3748,7 @@ public func em(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -3811,7 +3811,7 @@ public func embed(
     height: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -3839,7 +3839,7 @@ public func embed(
     attributes["height"] = height
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -3905,7 +3905,7 @@ public func fieldset(
     form: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -3933,7 +3933,7 @@ public func fieldset(
     attributes["form"] = form
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -3992,7 +3992,7 @@ public func figcaption(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -4017,7 +4017,7 @@ public func figcaption(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -4075,7 +4075,7 @@ public func figure(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -4100,7 +4100,7 @@ public func figure(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -4160,7 +4160,7 @@ public func font(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -4186,7 +4186,7 @@ public func font(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -4244,7 +4244,7 @@ public func footer(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -4269,7 +4269,7 @@ public func footer(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -4341,7 +4341,7 @@ public func form(
     enctype: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -4375,7 +4375,7 @@ public func form(
     attributes["enctype"] = enctype
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -4437,7 +4437,7 @@ public func frame(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -4462,7 +4462,7 @@ public func frame(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -4520,7 +4520,7 @@ public func frameset(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -4545,7 +4545,7 @@ public func frameset(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -4603,7 +4603,7 @@ public func h1(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -4628,7 +4628,7 @@ public func h1(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -4686,7 +4686,7 @@ public func h2(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -4711,7 +4711,7 @@ public func h2(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -4769,7 +4769,7 @@ public func h3(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -4794,7 +4794,7 @@ public func h3(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -4852,7 +4852,7 @@ public func h4(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -4877,7 +4877,7 @@ public func h4(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -4935,7 +4935,7 @@ public func h5(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -4960,7 +4960,7 @@ public func h5(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -5018,7 +5018,7 @@ public func h6(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -5043,7 +5043,7 @@ public func h6(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -5101,7 +5101,7 @@ public func head(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -5126,7 +5126,7 @@ public func head(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -5184,7 +5184,7 @@ public func header(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -5209,7 +5209,7 @@ public func header(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -5267,7 +5267,7 @@ public func hgroup(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -5292,7 +5292,7 @@ public func hgroup(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -5354,7 +5354,7 @@ public func hr(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -5380,7 +5380,7 @@ public func hr(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -5439,7 +5439,7 @@ public func html(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -5465,7 +5465,7 @@ public func html(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -5524,7 +5524,7 @@ public func i(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -5549,7 +5549,7 @@ public func i(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -5624,7 +5624,7 @@ public func iframe(
     hidden: Bool = false,
     id: String? = nil,
     importance: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -5661,7 +5661,7 @@ public func iframe(
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
     attributes["importance"] = importance
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -5726,7 +5726,7 @@ public func image(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -5751,7 +5751,7 @@ public func image(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -5834,7 +5834,7 @@ public func img(
     importance: String? = nil,
     intrinsicsize: String? = nil,
     ismap: Bool = false,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -5874,7 +5874,7 @@ public func img(
     attributes["importance"] = importance
     attributes["intrinsicsize"] = intrinsicsize
     attributes["ismap"] = ismap ? "" : nil
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -5985,7 +5985,7 @@ public func input(
     height: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -6041,7 +6041,7 @@ public func input(
     attributes["height"] = height
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -6121,7 +6121,7 @@ public func ins(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -6148,7 +6148,7 @@ public func ins(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -6206,7 +6206,7 @@ public func isindex(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -6231,7 +6231,7 @@ public func isindex(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -6289,7 +6289,7 @@ public func kbd(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -6314,7 +6314,7 @@ public func kbd(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -6382,7 +6382,7 @@ public func keygen(
     form: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -6413,7 +6413,7 @@ public func keygen(
     attributes["form"] = form
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -6477,7 +6477,7 @@ public func label(
     form: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -6504,7 +6504,7 @@ public func label(
     attributes["form"] = form
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -6562,7 +6562,7 @@ public func legend(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -6587,7 +6587,7 @@ public func legend(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -6646,7 +6646,7 @@ public func li(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -6672,7 +6672,7 @@ public func li(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -6745,7 +6745,7 @@ public func link(
     id: String? = nil,
     importance: String? = nil,
     integrity: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -6778,7 +6778,7 @@ public func link(
     attributes["id"] = id
     attributes["importance"] = importance
     attributes["integrity"] = integrity
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -6840,7 +6840,7 @@ public func listing(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -6865,7 +6865,7 @@ public func listing(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -6923,7 +6923,7 @@ public func main(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -6948,7 +6948,7 @@ public func main(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -7007,7 +7007,7 @@ public func map(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -7033,7 +7033,7 @@ public func map(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -7092,7 +7092,7 @@ public func mark(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -7117,7 +7117,7 @@ public func mark(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -7178,7 +7178,7 @@ public func marquee(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -7205,7 +7205,7 @@ public func marquee(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -7265,7 +7265,7 @@ public func menu(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -7291,7 +7291,7 @@ public func menu(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -7350,7 +7350,7 @@ public func menuitem(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -7375,7 +7375,7 @@ public func menuitem(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -7440,7 +7440,7 @@ public func meta(
     hidden: Bool = false,
     httpEquiv: String? = nil,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -7468,7 +7468,7 @@ public func meta(
     attributes["hidden"] = hidden ? "" : nil
     attributes["http-equiv"] = httpEquiv
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -7536,7 +7536,7 @@ public func meter(
     hidden: Bool = false,
     high: String? = nil,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -7568,7 +7568,7 @@ public func meter(
     attributes["hidden"] = hidden ? "" : nil
     attributes["high"] = high
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -7631,7 +7631,7 @@ public func multicol(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -7656,7 +7656,7 @@ public func multicol(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -7714,7 +7714,7 @@ public func nav(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -7739,7 +7739,7 @@ public func nav(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -7797,7 +7797,7 @@ public func nextid(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -7822,7 +7822,7 @@ public func nextid(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -7880,7 +7880,7 @@ public func nobr(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -7905,7 +7905,7 @@ public func nobr(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -7963,7 +7963,7 @@ public func noembed(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -7988,7 +7988,7 @@ public func noembed(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -8046,7 +8046,7 @@ public func noframes(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -8071,7 +8071,7 @@ public func noframes(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -8129,7 +8129,7 @@ public func noscript(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -8154,7 +8154,7 @@ public func noscript(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -8224,7 +8224,7 @@ public func object(
     height: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -8257,7 +8257,7 @@ public func object(
     attributes["height"] = height
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -8321,7 +8321,7 @@ public func ol(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -8348,7 +8348,7 @@ public func ol(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -8410,7 +8410,7 @@ public func optgroup(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -8436,7 +8436,7 @@ public func optgroup(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -8498,7 +8498,7 @@ public func option(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -8526,7 +8526,7 @@ public func option(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -8591,7 +8591,7 @@ public func output(
     form: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -8619,7 +8619,7 @@ public func output(
     attributes["form"] = form
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -8678,7 +8678,7 @@ public func p(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -8703,7 +8703,7 @@ public func p(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -8763,7 +8763,7 @@ public func param(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -8789,7 +8789,7 @@ public func param(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -8849,7 +8849,7 @@ public func picture(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -8874,7 +8874,7 @@ public func picture(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -8932,7 +8932,7 @@ public func plaintext(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -8957,7 +8957,7 @@ public func plaintext(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -9015,7 +9015,7 @@ public func pre(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -9040,7 +9040,7 @@ public func pre(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -9102,7 +9102,7 @@ public func progress(
     form: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -9130,7 +9130,7 @@ public func progress(
     attributes["form"] = form
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -9192,7 +9192,7 @@ public func q(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -9218,7 +9218,7 @@ public func q(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -9276,7 +9276,7 @@ public func rb(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -9301,7 +9301,7 @@ public func rb(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -9359,7 +9359,7 @@ public func rp(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -9384,7 +9384,7 @@ public func rp(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -9442,7 +9442,7 @@ public func rt(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -9467,7 +9467,7 @@ public func rt(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -9525,7 +9525,7 @@ public func rtc(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -9550,7 +9550,7 @@ public func rtc(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -9608,7 +9608,7 @@ public func ruby(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -9633,7 +9633,7 @@ public func ruby(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -9691,7 +9691,7 @@ public func s(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -9716,7 +9716,7 @@ public func s(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -9774,7 +9774,7 @@ public func samp(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -9799,7 +9799,7 @@ public func samp(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -9873,7 +9873,7 @@ public func script(
     id: String? = nil,
     importance: String? = nil,
     integrity: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -9908,7 +9908,7 @@ public func script(
     attributes["id"] = id
     attributes["importance"] = importance
     attributes["integrity"] = integrity
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -9970,7 +9970,7 @@ public func section(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -9995,7 +9995,7 @@ public func section(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -10065,7 +10065,7 @@ public func select(
     form: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -10098,7 +10098,7 @@ public func select(
     attributes["form"] = form
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -10160,7 +10160,7 @@ public func shadow(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -10185,7 +10185,7 @@ public func shadow(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -10243,7 +10243,7 @@ public func slot(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -10268,7 +10268,7 @@ public func slot(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -10326,7 +10326,7 @@ public func small(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -10351,7 +10351,7 @@ public func small(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -10414,7 +10414,7 @@ public func source(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -10443,7 +10443,7 @@ public func source(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -10506,7 +10506,7 @@ public func spacer(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -10531,7 +10531,7 @@ public func spacer(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -10589,7 +10589,7 @@ public func span(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -10614,7 +10614,7 @@ public func span(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -10672,7 +10672,7 @@ public func strike(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -10697,7 +10697,7 @@ public func strike(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -10755,7 +10755,7 @@ public func strong(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -10780,7 +10780,7 @@ public func strong(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -10841,7 +10841,7 @@ public func style(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -10869,7 +10869,7 @@ public func style(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -10930,7 +10930,7 @@ public func sub(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -10955,7 +10955,7 @@ public func sub(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -11013,7 +11013,7 @@ public func summary(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -11038,7 +11038,7 @@ public func summary(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -11096,7 +11096,7 @@ public func sup(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -11121,7 +11121,7 @@ public func sup(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -11188,7 +11188,7 @@ public func table(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -11218,7 +11218,7 @@ public func table(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -11281,7 +11281,7 @@ public func tbody(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -11308,7 +11308,7 @@ public func tbody(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -11377,7 +11377,7 @@ public func td(
     headers: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -11408,7 +11408,7 @@ public func td(
     attributes["headers"] = headers
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -11467,7 +11467,7 @@ public func template(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -11492,7 +11492,7 @@ public func template(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -11574,7 +11574,7 @@ public func textarea(
     hidden: Bool = false,
     id: String? = nil,
     inputmode: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -11615,7 +11615,7 @@ public func textarea(
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
     attributes["inputmode"] = inputmode
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -11685,7 +11685,7 @@ public func tfoot(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -11712,7 +11712,7 @@ public func tfoot(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -11782,7 +11782,7 @@ public func th(
     headers: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -11814,7 +11814,7 @@ public func th(
     attributes["headers"] = headers
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -11876,7 +11876,7 @@ public func thead(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -11902,7 +11902,7 @@ public func thead(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -11962,7 +11962,7 @@ public func time(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -11988,7 +11988,7 @@ public func time(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -12046,7 +12046,7 @@ public func title(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -12071,7 +12071,7 @@ public func title(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -12133,7 +12133,7 @@ public func tr(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -12160,7 +12160,7 @@ public func tr(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -12224,7 +12224,7 @@ public func track(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -12253,7 +12253,7 @@ public func track(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -12315,7 +12315,7 @@ public func tt(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -12340,7 +12340,7 @@ public func tt(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -12398,7 +12398,7 @@ public func u(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -12423,7 +12423,7 @@ public func u(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -12481,7 +12481,7 @@ public func ul(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -12506,7 +12506,7 @@ public func ul(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -12564,7 +12564,7 @@ public func `var`(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -12589,7 +12589,7 @@ public func `var`(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -12663,7 +12663,7 @@ public func video(
     height: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -12699,7 +12699,7 @@ public func video(
     attributes["height"] = height
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -12763,7 +12763,7 @@ public func wbr(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -12787,7 +12787,7 @@ public func wbr(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
@@ -12845,7 +12845,7 @@ public func xmp(
     dropzone: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    itemprop: Bool = false,
+    itemprop: String? = nil,
     itemscope: Bool = false,
     itemref: String? = nil,
     itemtype: String? = nil,
@@ -12870,7 +12870,7 @@ public func xmp(
     attributes["dropzone"] = dropzone
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["itemprop"] = itemprop ? "" : nil
+    attributes["itemprop"] = itemprop
     attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
     attributes["itemtype"] = itemtype
