@@ -7,7 +7,7 @@ public func %% (lhs: Node, rhs: Node) -> Node {
     case (.trim, .trim):
         return .trim
     default:
-        return .fragment(children: [ lhs, .trim, rhs ])
+        return [ lhs, .trim, rhs ]
     }
 }
 
@@ -16,7 +16,7 @@ prefix operator %
 public prefix func % (node: Node) -> Node {
     guard node != .trim else { return .trim }
 
-    return .fragment(children: [ .trim, node ])
+    return [ .trim, node ]
 }
 
 postfix operator %
@@ -24,5 +24,5 @@ postfix operator %
 public postfix func % (node: Node) -> Node {
     guard node != .trim else { return .trim }
 
-    return .fragment(children: [ node, .trim ])
+    return [ node, .trim ]
 }

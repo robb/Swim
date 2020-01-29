@@ -49,6 +49,9 @@ extension Node: TextOutputStreamable {
             for (key, value) in attributes.sorted(by: { $0 < $1 }) {
                 target.write(" ")
                 target.write(key)
+
+                guard value != "" else { continue }
+
                 target.write("=\"")
                 target.write(value)
                 target.write("\"")
@@ -99,25 +102,9 @@ extension Node: TextOutputStreamable {
     }
 }
 
-extension Node {
-    private static let textLevelTags: Set<String> = [
-        "a", "abbr", "b", "bdi", "bdo", "br", "cite", "code", "data", "dfn", "em",
-        "i", "kbd", "mark", "q", "rb", "rp", "rt", "rtc", "ruby", "s", "samp", "small",
-        "span", "strong", "sub", "sup", "time", "tt", "u", "var", "wbr",
-    ]
-
-    public static func element(name: String, attributes: [String: String] = [:], child: Node?) -> Node {
-        if Node.textLevelTags.contains(name), let child = child {
-            return Node.element(name, attributes, %child%)
-        }
-
-        return Node.element(name, attributes, child)
-    }
-}
-
-extension Node {
-    public static func fragment(children: [Node]) -> Node {
-        let flattened = children
+extension Node: ExpressibleByArrayLiteral {
+    public init(arrayLiteral elements: Node...) {
+        let flattened = elements
             .flatMap { node -> [Node] in
                 switch node {
                 case .fragment(let children):
@@ -127,13 +114,7 @@ extension Node {
                 }
         }
 
-        return .fragment(flattened)
-    }
-}
-
-extension Node: ExpressibleByArrayLiteral {
-    public init(arrayLiteral elements: Node...) {
-        self = .fragment(elements)
+        self = .fragment(flattened)
     }
 }
 

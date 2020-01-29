@@ -18,18 +18,18 @@ extension String: NodeConvertible {
 
 extension Array: NodeConvertible where Element: NodeConvertible {
     public func asNode() -> Node {
-        .fragment(children: map { $0.asNode() })
+        .fragment(map { $0.asNode() })
     }
 }
 
 @_functionBuilder
 public struct NodeBuilder {
     public static func buildBlock(_ components: Node...) -> Node {
-        .fragment(children: components)
+        .fragment(components)
     }
 
     public static func buildIf(_ component: Node?) -> Node {
-        component ?? .fragment(children: [])
+        component ?? []
     }
 
     public static func buildEither(first: Node) -> Node {
@@ -43,6 +43,6 @@ public struct NodeBuilder {
 
 extension NodeBuilder {
     public static func buildBlock(_ components: NodeConvertible...) -> Node {
-        .fragment(children: components.map { $0.asNode() })
+        .fragment(components.map { $0.asNode() })
     }
 }

@@ -7,8 +7,8 @@ final class HTMLTests: XCTestCase {
             head {
                 meta(charset: "utf-8", content: "text/html", httpEquiv: "Content-Type")
             }
-            body(customData: [ "foo": "bar" ]) {
-                article(classes: "readme", "modern") {
+            body(customAttributes: [ "data-foo": "bar" ]) {
+                article(class: "readme modern") {
                     header {
                         h1 {
                             "This is a great article."
@@ -33,6 +33,16 @@ final class HTMLTests: XCTestCase {
         }
 
         XCTAssertTrue(String(describing: root).contains("Hello World!"))
+    }
+
+    func testBooleanAttribute() {
+        let root = div(itemscope: true, itemtype: "https://schema.org/Article") {
+            "This is an article."
+        }
+
+        print(String(describing: root))
+
+        XCTAssertTrue(String(describing: root).contains(" itemscope "))
     }
 
     func testEmptyElements() {
