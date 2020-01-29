@@ -498,9 +498,7 @@ extension Attribute {
         name: "itemprop",
         description: """
 
-        """,
-        attributeType: .boolean,
-        defaultValue: "false"
+        """
     )
 
     static let itemref = Attribute(
