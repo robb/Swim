@@ -14,7 +14,9 @@ let package = Package(
             name: "Generator",
             targets: ["Generator"]),
     ],
-    dependencies: [],
+    dependencies: [
+        .package(url: "https://github.com/apple/swift-argument-parser", from: "0.0.1"),
+    ],
     targets: [
         .target(
             name: "HTML",
@@ -24,6 +26,6 @@ let package = Package(
             dependencies: ["HTML"]),
         .target(
             name: "Generator",
-            dependencies: []),
+            dependencies: ["ArgumentParser"]),
     ]
 )
