@@ -62,3 +62,27 @@ public extension Visitor where Result == Node {
         .trim
     }
 }
+
+public extension Visitor where Result == Void {
+    func visitElement(name: String, attributes: [String: String], child: Node?) -> Result {
+        if let child = child {
+            visitNode(child)
+        }
+    }
+
+    func visitText(text: String) -> Result {
+    }
+
+    func visitComment(text: String) -> Result {
+    }
+
+    func visitDocumentType(name: String) -> Result {
+    }
+
+    func visitFragment(children: [Node]) -> Result {
+        children.forEach(visitNode)
+    }
+
+    func visitTrim() -> Result {
+    }
+}
