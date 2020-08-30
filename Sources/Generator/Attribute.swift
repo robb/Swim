@@ -1,9 +1,9 @@
-import Foundation
+import SwiftSyntax
 
 enum AttributeType: Hashable {
     case boolean
     case optionalOfString
-    case custom(String)
+
 
     var typeDeclaration: String {
         switch self {
@@ -11,15 +11,7 @@ enum AttributeType: Hashable {
             return "Bool"
         case .optionalOfString:
             return "String?"
-        case .custom(let string):
-            return string
         }
-    }
-}
-
-extension AttributeType: ExpressibleByStringLiteral {
-    init(stringLiteral value: String) {
-        self = .custom(value)
     }
 }
 
@@ -48,81 +40,55 @@ struct Attribute: Hashable {
 }
 
 extension Attribute {
-    var parameterDeclaration: ParameterDeclaration {
-        ParameterDeclaration(localParameterName: name, typeAnnotation: attributeType, defaultValue: defaultValue)
-    }
-
-    var parameterAssignment: ParameterAssignment {
-        ParameterAssignment(dictionaryKey: name, localParameterName: name, attributeType: attributeType)
-    }
-}
-
-/// The declaration of a function parameter.
-struct ParameterDeclaration {
-    var annotation: String? = nil
-
-    var externalParameterName: String? = nil
-
-    var localParameterName: String
-
-    var typeAnnotation: AttributeType
-
-    var defaultValue: String? = nil
-}
-
-extension ParameterDeclaration: TextOutputStreamable {
-    func write<Target>(to target: inout Target) where Target : TextOutputStream {
-        if let annotation = annotation {
-            target.write(annotation)
-            target.write(" ")
-        }
-
-        if let externalParameterName = externalParameterName {
-            target.write(externalParameterName)
-            target.write(" ")
-        }
-
-        target.write(localParameterName.escapedIfNeeded)
-        target.write(": ")
-        target.write(typeAnnotation.typeDeclaration)
-
-        if let defaultValue = defaultValue {
-            target.write(" = ")
-            target.write(defaultValue)
+    func buildParameter(_ format: Format) -> FunctionParameterSyntax {
+        FunctionParameterSyntax {
+            $0.useSecondName(SyntaxFactory.makeIdentifier(name.escapedIfNeeded))
+            $0.useColon(SyntaxFactory.makeColonToken(leadingTrivia: .zero, trailingTrivia: .spaces(1)))
+            $0.useType(attributeType.buildType(format))
+            $0.useDefaultArgument(InitializerClauseSyntax{
+                $0.useEqual(SyntaxFactory.makeEqualToken(leadingTrivia: .spaces(1), trailingTrivia: .spaces(1)))
+                $0.useValue(attributeType.buildDefaultValue(format))
+            })
         }
     }
-}
 
-/// The assignment of a function parameter to a key in the attributes
-/// dictionary.
-struct ParameterAssignment {
-    let dictionaryName = "attributes"
-
-    var dictionaryKey: String
-
-    var localParameterName: String
-
-    var attributeType: AttributeType
-}
-
-extension ParameterAssignment: TextOutputStreamable {
-    func write<Target>(to target: inout Target) where Target : TextOutputStream {
-        target.write(dictionaryName)
-        target.write("[\"")
-        target.write(dictionaryKey)
-        target.write("\"]")
-
-        target.write(" = ")
-
+    func buildValueExpression(_ format: Format) -> ExprSyntax {
+        let identifier = SyntaxFactory.makeIdentifier(name.escapedIfNeeded)
         switch attributeType {
         case .boolean:
-            target.write(localParameterName.escapedIfNeeded)
-            target.write(" ? ")
-            target.write("\"\"")
-            target.write(" : ")
-            target.write("nil")
-        default:
-            target.write(localParameterName.escapedIfNeeded)
+            return ExprSyntax(TernaryExprSyntax {
+                $0.useConditionExpression(ExprSyntax(SyntaxFactory.makeIdentifierExpr(identifier: identifier, declNameArguments: nil)))
+                $0.useQuestionMark(SyntaxFactory.makeInfixQuestionMarkToken(leadingTrivia: .spaces(1), trailingTrivia: .spaces(1)))
+                $0.useFirstChoice(ExprSyntax(SyntaxFactory.makeStringLiteralExpr("")))
+                $0.useColonMark(SyntaxFactory.makeColonToken(leadingTrivia: .spaces(1), trailingTrivia: .spaces(1)))
+                $0.useSecondChoice(ExprSyntax(SyntaxFactory.makeNilLiteralExpr(nilKeyword: SyntaxFactory.makeNilKeyword())))
+            })
+        case .optionalOfString:
+            return ExprSyntax(SyntaxFactory.makeIdentifierExpr(identifier: identifier, declNameArguments: nil))
+        }
+    }
+}
+
+extension AttributeType {
+    func buildType(_ format: Format) -> TypeSyntax {
+        let type = SimpleTypeIdentifierSyntax {
+            switch self {
+            case .boolean:
+                $0.useName(SyntaxFactory.makeIdentifier("Bool"))
+            case .optionalOfString:
+                $0.useName(SyntaxFactory.makeIdentifier("String?"))
+            }
+        }
+
+        return TypeSyntax(type)
+    }
+
+    func buildDefaultValue(_ format: Format) -> ExprSyntax {
+        switch self {
+        case .boolean:
+            return ExprSyntax(SyntaxFactory.makeBooleanLiteralExpr(booleanLiteral: SyntaxFactory.makeFalseKeyword()))
+        case .optionalOfString:
+            return ExprSyntax(SyntaxFactory.makeNilLiteralExpr(nilKeyword: SyntaxFactory.makeNilKeyword()))
         }
     }
 }

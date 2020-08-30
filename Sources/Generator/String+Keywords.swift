@@ -1,5 +1,3 @@
-import Foundation
-
 private let keywords: Set<String> = [
     "Any", "as", "associatedtype", "associativity", "case", "catch", "class",
     "continue", "convenience", "default", "defer", "deinit", "didSet", "do",
