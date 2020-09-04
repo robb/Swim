@@ -10,13 +10,6 @@ let package = Package(
         .library(
             name: "HTML",
             targets: ["HTML"]),
-        .executable(
-            name: "Generator",
-            targets: ["Generator"]),
-    ],
-    dependencies: [
-        .package(url: "https://github.com/apple/swift-syntax.git", .exact("0.50200.0")),
-        .package(url: "https://github.com/apple/swift-argument-parser", from: "0.0.1"),
     ],
     targets: [
         .target(
@@ -25,8 +18,5 @@ let package = Package(
         .testTarget(
             name: "HTMLTests",
             dependencies: ["HTML"]),
-        .target(
-            name: "Generator",
-            dependencies: ["ArgumentParser", "SwiftSyntax"]),
     ]
 )
