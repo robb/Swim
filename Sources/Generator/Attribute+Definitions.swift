@@ -1,5 +1,3 @@
-import Foundation
-
 extension Attribute {
     static let acceptCharset = Attribute(
         name: "accept-charset",

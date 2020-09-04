@@ -1,5 +1,4 @@
 // This output is machine generated and should not be edited manually.
-
 /// a
 ///
 /// The HTML `<a>` element (or anchor element), along with it's href attribute, creates a hyperlink to other web pages, files, locations within the same page, email addresses, or any other URL.
@@ -101,9 +100,8 @@ public func a(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("a", attributes, %children().asNode()%)
 }
@@ -184,9 +182,8 @@ public func abbr(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("abbr", attributes, %children().asNode()%)
 }
@@ -267,9 +264,8 @@ public func acronym(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("acronym", attributes, children().asNode())
 }
@@ -350,9 +346,8 @@ public func address(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("address", attributes, children().asNode())
 }
@@ -445,9 +440,8 @@ public func applet(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("applet", attributes, children().asNode())
 }
@@ -560,9 +554,8 @@ public func area(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("area", attributes, nil)
 }
@@ -643,9 +636,8 @@ public func article(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("article", attributes, children().asNode())
 }
@@ -726,9 +718,8 @@ public func aside(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("aside", attributes, children().asNode())
 }
@@ -833,9 +824,8 @@ public func audio(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("audio", attributes, children().asNode())
 }
@@ -916,9 +906,8 @@ public func b(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("b", attributes, %children().asNode()%)
 }
@@ -1004,9 +993,8 @@ public func base(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("base", attributes, nil)
 }
@@ -1090,9 +1078,8 @@ public func basefont(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("basefont", attributes, children().asNode())
 }
@@ -1173,9 +1160,8 @@ public func bdi(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("bdi", attributes, %children().asNode()%)
 }
@@ -1256,9 +1242,8 @@ public func bdo(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("bdo", attributes, %children().asNode()%)
 }
@@ -1342,9 +1327,8 @@ public func bgsound(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("bgsound", attributes, children().asNode())
 }
@@ -1425,9 +1409,8 @@ public func big(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("big", attributes, children().asNode())
 }
@@ -1508,9 +1491,8 @@ public func blink(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("blink", attributes, children().asNode())
 }
@@ -1594,9 +1576,8 @@ public func blockquote(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("blockquote", attributes, children().asNode())
 }
@@ -1683,9 +1664,8 @@ public func body(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("body", attributes, children().asNode())
 }
@@ -1765,9 +1745,8 @@ public func br(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("br", attributes, nil)
 }
@@ -1881,9 +1860,8 @@ public func button(
     attributes["type"] = type
     attributes["value"] = value
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("button", attributes, children().asNode())
 }
@@ -1970,9 +1948,8 @@ public func canvas(
     attributes["translate"] = translate
     attributes["width"] = width
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("canvas", attributes, children().asNode())
 }
@@ -2056,9 +2033,8 @@ public func caption(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("caption", attributes, children().asNode())
 }
@@ -2139,9 +2115,8 @@ public func center(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("center", attributes, children().asNode())
 }
@@ -2222,9 +2197,8 @@ public func cite(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("cite", attributes, %children().asNode()%)
 }
@@ -2305,9 +2279,8 @@ public func code(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("code", attributes, %children().asNode()%)
 }
@@ -2396,9 +2369,8 @@ public func col(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("col", attributes, nil)
 }
@@ -2488,9 +2460,8 @@ public func colgroup(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("colgroup", attributes, children().asNode())
 }
@@ -2586,9 +2557,8 @@ public func command(
     attributes["translate"] = translate
     attributes["type"] = type
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("command", attributes, children().asNode())
 }
@@ -2669,9 +2639,8 @@ public func content(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("content", attributes, children().asNode())
 }
@@ -2755,9 +2724,8 @@ public func data(
     attributes["translate"] = translate
     attributes["value"] = value
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("data", attributes, %children().asNode()%)
 }
@@ -2838,9 +2806,8 @@ public func datalist(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("datalist", attributes, children().asNode())
 }
@@ -2921,9 +2888,8 @@ public func dd(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("dd", attributes, children().asNode())
 }
@@ -3010,9 +2976,8 @@ public func del(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("del", attributes, children().asNode())
 }
@@ -3096,9 +3061,8 @@ public func details(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("details", attributes, children().asNode())
 }
@@ -3179,9 +3143,8 @@ public func dfn(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("dfn", attributes, %children().asNode()%)
 }
@@ -3262,9 +3225,8 @@ public func dialog(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("dialog", attributes, children().asNode())
 }
@@ -3345,9 +3307,8 @@ public func dir(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("dir", attributes, children().asNode())
 }
@@ -3428,9 +3389,8 @@ public func div(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("div", attributes, children().asNode())
 }
@@ -3511,9 +3471,8 @@ public func dl(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("dl", attributes, children().asNode())
 }
@@ -3594,9 +3553,8 @@ public func dt(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("dt", attributes, children().asNode())
 }
@@ -3677,9 +3635,8 @@ public func element(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("element", attributes, children().asNode())
 }
@@ -3760,9 +3717,8 @@ public func em(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("em", attributes, %children().asNode()%)
 }
@@ -3854,9 +3810,8 @@ public func embed(
     attributes["type"] = type
     attributes["width"] = width
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("embed", attributes, nil)
 }
@@ -3946,9 +3901,8 @@ public func fieldset(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("fieldset", attributes, children().asNode())
 }
@@ -4029,9 +3983,8 @@ public func figcaption(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("figcaption", attributes, children().asNode())
 }
@@ -4112,9 +4065,8 @@ public func figure(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("figure", attributes, children().asNode())
 }
@@ -4198,9 +4150,8 @@ public func font(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("font", attributes, children().asNode())
 }
@@ -4281,9 +4232,8 @@ public func footer(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("footer", attributes, children().asNode())
 }
@@ -4391,9 +4341,8 @@ public func form(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("form", attributes, children().asNode())
 }
@@ -4474,9 +4423,8 @@ public func frame(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("frame", attributes, children().asNode())
 }
@@ -4557,9 +4505,8 @@ public func frameset(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("frameset", attributes, children().asNode())
 }
@@ -4640,9 +4587,8 @@ public func h1(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("h1", attributes, children().asNode())
 }
@@ -4723,9 +4669,8 @@ public func h2(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("h2", attributes, children().asNode())
 }
@@ -4806,9 +4751,8 @@ public func h3(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("h3", attributes, children().asNode())
 }
@@ -4889,9 +4833,8 @@ public func h4(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("h4", attributes, children().asNode())
 }
@@ -4972,9 +4915,8 @@ public func h5(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("h5", attributes, children().asNode())
 }
@@ -5055,9 +4997,8 @@ public func h6(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("h6", attributes, children().asNode())
 }
@@ -5138,9 +5079,8 @@ public func head(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("head", attributes, children().asNode())
 }
@@ -5221,9 +5161,8 @@ public func header(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("header", attributes, children().asNode())
 }
@@ -5304,9 +5243,8 @@ public func hgroup(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("hgroup", attributes, children().asNode())
 }
@@ -5392,9 +5330,8 @@ public func hr(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("hr", attributes, nil)
 }
@@ -5478,9 +5415,8 @@ public func html(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("html", attributes, children().asNode())
 }
@@ -5561,9 +5497,8 @@ public func i(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("i", attributes, %children().asNode()%)
 }
@@ -5680,9 +5615,8 @@ public func iframe(
     attributes["translate"] = translate
     attributes["width"] = width
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("iframe", attributes, children().asNode())
 }
@@ -5763,9 +5697,8 @@ public func image(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("image", attributes, children().asNode())
 }
@@ -5893,9 +5826,8 @@ public func img(
     attributes["usemap"] = usemap
     attributes["width"] = width
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("img", attributes, nil)
 }
@@ -6071,9 +6003,8 @@ public func input(
     attributes["value"] = value
     attributes["width"] = width
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("input", attributes, nil)
 }
@@ -6160,9 +6091,8 @@ public func ins(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("ins", attributes, children().asNode())
 }
@@ -6243,9 +6173,8 @@ public func isindex(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("isindex", attributes, children().asNode())
 }
@@ -6326,9 +6255,8 @@ public func kbd(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("kbd", attributes, %children().asNode()%)
 }
@@ -6427,9 +6355,8 @@ public func keygen(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("keygen", attributes, children().asNode())
 }
@@ -6516,9 +6443,8 @@ public func label(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("label", attributes, children().asNode())
 }
@@ -6599,9 +6525,8 @@ public func legend(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("legend", attributes, children().asNode())
 }
@@ -6685,9 +6610,8 @@ public func li(
     attributes["translate"] = translate
     attributes["value"] = value
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("li", attributes, children().asNode())
 }
@@ -6794,9 +6718,8 @@ public func link(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("link", attributes, nil)
 }
@@ -6877,9 +6800,8 @@ public func listing(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("listing", attributes, children().asNode())
 }
@@ -6960,9 +6882,8 @@ public func main(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("main", attributes, children().asNode())
 }
@@ -7046,9 +6967,8 @@ public func map(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("map", attributes, children().asNode())
 }
@@ -7129,9 +7049,8 @@ public func mark(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("mark", attributes, %children().asNode()%)
 }
@@ -7218,9 +7137,8 @@ public func marquee(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("marquee", attributes, children().asNode())
 }
@@ -7304,9 +7222,8 @@ public func menu(
     attributes["translate"] = translate
     attributes["type"] = type
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("menu", attributes, children().asNode())
 }
@@ -7387,9 +7304,8 @@ public func menuitem(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("menuitem", attributes, children().asNode())
 }
@@ -7481,9 +7397,8 @@ public func meta(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("meta", attributes, nil)
 }
@@ -7585,9 +7500,8 @@ public func meter(
     attributes["translate"] = translate
     attributes["value"] = value
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("meter", attributes, children().asNode())
 }
@@ -7668,9 +7582,8 @@ public func multicol(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("multicol", attributes, children().asNode())
 }
@@ -7751,9 +7664,8 @@ public func nav(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("nav", attributes, children().asNode())
 }
@@ -7834,9 +7746,8 @@ public func nextid(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("nextid", attributes, children().asNode())
 }
@@ -7917,9 +7828,8 @@ public func nobr(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("nobr", attributes, children().asNode())
 }
@@ -8000,9 +7910,8 @@ public func noembed(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("noembed", attributes, children().asNode())
 }
@@ -8083,9 +7992,8 @@ public func noframes(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("noframes", attributes, children().asNode())
 }
@@ -8166,9 +8074,8 @@ public func noscript(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("noscript", attributes, children().asNode())
 }
@@ -8273,9 +8180,8 @@ public func object(
     attributes["usemap"] = usemap
     attributes["width"] = width
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("object", attributes, children().asNode())
 }
@@ -8362,9 +8268,8 @@ public func ol(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("ol", attributes, children().asNode())
 }
@@ -8448,9 +8353,8 @@ public func optgroup(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("optgroup", attributes, children().asNode())
 }
@@ -8540,9 +8444,8 @@ public func option(
     attributes["translate"] = translate
     attributes["value"] = value
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("option", attributes, children().asNode())
 }
@@ -8632,9 +8535,8 @@ public func output(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("output", attributes, children().asNode())
 }
@@ -8715,9 +8617,8 @@ public func p(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("p", attributes, children().asNode())
 }
@@ -8803,9 +8704,8 @@ public func param(
     attributes["translate"] = translate
     attributes["value"] = value
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("param", attributes, nil)
 }
@@ -8886,9 +8786,8 @@ public func picture(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("picture", attributes, children().asNode())
 }
@@ -8969,9 +8868,8 @@ public func plaintext(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("plaintext", attributes, children().asNode())
 }
@@ -9052,9 +8950,8 @@ public func pre(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("pre", attributes, children().asNode())
 }
@@ -9144,9 +9041,8 @@ public func progress(
     attributes["translate"] = translate
     attributes["value"] = value
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("progress", attributes, children().asNode())
 }
@@ -9230,9 +9126,8 @@ public func q(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("q", attributes, %children().asNode()%)
 }
@@ -9313,9 +9208,8 @@ public func rb(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("rb", attributes, %children().asNode()%)
 }
@@ -9396,9 +9290,8 @@ public func rp(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("rp", attributes, %children().asNode()%)
 }
@@ -9479,9 +9372,8 @@ public func rt(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("rt", attributes, %children().asNode()%)
 }
@@ -9562,9 +9454,8 @@ public func rtc(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("rtc", attributes, %children().asNode()%)
 }
@@ -9645,9 +9536,8 @@ public func ruby(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("ruby", attributes, %children().asNode()%)
 }
@@ -9728,9 +9618,8 @@ public func s(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("s", attributes, %children().asNode()%)
 }
@@ -9811,9 +9700,8 @@ public func samp(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("samp", attributes, %children().asNode()%)
 }
@@ -9924,9 +9812,8 @@ public func script(
     attributes["translate"] = translate
     attributes["type"] = type
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("script", attributes, children().asNode())
 }
@@ -10007,9 +9894,8 @@ public func section(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("section", attributes, children().asNode())
 }
@@ -10114,9 +10000,8 @@ public func select(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("select", attributes, children().asNode())
 }
@@ -10197,9 +10082,8 @@ public func shadow(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("shadow", attributes, children().asNode())
 }
@@ -10280,9 +10164,8 @@ public func slot(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("slot", attributes, children().asNode())
 }
@@ -10363,9 +10246,8 @@ public func small(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("small", attributes, %children().asNode()%)
 }
@@ -10460,9 +10342,8 @@ public func source(
     attributes["translate"] = translate
     attributes["type"] = type
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("source", attributes, nil)
 }
@@ -10543,9 +10424,8 @@ public func spacer(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("spacer", attributes, children().asNode())
 }
@@ -10626,9 +10506,8 @@ public func span(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("span", attributes, %children().asNode()%)
 }
@@ -10709,9 +10588,8 @@ public func strike(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("strike", attributes, children().asNode())
 }
@@ -10792,9 +10670,8 @@ public func strong(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("strong", attributes, %children().asNode()%)
 }
@@ -10884,9 +10761,8 @@ public func style(
     attributes["translate"] = translate
     attributes["type"] = type
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("style", attributes, children().asNode())
 }
@@ -10967,9 +10843,8 @@ public func sub(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("sub", attributes, %children().asNode()%)
 }
@@ -11050,9 +10925,8 @@ public func summary(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("summary", attributes, children().asNode())
 }
@@ -11133,9 +11007,8 @@ public func sup(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("sup", attributes, %children().asNode()%)
 }
@@ -11231,9 +11104,8 @@ public func table(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("table", attributes, children().asNode())
 }
@@ -11320,9 +11192,8 @@ public func tbody(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("tbody", attributes, children().asNode())
 }
@@ -11421,9 +11292,8 @@ public func td(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("td", attributes, children().asNode())
 }
@@ -11504,9 +11374,8 @@ public func template(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("template", attributes, children().asNode())
 }
@@ -11635,9 +11504,8 @@ public func textarea(
     attributes["translate"] = translate
     attributes["wrap"] = wrap
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("textarea", attributes, children().asNode())
 }
@@ -11724,9 +11592,8 @@ public func tfoot(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("tfoot", attributes, children().asNode())
 }
@@ -11828,9 +11695,8 @@ public func th(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("th", attributes, children().asNode())
 }
@@ -11914,9 +11780,8 @@ public func thead(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("thead", attributes, children().asNode())
 }
@@ -12000,9 +11865,8 @@ public func time(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("time", attributes, %children().asNode()%)
 }
@@ -12083,9 +11947,8 @@ public func title(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("title", attributes, children().asNode())
 }
@@ -12172,9 +12035,8 @@ public func tr(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("tr", attributes, children().asNode())
 }
@@ -12269,9 +12131,8 @@ public func track(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("track", attributes, nil)
 }
@@ -12352,9 +12213,8 @@ public func tt(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("tt", attributes, %children().asNode()%)
 }
@@ -12435,9 +12295,8 @@ public func u(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("u", attributes, %children().asNode()%)
 }
@@ -12518,9 +12377,8 @@ public func ul(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("ul", attributes, children().asNode())
 }
@@ -12601,9 +12459,8 @@ public func `var`(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("var", attributes, %children().asNode()%)
 }
@@ -12717,9 +12574,8 @@ public func video(
     attributes["translate"] = translate
     attributes["width"] = width
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("video", attributes, children().asNode())
 }
@@ -12799,9 +12655,8 @@ public func wbr(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("wbr", attributes, nil)
 }
@@ -12882,9 +12737,8 @@ public func xmp(
     attributes["title"] = title
     attributes["translate"] = translate
 
-    for (key, value) in customAttributes {
-        attributes[key] = value
-    }
+
+    attributes.merge(customAttributes) { _, b in b }
 
     return .element("xmp", attributes, children().asNode())
 }
