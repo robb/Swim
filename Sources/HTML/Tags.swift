@@ -1,104 +1,116 @@
 // This output is machine generated and should not be edited manually.
 /// a
 ///
-/// The HTML `<a>` element (or anchor element), along with it's href attribute, creates a hyperlink to other web pages, files, locations within the same page, email addresses, or any other URL.
+/// Hyperlink.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - download: Indicates that the hyperlink is to be used for downloading a resource.
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - href: The URL of a linked resource.
-///      - hreflang: Specifies the language of the linked resource.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - media: Specifies a hint of the media for which the linked resource was designed.
-///      - ping: The ping attribute specifies a space-separated list of URLs to be notified if a user follows the hyperlink.
-///      - referrerpolicy: Specifies which referrer is sent when fetching the resource.
-///      - rel: Specifies the relationship of the target object to the link object.
-///      - shape: 
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - target: 
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - download: Whether to download the resource instead of navigating to it, and its file name if so.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - href: Address of the hyperlink.
+///      - hreflang: Language of the linked resource.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - ping: URLs to ping.
+///      - referrerpolicy: Referrer policy for fetches initiated by the element.
+///      - rel: Relationship between the location in the document containing the hyperlink and the destination resource.
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - target: Browsing context for hyperlink navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
+///      - type: Hint for the type of the referenced resource.
 public func a(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
     download: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     href: String? = nil,
     hreflang: String? = nil,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
-    media: String? = nil,
+    nonce: String? = nil,
     ping: String? = nil,
     referrerpolicy: String? = nil,
     rel: String? = nil,
-    shape: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     target: String? = nil,
     title: String? = nil,
     translate: String? = nil,
+    type: String? = nil,
     customAttributes: [String: String] = [:],
     @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
     attributes["download"] = download
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["href"] = href
     attributes["hreflang"] = hreflang
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
-    attributes["media"] = media
+    attributes["nonce"] = nonce
     attributes["ping"] = ping
     attributes["referrerpolicy"] = referrerpolicy
     attributes["rel"] = rel
-    attributes["shape"] = shape
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["target"] = target
     attributes["title"] = title
     attributes["translate"] = translate
+    attributes["type"] = type
 
 
     attributes.merge(customAttributes) { _, b in b }
@@ -110,48 +122,58 @@ public func a(
 
 /// abbr
 ///
-/// The HTML Abbreviation element (`<abbr>`) represents an abbreviation or acronym; the optional title attribute can provide an expansion or description for the abbreviation.
+/// Abbreviation.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Full term or expansion of abbreviation.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func abbr(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -162,21 +184,26 @@ public func abbr(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -190,132 +217,60 @@ public func abbr(
 
 
 
-/// acronym
-///
-/// The HTML Acronym Element (`<acronym>`) allows authors to clearly indicate a sequence of characters that compose an acronym or abbreviation for a word. This element has been removed in HTML5. Use `<abbr>` instead.
-///
-/// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
-public func acronym(
-    accesskey: String? = nil,
-    autocapitalize: String? = nil,
-    `class`: String? = nil,
-    contenteditable: Bool = false,
-    contextmenu: String? = nil,
-    dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
-    hidden: Bool = false,
-    id: String? = nil,
-    itemprop: String? = nil,
-    itemscope: Bool = false,
-    itemref: String? = nil,
-    itemtype: String? = nil,
-    lang: String? = nil,
-    slot: String? = nil,
-    spellcheck: String? = nil,
-    style: String? = nil,
-    tabindex: String? = nil,
-    title: String? = nil,
-    translate: String? = nil,
-    customAttributes: [String: String] = [:],
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
-) -> Node {
-    var attributes: [String: String] = [:]
-    attributes["accesskey"] = accesskey
-    attributes["autocapitalize"] = autocapitalize
-    attributes["class"] = `class`
-    attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
-    attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
-    attributes["hidden"] = hidden ? "" : nil
-    attributes["id"] = id
-    attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
-    attributes["itemref"] = itemref
-    attributes["itemtype"] = itemtype
-    attributes["lang"] = lang
-    attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
-    attributes["style"] = style
-    attributes["tabindex"] = tabindex
-    attributes["title"] = title
-    attributes["translate"] = translate
-
-
-    attributes.merge(customAttributes) { _, b in b }
-
-    return .element("acronym", attributes, children().asNode())
-}
-
-
-
 /// address
 ///
-/// The HTML `<address>` element indicates that the enclosed HTML provides contact information for a person or people, or for an organization.
+/// Contact information for a page or article element.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func address(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -326,21 +281,26 @@ public func address(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -354,165 +314,77 @@ public func address(
 
 
 
-/// applet
-///
-/// The obsolete HTML Applet Element (`<applet>`) embeds a Java applet into the document; this element has been deprecated in favor of `<object>`.
-///
-/// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - align: Specifies the horizontal alignment of the element.
-///      - alt: Alternative text in case an image can't be displayed.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - code: Specifies the URL of the applet's class file to be loaded and executed.
-///      - codebase: This attribute gives the absolute or relative URL of the directory where applets' .class files referenced by the code attribute are stored.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
-public func applet(
-    accesskey: String? = nil,
-    align: String? = nil,
-    alt: String? = nil,
-    autocapitalize: String? = nil,
-    `class`: String? = nil,
-    code: String? = nil,
-    codebase: String? = nil,
-    contenteditable: Bool = false,
-    contextmenu: String? = nil,
-    dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
-    hidden: Bool = false,
-    id: String? = nil,
-    itemprop: String? = nil,
-    itemscope: Bool = false,
-    itemref: String? = nil,
-    itemtype: String? = nil,
-    lang: String? = nil,
-    slot: String? = nil,
-    spellcheck: String? = nil,
-    style: String? = nil,
-    tabindex: String? = nil,
-    title: String? = nil,
-    translate: String? = nil,
-    customAttributes: [String: String] = [:],
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
-) -> Node {
-    var attributes: [String: String] = [:]
-    attributes["accesskey"] = accesskey
-    attributes["align"] = align
-    attributes["alt"] = alt
-    attributes["autocapitalize"] = autocapitalize
-    attributes["class"] = `class`
-    attributes["code"] = code
-    attributes["codebase"] = codebase
-    attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
-    attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
-    attributes["hidden"] = hidden ? "" : nil
-    attributes["id"] = id
-    attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
-    attributes["itemref"] = itemref
-    attributes["itemtype"] = itemtype
-    attributes["lang"] = lang
-    attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
-    attributes["style"] = style
-    attributes["tabindex"] = tabindex
-    attributes["title"] = title
-    attributes["translate"] = translate
-
-
-    attributes.merge(customAttributes) { _, b in b }
-
-    return .element("applet", attributes, children().asNode())
-}
-
-
-
 /// area
 ///
-/// The HTML `<area>` element defines a hot-spot region on an image, and optionally associates it with a hypertext link. This element is used only within a `<map>` element.
+/// Hyperlink or dead area on an image map.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - alt: Alternative text in case an image can't be displayed.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - coords: A set of values specifying the coordinates of the hot-spot region.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - download: Indicates that the hyperlink is to be used for downloading a resource.
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - href: The URL of a linked resource.
-///      - hreflang: Specifies the language of the linked resource.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - media: Specifies a hint of the media for which the linked resource was designed.
-///      - ping: The ping attribute specifies a space-separated list of URLs to be notified if a user follows the hyperlink.
-///      - referrerpolicy: Specifies which referrer is sent when fetching the resource.
-///      - rel: Specifies the relationship of the target object to the link object.
-///      - shape: 
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - target: 
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - alt: Replacement text for use when images are not available.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - coords: Coordinates for the shape to be created in an image map.
+///      - dir: The text directionality of the element.
+///      - download: Whether to download the resource instead of navigating to it, and its file name if so.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - href: Address of the hyperlink.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - ping: URLs to ping.
+///      - referrerpolicy: Referrer policy for fetches initiated by the element.
+///      - rel: Relationship between the location in the document containing the hyperlink and the destination resource.
+///      - role: ARIA semantic role.
+///      - shape: The kind of shape to be created in an image map.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - target: Browsing context for hyperlink navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func area(
     accesskey: String? = nil,
     alt: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     coords: String? = nil,
     dir: String? = nil,
     download: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     href: String? = nil,
-    hreflang: String? = nil,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
-    media: String? = nil,
+    nonce: String? = nil,
     ping: String? = nil,
     referrerpolicy: String? = nil,
     rel: String? = nil,
+    role: String? = nil,
     shape: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     target: String? = nil,
@@ -524,30 +396,33 @@ public func area(
     attributes["accesskey"] = accesskey
     attributes["alt"] = alt
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["coords"] = coords
     attributes["dir"] = dir
     attributes["download"] = download
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["href"] = href
-    attributes["hreflang"] = hreflang
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
-    attributes["media"] = media
+    attributes["nonce"] = nonce
     attributes["ping"] = ping
     attributes["referrerpolicy"] = referrerpolicy
     attributes["rel"] = rel
+    attributes["role"] = role
     attributes["shape"] = shape
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["target"] = target
@@ -564,48 +439,58 @@ public func area(
 
 /// article
 ///
-/// The HTML `<article>` element represents a self-contained composition in a document, page, application, or site, which is intended to be independently distributable or reusable
+/// Self-contained syndicatable or reusable composition.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func article(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -616,21 +501,26 @@ public func article(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -646,48 +536,58 @@ public func article(
 
 /// aside
 ///
-/// The HTML `<aside>` element represents a portion of a document whose content is only indirectly related to the document's main content.
+/// Sidebar for tangentially related content.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func aside(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -698,21 +598,26 @@ public func aside(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -728,63 +633,71 @@ public func aside(
 
 /// audio
 ///
-/// The HTML `<audio>` element is used to embed sound content in documents. It may contain one or more audio sources, represented using the src attribute or the `<source>` element: the browser will choose the most suitable one. It can also be the destination for streamed media, using a MediaStream.
+/// Audio player.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - autoplay: The audio or video should play as soon as possible.
-///      - buffered: Contains the time range of already buffered media.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - controls: Indicates whether the browser should show playback controls to the user.
-///      - crossorigin: How the element handles cross-origin requests
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - loop: Indicates whether the media should start playing from the start when it's finished.
-///      - muted: Indicates whether the audio will be initially silenced on page load.
-///      - preload: Indicates whether the whole resource, parts of it or nothing should be preloaded.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - src: The URL of the embeddable content.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - autoplay: Hint that the media resource can be started automatically when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - controls: Show user agent controls.
+///      - crossorigin: How the element handles crossorigin requests.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - loop: Whether to loop the media resource.
+///      - muted: Whether to mute the media resource by default.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - preload: Hints how much buffering the media resource will likely need.
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - src: Address of the resource.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func audio(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     autoplay: Bool = false,
-    buffered: String? = nil,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     controls: Bool = false,
     crossorigin: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
     loop: Bool = false,
     muted: Bool = false,
+    nonce: String? = nil,
     preload: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     src: String? = nil,
     style: String? = nil,
     tabindex: String? = nil,
@@ -796,28 +709,32 @@ public func audio(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["autoplay"] = autoplay ? "" : nil
-    attributes["buffered"] = buffered
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["controls"] = controls ? "" : nil
     attributes["crossorigin"] = crossorigin
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
     attributes["loop"] = loop ? "" : nil
     attributes["muted"] = muted ? "" : nil
+    attributes["nonce"] = nonce
     attributes["preload"] = preload
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["src"] = src
     attributes["style"] = style
     attributes["tabindex"] = tabindex
@@ -834,48 +751,58 @@ public func audio(
 
 /// b
 ///
-/// The HTML Bring Attention To element (`<b>`)  is used to draw the reader's attention to the element's contents, which are not otherwise granted special importance.
+/// Keywords.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func b(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -886,21 +813,26 @@ public func b(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -916,51 +848,61 @@ public func b(
 
 /// base
 ///
-/// The HTML `<base>` element specifies the base URL to use for all relative URLs contained within a document. There can be only one `<base>` element in a document.
+/// Base URL and default target browsing context for hyperlinks and forms.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - href: The URL of a linked resource.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - target: 
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - href: Document base URL.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - target: Default browsing context for hyperlink navigation and form submission.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func base(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     href: String? = nil,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     target: String? = nil,
@@ -971,22 +913,27 @@ public func base(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["href"] = href
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["target"] = target
@@ -1001,135 +948,60 @@ public func base(
 
 
 
-/// basefont
-///
-/// The obsolete HTML Base Font element (`<basefont>`) sets a default font face, size, and color for the other elements which are descended from its parent element.
-///
-/// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - color: This attribute sets the text color using either a named color or a color specified in the hexadecimal #RRGGBB format.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
-public func basefont(
-    accesskey: String? = nil,
-    autocapitalize: String? = nil,
-    `class`: String? = nil,
-    color: String? = nil,
-    contenteditable: Bool = false,
-    contextmenu: String? = nil,
-    dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
-    hidden: Bool = false,
-    id: String? = nil,
-    itemprop: String? = nil,
-    itemscope: Bool = false,
-    itemref: String? = nil,
-    itemtype: String? = nil,
-    lang: String? = nil,
-    slot: String? = nil,
-    spellcheck: String? = nil,
-    style: String? = nil,
-    tabindex: String? = nil,
-    title: String? = nil,
-    translate: String? = nil,
-    customAttributes: [String: String] = [:],
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
-) -> Node {
-    var attributes: [String: String] = [:]
-    attributes["accesskey"] = accesskey
-    attributes["autocapitalize"] = autocapitalize
-    attributes["class"] = `class`
-    attributes["color"] = color
-    attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
-    attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
-    attributes["hidden"] = hidden ? "" : nil
-    attributes["id"] = id
-    attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
-    attributes["itemref"] = itemref
-    attributes["itemtype"] = itemtype
-    attributes["lang"] = lang
-    attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
-    attributes["style"] = style
-    attributes["tabindex"] = tabindex
-    attributes["title"] = title
-    attributes["translate"] = translate
-
-
-    attributes.merge(customAttributes) { _, b in b }
-
-    return .element("basefont", attributes, children().asNode())
-}
-
-
-
 /// bdi
 ///
-/// The HTML Bidirectional Isolate element (`<bdi>`)  tells the browser's bidirectional algorithm to treat the text it contains in isolation from its surrounding text.
+/// Text directionality isolation.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func bdi(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -1140,21 +1012,26 @@ public func bdi(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -1170,48 +1047,58 @@ public func bdi(
 
 /// bdo
 ///
-/// The HTML Bidirectional Text Override element (`<bdo>`) overrides the current directionality of text, so that the text within is rendered in a different direction.
+/// Text directionality formatting.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func bdo(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -1222,21 +1109,26 @@ public func bdo(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -1250,301 +1142,62 @@ public func bdo(
 
 
 
-/// bgsound
-///
-/// The Internet Explorer only HTML Background Sound element (`<bgsound>`) sets up a sound file to play in the background while the page is used; use `<audio>` instead.
-///
-/// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - loop: Indicates whether the media should start playing from the start when it's finished.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
-public func bgsound(
-    accesskey: String? = nil,
-    autocapitalize: String? = nil,
-    `class`: String? = nil,
-    contenteditable: Bool = false,
-    contextmenu: String? = nil,
-    dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
-    hidden: Bool = false,
-    id: String? = nil,
-    itemprop: String? = nil,
-    itemscope: Bool = false,
-    itemref: String? = nil,
-    itemtype: String? = nil,
-    lang: String? = nil,
-    loop: Bool = false,
-    slot: String? = nil,
-    spellcheck: String? = nil,
-    style: String? = nil,
-    tabindex: String? = nil,
-    title: String? = nil,
-    translate: String? = nil,
-    customAttributes: [String: String] = [:],
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
-) -> Node {
-    var attributes: [String: String] = [:]
-    attributes["accesskey"] = accesskey
-    attributes["autocapitalize"] = autocapitalize
-    attributes["class"] = `class`
-    attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
-    attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
-    attributes["hidden"] = hidden ? "" : nil
-    attributes["id"] = id
-    attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
-    attributes["itemref"] = itemref
-    attributes["itemtype"] = itemtype
-    attributes["lang"] = lang
-    attributes["loop"] = loop ? "" : nil
-    attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
-    attributes["style"] = style
-    attributes["tabindex"] = tabindex
-    attributes["title"] = title
-    attributes["translate"] = translate
-
-
-    attributes.merge(customAttributes) { _, b in b }
-
-    return .element("bgsound", attributes, children().asNode())
-}
-
-
-
-/// big
-///
-/// The obsolete HTML Big Element (`<big>`) renders the enclosed text at a font size one level larger than the surrounding text (medium becomes large, for example).
-///
-/// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
-public func big(
-    accesskey: String? = nil,
-    autocapitalize: String? = nil,
-    `class`: String? = nil,
-    contenteditable: Bool = false,
-    contextmenu: String? = nil,
-    dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
-    hidden: Bool = false,
-    id: String? = nil,
-    itemprop: String? = nil,
-    itemscope: Bool = false,
-    itemref: String? = nil,
-    itemtype: String? = nil,
-    lang: String? = nil,
-    slot: String? = nil,
-    spellcheck: String? = nil,
-    style: String? = nil,
-    tabindex: String? = nil,
-    title: String? = nil,
-    translate: String? = nil,
-    customAttributes: [String: String] = [:],
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
-) -> Node {
-    var attributes: [String: String] = [:]
-    attributes["accesskey"] = accesskey
-    attributes["autocapitalize"] = autocapitalize
-    attributes["class"] = `class`
-    attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
-    attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
-    attributes["hidden"] = hidden ? "" : nil
-    attributes["id"] = id
-    attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
-    attributes["itemref"] = itemref
-    attributes["itemtype"] = itemtype
-    attributes["lang"] = lang
-    attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
-    attributes["style"] = style
-    attributes["tabindex"] = tabindex
-    attributes["title"] = title
-    attributes["translate"] = translate
-
-
-    attributes.merge(customAttributes) { _, b in b }
-
-    return .element("big", attributes, children().asNode())
-}
-
-
-
-/// blink
-///
-/// The HTML Blink Element (`<blink>`) is a non-standard element which causes the enclosed text to flash slowly.
-///
-/// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
-public func blink(
-    accesskey: String? = nil,
-    autocapitalize: String? = nil,
-    `class`: String? = nil,
-    contenteditable: Bool = false,
-    contextmenu: String? = nil,
-    dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
-    hidden: Bool = false,
-    id: String? = nil,
-    itemprop: String? = nil,
-    itemscope: Bool = false,
-    itemref: String? = nil,
-    itemtype: String? = nil,
-    lang: String? = nil,
-    slot: String? = nil,
-    spellcheck: String? = nil,
-    style: String? = nil,
-    tabindex: String? = nil,
-    title: String? = nil,
-    translate: String? = nil,
-    customAttributes: [String: String] = [:],
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
-) -> Node {
-    var attributes: [String: String] = [:]
-    attributes["accesskey"] = accesskey
-    attributes["autocapitalize"] = autocapitalize
-    attributes["class"] = `class`
-    attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
-    attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
-    attributes["hidden"] = hidden ? "" : nil
-    attributes["id"] = id
-    attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
-    attributes["itemref"] = itemref
-    attributes["itemtype"] = itemtype
-    attributes["lang"] = lang
-    attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
-    attributes["style"] = style
-    attributes["tabindex"] = tabindex
-    attributes["title"] = title
-    attributes["translate"] = translate
-
-
-    attributes.merge(customAttributes) { _, b in b }
-
-    return .element("blink", attributes, children().asNode())
-}
-
-
-
 /// blockquote
 ///
-/// The HTML `<blockquote>` Element (or HTML Block Quotation Element) indicates that the enclosed text is an extended quotation. Usually, this is rendered visually by indentation (see Notes for how to change it). A URL for the source of the quotation may be given using the cite attribute, while a text representation of the source can be given using the `<cite>` element.
+/// A section quoted from another source.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - cite: Contains a URI which points to the source of the quote or change.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - cite: Link to the source of the quotation or more information about the edit.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func blockquote(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     cite: String? = nil,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -1555,22 +1208,27 @@ public func blockquote(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["cite"] = cite
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -1586,52 +1244,58 @@ public func blockquote(
 
 /// body
 ///
-/// The HTML `<body>` Element represents the content of an HTML document. There can be only one `<body>` element in a document.
+/// Document body.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - background: Specifies the URL of an image file.
-///      - bgcolor: Background color of the element.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func body(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
-    background: String? = nil,
-    bgcolor: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -1642,23 +1306,26 @@ public func body(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
-    attributes["background"] = background
-    attributes["bgcolor"] = bgcolor
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -1674,48 +1341,58 @@ public func body(
 
 /// br
 ///
-/// The HTML `<br>` element produces a line break in text (carriage-return). It is useful for writing a poem or an address, where the division of lines is significant.
+/// Line break, e.g. in poem or postal address.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func br(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -1725,21 +1402,26 @@ public func br(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -1755,52 +1437,55 @@ public func br(
 
 /// button
 ///
-/// The HTML `<button>` element represents a clickable button, which can be used in forms or anywhere in a document that needs simple, standard button functionality.
+/// Button control.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - autofocus: The element should be automatically focused after the page loaded.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - disabled: Indicates whether the user can interact with the element.
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - form: Indicates the form that is the owner of the element.
-///      - formaction: Indicates the action of the element, overriding the action defined in the <form>.
-///      - formenctype: If the button/input is a submit button (type="submit"), this attribute sets the encoding type to use during form submission. If this attribute is specified, it overrides the enctype attribute of the button's form owner.
-///      - formmethod: If the button/input is a submit button (type="submit"), this attribute sets the submission method to use during form submission (GET, POST, etc.). If this attribute is specified, it overrides the method attribute of the button's form owner.
-///      - formnovalidate: If the button/input is a submit button (type="submit"), this boolean attribute specifies that the form is not to be validated when it is submitted. If this attribute is specified, it overrides the novalidate attribute of the button's form owner.
-///      - formtarget: If the button/input is a submit button (type="submit"), this attribute specifies the browsing context (for example, tab, window, or inline frame) in which to display the response that is received after submitting the form. If this attribute is specified, it overrides the target attribute of the button's form owner.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - name: Name of the element. For example used by the server to identify the fields in form submits.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
-///      - type: Defines the type of the element.
-///      - value: Defines a default value which will be displayed in the element on page load.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - disabled: Whether the form control is disabled.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - form: Associates the element with a form element.
+///      - formaction: URL to use for form submission.
+///      - formenctype: Entry list encoding type to use for form submission.
+///      - formmethod: Variant to use for form submission.
+///      - formnovalidate: Bypass form control validation for form submission.
+///      - formtarget: Browsing context for form submission.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - name: Name of the element to use for form submission and in the form.elements API.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
+///      - type: Type of button.
+///      - value: Value to be used for form submission.
 public func button(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
     disabled: Bool = false,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     form: String? = nil,
     formaction: String? = nil,
     formenctype: String? = nil,
@@ -1809,14 +1494,19 @@ public func button(
     formtarget: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
     name: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -1832,11 +1522,10 @@ public func button(
     attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
     attributes["disabled"] = disabled ? "" : nil
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["form"] = form
     attributes["formaction"] = formaction
     attributes["formenctype"] = formenctype
@@ -1845,14 +1534,19 @@ public func button(
     attributes["formtarget"] = formtarget
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
     attributes["name"] = name
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -1870,51 +1564,61 @@ public func button(
 
 /// canvas
 ///
-/// Use the HTML `<canvas>` element with either the canvas scripting API or the WebGL API to draw graphics and animations.
+/// Scriptable bitmap canvas.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - height: Specifies the height of elements listed here. For all other elements, use the CSS height property.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
-///      - width: For the elements listed here, this establishes the element's width.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - height: Vertical dimension.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
+///      - width: Horizontal dimension.
 public func canvas(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     height: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -1926,22 +1630,27 @@ public func canvas(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["height"] = height
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -1958,50 +1667,58 @@ public func canvas(
 
 /// caption
 ///
-/// The HTML Table Caption element (`<caption>`) specifies the caption (or title) of a table, and if used is always the first child of a `<table>`.
+/// Table caption.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - align: Specifies the horizontal alignment of the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func caption(
     accesskey: String? = nil,
-    align: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -2011,23 +1728,27 @@ public func caption(
 ) -> Node {
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
-    attributes["align"] = align
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -2041,132 +1762,60 @@ public func caption(
 
 
 
-/// center
-///
-/// The obsolete HTML Center Element (`<center>`) is a block-level element that displays its block-level or inline contents centered horizontally within its containing element.
-///
-/// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
-public func center(
-    accesskey: String? = nil,
-    autocapitalize: String? = nil,
-    `class`: String? = nil,
-    contenteditable: Bool = false,
-    contextmenu: String? = nil,
-    dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
-    hidden: Bool = false,
-    id: String? = nil,
-    itemprop: String? = nil,
-    itemscope: Bool = false,
-    itemref: String? = nil,
-    itemtype: String? = nil,
-    lang: String? = nil,
-    slot: String? = nil,
-    spellcheck: String? = nil,
-    style: String? = nil,
-    tabindex: String? = nil,
-    title: String? = nil,
-    translate: String? = nil,
-    customAttributes: [String: String] = [:],
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
-) -> Node {
-    var attributes: [String: String] = [:]
-    attributes["accesskey"] = accesskey
-    attributes["autocapitalize"] = autocapitalize
-    attributes["class"] = `class`
-    attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
-    attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
-    attributes["hidden"] = hidden ? "" : nil
-    attributes["id"] = id
-    attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
-    attributes["itemref"] = itemref
-    attributes["itemtype"] = itemtype
-    attributes["lang"] = lang
-    attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
-    attributes["style"] = style
-    attributes["tabindex"] = tabindex
-    attributes["title"] = title
-    attributes["translate"] = translate
-
-
-    attributes.merge(customAttributes) { _, b in b }
-
-    return .element("center", attributes, children().asNode())
-}
-
-
-
 /// cite
 ///
-/// The HTML Citation element (`<cite>`) is used to describe a reference to a cited creative work, and must include the title of that work.
+/// Title of a work.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func cite(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -2177,21 +1826,26 @@ public func cite(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -2207,48 +1861,58 @@ public func cite(
 
 /// code
 ///
-/// The HTML `<code>` element displays its contents styled in a fashion intended to indicate that the text is a short fragment of computer code.
+/// Computer code.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func code(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -2259,21 +1923,26 @@ public func code(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -2289,54 +1958,60 @@ public func code(
 
 /// col
 ///
-/// The HTML `<col>` element defines a column within a table and is used for defining common semantics on all common cells. It is generally found within a `<colgroup>` element.
+/// Table column.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - align: Specifies the horizontal alignment of the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - bgcolor: Background color of the element.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - span: 
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - span: Number of columns spanned by the element.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func col(
     accesskey: String? = nil,
-    align: String? = nil,
     autocapitalize: String? = nil,
-    bgcolor: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
     span: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -2345,25 +2020,28 @@ public func col(
 ) -> Node {
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
-    attributes["align"] = align
     attributes["autocapitalize"] = autocapitalize
-    attributes["bgcolor"] = bgcolor
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
     attributes["span"] = span
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -2379,54 +2057,60 @@ public func col(
 
 /// colgroup
 ///
-/// The HTML `<colgroup>` element defines a group of columns within a table.
+/// Group of columns in a table.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - align: Specifies the horizontal alignment of the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - bgcolor: Background color of the element.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - span: 
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - span: Number of columns spanned by the element.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func colgroup(
     accesskey: String? = nil,
-    align: String? = nil,
     autocapitalize: String? = nil,
-    bgcolor: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
     span: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -2436,25 +2120,28 @@ public func colgroup(
 ) -> Node {
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
-    attributes["align"] = align
     attributes["autocapitalize"] = autocapitalize
-    attributes["bgcolor"] = bgcolor
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
     attributes["span"] = span
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -2468,230 +2155,61 @@ public func colgroup(
 
 
 
-/// command
-///
-/// The HTML Command element (`<command>`) represents a command which the user can invoke. Commands are often used as part of a context menu or toolbar.
-///
-/// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - checked: Indicates whether the element should be checked on page load.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - disabled: Indicates whether the user can interact with the element.
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - icon: Specifies a picture which represents the command.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - radiogroup: 
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
-///      - type: Defines the type of the element.
-public func command(
-    accesskey: String? = nil,
-    autocapitalize: String? = nil,
-    checked: Bool = false,
-    `class`: String? = nil,
-    contenteditable: Bool = false,
-    contextmenu: String? = nil,
-    dir: String? = nil,
-    disabled: Bool = false,
-    draggable: String? = nil,
-    dropzone: String? = nil,
-    hidden: Bool = false,
-    icon: String? = nil,
-    id: String? = nil,
-    itemprop: String? = nil,
-    itemscope: Bool = false,
-    itemref: String? = nil,
-    itemtype: String? = nil,
-    lang: String? = nil,
-    radiogroup: String? = nil,
-    slot: String? = nil,
-    spellcheck: String? = nil,
-    style: String? = nil,
-    tabindex: String? = nil,
-    title: String? = nil,
-    translate: String? = nil,
-    type: String? = nil,
-    customAttributes: [String: String] = [:],
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
-) -> Node {
-    var attributes: [String: String] = [:]
-    attributes["accesskey"] = accesskey
-    attributes["autocapitalize"] = autocapitalize
-    attributes["checked"] = checked ? "" : nil
-    attributes["class"] = `class`
-    attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
-    attributes["dir"] = dir
-    attributes["disabled"] = disabled ? "" : nil
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
-    attributes["hidden"] = hidden ? "" : nil
-    attributes["icon"] = icon
-    attributes["id"] = id
-    attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
-    attributes["itemref"] = itemref
-    attributes["itemtype"] = itemtype
-    attributes["lang"] = lang
-    attributes["radiogroup"] = radiogroup
-    attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
-    attributes["style"] = style
-    attributes["tabindex"] = tabindex
-    attributes["title"] = title
-    attributes["translate"] = translate
-    attributes["type"] = type
-
-
-    attributes.merge(customAttributes) { _, b in b }
-
-    return .element("command", attributes, children().asNode())
-}
-
-
-
-/// content
-///
-/// The HTML `<content>` element—an obsolete part of the Web Components suite of technologies—was used inside of Shadow DOM as an insertion point, and wasn't meant to be used in ordinary HTML.
-///
-/// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
-public func content(
-    accesskey: String? = nil,
-    autocapitalize: String? = nil,
-    `class`: String? = nil,
-    contenteditable: Bool = false,
-    contextmenu: String? = nil,
-    dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
-    hidden: Bool = false,
-    id: String? = nil,
-    itemprop: String? = nil,
-    itemscope: Bool = false,
-    itemref: String? = nil,
-    itemtype: String? = nil,
-    lang: String? = nil,
-    slot: String? = nil,
-    spellcheck: String? = nil,
-    style: String? = nil,
-    tabindex: String? = nil,
-    title: String? = nil,
-    translate: String? = nil,
-    customAttributes: [String: String] = [:],
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
-) -> Node {
-    var attributes: [String: String] = [:]
-    attributes["accesskey"] = accesskey
-    attributes["autocapitalize"] = autocapitalize
-    attributes["class"] = `class`
-    attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
-    attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
-    attributes["hidden"] = hidden ? "" : nil
-    attributes["id"] = id
-    attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
-    attributes["itemref"] = itemref
-    attributes["itemtype"] = itemtype
-    attributes["lang"] = lang
-    attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
-    attributes["style"] = style
-    attributes["tabindex"] = tabindex
-    attributes["title"] = title
-    attributes["translate"] = translate
-
-
-    attributes.merge(customAttributes) { _, b in b }
-
-    return .element("content", attributes, children().asNode())
-}
-
-
-
 /// data
 ///
-/// The HTML `<data>` element links a given content with a machine-readable translation. If the content is time- or date-related, the `<time>` element must be used.
+/// Machine-readable equivalent.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
-///      - value: Defines a default value which will be displayed in the element on page load.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
+///      - value: Machine-readable value.
 public func data(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -2703,21 +2221,26 @@ public func data(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -2734,48 +2257,58 @@ public func data(
 
 /// datalist
 ///
-/// The HTML `<datalist>` element contains a set of `<option>` elements that represent the values available for other controls.
+/// Container for options for combo box control.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func datalist(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -2786,21 +2319,26 @@ public func datalist(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -2816,48 +2354,58 @@ public func datalist(
 
 /// dd
 ///
-/// The HTML `<dd>` element provides the details about or the definition of the preceding term (`<dt>`) in a description list (`<dl>`).
+/// Content for corresponding dt element(s).
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func dd(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -2868,21 +2416,26 @@ public func dd(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -2898,52 +2451,62 @@ public func dd(
 
 /// del
 ///
-/// The HTML `<del>` element represents a range of text that has been deleted from a document.
+/// A removal from the document.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - cite: Contains a URI which points to the source of the quote or change.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - datetime: Indicates the date and time associated with the element.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - cite: Link to the source of the quotation or more information about the edit.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - datetime: Date and (optionally) time of the change.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func del(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     cite: String? = nil,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     datetime: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -2954,23 +2517,28 @@ public func del(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["cite"] = cite
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["datetime"] = datetime
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -2986,50 +2554,60 @@ public func del(
 
 /// details
 ///
-/// The HTML Details Element (`<details>`) creates a disclosure widget in which information is visible only when the widget is toggled into an "open" state.
+/// Disclosure control for hiding details.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - open: Indicates whether the details will be shown on page load.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - open: Whether the details are visible.
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func details(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
     `open`: Bool = false,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -3040,22 +2618,27 @@ public func details(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
     attributes["open"] = `open` ? "" : nil
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -3071,48 +2654,58 @@ public func details(
 
 /// dfn
 ///
-/// The HTML Definition element (`<dfn>`) is used to indicate the term being defined within the context of a definition phrase or sentence.
+/// Defining instance.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Full term or expansion of abbreviation.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func dfn(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -3123,21 +2716,26 @@ public func dfn(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -3153,48 +2751,60 @@ public func dfn(
 
 /// dialog
 ///
-/// The HTML `<dialog>` element represents a dialog box or other interactive component, such as an inspector or window.
+/// Dialog box or window.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - open: Whether the dialog box is showing.
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func dialog(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    `open`: Bool = false,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -3205,21 +2815,27 @@ public func dialog(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["open"] = `open` ? "" : nil
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -3233,132 +2849,60 @@ public func dialog(
 
 
 
-/// dir
-///
-/// The obsolete HTML Directory element (`<dir>`) is used as a container for a directory of files and/or folders, potentially with styles and icons applied by the user agent.
-///
-/// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
-public func dir(
-    accesskey: String? = nil,
-    autocapitalize: String? = nil,
-    `class`: String? = nil,
-    contenteditable: Bool = false,
-    contextmenu: String? = nil,
-    dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
-    hidden: Bool = false,
-    id: String? = nil,
-    itemprop: String? = nil,
-    itemscope: Bool = false,
-    itemref: String? = nil,
-    itemtype: String? = nil,
-    lang: String? = nil,
-    slot: String? = nil,
-    spellcheck: String? = nil,
-    style: String? = nil,
-    tabindex: String? = nil,
-    title: String? = nil,
-    translate: String? = nil,
-    customAttributes: [String: String] = [:],
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
-) -> Node {
-    var attributes: [String: String] = [:]
-    attributes["accesskey"] = accesskey
-    attributes["autocapitalize"] = autocapitalize
-    attributes["class"] = `class`
-    attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
-    attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
-    attributes["hidden"] = hidden ? "" : nil
-    attributes["id"] = id
-    attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
-    attributes["itemref"] = itemref
-    attributes["itemtype"] = itemtype
-    attributes["lang"] = lang
-    attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
-    attributes["style"] = style
-    attributes["tabindex"] = tabindex
-    attributes["title"] = title
-    attributes["translate"] = translate
-
-
-    attributes.merge(customAttributes) { _, b in b }
-
-    return .element("dir", attributes, children().asNode())
-}
-
-
-
 /// div
 ///
-/// The HTML Content Division element (`<div>`) is the generic container for flow content. It has no effect on the content or layout until styled using CSS.
+/// Generic flow container, or container for name-value groups in dl elements.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func div(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -3369,21 +2913,26 @@ public func div(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -3399,48 +2948,58 @@ public func div(
 
 /// dl
 ///
-/// The HTML `<dl>` element represents a description list. The element encloses a list of groups of terms (specified using the `<dt>` element) and descriptions (provided by `<dd>` elements). Common uses for this element are to implement a glossary or to display metadata (a list of key-value pairs).
+/// Association list consisting of zero or more name-value groups.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func dl(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -3451,21 +3010,26 @@ public func dl(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -3481,48 +3045,58 @@ public func dl(
 
 /// dt
 ///
-/// The HTML `<dt>` element specifies a term in a description or definition list, and as such must be used inside a `<dl>` element.
+/// Legend for corresponding dd element(s).
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func dt(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -3533,21 +3107,26 @@ public func dt(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -3561,132 +3140,60 @@ public func dt(
 
 
 
-/// element
-///
-/// The obsolete HTML `<element>` element was part of the Web Components specification; it was intended to be used to define new custom DOM elements.
-///
-/// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
-public func element(
-    accesskey: String? = nil,
-    autocapitalize: String? = nil,
-    `class`: String? = nil,
-    contenteditable: Bool = false,
-    contextmenu: String? = nil,
-    dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
-    hidden: Bool = false,
-    id: String? = nil,
-    itemprop: String? = nil,
-    itemscope: Bool = false,
-    itemref: String? = nil,
-    itemtype: String? = nil,
-    lang: String? = nil,
-    slot: String? = nil,
-    spellcheck: String? = nil,
-    style: String? = nil,
-    tabindex: String? = nil,
-    title: String? = nil,
-    translate: String? = nil,
-    customAttributes: [String: String] = [:],
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
-) -> Node {
-    var attributes: [String: String] = [:]
-    attributes["accesskey"] = accesskey
-    attributes["autocapitalize"] = autocapitalize
-    attributes["class"] = `class`
-    attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
-    attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
-    attributes["hidden"] = hidden ? "" : nil
-    attributes["id"] = id
-    attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
-    attributes["itemref"] = itemref
-    attributes["itemtype"] = itemtype
-    attributes["lang"] = lang
-    attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
-    attributes["style"] = style
-    attributes["tabindex"] = tabindex
-    attributes["title"] = title
-    attributes["translate"] = translate
-
-
-    attributes.merge(customAttributes) { _, b in b }
-
-    return .element("element", attributes, children().asNode())
-}
-
-
-
 /// em
 ///
-/// The HTML `<em>` element marks text that has stress emphasis. The `<em>` element can be nested, with each level of nesting indicating a greater degree of emphasis.
+/// Stress emphasis.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func em(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -3697,21 +3204,26 @@ public func em(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -3727,53 +3239,63 @@ public func em(
 
 /// embed
 ///
-/// The HTML `<embed>` element embeds external content at the specified point in the document. This content is provided by an external application or other source of interactive content such as a browser plug-in.
+/// Plugin.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - height: Specifies the height of elements listed here. For all other elements, use the CSS height property.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - src: The URL of the embeddable content.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
-///      - type: Defines the type of the element.
-///      - width: For the elements listed here, this establishes the element's width.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - height: Vertical dimension.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - src: Address of the resource.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
+///      - type: Type of embedded resource.
+///      - width: Horizontal dimension.
 public func embed(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     height: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     src: String? = nil,
     style: String? = nil,
     tabindex: String? = nil,
@@ -3786,22 +3308,27 @@ public func embed(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["height"] = height
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["src"] = src
     attributes["style"] = style
     attributes["tabindex"] = tabindex
@@ -3820,54 +3347,64 @@ public func embed(
 
 /// fieldset
 ///
-/// The HTML `<fieldset>` element is used to group several controls as well as labels (`<label>`) within a web form.
+/// Group of form controls.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - disabled: Indicates whether the user can interact with the element.
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - form: Indicates the form that is the owner of the element.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - name: Name of the element. For example used by the server to identify the fields in form submits.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - disabled2: Whether the descendant form controls, except any inside legend, are disabled.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - form: Associates the element with a form element.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - name: Name of the element to use for form submission and in the form.elements API.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func fieldset(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    disabled: Bool = false,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    disabled2: Bool = false,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     form: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
     name: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -3878,24 +3415,29 @@ public func fieldset(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["disabled"] = disabled ? "" : nil
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["disabled2"] = disabled2 ? "" : nil
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["form"] = form
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
     attributes["name"] = name
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -3911,48 +3453,58 @@ public func fieldset(
 
 /// figcaption
 ///
-/// The HTML `<figcaption>` or Figure Caption element represents a caption or legend describing the rest of the contents of its parent `<figure>` element.
+/// Caption for figure.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func figcaption(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -3963,21 +3515,26 @@ public func figcaption(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -3993,48 +3550,58 @@ public func figcaption(
 
 /// figure
 ///
-/// The HTML `<figure>` (Figure With Optional Caption) element represents self-contained content, potentially with an optional caption, which is specified using the (`<figcaption>`) element.
+/// Figure with optional caption.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func figure(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -4045,21 +3612,26 @@ public func figure(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -4073,135 +3645,60 @@ public func figure(
 
 
 
-/// font
-///
-/// The HTML Font Element (`<font>`) defines the font size, color and face for its content.
-///
-/// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - color: This attribute sets the text color using either a named color or a color specified in the hexadecimal #RRGGBB format.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
-public func font(
-    accesskey: String? = nil,
-    autocapitalize: String? = nil,
-    `class`: String? = nil,
-    color: String? = nil,
-    contenteditable: Bool = false,
-    contextmenu: String? = nil,
-    dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
-    hidden: Bool = false,
-    id: String? = nil,
-    itemprop: String? = nil,
-    itemscope: Bool = false,
-    itemref: String? = nil,
-    itemtype: String? = nil,
-    lang: String? = nil,
-    slot: String? = nil,
-    spellcheck: String? = nil,
-    style: String? = nil,
-    tabindex: String? = nil,
-    title: String? = nil,
-    translate: String? = nil,
-    customAttributes: [String: String] = [:],
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
-) -> Node {
-    var attributes: [String: String] = [:]
-    attributes["accesskey"] = accesskey
-    attributes["autocapitalize"] = autocapitalize
-    attributes["class"] = `class`
-    attributes["color"] = color
-    attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
-    attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
-    attributes["hidden"] = hidden ? "" : nil
-    attributes["id"] = id
-    attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
-    attributes["itemref"] = itemref
-    attributes["itemtype"] = itemtype
-    attributes["lang"] = lang
-    attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
-    attributes["style"] = style
-    attributes["tabindex"] = tabindex
-    attributes["title"] = title
-    attributes["translate"] = translate
-
-
-    attributes.merge(customAttributes) { _, b in b }
-
-    return .element("font", attributes, children().asNode())
-}
-
-
-
 /// footer
 ///
-/// The HTML `<footer>` element represents a footer for its nearest sectioning content or sectioning root element. A footer typically contains information about the author of the section, copyright data or links to related documents.
+/// Footer for a page or section.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func footer(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -4212,21 +3709,26 @@ public func footer(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -4242,65 +3744,73 @@ public func footer(
 
 /// form
 ///
-/// The HTML `<form>` element represents a document section that contains interactive controls for submitting information to a web server.
+/// User-submittable form.
 ///
 /// - Parameters:
-///      - accept: List of types the server accepts, typically a file type.
-///      - accept-charset: List of supported charsets.
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - action: The URI of a program that processes the information submitted via the form.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - autocomplete: Indicates whether controls in this form can by default have their values automatically completed by the browser.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - enctype: Defines the content type of the form date when the method is POST.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - method: Defines which HTTP method to use when submitting the form. Can be GET (default) or POST.
-///      - name: Name of the element. For example used by the server to identify the fields in form submits.
-///      - novalidate: This attribute indicates that the form shouldn't be validated when submitted.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - target: 
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accept-charset: Character encodings to use for form submission.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - action: URL to use for form submission.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autocomplete: Default setting for autofill feature for controls in the form.
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enctype: Entry list encoding type to use for form submission.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - method: Variant to use for form submission.
+///      - name: Name of form to use in the document.forms API.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - novalidate: Bypass form control validation for form submission.
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - target: Browsing context for form submission.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func form(
-    accept: String? = nil,
     acceptCharset: String? = nil,
     accesskey: String? = nil,
     action: String? = nil,
     autocapitalize: String? = nil,
     autocomplete: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
     enctype: String? = nil,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
     method: String? = nil,
     name: String? = nil,
+    nonce: String? = nil,
     novalidate: Bool = false,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     target: String? = nil,
@@ -4310,31 +3820,35 @@ public func form(
     @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
     var attributes: [String: String] = [:]
-    attributes["accept"] = accept
     attributes["accept-charset"] = acceptCharset
     attributes["accesskey"] = accesskey
     attributes["action"] = action
     attributes["autocapitalize"] = autocapitalize
     attributes["autocomplete"] = autocomplete
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
     attributes["enctype"] = enctype
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
     attributes["method"] = method
     attributes["name"] = name
+    attributes["nonce"] = nonce
     attributes["novalidate"] = novalidate ? "" : nil
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["target"] = target
@@ -4349,214 +3863,60 @@ public func form(
 
 
 
-/// frame
-///
-/// `<frame>` is an HTML element which defines a particular area in which another HTML document can be displayed. A frame should be used within a `<frameset>`.
-///
-/// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
-public func frame(
-    accesskey: String? = nil,
-    autocapitalize: String? = nil,
-    `class`: String? = nil,
-    contenteditable: Bool = false,
-    contextmenu: String? = nil,
-    dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
-    hidden: Bool = false,
-    id: String? = nil,
-    itemprop: String? = nil,
-    itemscope: Bool = false,
-    itemref: String? = nil,
-    itemtype: String? = nil,
-    lang: String? = nil,
-    slot: String? = nil,
-    spellcheck: String? = nil,
-    style: String? = nil,
-    tabindex: String? = nil,
-    title: String? = nil,
-    translate: String? = nil,
-    customAttributes: [String: String] = [:],
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
-) -> Node {
-    var attributes: [String: String] = [:]
-    attributes["accesskey"] = accesskey
-    attributes["autocapitalize"] = autocapitalize
-    attributes["class"] = `class`
-    attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
-    attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
-    attributes["hidden"] = hidden ? "" : nil
-    attributes["id"] = id
-    attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
-    attributes["itemref"] = itemref
-    attributes["itemtype"] = itemtype
-    attributes["lang"] = lang
-    attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
-    attributes["style"] = style
-    attributes["tabindex"] = tabindex
-    attributes["title"] = title
-    attributes["translate"] = translate
-
-
-    attributes.merge(customAttributes) { _, b in b }
-
-    return .element("frame", attributes, children().asNode())
-}
-
-
-
-/// frameset
-///
-/// The HTML `<frameset>` element is used to contain `<frame>` elements.
-///
-/// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
-public func frameset(
-    accesskey: String? = nil,
-    autocapitalize: String? = nil,
-    `class`: String? = nil,
-    contenteditable: Bool = false,
-    contextmenu: String? = nil,
-    dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
-    hidden: Bool = false,
-    id: String? = nil,
-    itemprop: String? = nil,
-    itemscope: Bool = false,
-    itemref: String? = nil,
-    itemtype: String? = nil,
-    lang: String? = nil,
-    slot: String? = nil,
-    spellcheck: String? = nil,
-    style: String? = nil,
-    tabindex: String? = nil,
-    title: String? = nil,
-    translate: String? = nil,
-    customAttributes: [String: String] = [:],
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
-) -> Node {
-    var attributes: [String: String] = [:]
-    attributes["accesskey"] = accesskey
-    attributes["autocapitalize"] = autocapitalize
-    attributes["class"] = `class`
-    attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
-    attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
-    attributes["hidden"] = hidden ? "" : nil
-    attributes["id"] = id
-    attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
-    attributes["itemref"] = itemref
-    attributes["itemtype"] = itemtype
-    attributes["lang"] = lang
-    attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
-    attributes["style"] = style
-    attributes["tabindex"] = tabindex
-    attributes["title"] = title
-    attributes["translate"] = translate
-
-
-    attributes.merge(customAttributes) { _, b in b }
-
-    return .element("frameset", attributes, children().asNode())
-}
-
-
-
 /// h1
 ///
-/// The HTML `<h1>`–`<h6>` elements represent six levels of section headings. `<h1>` is the highest section level and `<h6>` is the lowest.
+/// Section heading.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func h1(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -4567,21 +3927,26 @@ public func h1(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -4597,48 +3962,58 @@ public func h1(
 
 /// h2
 ///
-/// The HTML `<h1>`–`<h6>` elements represent six levels of section headings. `<h1>` is the highest section level and `<h6>` is the lowest.
+/// Section heading.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func h2(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -4649,21 +4024,26 @@ public func h2(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -4679,48 +4059,58 @@ public func h2(
 
 /// h3
 ///
-/// The HTML `<h1>`–`<h6>` elements represent six levels of section headings. `<h1>` is the highest section level and `<h6>` is the lowest.
+/// Section heading.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func h3(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -4731,21 +4121,26 @@ public func h3(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -4761,48 +4156,58 @@ public func h3(
 
 /// h4
 ///
-/// The HTML `<h1>`–`<h6>` elements represent six levels of section headings. `<h1>` is the highest section level and `<h6>` is the lowest.
+/// Section heading.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func h4(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -4813,21 +4218,26 @@ public func h4(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -4843,48 +4253,58 @@ public func h4(
 
 /// h5
 ///
-/// The HTML `<h1>`–`<h6>` elements represent six levels of section headings. `<h1>` is the highest section level and `<h6>` is the lowest.
+/// Section heading.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func h5(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -4895,21 +4315,26 @@ public func h5(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -4925,48 +4350,58 @@ public func h5(
 
 /// h6
 ///
-/// The HTML `<h1>`–`<h6>` elements represent six levels of section headings. `<h1>` is the highest section level and `<h6>` is the lowest.
+/// Section heading.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func h6(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -4977,21 +4412,26 @@ public func h6(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -5007,48 +4447,58 @@ public func h6(
 
 /// head
 ///
-/// The HTML `<head>` element contains machine-readable information (metadata) about the document, like its title, scripts, and style sheets.
+/// Container for document metadata.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func head(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -5059,21 +4509,26 @@ public func head(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -5089,48 +4544,58 @@ public func head(
 
 /// header
 ///
-/// The HTML `<header>` element represents introductory content, typically a group of introductory or navigational aids. It may contain some heading elements but also a logo, a search form, an author name, and other elements.
+/// Introductory or navigational aids for a page or section.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func header(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -5141,21 +4606,26 @@ public func header(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -5171,48 +4641,58 @@ public func header(
 
 /// hgroup
 ///
-/// The HTML `<hgroup>` element represents a multi-level heading for a section of a document. It groups a set of `<h1>`–`<h6>` elements.
+/// heading group.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func hgroup(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -5223,21 +4703,26 @@ public func hgroup(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -5253,52 +4738,58 @@ public func hgroup(
 
 /// hr
 ///
-/// The HTML `<hr>` element represents a thematic break between paragraph-level elements: for example, a change of scene in a story, or a shift of topic within a section.
+/// Thematic break.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - align: Specifies the horizontal alignment of the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - color: This attribute sets the text color using either a named color or a color specified in the hexadecimal #RRGGBB format.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func hr(
     accesskey: String? = nil,
-    align: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
-    color: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -5307,24 +4798,27 @@ public func hr(
 ) -> Node {
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
-    attributes["align"] = align
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
-    attributes["color"] = color
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -5340,50 +4834,60 @@ public func hr(
 
 /// html
 ///
-/// The HTML `<html>` element represents the root (top-level element) of an HTML document, so it is also referred to as the root element. All other elements must be descendants of this element.
+/// Root element.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - manifest: Specifies the URL of the document's cache manifest.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - manifest: Application cache manifest.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func html(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
     manifest: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -5394,22 +4898,27 @@ public func html(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
     attributes["manifest"] = manifest
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -5425,48 +4934,58 @@ public func html(
 
 /// i
 ///
-/// The HTML `<i>` element represents a range of text that is set off from the normal text for some reason. Some examples include technical terms, foreign language phrases, or fictional character thoughts. It is typically displayed in italic type.
+/// Alternate voice.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func i(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -5477,21 +4996,26 @@ public func i(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -5507,69 +5031,75 @@ public func i(
 
 /// iframe
 ///
-/// The HTML Inline Frame element (`<iframe>`) represents a nested browsing context, embedding another HTML page into the current one.
+/// Nested browsing context.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - align: Specifies the horizontal alignment of the element.
-///      - allow: Specifies a feature-policy for the iframe.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - csp: Specifies the Content Security Policy that an embedded document must agree to enforce upon itself.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - height: Specifies the height of elements listed here. For all other elements, use the CSS height property.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - importance: Indicates the relative fetch priority for the resource.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - loading: Indicates if the element should be loaded lazily.
-///      - name: Name of the element. For example used by the server to identify the fields in form submits.
-///      - referrerpolicy: Specifies which referrer is sent when fetching the resource.
-///      - sandbox: Stops a document loaded in an iframe from using certain features (such as submitting forms or opening new windows).
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - src: The URL of the embeddable content.
-///      - srcdoc: 
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
-///      - width: For the elements listed here, this establishes the element's width.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - allow: Feature policy to be applied to the iframe's contents.
+///      - allowfullscreen: Whether to allow the iframe's contents to use requestFullscreen().
+///      - allowpaymentrequest: Whether the iframe's contents are allowed to use the PaymentRequest interface to make payment requests.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - height: Vertical dimension.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - name: Name of nested browsing context.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - referrerpolicy: Referrer policy for fetches initiated by the element.
+///      - role: ARIA semantic role.
+///      - sandbox: Security rules for nested content.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - src: Address of the resource.
+///      - srcdoc: A document to render in the iframe.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
+///      - width: Horizontal dimension.
 public func iframe(
     accesskey: String? = nil,
-    align: String? = nil,
     allow: String? = nil,
+    allowfullscreen: Bool = false,
+    allowpaymentrequest: Bool = false,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
-    csp: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     height: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    importance: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
-    loading: String? = nil,
     name: String? = nil,
+    nonce: String? = nil,
     referrerpolicy: String? = nil,
+    role: String? = nil,
     sandbox: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     src: String? = nil,
     srcdoc: String? = nil,
     style: String? = nil,
@@ -5582,31 +5112,34 @@ public func iframe(
 ) -> Node {
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
-    attributes["align"] = align
     attributes["allow"] = allow
+    attributes["allowfullscreen"] = allowfullscreen ? "" : nil
+    attributes["allowpaymentrequest"] = allowpaymentrequest ? "" : nil
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
-    attributes["csp"] = csp
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["height"] = height
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["importance"] = importance
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
-    attributes["loading"] = loading
     attributes["name"] = name
+    attributes["nonce"] = nonce
     attributes["referrerpolicy"] = referrerpolicy
+    attributes["role"] = role
     attributes["sandbox"] = sandbox
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["src"] = src
     attributes["srcdoc"] = srcdoc
     attributes["style"] = style
@@ -5623,160 +5156,80 @@ public func iframe(
 
 
 
-/// image
-///
-/// The obsolete HTML Image element (`<image>`) is an obsolete remnant of an ancient version of HTML lost in the mists of time; use the standard `<img>` element instead.
-///
-/// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
-public func image(
-    accesskey: String? = nil,
-    autocapitalize: String? = nil,
-    `class`: String? = nil,
-    contenteditable: Bool = false,
-    contextmenu: String? = nil,
-    dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
-    hidden: Bool = false,
-    id: String? = nil,
-    itemprop: String? = nil,
-    itemscope: Bool = false,
-    itemref: String? = nil,
-    itemtype: String? = nil,
-    lang: String? = nil,
-    slot: String? = nil,
-    spellcheck: String? = nil,
-    style: String? = nil,
-    tabindex: String? = nil,
-    title: String? = nil,
-    translate: String? = nil,
-    customAttributes: [String: String] = [:],
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
-) -> Node {
-    var attributes: [String: String] = [:]
-    attributes["accesskey"] = accesskey
-    attributes["autocapitalize"] = autocapitalize
-    attributes["class"] = `class`
-    attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
-    attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
-    attributes["hidden"] = hidden ? "" : nil
-    attributes["id"] = id
-    attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
-    attributes["itemref"] = itemref
-    attributes["itemtype"] = itemtype
-    attributes["lang"] = lang
-    attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
-    attributes["style"] = style
-    attributes["tabindex"] = tabindex
-    attributes["title"] = title
-    attributes["translate"] = translate
-
-
-    attributes.merge(customAttributes) { _, b in b }
-
-    return .element("image", attributes, children().asNode())
-}
-
-
-
 /// img
 ///
-/// The HTML `<img>` element embeds an image into the document. It is a replaced element.
+/// Image.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - align: Specifies the horizontal alignment of the element.
-///      - alt: Alternative text in case an image can't be displayed.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - border: The border width.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - crossorigin: How the element handles cross-origin requests
-///      - decoding: Indicates the preferred method to decode the image.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - height: Specifies the height of elements listed here. For all other elements, use the CSS height property.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - importance: Indicates the relative fetch priority for the resource.
-///      - intrinsicsize: This attribute tells the browser to ignore the actual intrinsic size of the image and pretend it’s the size specified in the attribute.
-///      - ismap: Indicates that the image is part of a server-side image map.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - loading: Indicates if the element should be loaded lazily.
-///      - referrerpolicy: Specifies which referrer is sent when fetching the resource.
-///      - sizes: 
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - src: The URL of the embeddable content.
-///      - srcset: One or more responsive image candidates.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
-///      - usemap: 
-///      - width: For the elements listed here, this establishes the element's width.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - alt: Replacement text for use when images are not available.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - crossorigin: How the element handles crossorigin requests.
+///      - decoding: Decoding hint to use when processing this image for presentation.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - height: Vertical dimension.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - ismap: Whether the image is a server-side image map.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - loading: Used when determining loading deferral.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - referrerpolicy: Referrer policy for fetches initiated by the element.
+///      - role: ARIA semantic role.
+///      - sizes: Image sizes for different page layouts.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - src: Address of the resource.
+///      - srcset: Images to use in different situations (e.g., high-resolution displays, small monitors, etc.).
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
+///      - usemap: Name of image map to use.
+///      - width: Horizontal dimension.
 public func img(
     accesskey: String? = nil,
-    align: String? = nil,
     alt: String? = nil,
     autocapitalize: String? = nil,
-    border: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     crossorigin: String? = nil,
     decoding: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     height: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    importance: String? = nil,
-    intrinsicsize: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
     ismap: Bool = false,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
     loading: String? = nil,
+    nonce: String? = nil,
     referrerpolicy: String? = nil,
+    role: String? = nil,
     sizes: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     src: String? = nil,
     srcset: String? = nil,
     style: String? = nil,
@@ -5789,34 +5242,35 @@ public func img(
 ) -> Node {
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
-    attributes["align"] = align
     attributes["alt"] = alt
     attributes["autocapitalize"] = autocapitalize
-    attributes["border"] = border
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["crossorigin"] = crossorigin
     attributes["decoding"] = decoding
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["height"] = height
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["importance"] = importance
-    attributes["intrinsicsize"] = intrinsicsize
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
     attributes["ismap"] = ismap ? "" : nil
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
     attributes["loading"] = loading
+    attributes["nonce"] = nonce
     attributes["referrerpolicy"] = referrerpolicy
+    attributes["role"] = role
     attributes["sizes"] = sizes
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["src"] = src
     attributes["srcset"] = srcset
     attributes["style"] = style
@@ -5836,62 +5290,65 @@ public func img(
 
 /// input
 ///
-/// The HTML `<input>` element is used to create interactive controls for web-based forms in order to accept data from the user; a wide variety of types of input data and control widgets are available, depending on the device and user agent.
+/// Form control.
 ///
 /// - Parameters:
-///      - accept: List of types the server accepts, typically a file type.
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - alt: Alternative text in case an image can't be displayed.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - autocomplete: Indicates whether controls in this form can by default have their values automatically completed by the browser.
-///      - autofocus: The element should be automatically focused after the page loaded.
-///      - checked: Indicates whether the element should be checked on page load.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - dirname: 
-///      - disabled: Indicates whether the user can interact with the element.
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - form: Indicates the form that is the owner of the element.
-///      - formaction: Indicates the action of the element, overriding the action defined in the <form>.
-///      - formenctype: If the button/input is a submit button (type="submit"), this attribute sets the encoding type to use during form submission. If this attribute is specified, it overrides the enctype attribute of the button's form owner.
-///      - formmethod: If the button/input is a submit button (type="submit"), this attribute sets the submission method to use during form submission (GET, POST, etc.). If this attribute is specified, it overrides the method attribute of the button's form owner.
-///      - formnovalidate: If the button/input is a submit button (type="submit"), this boolean attribute specifies that the form is not to be validated when it is submitted. If this attribute is specified, it overrides the novalidate attribute of the button's form owner.
-///      - formtarget: If the button/input is a submit button (type="submit"), this attribute specifies the browsing context (for example, tab, window, or inline frame) in which to display the response that is received after submitting the form. If this attribute is specified, it overrides the target attribute of the button's form owner.
-///      - height: Specifies the height of elements listed here. For all other elements, use the CSS height property.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - list: Identifies a list of pre-defined options to suggest to the user.
-///      - max: Indicates the maximum value allowed.
-///      - maxlength: Defines the maximum number of characters allowed in the element.
-///      - min: Indicates the minimum value allowed.
-///      - minlength: Defines the minimum number of characters allowed in the element.
-///      - multiple: Indicates whether multiple values can be entered in an input of the type email or file.
-///      - name: Name of the element. For example used by the server to identify the fields in form submits.
-///      - pattern: Defines a regular expression which the element's value will be validated against.
-///      - placeholder: Provides a hint to the user of what can be entered in the field.
-///      - readonly: Indicates whether the element can be edited.
-///      - required: Indicates whether this element is required to fill out or not.
-///      - size: Defines the width of the element (in pixels). If the element's type attribute is text or password then it's the number of characters.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - src: The URL of the embeddable content.
-///      - step: 
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
-///      - type: Defines the type of the element.
-///      - usemap: 
-///      - value: Defines a default value which will be displayed in the element on page load.
-///      - width: For the elements listed here, this establishes the element's width.
+///      - accept: Hint for expected file type in file upload controls.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - alt: Replacement text for use when images are not available.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autocomplete: Hint for form autofill feature.
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - checked: Whether the control is checked.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - dirname: Name of form control to use for sending the element's directionality in form submission.
+///      - disabled: Whether the form control is disabled.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - form: Associates the element with a form element.
+///      - formaction: URL to use for form submission.
+///      - formenctype: Entry list encoding type to use for form submission.
+///      - formmethod: Variant to use for form submission.
+///      - formnovalidate: Bypass form control validation for form submission.
+///      - formtarget: Browsing context for form submission.
+///      - height: Vertical dimension.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - list: List of autocomplete options.
+///      - max: Maximum value.
+///      - maxlength: Maximum length of value.
+///      - min: Minimum value.
+///      - minlength: Minimum length of value.
+///      - multiple: Whether to allow multiple values.
+///      - name: Name of the element to use for form submission and in the form.elements API.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - pattern: Pattern to be matched by the form control's value.
+///      - placeholder: User-visible label to be placed within the form control.
+///      - readonly: Whether to allow the value to be edited by the user.
+///      - required: Whether the control is required for form submission.
+///      - role: ARIA semantic role.
+///      - size: Size of the control.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - src: Address of the resource.
+///      - step: Granularity to be matched by the form control's value.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Description of pattern (when used with pattern attribute).
+///      - translate: Whether the element is to be translated when the page is localized.
+///      - type: Type of form control.
+///      - value: Value of the form control.
+///      - width: Horizontal dimension.
 public func input(
     accept: String? = nil,
     accesskey: String? = nil,
@@ -5902,12 +5359,11 @@ public func input(
     checked: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
     dirname: String? = nil,
     disabled: Bool = false,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     form: String? = nil,
     formaction: String? = nil,
     formenctype: String? = nil,
@@ -5917,9 +5373,12 @@ public func input(
     height: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
     list: String? = nil,
@@ -5929,13 +5388,15 @@ public func input(
     minlength: String? = nil,
     multiple: Bool = false,
     name: String? = nil,
+    nonce: String? = nil,
     pattern: String? = nil,
     placeholder: String? = nil,
     readonly: Bool = false,
     `required`: Bool = false,
+    role: String? = nil,
     size: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     src: String? = nil,
     step: String? = nil,
     style: String? = nil,
@@ -5943,7 +5404,6 @@ public func input(
     title: String? = nil,
     translate: String? = nil,
     type: String? = nil,
-    usemap: String? = nil,
     value: String? = nil,
     width: String? = nil,
     customAttributes: [String: String] = [:]
@@ -5958,12 +5418,11 @@ public func input(
     attributes["checked"] = checked ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
     attributes["dirname"] = dirname
     attributes["disabled"] = disabled ? "" : nil
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["form"] = form
     attributes["formaction"] = formaction
     attributes["formenctype"] = formenctype
@@ -5973,9 +5432,12 @@ public func input(
     attributes["height"] = height
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
     attributes["list"] = list
@@ -5985,13 +5447,15 @@ public func input(
     attributes["minlength"] = minlength
     attributes["multiple"] = multiple ? "" : nil
     attributes["name"] = name
+    attributes["nonce"] = nonce
     attributes["pattern"] = pattern
     attributes["placeholder"] = placeholder
     attributes["readonly"] = readonly ? "" : nil
     attributes["required"] = `required` ? "" : nil
+    attributes["role"] = role
     attributes["size"] = size
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["src"] = src
     attributes["step"] = step
     attributes["style"] = style
@@ -5999,7 +5463,6 @@ public func input(
     attributes["title"] = title
     attributes["translate"] = translate
     attributes["type"] = type
-    attributes["usemap"] = usemap
     attributes["value"] = value
     attributes["width"] = width
 
@@ -6013,52 +5476,62 @@ public func input(
 
 /// ins
 ///
-/// The HTML `<ins>` element represents a range of text that has been added to a document.
+/// An addition to the document.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - cite: Contains a URI which points to the source of the quote or change.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - datetime: Indicates the date and time associated with the element.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - cite: Link to the source of the quotation or more information about the edit.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - datetime: Date and (optionally) time of the change.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func ins(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     cite: String? = nil,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     datetime: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -6069,23 +5542,28 @@ public func ins(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["cite"] = cite
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["datetime"] = datetime
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -6099,132 +5577,60 @@ public func ins(
 
 
 
-/// isindex
-///
-/// `<isindex>` is an obsolete HTML element that puts a text field in a page for querying the document.
-///
-/// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
-public func isindex(
-    accesskey: String? = nil,
-    autocapitalize: String? = nil,
-    `class`: String? = nil,
-    contenteditable: Bool = false,
-    contextmenu: String? = nil,
-    dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
-    hidden: Bool = false,
-    id: String? = nil,
-    itemprop: String? = nil,
-    itemscope: Bool = false,
-    itemref: String? = nil,
-    itemtype: String? = nil,
-    lang: String? = nil,
-    slot: String? = nil,
-    spellcheck: String? = nil,
-    style: String? = nil,
-    tabindex: String? = nil,
-    title: String? = nil,
-    translate: String? = nil,
-    customAttributes: [String: String] = [:],
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
-) -> Node {
-    var attributes: [String: String] = [:]
-    attributes["accesskey"] = accesskey
-    attributes["autocapitalize"] = autocapitalize
-    attributes["class"] = `class`
-    attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
-    attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
-    attributes["hidden"] = hidden ? "" : nil
-    attributes["id"] = id
-    attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
-    attributes["itemref"] = itemref
-    attributes["itemtype"] = itemtype
-    attributes["lang"] = lang
-    attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
-    attributes["style"] = style
-    attributes["tabindex"] = tabindex
-    attributes["title"] = title
-    attributes["translate"] = translate
-
-
-    attributes.merge(customAttributes) { _, b in b }
-
-    return .element("isindex", attributes, children().asNode())
-}
-
-
-
 /// kbd
 ///
-/// The HTML Keyboard Input element (`<kbd>`) represents a span of inline text denoting textual user input from a keyboard, voice input, or any other text entry device.
+/// User input.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func kbd(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -6235,21 +5641,26 @@ public func kbd(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -6263,62 +5674,62 @@ public func kbd(
 
 
 
-/// keygen
+/// label
 ///
-/// The HTML `<keygen>` element exists to facilitate generation of key material, and submission of the public key as part of an HTML form. This mechanism is designed for use with Web-based certificate management systems. It is expected that the `<keygen>` element will be used in an HTML form along with other information needed to construct a certificate request, and that the result of the process will be a signed certificate.
+/// Caption for a form control.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - autofocus: The element should be automatically focused after the page loaded.
-///      - challenge: A challenge string that is submitted along with the public key.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - disabled: Indicates whether the user can interact with the element.
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - form: Indicates the form that is the owner of the element.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - keytype: Specifies the type of key generated.
-///      - lang: Defines the language used in the element.
-///      - name: Name of the element. For example used by the server to identify the fields in form submits.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
-public func keygen(
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - for: Associate the label with form control.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
+public func label(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
     autofocus: Bool = false,
-    challenge: String? = nil,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    disabled: Bool = false,
-    draggable: String? = nil,
-    dropzone: String? = nil,
-    form: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
+    `for`: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
-    keytype: String? = nil,
     lang: String? = nil,
-    name: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -6330,114 +5741,26 @@ public func keygen(
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
     attributes["autofocus"] = autofocus ? "" : nil
-    attributes["challenge"] = challenge
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["disabled"] = disabled ? "" : nil
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
-    attributes["form"] = form
-    attributes["hidden"] = hidden ? "" : nil
-    attributes["id"] = id
-    attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
-    attributes["itemref"] = itemref
-    attributes["itemtype"] = itemtype
-    attributes["keytype"] = keytype
-    attributes["lang"] = lang
-    attributes["name"] = name
-    attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
-    attributes["style"] = style
-    attributes["tabindex"] = tabindex
-    attributes["title"] = title
-    attributes["translate"] = translate
-
-
-    attributes.merge(customAttributes) { _, b in b }
-
-    return .element("keygen", attributes, children().asNode())
-}
-
-
-
-/// label
-///
-/// The HTML `<label>` element represents a caption for an item in a user interface.
-///
-/// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - for: Describes elements which belongs to this one.
-///      - form: Indicates the form that is the owner of the element.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
-public func label(
-    accesskey: String? = nil,
-    autocapitalize: String? = nil,
-    `class`: String? = nil,
-    contenteditable: Bool = false,
-    contextmenu: String? = nil,
-    dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
-    `for`: String? = nil,
-    form: String? = nil,
-    hidden: Bool = false,
-    id: String? = nil,
-    itemprop: String? = nil,
-    itemscope: Bool = false,
-    itemref: String? = nil,
-    itemtype: String? = nil,
-    lang: String? = nil,
-    slot: String? = nil,
-    spellcheck: String? = nil,
-    style: String? = nil,
-    tabindex: String? = nil,
-    title: String? = nil,
-    translate: String? = nil,
-    customAttributes: [String: String] = [:],
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
-) -> Node {
-    var attributes: [String: String] = [:]
-    attributes["accesskey"] = accesskey
-    attributes["autocapitalize"] = autocapitalize
-    attributes["class"] = `class`
-    attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
-    attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["for"] = `for`
-    attributes["form"] = form
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -6453,48 +5776,58 @@ public func label(
 
 /// legend
 ///
-/// The HTML `<legend>` element represents a caption for the content of its parent `<fieldset>`.
+/// Caption for fieldset.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func legend(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -6505,21 +5838,26 @@ public func legend(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -6535,49 +5873,59 @@ public func legend(
 
 /// li
 ///
-/// The HTML `<li>` element is used to represent an item in a list.
+/// List item.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
-///      - value: Defines a default value which will be displayed in the element on page load.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
+///      - value: Ordinal value of the list item.
 public func li(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -6589,21 +5937,26 @@ public func li(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -6620,103 +5973,130 @@ public func li(
 
 /// link
 ///
-/// The HTML External Resource Link element (`<link>`) specifies relationships between the current document and an external resource. This element is most commonly used to link to stylesheets, but is also used to establish site icons (both "favicon" style icons and mobile home screen/app icons) among other things.
+/// Link metadata.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - crossorigin: How the element handles cross-origin requests
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - href: The URL of a linked resource.
-///      - hreflang: Specifies the language of the linked resource.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - importance: Indicates the relative fetch priority for the resource.
-///      - integrity: Specifies a Subresource Integrity value that allows browsers to verify what they fetch.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - media: Specifies a hint of the media for which the linked resource was designed.
-///      - referrerpolicy: Specifies which referrer is sent when fetching the resource.
-///      - rel: Specifies the relationship of the target object to the link object.
-///      - sizes: 
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - as: Potential destination for a preload request (for `preload` and `modulepreload`).
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - color: Color to use when customizing a site's icon (for `mask-icon`).
+///      - contenteditable: Whether the element is editable.
+///      - crossorigin: How the element handles crossorigin requests.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - href: Address of the hyperlink.
+///      - hreflang: Language of the linked resource.
+///      - id: The element's ID.
+///      - imagesizes: Image sizes for different page layouts.
+///      - imagesrcset: Images to use in different situations (e.g., high-resolution displays, small monitors, etc.).
+///      - inputmode: Hint for selecting an input modality.
+///      - integrity: Integrity metadata used in Subresource Integrity checks [SRI].
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - media: Applicable media.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - referrerpolicy: Referrer policy for fetches initiated by the element.
+///      - rel2: Relationship between the document containing the hyperlink and the destination resource.
+///      - role: ARIA semantic role.
+///      - sizes: Sizes of the icons (for `icon`).
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: CSS style sheet set name.
+///      - translate: Whether the element is to be translated when the page is localized.
+///      - type: Hint for the type of the referenced resource.
 public func link(
     accesskey: String? = nil,
+    `as`: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
+    color: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     crossorigin: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     href: String? = nil,
     hreflang: String? = nil,
     id: String? = nil,
-    importance: String? = nil,
+    imagesizes: String? = nil,
+    imagesrcset: String? = nil,
+    inputmode: String? = nil,
     integrity: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
     media: String? = nil,
+    nonce: String? = nil,
     referrerpolicy: String? = nil,
-    rel: String? = nil,
+    rel2: String? = nil,
+    role: String? = nil,
     sizes: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
+    type: String? = nil,
     customAttributes: [String: String] = [:]
 ) -> Node {
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
+    attributes["as"] = `as`
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
+    attributes["color"] = color
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["crossorigin"] = crossorigin
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["href"] = href
     attributes["hreflang"] = hreflang
     attributes["id"] = id
-    attributes["importance"] = importance
+    attributes["imagesizes"] = imagesizes
+    attributes["imagesrcset"] = imagesrcset
+    attributes["inputmode"] = inputmode
     attributes["integrity"] = integrity
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
     attributes["media"] = media
+    attributes["nonce"] = nonce
     attributes["referrerpolicy"] = referrerpolicy
-    attributes["rel"] = rel
+    attributes["rel2"] = rel2
+    attributes["role"] = role
     attributes["sizes"] = sizes
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
     attributes["translate"] = translate
+    attributes["type"] = type
 
 
     attributes.merge(customAttributes) { _, b in b }
@@ -6726,132 +6106,60 @@ public func link(
 
 
 
-/// listing
-///
-/// The HTML Listing Element (`<listing>`) renders text between the start and end tags without interpreting the HTML in between and using a monospaced font. The HTML 2 standard recommended that lines shouldn't be broken when not greater than 132 characters.
-///
-/// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
-public func listing(
-    accesskey: String? = nil,
-    autocapitalize: String? = nil,
-    `class`: String? = nil,
-    contenteditable: Bool = false,
-    contextmenu: String? = nil,
-    dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
-    hidden: Bool = false,
-    id: String? = nil,
-    itemprop: String? = nil,
-    itemscope: Bool = false,
-    itemref: String? = nil,
-    itemtype: String? = nil,
-    lang: String? = nil,
-    slot: String? = nil,
-    spellcheck: String? = nil,
-    style: String? = nil,
-    tabindex: String? = nil,
-    title: String? = nil,
-    translate: String? = nil,
-    customAttributes: [String: String] = [:],
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
-) -> Node {
-    var attributes: [String: String] = [:]
-    attributes["accesskey"] = accesskey
-    attributes["autocapitalize"] = autocapitalize
-    attributes["class"] = `class`
-    attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
-    attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
-    attributes["hidden"] = hidden ? "" : nil
-    attributes["id"] = id
-    attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
-    attributes["itemref"] = itemref
-    attributes["itemtype"] = itemtype
-    attributes["lang"] = lang
-    attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
-    attributes["style"] = style
-    attributes["tabindex"] = tabindex
-    attributes["title"] = title
-    attributes["translate"] = translate
-
-
-    attributes.merge(customAttributes) { _, b in b }
-
-    return .element("listing", attributes, children().asNode())
-}
-
-
-
 /// main
 ///
-/// The HTML `<main>` element represents the dominant content of the `<body>` of a document. The main content area consists of content that is directly related to or expands upon the central topic of a document, or the central functionality of an application.
+/// Container for the dominant contents of the document.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func main(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -6862,21 +6170,26 @@ public func main(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -6892,50 +6205,60 @@ public func main(
 
 /// map
 ///
-/// The HTML `<map>` element is used with `<area>` elements to define an image map (a clickable link area).
+/// Image map.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - name: Name of the element. For example used by the server to identify the fields in form submits.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - name: Name of image map to reference from the usemap attribute.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func map(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
     name: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -6946,22 +6269,27 @@ public func map(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
     attributes["name"] = name
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -6977,48 +6305,58 @@ public func map(
 
 /// mark
 ///
-/// The HTML Mark Text element (`<mark>`) represents text which is marked or highlighted for reference or notation purposes, due to the marked passage's relevance or importance in the enclosing context.
+/// Highlight.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func mark(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -7029,21 +6367,26 @@ public func mark(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -7057,54 +6400,60 @@ public func mark(
 
 
 
-/// marquee
+/// math
 ///
-/// The HTML `<marquee>` element is used to insert a scrolling area of text. You can control what happens when the text reaches the edges of its content area using its attributes.
+/// MathML root.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - bgcolor: Background color of the element.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - loop: Indicates whether the media should start playing from the start when it's finished.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
-public func marquee(
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
+public func math(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
-    bgcolor: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
-    loop: Bool = false,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -7115,23 +6464,26 @@ public func marquee(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
-    attributes["bgcolor"] = bgcolor
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
-    attributes["loop"] = loop ? "" : nil
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -7140,87 +6492,99 @@ public func marquee(
 
     attributes.merge(customAttributes) { _, b in b }
 
-    return .element("marquee", attributes, children().asNode())
+    return .element("math", attributes, children().asNode())
 }
 
 
 
 /// menu
 ///
-/// The HTML `<menu>` element represents a group of commands that a user can perform or activate. This includes both list menus, which might appear across the top of a screen, as well as context menus, such as those that might appear underneath a button after it has been clicked.
+/// Menu of commands.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
-///      - type: Defines the type of the element.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func menu(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    type: String? = nil,
     customAttributes: [String: String] = [:],
     @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
     attributes["translate"] = translate
-    attributes["type"] = type
 
 
     attributes.merge(customAttributes) { _, b in b }
@@ -7230,140 +6594,68 @@ public func menu(
 
 
 
-/// menuitem
-///
-/// The HTML `<menuitem>` element represents a command that a user is able to invoke through a popup menu. This includes context menus, as well as menus that might be attached to a menu button.
-///
-/// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
-public func menuitem(
-    accesskey: String? = nil,
-    autocapitalize: String? = nil,
-    `class`: String? = nil,
-    contenteditable: Bool = false,
-    contextmenu: String? = nil,
-    dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
-    hidden: Bool = false,
-    id: String? = nil,
-    itemprop: String? = nil,
-    itemscope: Bool = false,
-    itemref: String? = nil,
-    itemtype: String? = nil,
-    lang: String? = nil,
-    slot: String? = nil,
-    spellcheck: String? = nil,
-    style: String? = nil,
-    tabindex: String? = nil,
-    title: String? = nil,
-    translate: String? = nil,
-    customAttributes: [String: String] = [:],
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
-) -> Node {
-    var attributes: [String: String] = [:]
-    attributes["accesskey"] = accesskey
-    attributes["autocapitalize"] = autocapitalize
-    attributes["class"] = `class`
-    attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
-    attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
-    attributes["hidden"] = hidden ? "" : nil
-    attributes["id"] = id
-    attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
-    attributes["itemref"] = itemref
-    attributes["itemtype"] = itemtype
-    attributes["lang"] = lang
-    attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
-    attributes["style"] = style
-    attributes["tabindex"] = tabindex
-    attributes["title"] = title
-    attributes["translate"] = translate
-
-
-    attributes.merge(customAttributes) { _, b in b }
-
-    return .element("menuitem", attributes, children().asNode())
-}
-
-
-
 /// meta
 ///
-/// The HTML `<meta>` element represents metadata that cannot be represented by other HTML meta-related elements, like `<base>`, `<link>`, `<script>`, `<style>` or `<title>`.
+/// Text metadata.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - charset: Declares the character encoding of the page or script.
-///      - class: Often used with CSS to style elements with common properties.
-///      - content: A value associated with http-equiv or name depending on the context.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - http-equiv: Defines a pragma directive.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - name: Name of the element. For example used by the server to identify the fields in form submits.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - charset: Character encoding declaration.
+///      - class: Classes to which the element belongs.
+///      - content: Value of the element.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - http-equiv: Pragma directive.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - name: Metadata name.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func meta(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     charset: String? = nil,
     `class`: String? = nil,
     content: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     httpEquiv: String? = nil,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
     name: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -7373,25 +6665,30 @@ public func meta(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["charset"] = charset
     attributes["class"] = `class`
     attributes["content"] = content
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["http-equiv"] = httpEquiv
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
     attributes["name"] = name
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -7407,61 +6704,69 @@ public func meta(
 
 /// meter
 ///
-/// The HTML `<meter>` element represents either a scalar value within a known range or a fractional value.
+/// Gauge.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - form: Indicates the form that is the owner of the element.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - high: Indicates the lower bound of the upper range.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - low: Indicates the upper bound of the lower range.
-///      - max: Indicates the maximum value allowed.
-///      - min: Indicates the minimum value allowed.
-///      - optimum: Indicates the optimal numeric value.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
-///      - value: Defines a default value which will be displayed in the element on page load.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - high: Low limit of high range.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - low: High limit of low range.
+///      - max: Upper bound of range.
+///      - min: Lower bound of range.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - optimum: Optimum value in gauge.
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
+///      - value: Current value of the element.
 public func meter(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
-    form: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     high: String? = nil,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
     low: String? = nil,
     max: String? = nil,
     min: String? = nil,
+    nonce: String? = nil,
     optimum: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -7473,27 +6778,31 @@ public func meter(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
-    attributes["form"] = form
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["high"] = high
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
     attributes["low"] = low
     attributes["max"] = max
     attributes["min"] = min
+    attributes["nonce"] = nonce
     attributes["optimum"] = optimum
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -7508,132 +6817,60 @@ public func meter(
 
 
 
-/// multicol
-///
-/// The HTML Multi-Column Layout element (`<multicol>`) was an experimental element designed to allow multi-column layouts and must not be used.
-///
-/// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
-public func multicol(
-    accesskey: String? = nil,
-    autocapitalize: String? = nil,
-    `class`: String? = nil,
-    contenteditable: Bool = false,
-    contextmenu: String? = nil,
-    dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
-    hidden: Bool = false,
-    id: String? = nil,
-    itemprop: String? = nil,
-    itemscope: Bool = false,
-    itemref: String? = nil,
-    itemtype: String? = nil,
-    lang: String? = nil,
-    slot: String? = nil,
-    spellcheck: String? = nil,
-    style: String? = nil,
-    tabindex: String? = nil,
-    title: String? = nil,
-    translate: String? = nil,
-    customAttributes: [String: String] = [:],
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
-) -> Node {
-    var attributes: [String: String] = [:]
-    attributes["accesskey"] = accesskey
-    attributes["autocapitalize"] = autocapitalize
-    attributes["class"] = `class`
-    attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
-    attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
-    attributes["hidden"] = hidden ? "" : nil
-    attributes["id"] = id
-    attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
-    attributes["itemref"] = itemref
-    attributes["itemtype"] = itemtype
-    attributes["lang"] = lang
-    attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
-    attributes["style"] = style
-    attributes["tabindex"] = tabindex
-    attributes["title"] = title
-    attributes["translate"] = translate
-
-
-    attributes.merge(customAttributes) { _, b in b }
-
-    return .element("multicol", attributes, children().asNode())
-}
-
-
-
 /// nav
 ///
-/// The HTML `<nav>` element represents a section of a page whose purpose is to provide navigation links, either within the current document or to other documents. Common examples of navigation sections are menus, tables of contents, and indexes.
+/// Section with navigational links.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func nav(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -7644,21 +6881,26 @@ public func nav(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -7672,378 +6914,60 @@ public func nav(
 
 
 
-/// nextid
-///
-/// `<nextid>` is an obsolete HTML element that served to enable the NeXT web designing tool to generate automatic NAME labels for its anchors.
-///
-/// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
-public func nextid(
-    accesskey: String? = nil,
-    autocapitalize: String? = nil,
-    `class`: String? = nil,
-    contenteditable: Bool = false,
-    contextmenu: String? = nil,
-    dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
-    hidden: Bool = false,
-    id: String? = nil,
-    itemprop: String? = nil,
-    itemscope: Bool = false,
-    itemref: String? = nil,
-    itemtype: String? = nil,
-    lang: String? = nil,
-    slot: String? = nil,
-    spellcheck: String? = nil,
-    style: String? = nil,
-    tabindex: String? = nil,
-    title: String? = nil,
-    translate: String? = nil,
-    customAttributes: [String: String] = [:],
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
-) -> Node {
-    var attributes: [String: String] = [:]
-    attributes["accesskey"] = accesskey
-    attributes["autocapitalize"] = autocapitalize
-    attributes["class"] = `class`
-    attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
-    attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
-    attributes["hidden"] = hidden ? "" : nil
-    attributes["id"] = id
-    attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
-    attributes["itemref"] = itemref
-    attributes["itemtype"] = itemtype
-    attributes["lang"] = lang
-    attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
-    attributes["style"] = style
-    attributes["tabindex"] = tabindex
-    attributes["title"] = title
-    attributes["translate"] = translate
-
-
-    attributes.merge(customAttributes) { _, b in b }
-
-    return .element("nextid", attributes, children().asNode())
-}
-
-
-
-/// nobr
-///
-/// The non-standard, obsolete HTML `<nobr>` element prevents the text it contains from automatically wrapping across multiple lines, potentially resulting in the user having to scroll horizontally to see the entire width of the text.
-///
-/// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
-public func nobr(
-    accesskey: String? = nil,
-    autocapitalize: String? = nil,
-    `class`: String? = nil,
-    contenteditable: Bool = false,
-    contextmenu: String? = nil,
-    dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
-    hidden: Bool = false,
-    id: String? = nil,
-    itemprop: String? = nil,
-    itemscope: Bool = false,
-    itemref: String? = nil,
-    itemtype: String? = nil,
-    lang: String? = nil,
-    slot: String? = nil,
-    spellcheck: String? = nil,
-    style: String? = nil,
-    tabindex: String? = nil,
-    title: String? = nil,
-    translate: String? = nil,
-    customAttributes: [String: String] = [:],
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
-) -> Node {
-    var attributes: [String: String] = [:]
-    attributes["accesskey"] = accesskey
-    attributes["autocapitalize"] = autocapitalize
-    attributes["class"] = `class`
-    attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
-    attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
-    attributes["hidden"] = hidden ? "" : nil
-    attributes["id"] = id
-    attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
-    attributes["itemref"] = itemref
-    attributes["itemtype"] = itemtype
-    attributes["lang"] = lang
-    attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
-    attributes["style"] = style
-    attributes["tabindex"] = tabindex
-    attributes["title"] = title
-    attributes["translate"] = translate
-
-
-    attributes.merge(customAttributes) { _, b in b }
-
-    return .element("nobr", attributes, children().asNode())
-}
-
-
-
-/// noembed
-///
-/// The `<noembed>` element is an obsolete, non-standard way to provide alternative, or "fallback", content for browsers that do not support the `<embed>` element or do not support the type of embedded content an author wishes to use.
-///
-/// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
-public func noembed(
-    accesskey: String? = nil,
-    autocapitalize: String? = nil,
-    `class`: String? = nil,
-    contenteditable: Bool = false,
-    contextmenu: String? = nil,
-    dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
-    hidden: Bool = false,
-    id: String? = nil,
-    itemprop: String? = nil,
-    itemscope: Bool = false,
-    itemref: String? = nil,
-    itemtype: String? = nil,
-    lang: String? = nil,
-    slot: String? = nil,
-    spellcheck: String? = nil,
-    style: String? = nil,
-    tabindex: String? = nil,
-    title: String? = nil,
-    translate: String? = nil,
-    customAttributes: [String: String] = [:],
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
-) -> Node {
-    var attributes: [String: String] = [:]
-    attributes["accesskey"] = accesskey
-    attributes["autocapitalize"] = autocapitalize
-    attributes["class"] = `class`
-    attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
-    attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
-    attributes["hidden"] = hidden ? "" : nil
-    attributes["id"] = id
-    attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
-    attributes["itemref"] = itemref
-    attributes["itemtype"] = itemtype
-    attributes["lang"] = lang
-    attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
-    attributes["style"] = style
-    attributes["tabindex"] = tabindex
-    attributes["title"] = title
-    attributes["translate"] = translate
-
-
-    attributes.merge(customAttributes) { _, b in b }
-
-    return .element("noembed", attributes, children().asNode())
-}
-
-
-
-/// noframes
-///
-/// The obsolete HTML No Frames or frame fallback element, `<noframes>`, provides content to be presented in browsers that don't support (or have disabled support for) the `<frame>` element.
-///
-/// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
-public func noframes(
-    accesskey: String? = nil,
-    autocapitalize: String? = nil,
-    `class`: String? = nil,
-    contenteditable: Bool = false,
-    contextmenu: String? = nil,
-    dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
-    hidden: Bool = false,
-    id: String? = nil,
-    itemprop: String? = nil,
-    itemscope: Bool = false,
-    itemref: String? = nil,
-    itemtype: String? = nil,
-    lang: String? = nil,
-    slot: String? = nil,
-    spellcheck: String? = nil,
-    style: String? = nil,
-    tabindex: String? = nil,
-    title: String? = nil,
-    translate: String? = nil,
-    customAttributes: [String: String] = [:],
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
-) -> Node {
-    var attributes: [String: String] = [:]
-    attributes["accesskey"] = accesskey
-    attributes["autocapitalize"] = autocapitalize
-    attributes["class"] = `class`
-    attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
-    attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
-    attributes["hidden"] = hidden ? "" : nil
-    attributes["id"] = id
-    attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
-    attributes["itemref"] = itemref
-    attributes["itemtype"] = itemtype
-    attributes["lang"] = lang
-    attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
-    attributes["style"] = style
-    attributes["tabindex"] = tabindex
-    attributes["title"] = title
-    attributes["translate"] = translate
-
-
-    attributes.merge(customAttributes) { _, b in b }
-
-    return .element("noframes", attributes, children().asNode())
-}
-
-
-
 /// noscript
 ///
-/// The HTML `<noscript>` element defines a section of HTML to be inserted if a script type on the page is unsupported or if scripting is currently turned off in the browser.
+/// Fallback content for script.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func noscript(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -8054,21 +6978,26 @@ public func noscript(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -8084,61 +7013,69 @@ public func noscript(
 
 /// object
 ///
-/// The HTML `<object>` element represents an external resource, which can be treated as an image, a nested browsing context, or a resource to be handled by a plugin.
+/// Image, nested browsing context, or plugin.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - border: The border width.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - data: Specifies the URL of the resource.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - form: Indicates the form that is the owner of the element.
-///      - height: Specifies the height of elements listed here. For all other elements, use the CSS height property.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - name: Name of the element. For example used by the server to identify the fields in form submits.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
-///      - type: Defines the type of the element.
-///      - usemap: 
-///      - width: For the elements listed here, this establishes the element's width.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - data: Address of the resource.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - form: Associates the element with a form element.
+///      - height: Vertical dimension.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - name: Name of nested browsing context.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
+///      - type: Type of embedded resource.
+///      - usemap: Name of image map to use.
+///      - width: Horizontal dimension.
 public func object(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
-    border: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     data: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     form: String? = nil,
     height: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
     name: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -8152,26 +7089,30 @@ public func object(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
-    attributes["border"] = border
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["data"] = data
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["form"] = form
     attributes["height"] = height
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
     attributes["name"] = name
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -8190,83 +7131,101 @@ public func object(
 
 /// ol
 ///
-/// The HTML `<ol>` element represents an ordered list of items, typically rendered as a numbered list.
+/// Ordered list.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - reversed: Indicates whether the list should be displayed in a descending order instead of a ascending.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - start: Defines the first number if other than 1.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - reversed: Number the list backwards.
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - start: Starting value of the list.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
+///      - type: Kind of list marker.
 public func ol(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
     reversed: Bool = false,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     start: String? = nil,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
+    type: String? = nil,
     customAttributes: [String: String] = [:],
     @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
     attributes["reversed"] = reversed ? "" : nil
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["start"] = start
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
     attributes["translate"] = translate
+    attributes["type"] = type
 
 
     attributes.merge(customAttributes) { _, b in b }
@@ -8278,50 +7237,62 @@ public func ol(
 
 /// optgroup
 ///
-/// The HTML `<optgroup>` element creates a grouping of options within a `<select>` element.
+/// Group of options in a list box.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - disabled: Indicates whether the user can interact with the element.
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - disabled: Whether the form control is disabled.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - label: User-visible label.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func optgroup(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
     disabled: Bool = false,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
+    label: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -8332,22 +7303,28 @@ public func optgroup(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
     attributes["disabled"] = disabled ? "" : nil
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
+    attributes["label"] = label
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -8363,53 +7340,65 @@ public func optgroup(
 
 /// option
 ///
-/// The HTML `<option>` element is used to define an item contained in a `<select>`, an `<optgroup>`, or a `<datalist>` element. As such, `<option>` can represent menu items in popups and other lists of items in an HTML document.
+/// Option in a list box or combo box control.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - disabled: Indicates whether the user can interact with the element.
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - selected: Defines a value which will be selected on page load.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
-///      - value: Defines a default value which will be displayed in the element on page load.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - disabled: Whether the form control is disabled.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - label: User-visible label.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - selected: Whether the option is selected by default.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
+///      - value: Value to be used for form submission.
 public func option(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
     disabled: Bool = false,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
+    label: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     selected: Bool = false,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -8421,23 +7410,29 @@ public func option(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
     attributes["disabled"] = disabled ? "" : nil
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
+    attributes["label"] = label
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["selected"] = selected ? "" : nil
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -8454,54 +7449,64 @@ public func option(
 
 /// output
 ///
-/// The HTML Output element (`<output>`) is a container element into which a site or app can inject the results of a calculation or the outcome of a user action.
+/// Calculated output value.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - for: Describes elements which belongs to this one.
-///      - form: Indicates the form that is the owner of the element.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - name: Name of the element. For example used by the server to identify the fields in form submits.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - for2: Specifies controls from which the output was calculated.
+///      - form: Associates the element with a form element.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - name: Name of the element to use for form submission and in the form.elements API.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func output(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
-    `for`: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
+    for2: String? = nil,
     form: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
     name: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -8512,24 +7517,29 @@ public func output(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
-    attributes["for"] = `for`
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
+    attributes["for2"] = for2
     attributes["form"] = form
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
     attributes["name"] = name
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -8545,48 +7555,58 @@ public func output(
 
 /// p
 ///
-/// The HTML `<p>` element represents a paragraph.
+/// Paragraph.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func p(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -8597,21 +7617,26 @@ public func p(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -8627,51 +7652,61 @@ public func p(
 
 /// param
 ///
-/// The HTML `<param>` element defines parameters for an `<object>` element.
+/// Parameter for object.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - name: Name of the element. For example used by the server to identify the fields in form submits.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
-///      - value: Defines a default value which will be displayed in the element on page load.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - name: Name of parameter.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
+///      - value: Value of parameter.
 public func param(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
     name: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -8682,22 +7717,27 @@ public func param(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
     attributes["name"] = name
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -8714,48 +7754,58 @@ public func param(
 
 /// picture
 ///
-/// The HTML `<picture>` element contains zero or more `<source>` elements and one `<img>` element to provide versions of an image for different display/device scenarios.
+/// Image.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func picture(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -8766,21 +7816,26 @@ public func picture(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -8794,132 +7849,60 @@ public func picture(
 
 
 
-/// plaintext
-///
-/// The HTML Plaintext Element (`<plaintext>`) renders everything following the start tag as raw text, ignoring any following HTML.
-///
-/// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
-public func plaintext(
-    accesskey: String? = nil,
-    autocapitalize: String? = nil,
-    `class`: String? = nil,
-    contenteditable: Bool = false,
-    contextmenu: String? = nil,
-    dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
-    hidden: Bool = false,
-    id: String? = nil,
-    itemprop: String? = nil,
-    itemscope: Bool = false,
-    itemref: String? = nil,
-    itemtype: String? = nil,
-    lang: String? = nil,
-    slot: String? = nil,
-    spellcheck: String? = nil,
-    style: String? = nil,
-    tabindex: String? = nil,
-    title: String? = nil,
-    translate: String? = nil,
-    customAttributes: [String: String] = [:],
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
-) -> Node {
-    var attributes: [String: String] = [:]
-    attributes["accesskey"] = accesskey
-    attributes["autocapitalize"] = autocapitalize
-    attributes["class"] = `class`
-    attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
-    attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
-    attributes["hidden"] = hidden ? "" : nil
-    attributes["id"] = id
-    attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
-    attributes["itemref"] = itemref
-    attributes["itemtype"] = itemtype
-    attributes["lang"] = lang
-    attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
-    attributes["style"] = style
-    attributes["tabindex"] = tabindex
-    attributes["title"] = title
-    attributes["translate"] = translate
-
-
-    attributes.merge(customAttributes) { _, b in b }
-
-    return .element("plaintext", attributes, children().asNode())
-}
-
-
-
 /// pre
 ///
-/// The HTML `<pre>` element represents preformatted text which is to be presented exactly as written in the HTML file.
+/// Block of preformatted text.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func pre(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -8930,21 +7913,26 @@ public func pre(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -8960,53 +7948,61 @@ public func pre(
 
 /// progress
 ///
-/// The HTML `<progress>` element displays an indicator showing the completion progress of a task, typically displayed as a progress bar.
+/// Progress bar.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - form: Indicates the form that is the owner of the element.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - max: Indicates the maximum value allowed.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
-///      - value: Defines a default value which will be displayed in the element on page load.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - max: Upper bound of range.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
+///      - value: Current value of the element.
 public func progress(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
-    form: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
     max: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -9018,23 +8014,27 @@ public func progress(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
-    attributes["form"] = form
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
     attributes["max"] = max
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -9051,50 +8051,60 @@ public func progress(
 
 /// q
 ///
-/// The HTML `<q>` element indicates that the enclosed text is a short inline quotation. Most modern browsers implement this by surrounding the text in quotation marks.
+/// Quotation.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - cite: Contains a URI which points to the source of the quote or change.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - cite: Link to the source of the quotation or more information about the edit.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func q(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     cite: String? = nil,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -9105,22 +8115,27 @@ public func q(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["cite"] = cite
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -9134,132 +8149,60 @@ public func q(
 
 
 
-/// rb
-///
-/// The HTML Ruby Base (`<rb>`) element is used to delimit the base text component of a  `<ruby>` annotation, i.e. the text that is being annotated.
-///
-/// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
-public func rb(
-    accesskey: String? = nil,
-    autocapitalize: String? = nil,
-    `class`: String? = nil,
-    contenteditable: Bool = false,
-    contextmenu: String? = nil,
-    dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
-    hidden: Bool = false,
-    id: String? = nil,
-    itemprop: String? = nil,
-    itemscope: Bool = false,
-    itemref: String? = nil,
-    itemtype: String? = nil,
-    lang: String? = nil,
-    slot: String? = nil,
-    spellcheck: String? = nil,
-    style: String? = nil,
-    tabindex: String? = nil,
-    title: String? = nil,
-    translate: String? = nil,
-    customAttributes: [String: String] = [:],
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
-) -> Node {
-    var attributes: [String: String] = [:]
-    attributes["accesskey"] = accesskey
-    attributes["autocapitalize"] = autocapitalize
-    attributes["class"] = `class`
-    attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
-    attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
-    attributes["hidden"] = hidden ? "" : nil
-    attributes["id"] = id
-    attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
-    attributes["itemref"] = itemref
-    attributes["itemtype"] = itemtype
-    attributes["lang"] = lang
-    attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
-    attributes["style"] = style
-    attributes["tabindex"] = tabindex
-    attributes["title"] = title
-    attributes["translate"] = translate
-
-
-    attributes.merge(customAttributes) { _, b in b }
-
-    return .element("rb", attributes, %children().asNode()%)
-}
-
-
-
 /// rp
 ///
-/// The HTML Ruby Fallback Parenthesis (`<rp>`) element is used to provide fall-back parentheses for browsers that do not support display of ruby annotations using the `<ruby>` element.
+/// Parenthesis for ruby annotation text.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func rp(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -9270,21 +8213,26 @@ public func rp(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -9300,48 +8248,58 @@ public func rp(
 
 /// rt
 ///
-/// The HTML Ruby Text (`<rt>`) element specifies the ruby text component of a ruby annotation, which is used to provide pronunciation, translation, or transliteration information for East Asian typography. The `<rt>` element must always be contained within a `<ruby>` element.
+/// Ruby annotation text.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func rt(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -9352,21 +8310,26 @@ public func rt(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -9380,132 +8343,60 @@ public func rt(
 
 
 
-/// rtc
-///
-/// The HTML Ruby Text Container (`<rtc>`) element embraces semantic annotations of characters presented in a ruby of `<rb>` elements used inside of `<ruby>` element. `<rb>` elements can have both pronunciation (`<rt>`) and semantic (`<rtc>`) annotations.
-///
-/// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
-public func rtc(
-    accesskey: String? = nil,
-    autocapitalize: String? = nil,
-    `class`: String? = nil,
-    contenteditable: Bool = false,
-    contextmenu: String? = nil,
-    dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
-    hidden: Bool = false,
-    id: String? = nil,
-    itemprop: String? = nil,
-    itemscope: Bool = false,
-    itemref: String? = nil,
-    itemtype: String? = nil,
-    lang: String? = nil,
-    slot: String? = nil,
-    spellcheck: String? = nil,
-    style: String? = nil,
-    tabindex: String? = nil,
-    title: String? = nil,
-    translate: String? = nil,
-    customAttributes: [String: String] = [:],
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
-) -> Node {
-    var attributes: [String: String] = [:]
-    attributes["accesskey"] = accesskey
-    attributes["autocapitalize"] = autocapitalize
-    attributes["class"] = `class`
-    attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
-    attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
-    attributes["hidden"] = hidden ? "" : nil
-    attributes["id"] = id
-    attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
-    attributes["itemref"] = itemref
-    attributes["itemtype"] = itemtype
-    attributes["lang"] = lang
-    attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
-    attributes["style"] = style
-    attributes["tabindex"] = tabindex
-    attributes["title"] = title
-    attributes["translate"] = translate
-
-
-    attributes.merge(customAttributes) { _, b in b }
-
-    return .element("rtc", attributes, %children().asNode()%)
-}
-
-
-
 /// ruby
 ///
-/// The HTML `<ruby>` element represents a ruby annotation. Ruby annotations are for showing pronunciation of East Asian characters.
+/// Ruby annotation(s).
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func ruby(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -9516,21 +8407,26 @@ public func ruby(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -9546,48 +8442,58 @@ public func ruby(
 
 /// s
 ///
-/// The HTML `<s>` element renders text with a strikethrough, or a line through it. Use the `<s>` element to represent things that are no longer relevant or no longer accurate. However, `<s>` is not appropriate when indicating document edits; for that, use the `<del>` and `<ins>` elements, as appropriate.
+/// Inaccurate text.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func s(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -9598,21 +8504,26 @@ public func s(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -9628,48 +8539,58 @@ public func s(
 
 /// samp
 ///
-/// The HTML Sample Element (`<samp>`) is used to enclose inline text which represents sample (or quoted) output from a computer program.
+/// Computer output.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func samp(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -9680,21 +8601,26 @@ public func samp(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -9710,66 +8636,72 @@ public func samp(
 
 /// script
 ///
-/// The HTML `<script>` element is used to embed or reference executable code; this is typically used to embed or refer to JavaScript code.
+/// Embedded script.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - async: Indicates that the script should be executed asynchronously.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - charset: Declares the character encoding of the page or script.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - crossorigin: How the element handles cross-origin requests
-///      - defer: Indicates that the script should be executed after the page has been parsed.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - importance: Indicates the relative fetch priority for the resource.
-///      - integrity: Specifies a Subresource Integrity value that allows browsers to verify what they fetch.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - language: Defines the script language used in the element.
-///      - referrerpolicy: Specifies which referrer is sent when fetching the resource.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - src: The URL of the embeddable content.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
-///      - type: Defines the type of the element.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - async: Execute script when available, without blocking while fetching.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - crossorigin: How the element handles crossorigin requests.
+///      - defer: Defer script execution.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - integrity: Integrity metadata used in Subresource Integrity checks [SRI].
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nomodule: Prevents execution in user agents that support module scripts.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - referrerpolicy: Referrer policy for fetches initiated by the element.
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - src: Address of the resource.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
+///      - type: Type of script.
 public func script(
     accesskey: String? = nil,
     async: Bool = false,
     autocapitalize: String? = nil,
-    charset: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     crossorigin: String? = nil,
     `defer`: Bool = false,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
-    importance: String? = nil,
+    inputmode: String? = nil,
     integrity: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
-    language: String? = nil,
+    nomodule: Bool = false,
+    nonce: String? = nil,
     referrerpolicy: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     src: String? = nil,
     style: String? = nil,
     tabindex: String? = nil,
@@ -9783,28 +8715,31 @@ public func script(
     attributes["accesskey"] = accesskey
     attributes["async"] = async ? "" : nil
     attributes["autocapitalize"] = autocapitalize
-    attributes["charset"] = charset
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["crossorigin"] = crossorigin
     attributes["defer"] = `defer` ? "" : nil
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
-    attributes["importance"] = importance
+    attributes["inputmode"] = inputmode
     attributes["integrity"] = integrity
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
-    attributes["language"] = language
+    attributes["nomodule"] = nomodule ? "" : nil
+    attributes["nonce"] = nonce
     attributes["referrerpolicy"] = referrerpolicy
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["src"] = src
     attributes["style"] = style
     attributes["tabindex"] = tabindex
@@ -9822,48 +8757,58 @@ public func script(
 
 /// section
 ///
-/// The HTML `<section>` element represents a standalone section — which doesn't have a more specific semantic element to represent it — contained within an HTML document.
+/// Generic document or application section.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func section(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -9874,21 +8819,26 @@ public func section(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -9904,38 +8854,42 @@ public func section(
 
 /// select
 ///
-/// The HTML `<select>` element represents a control that provides a menu of options
+/// List box control.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - autocomplete: Indicates whether controls in this form can by default have their values automatically completed by the browser.
-///      - autofocus: The element should be automatically focused after the page loaded.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - disabled: Indicates whether the user can interact with the element.
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - form: Indicates the form that is the owner of the element.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - multiple: Indicates whether multiple values can be entered in an input of the type email or file.
-///      - name: Name of the element. For example used by the server to identify the fields in form submits.
-///      - required: Indicates whether this element is required to fill out or not.
-///      - size: Defines the width of the element (in pixels). If the element's type attribute is text or password then it's the number of characters.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autocomplete: Hint for form autofill feature.
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - disabled: Whether the form control is disabled.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - form: Associates the element with a form element.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - multiple: Whether to allow multiple values.
+///      - name: Name of the element to use for form submission and in the form.elements API.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - required: Whether the control is required for form submission.
+///      - role: ARIA semantic role.
+///      - size: Size of the control.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func select(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
@@ -9943,25 +8897,29 @@ public func select(
     autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
     disabled: Bool = false,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     form: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
     multiple: Bool = false,
     name: String? = nil,
+    nonce: String? = nil,
     `required`: Bool = false,
+    role: String? = nil,
     size: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -9976,25 +8934,29 @@ public func select(
     attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
     attributes["disabled"] = disabled ? "" : nil
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["form"] = form
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
     attributes["multiple"] = multiple ? "" : nil
     attributes["name"] = name
+    attributes["nonce"] = nonce
     attributes["required"] = `required` ? "" : nil
+    attributes["role"] = role
     attributes["size"] = size
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -10008,132 +8970,62 @@ public func select(
 
 
 
-/// shadow
-///
-/// The HTML `<shadow>` element—an obsolete part of the Web Components technology suite—was intended to be used as a shadow DOM insertion point.
-///
-/// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
-public func shadow(
-    accesskey: String? = nil,
-    autocapitalize: String? = nil,
-    `class`: String? = nil,
-    contenteditable: Bool = false,
-    contextmenu: String? = nil,
-    dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
-    hidden: Bool = false,
-    id: String? = nil,
-    itemprop: String? = nil,
-    itemscope: Bool = false,
-    itemref: String? = nil,
-    itemtype: String? = nil,
-    lang: String? = nil,
-    slot: String? = nil,
-    spellcheck: String? = nil,
-    style: String? = nil,
-    tabindex: String? = nil,
-    title: String? = nil,
-    translate: String? = nil,
-    customAttributes: [String: String] = [:],
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
-) -> Node {
-    var attributes: [String: String] = [:]
-    attributes["accesskey"] = accesskey
-    attributes["autocapitalize"] = autocapitalize
-    attributes["class"] = `class`
-    attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
-    attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
-    attributes["hidden"] = hidden ? "" : nil
-    attributes["id"] = id
-    attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
-    attributes["itemref"] = itemref
-    attributes["itemtype"] = itemtype
-    attributes["lang"] = lang
-    attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
-    attributes["style"] = style
-    attributes["tabindex"] = tabindex
-    attributes["title"] = title
-    attributes["translate"] = translate
-
-
-    attributes.merge(customAttributes) { _, b in b }
-
-    return .element("shadow", attributes, children().asNode())
-}
-
-
-
 /// slot
 ///
-/// The HTML `<slot>` element—part of the Web Components technology suite—is a placeholder inside a web component that you can fill with your own markup, which lets you create separate DOM trees and present them together.
+/// Shadow tree slot.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - name: Name of shadow tree slot.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func slot(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    name: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -10144,21 +9036,27 @@ public func slot(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["name"] = name
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -10174,48 +9072,58 @@ public func slot(
 
 /// small
 ///
-/// The HTML `<small>` element makes the text font size one size smaller (for example, from large to medium, or from small to x-small) down to the browser's minimum font size.  In HTML5, this element is repurposed to represent side-comments and small print, including copyright and legal text, independent of its styled presentation.
+/// Side comment.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func small(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -10226,21 +9134,26 @@ public func small(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -10256,55 +9169,65 @@ public func small(
 
 /// source
 ///
-/// The HTML `<source>` element specifies multiple media resources for the `<picture>`, the `<audio>` element, or the `<video>` element.
+/// Image source for img or media source for video or audio.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - media: Specifies a hint of the media for which the linked resource was designed.
-///      - sizes: 
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - src: The URL of the embeddable content.
-///      - srcset: One or more responsive image candidates.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
-///      - type: Defines the type of the element.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - media: Applicable media.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - sizes: Image sizes for different page layouts.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - src: Address of the resource.
+///      - srcset: Images to use in different situations (e.g., high-resolution displays, small monitors, etc.).
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
+///      - type: Type of embedded resource.
 public func source(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
     media: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     sizes: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     src: String? = nil,
     srcset: String? = nil,
     style: String? = nil,
@@ -10317,23 +9240,28 @@ public func source(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
     attributes["media"] = media
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["sizes"] = sizes
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["src"] = src
     attributes["srcset"] = srcset
     attributes["style"] = style
@@ -10350,132 +9278,60 @@ public func source(
 
 
 
-/// spacer
-///
-/// `<spacer>` is an obsolete HTML element which allowed insertion of empty spaces on pages. It was devised by Netscape to accomplish the same effect as a single-pixel layout image, which was something web designers used to use to add white spaces to web pages without actually using an image. However, `<spacer>` no longer supported by any major browser and the same effects can now be achieved using simple CSS.
-///
-/// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
-public func spacer(
-    accesskey: String? = nil,
-    autocapitalize: String? = nil,
-    `class`: String? = nil,
-    contenteditable: Bool = false,
-    contextmenu: String? = nil,
-    dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
-    hidden: Bool = false,
-    id: String? = nil,
-    itemprop: String? = nil,
-    itemscope: Bool = false,
-    itemref: String? = nil,
-    itemtype: String? = nil,
-    lang: String? = nil,
-    slot: String? = nil,
-    spellcheck: String? = nil,
-    style: String? = nil,
-    tabindex: String? = nil,
-    title: String? = nil,
-    translate: String? = nil,
-    customAttributes: [String: String] = [:],
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
-) -> Node {
-    var attributes: [String: String] = [:]
-    attributes["accesskey"] = accesskey
-    attributes["autocapitalize"] = autocapitalize
-    attributes["class"] = `class`
-    attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
-    attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
-    attributes["hidden"] = hidden ? "" : nil
-    attributes["id"] = id
-    attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
-    attributes["itemref"] = itemref
-    attributes["itemtype"] = itemtype
-    attributes["lang"] = lang
-    attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
-    attributes["style"] = style
-    attributes["tabindex"] = tabindex
-    attributes["title"] = title
-    attributes["translate"] = translate
-
-
-    attributes.merge(customAttributes) { _, b in b }
-
-    return .element("spacer", attributes, children().asNode())
-}
-
-
-
 /// span
 ///
-/// The HTML `<span>` element is a generic inline container for phrasing content, which does not inherently represent anything. It can be used to group elements for styling purposes (using the class or id attributes), or because they share attribute values, such as lang.
+/// Generic phrasing container.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func span(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -10486,21 +9342,26 @@ public func span(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -10514,132 +9375,60 @@ public func span(
 
 
 
-/// strike
-///
-/// The HTML `<strike>` element (or HTML Strikethrough Element) places a strikethrough (horizontal line) over text.
-///
-/// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
-public func strike(
-    accesskey: String? = nil,
-    autocapitalize: String? = nil,
-    `class`: String? = nil,
-    contenteditable: Bool = false,
-    contextmenu: String? = nil,
-    dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
-    hidden: Bool = false,
-    id: String? = nil,
-    itemprop: String? = nil,
-    itemscope: Bool = false,
-    itemref: String? = nil,
-    itemtype: String? = nil,
-    lang: String? = nil,
-    slot: String? = nil,
-    spellcheck: String? = nil,
-    style: String? = nil,
-    tabindex: String? = nil,
-    title: String? = nil,
-    translate: String? = nil,
-    customAttributes: [String: String] = [:],
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
-) -> Node {
-    var attributes: [String: String] = [:]
-    attributes["accesskey"] = accesskey
-    attributes["autocapitalize"] = autocapitalize
-    attributes["class"] = `class`
-    attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
-    attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
-    attributes["hidden"] = hidden ? "" : nil
-    attributes["id"] = id
-    attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
-    attributes["itemref"] = itemref
-    attributes["itemtype"] = itemtype
-    attributes["lang"] = lang
-    attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
-    attributes["style"] = style
-    attributes["tabindex"] = tabindex
-    attributes["title"] = title
-    attributes["translate"] = translate
-
-
-    attributes.merge(customAttributes) { _, b in b }
-
-    return .element("strike", attributes, children().asNode())
-}
-
-
-
 /// strong
 ///
-/// The HTML Strong Importance Element (`<strong>`) indicates that its contents have strong importance, seriousness, or urgency. Browsers typically render the contents in bold type.
+/// Importance.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func strong(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -10650,21 +9439,26 @@ public func strong(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -10680,86 +9474,95 @@ public func strong(
 
 /// style
 ///
-/// The HTML `<style>` element contains style information for a document, or part of a document.
+/// Embedded styling information.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - media: Specifies a hint of the media for which the linked resource was designed.
-///      - scoped: 
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
-///      - type: Defines the type of the element.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - media: Applicable media.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: CSS style sheet set name.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func style(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
     media: String? = nil,
-    scoped: Bool = false,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
-    type: String? = nil,
     customAttributes: [String: String] = [:],
     @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
     attributes["media"] = media
-    attributes["scoped"] = scoped ? "" : nil
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
     attributes["translate"] = translate
-    attributes["type"] = type
 
 
     attributes.merge(customAttributes) { _, b in b }
@@ -10771,48 +9574,58 @@ public func style(
 
 /// sub
 ///
-/// The HTML Subscript element (`<sub>`) specifies inline text which should be displayed as subscript for solely typographical reasons.
+/// Subscript.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func sub(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -10823,21 +9636,26 @@ public func sub(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -10853,48 +9671,58 @@ public func sub(
 
 /// summary
 ///
-/// The HTML Disclosure Summary element (`<summary>`) element specifies a summary, caption, or legend for a `<details>` element's disclosure box.
+/// Caption for details.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func summary(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -10905,21 +9733,26 @@ public func summary(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -10935,48 +9768,58 @@ public func summary(
 
 /// sup
 ///
-/// The HTML Superscript element (`<sup>`) specifies inline text which is to be displayed as superscript for solely typographical reasons.
+/// Superscript.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func sup(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -10987,21 +9830,26 @@ public func sup(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -11015,61 +9863,61 @@ public func sup(
 
 
 
-/// table
+/// svg
 ///
-/// The HTML `<table>` element represents tabular data — that is, information presented in a two-dimensional table comprised of rows and columns of cells containing data.
+/// SVG root.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - align: Specifies the horizontal alignment of the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - background: Specifies the URL of an image file.
-///      - bgcolor: Background color of the element.
-///      - border: The border width.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - summary: 
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
-public func table(
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
+public func svg(
     accesskey: String? = nil,
-    align: String? = nil,
     autocapitalize: String? = nil,
-    background: String? = nil,
-    bgcolor: String? = nil,
-    border: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
-    summary: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
     translate: String? = nil,
@@ -11078,28 +9926,125 @@ public func table(
 ) -> Node {
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
-    attributes["align"] = align
     attributes["autocapitalize"] = autocapitalize
-    attributes["background"] = background
-    attributes["bgcolor"] = bgcolor
-    attributes["border"] = border
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
-    attributes["summary"] = summary
+    attributes["tabindex"] = tabindex
+    attributes["title"] = title
+    attributes["translate"] = translate
+
+
+    attributes.merge(customAttributes) { _, b in b }
+
+    return .element("svg", attributes, children().asNode())
+}
+
+
+
+/// table
+///
+/// Table.
+///
+/// - Parameters:
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
+public func table(
+    accesskey: String? = nil,
+    autocapitalize: String? = nil,
+    autofocus: Bool = false,
+    `class`: String? = nil,
+    contenteditable: Bool = false,
+    dir: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
+    hidden: Bool = false,
+    id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
+    itemprop: String? = nil,
+    itemref: String? = nil,
+    itemscope: Bool = false,
+    itemtype: String? = nil,
+    lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
+    slot: String? = nil,
+    spellcheck: Bool = false,
+    style: String? = nil,
+    tabindex: String? = nil,
+    title: String? = nil,
+    translate: String? = nil,
+    customAttributes: [String: String] = [:],
+    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
+) -> Node {
+    var attributes: [String: String] = [:]
+    attributes["accesskey"] = accesskey
+    attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
+    attributes["class"] = `class`
+    attributes["contenteditable"] = contenteditable ? "" : nil
+    attributes["dir"] = dir
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
+    attributes["hidden"] = hidden ? "" : nil
+    attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
+    attributes["itemprop"] = itemprop
+    attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
+    attributes["itemtype"] = itemtype
+    attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
+    attributes["slot"] = slot
+    attributes["spellcheck"] = spellcheck ? "" : nil
+    attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
     attributes["translate"] = translate
@@ -11114,52 +10059,58 @@ public func table(
 
 /// tbody
 ///
-/// The HTML Table Body element (`<tbody>`) encapsulates a set of table rows (`<tr>` elements), indicating that they comprise the body of the table (`<table>`).
+/// Group of rows in a table.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - align: Specifies the horizontal alignment of the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - bgcolor: Background color of the element.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func tbody(
     accesskey: String? = nil,
-    align: String? = nil,
     autocapitalize: String? = nil,
-    bgcolor: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -11169,24 +10120,27 @@ public func tbody(
 ) -> Node {
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
-    attributes["align"] = align
     attributes["autocapitalize"] = autocapitalize
-    attributes["bgcolor"] = bgcolor
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -11202,60 +10156,64 @@ public func tbody(
 
 /// td
 ///
-/// The HTML `<td>` element defines a cell of a table that contains data. It participates in the table model.
+/// Table cell.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - align: Specifies the horizontal alignment of the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - background: Specifies the URL of an image file.
-///      - bgcolor: Background color of the element.
-///      - class: Often used with CSS to style elements with common properties.
-///      - colspan: The colspan attribute defines the number of columns a cell should span.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - headers: IDs of the <th> elements which applies to this element.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - rowspan: Defines the number of rows a table cell should span over.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - colspan: Number of columns that the cell is to span.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - headers: The header cells for this cell.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - rowspan: Number of rows that the cell is to span.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func td(
     accesskey: String? = nil,
-    align: String? = nil,
     autocapitalize: String? = nil,
-    background: String? = nil,
-    bgcolor: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     colspan: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     headers: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     rowspan: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -11265,28 +10223,30 @@ public func td(
 ) -> Node {
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
-    attributes["align"] = align
     attributes["autocapitalize"] = autocapitalize
-    attributes["background"] = background
-    attributes["bgcolor"] = bgcolor
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["colspan"] = colspan
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["headers"] = headers
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["rowspan"] = rowspan
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -11302,48 +10262,58 @@ public func td(
 
 /// template
 ///
-/// The HTML Content Template (`<template>`) element is a mechanism for holding HTML that is not to be rendered immediately when a page is loaded but may be instantiated subsequently during runtime using JavaScript.
+/// Template.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func template(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -11354,21 +10324,26 @@ public func template(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -11384,46 +10359,48 @@ public func template(
 
 /// textarea
 ///
-/// The HTML `<textarea>` element represents a multi-line plain-text editing control, useful when you want to allow users to enter a sizeable amount of free-form text, for example a comment on a review or feedback form.
+/// Multiline text controls.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - autocomplete: Indicates whether controls in this form can by default have their values automatically completed by the browser.
-///      - autofocus: The element should be automatically focused after the page loaded.
-///      - class: Often used with CSS to style elements with common properties.
-///      - cols: Defines the number of columns in a textarea.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - dirname: 
-///      - disabled: Indicates whether the user can interact with the element.
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - enterkeyhint: The enterkeyhint specifies what action label (or icon) to present for the enter key on virtual keyboards. The attribute can be used with form controls (such as the value of textarea elements), or in elements in an editing host (e.g., using contenteditable attribute).
-///      - form: Indicates the form that is the owner of the element.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - inputmode: Provides a hint as to the type of data that might be entered by the user while editing the element or its contents. The attribute can be used with form controls (such as the value of textarea elements), or in elements in an editing host (e.g., using contenteditable attribute).
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - maxlength: Defines the maximum number of characters allowed in the element.
-///      - minlength: Defines the minimum number of characters allowed in the element.
-///      - name: Name of the element. For example used by the server to identify the fields in form submits.
-///      - placeholder: Provides a hint to the user of what can be entered in the field.
-///      - readonly: Indicates whether the element can be edited.
-///      - required: Indicates whether this element is required to fill out or not.
-///      - rows: Defines the number of rows in a text area.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
-///      - wrap: Indicates whether the text should be wrapped.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autocomplete: Hint for form autofill feature.
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - cols: Maximum number of characters per line.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - dirname: Name of form control to use for sending the element's directionality in form submission.
+///      - disabled: Whether the form control is disabled.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - form: Associates the element with a form element.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - maxlength: Maximum length of value.
+///      - minlength: Minimum length of value.
+///      - name: Name of the element to use for form submission and in the form.elements API.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - placeholder: User-visible label to be placed within the form control.
+///      - readonly: Whether to allow the value to be edited by the user.
+///      - required: Whether the control is required for form submission.
+///      - role: ARIA semantic role.
+///      - rows: Number of lines to show.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
+///      - wrap: How the value of the form control is to be wrapped for form submission.
 public func textarea(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
@@ -11432,31 +10409,33 @@ public func textarea(
     `class`: String? = nil,
     cols: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
     dirname: String? = nil,
     disabled: Bool = false,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
     enterkeyhint: String? = nil,
     form: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
     inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
     maxlength: String? = nil,
     minlength: String? = nil,
     name: String? = nil,
+    nonce: String? = nil,
     placeholder: String? = nil,
     readonly: Bool = false,
     `required`: Bool = false,
+    role: String? = nil,
     rows: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -11473,31 +10452,33 @@ public func textarea(
     attributes["class"] = `class`
     attributes["cols"] = cols
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
     attributes["dirname"] = dirname
     attributes["disabled"] = disabled ? "" : nil
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
     attributes["enterkeyhint"] = enterkeyhint
     attributes["form"] = form
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
     attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
     attributes["maxlength"] = maxlength
     attributes["minlength"] = minlength
     attributes["name"] = name
+    attributes["nonce"] = nonce
     attributes["placeholder"] = placeholder
     attributes["readonly"] = readonly ? "" : nil
     attributes["required"] = `required` ? "" : nil
+    attributes["role"] = role
     attributes["rows"] = rows
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -11514,52 +10495,58 @@ public func textarea(
 
 /// tfoot
 ///
-/// The HTML `<tfoot>` element defines a set of rows summarizing the columns of the table.
+/// Group of footer rows in a table.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - align: Specifies the horizontal alignment of the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - bgcolor: Background color of the element.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func tfoot(
     accesskey: String? = nil,
-    align: String? = nil,
     autocapitalize: String? = nil,
-    bgcolor: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -11569,24 +10556,27 @@ public func tfoot(
 ) -> Node {
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
-    attributes["align"] = align
     attributes["autocapitalize"] = autocapitalize
-    attributes["bgcolor"] = bgcolor
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -11602,62 +10592,68 @@ public func tfoot(
 
 /// th
 ///
-/// The HTML `<th>` element defines a cell as header of a group of table cells. The exact nature of this group is defined by the scope and headers attributes.
+/// Table header cell.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - align: Specifies the horizontal alignment of the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - background: Specifies the URL of an image file.
-///      - bgcolor: Background color of the element.
-///      - class: Often used with CSS to style elements with common properties.
-///      - colspan: The colspan attribute defines the number of columns a cell should span.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - headers: IDs of the <th> elements which applies to this element.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - rowspan: Defines the number of rows a table cell should span over.
-///      - scope: Defines the cells that the header test (defined in the th element) relates to.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - abbr: Alternative label to use for the header cell when referencing the cell in other contexts.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - colspan: Number of columns that the cell is to span.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - headers: The header cells for this cell.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - rowspan: Number of rows that the cell is to span.
+///      - scope: Specifies which cells the header cell applies to.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func th(
+    abbr: String? = nil,
     accesskey: String? = nil,
-    align: String? = nil,
     autocapitalize: String? = nil,
-    background: String? = nil,
-    bgcolor: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     colspan: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     headers: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     rowspan: String? = nil,
     scope: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -11666,30 +10662,33 @@ public func th(
     @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
 ) -> Node {
     var attributes: [String: String] = [:]
+    attributes["abbr"] = abbr
     attributes["accesskey"] = accesskey
-    attributes["align"] = align
     attributes["autocapitalize"] = autocapitalize
-    attributes["background"] = background
-    attributes["bgcolor"] = bgcolor
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["colspan"] = colspan
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["headers"] = headers
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["rowspan"] = rowspan
     attributes["scope"] = scope
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -11705,50 +10704,58 @@ public func th(
 
 /// thead
 ///
-/// The HTML `<thead>` element defines a set of rows defining the head of the columns of the table.
+/// Group of heading rows in a table.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - align: Specifies the horizontal alignment of the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func thead(
     accesskey: String? = nil,
-    align: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -11758,23 +10765,27 @@ public func thead(
 ) -> Node {
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
-    attributes["align"] = align
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -11790,50 +10801,60 @@ public func thead(
 
 /// time
 ///
-/// The HTML `<time>` element represents a specific period in time.
+/// Machine-readable equivalent of date- or time-related data.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - datetime: Indicates the date and time associated with the element.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - datetime: Machine-readable value.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func time(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     datetime: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -11844,22 +10865,27 @@ public func time(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["datetime"] = datetime
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -11875,48 +10901,58 @@ public func time(
 
 /// title
 ///
-/// The HTML Title element (`<title>`) defines the document's title that is shown in a browser's title bar or a page's tab.
+/// Document title.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func title(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -11927,21 +10963,26 @@ public func title(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -11957,52 +10998,58 @@ public func title(
 
 /// tr
 ///
-/// The HTML `<tr>` element defines a row of cells in a table. The row's cells can then be established using a mix of `<td>` (data cell) and `<th>` (header cell) elements.The HTML `<tr>` element specifies that the markup contained inside the `<tr>` block comprises one row of a table, inside which the `<th>` and `<td>` elements create header and data cells, respectively, within the row.
+/// Table row.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - align: Specifies the horizontal alignment of the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - bgcolor: Background color of the element.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func tr(
     accesskey: String? = nil,
-    align: String? = nil,
     autocapitalize: String? = nil,
-    bgcolor: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -12012,24 +11059,27 @@ public func tr(
 ) -> Node {
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
-    attributes["align"] = align
     attributes["autocapitalize"] = autocapitalize
-    attributes["bgcolor"] = bgcolor
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -12045,56 +11095,66 @@ public func tr(
 
 /// track
 ///
-/// The HTML `<track>` element is used as a child of the media elements `<audio>` and `<video>`. It lets you specify timed text tracks (or time-based data), for example to automatically handle subtitles. The tracks are formatted in WebVTT format (.vtt files) — Web Video Text Tracks or Timed Text Markup Language (TTML).
+/// Timed text track.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - default: Indicates that the track should be enabled unless the user's preferences indicate something different.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - kind: Specifies the kind of text track.
-///      - label: Specifies a user-readable title of the text track.
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - src: The URL of the embeddable content.
-///      - srclang: 
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - default: Enable the track if no other text track is more suitable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - kind: The type of text track.
+///      - label: User-visible label.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - src: Address of the resource.
+///      - srclang: Language of the text track.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func track(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     `default`: Bool = false,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     kind: String? = nil,
     label: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     src: String? = nil,
     srclang: String? = nil,
     style: String? = nil,
@@ -12106,24 +11166,29 @@ public func track(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["default"] = `default` ? "" : nil
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["kind"] = kind
     attributes["label"] = label
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["src"] = src
     attributes["srclang"] = srclang
     attributes["style"] = style
@@ -12139,132 +11204,60 @@ public func track(
 
 
 
-/// tt
-///
-/// The obsolete HTML Teletype Text element (`<tt>`) creates inline text which is presented using the user agent's default monospace font face.
-///
-/// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
-public func tt(
-    accesskey: String? = nil,
-    autocapitalize: String? = nil,
-    `class`: String? = nil,
-    contenteditable: Bool = false,
-    contextmenu: String? = nil,
-    dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
-    hidden: Bool = false,
-    id: String? = nil,
-    itemprop: String? = nil,
-    itemscope: Bool = false,
-    itemref: String? = nil,
-    itemtype: String? = nil,
-    lang: String? = nil,
-    slot: String? = nil,
-    spellcheck: String? = nil,
-    style: String? = nil,
-    tabindex: String? = nil,
-    title: String? = nil,
-    translate: String? = nil,
-    customAttributes: [String: String] = [:],
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
-) -> Node {
-    var attributes: [String: String] = [:]
-    attributes["accesskey"] = accesskey
-    attributes["autocapitalize"] = autocapitalize
-    attributes["class"] = `class`
-    attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
-    attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
-    attributes["hidden"] = hidden ? "" : nil
-    attributes["id"] = id
-    attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
-    attributes["itemref"] = itemref
-    attributes["itemtype"] = itemtype
-    attributes["lang"] = lang
-    attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
-    attributes["style"] = style
-    attributes["tabindex"] = tabindex
-    attributes["title"] = title
-    attributes["translate"] = translate
-
-
-    attributes.merge(customAttributes) { _, b in b }
-
-    return .element("tt", attributes, %children().asNode()%)
-}
-
-
-
 /// u
 ///
-/// The HTML Unarticulated Annotation Element (`<u>`) represents a span of inline text which should be rendered in a way that indicates that it has a non-textual annotation.
+/// Unarticulated annotation.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func u(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -12275,21 +11268,26 @@ public func u(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -12305,48 +11303,58 @@ public func u(
 
 /// ul
 ///
-/// The HTML `<ul>` element represents an unordered list of items, typically rendered as a bulleted list.
+/// List.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func ul(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -12357,21 +11365,26 @@ public func ul(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -12387,48 +11400,58 @@ public func ul(
 
 /// var
 ///
-/// The HTML Variable element (`<var>`) represents the name of a variable in a mathematical expression or a programming context.
+/// Variable.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func `var`(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -12439,21 +11462,26 @@ public func `var`(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -12469,68 +11497,78 @@ public func `var`(
 
 /// video
 ///
-/// The HTML Video element (`<video>`) embeds a media player which supports video playback into the document.
+/// Video player.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - autoplay: The audio or video should play as soon as possible.
-///      - buffered: Contains the time range of already buffered media.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - controls: Indicates whether the browser should show playback controls to the user.
-///      - crossorigin: How the element handles cross-origin requests
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - height: Specifies the height of elements listed here. For all other elements, use the CSS height property.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - loop: Indicates whether the media should start playing from the start when it's finished.
-///      - muted: Indicates whether the audio will be initially silenced on page load.
-///      - poster: A URL indicating a poster frame to show until the user plays or seeks.
-///      - preload: Indicates whether the whole resource, parts of it or nothing should be preloaded.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - src: The URL of the embeddable content.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
-///      - width: For the elements listed here, this establishes the element's width.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - autoplay: Hint that the media resource can be started automatically when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - controls: Show user agent controls.
+///      - crossorigin: How the element handles crossorigin requests.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - height: Vertical dimension.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - loop: Whether to loop the media resource.
+///      - muted: Whether to mute the media resource by default.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - playsinline: Encourage the user agent to display video content within the element's playback area.
+///      - poster: Poster frame to show prior to video playback.
+///      - preload: Hints how much buffering the media resource will likely need.
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - src: Address of the resource.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
+///      - width: Horizontal dimension.
 public func video(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     autoplay: Bool = false,
-    buffered: String? = nil,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     controls: Bool = false,
     crossorigin: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     height: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
     loop: Bool = false,
     muted: Bool = false,
+    nonce: String? = nil,
+    playsinline: Bool = false,
     poster: String? = nil,
     preload: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     src: String? = nil,
     style: String? = nil,
     tabindex: String? = nil,
@@ -12543,30 +11581,35 @@ public func video(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["autoplay"] = autoplay ? "" : nil
-    attributes["buffered"] = buffered
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["controls"] = controls ? "" : nil
     attributes["crossorigin"] = crossorigin
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["height"] = height
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
     attributes["loop"] = loop ? "" : nil
     attributes["muted"] = muted ? "" : nil
+    attributes["nonce"] = nonce
+    attributes["playsinline"] = playsinline ? "" : nil
     attributes["poster"] = poster
     attributes["preload"] = preload
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["src"] = src
     attributes["style"] = style
     attributes["tabindex"] = tabindex
@@ -12584,48 +11627,58 @@ public func video(
 
 /// wbr
 ///
-/// The HTML `<wbr>` element represents a word break opportunity—a position within text where the browser may optionally break a line, though its line-breaking rules would not otherwise create a break at that location.
+/// Line breaking opportunity.
 ///
 /// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
+///      - accesskey: Keyboard shortcut to activate or focus element.
+///      - autocapitalize: Recommended autocapitalization behavior (for supported input methods).
+///      - autofocus: Automatically focus the element when the page is loaded.
+///      - class: Classes to which the element belongs.
+///      - contenteditable: Whether the element is editable.
+///      - dir: The text directionality of the element.
+///      - draggable: Whether the element is draggable.
+///      - enterkeyhint: Hint for selecting an enter key action.
+///      - hidden: Whether the element is relevant.
+///      - id: The element's ID.
+///      - inputmode: Hint for selecting an input modality.
+///      - is: Creates a customized built-in element.
+///      - itemid: Global identifier for a microdata item.
+///      - itemprop: Property names of a microdata item.
+///      - itemref: Referenced elements.
+///      - itemscope: Introduces a microdata item.
+///      - itemtype: Item types of a microdata item.
+///      - lang: Language of the element.
+///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
+///      - role: ARIA semantic role.
+///      - slot: The element's desired slot.
+///      - spellcheck: Whether the element is to have its spelling and grammar checked.
+///      - style: Presentational and formatting instructions.
+///      - tabindex: Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation.
+///      - title: Advisory information for the element.
+///      - translate: Whether the element is to be translated when the page is localized.
 public func wbr(
     accesskey: String? = nil,
     autocapitalize: String? = nil,
+    autofocus: Bool = false,
     `class`: String? = nil,
     contenteditable: Bool = false,
-    contextmenu: String? = nil,
     dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
+    draggable: Bool = false,
+    enterkeyhint: String? = nil,
     hidden: Bool = false,
     id: String? = nil,
+    inputmode: String? = nil,
+    `is`: String? = nil,
+    itemid: String? = nil,
     itemprop: String? = nil,
-    itemscope: Bool = false,
     itemref: String? = nil,
+    itemscope: Bool = false,
     itemtype: String? = nil,
     lang: String? = nil,
+    nonce: String? = nil,
+    role: String? = nil,
     slot: String? = nil,
-    spellcheck: String? = nil,
+    spellcheck: Bool = false,
     style: String? = nil,
     tabindex: String? = nil,
     title: String? = nil,
@@ -12635,21 +11688,26 @@ public func wbr(
     var attributes: [String: String] = [:]
     attributes["accesskey"] = accesskey
     attributes["autocapitalize"] = autocapitalize
+    attributes["autofocus"] = autofocus ? "" : nil
     attributes["class"] = `class`
     attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
     attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
+    attributes["draggable"] = draggable ? "" : nil
+    attributes["enterkeyhint"] = enterkeyhint
     attributes["hidden"] = hidden ? "" : nil
     attributes["id"] = id
+    attributes["inputmode"] = inputmode
+    attributes["is"] = `is`
+    attributes["itemid"] = itemid
     attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemref"] = itemref
+    attributes["itemscope"] = itemscope ? "" : nil
     attributes["itemtype"] = itemtype
     attributes["lang"] = lang
+    attributes["nonce"] = nonce
+    attributes["role"] = role
     attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
+    attributes["spellcheck"] = spellcheck ? "" : nil
     attributes["style"] = style
     attributes["tabindex"] = tabindex
     attributes["title"] = title
@@ -12659,87 +11717,5 @@ public func wbr(
     attributes.merge(customAttributes) { _, b in b }
 
     return .element("wbr", attributes, nil)
-}
-
-
-
-/// xmp
-///
-/// The HTML Example Element (`<xmp>`) renders text between the start and end tags without interpreting the HTML in between and using a monospaced font. The HTML2 specification recommended that it should be rendered wide enough to allow 80 characters per line.
-///
-/// - Parameters:
-///      - accesskey: Defines a keyboard shortcut to activate or add focus to the element.
-///      - autocapitalize: Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
-///      - class: Often used with CSS to style elements with common properties.
-///      - contenteditable: Indicates whether the element's content is editable.
-///      - contextmenu: Defines the ID of a <menu> element which will serve as the element's context menu.
-///      - dir: Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)
-///      - draggable: Defines whether the element can be dragged.
-///      - dropzone: Indicates that the element accept the dropping of content on it.
-///      - hidden: Prevents rendering of given element, while keeping child elements, e.g. script elements, active.
-///      - id: Often used with CSS to style a specific element. The value of this attribute must be unique.
-///      - itemprop: 
-///      - itemscope: 
-///      - itemref: 
-///      - itemtype: 
-///      - lang: Defines the language used in the element.
-///      - slot: Assigns a slot in a shadow DOM shadow tree to an element.
-///      - spellcheck: Indicates whether spell checking is allowed for the element.
-///      - style: Defines CSS styles which will override styles previously set.
-///      - tabindex: Overrides the browser's default tab order and follows the one specified instead.
-///      - title: Text to be displayed in a tooltip when hovering over the element.
-///      - translate: Specify whether an element’s attribute values and the values of its Text node children are to be translated when the page is localized, or whether to leave them unchanged.
-public func xmp(
-    accesskey: String? = nil,
-    autocapitalize: String? = nil,
-    `class`: String? = nil,
-    contenteditable: Bool = false,
-    contextmenu: String? = nil,
-    dir: String? = nil,
-    draggable: String? = nil,
-    dropzone: String? = nil,
-    hidden: Bool = false,
-    id: String? = nil,
-    itemprop: String? = nil,
-    itemscope: Bool = false,
-    itemref: String? = nil,
-    itemtype: String? = nil,
-    lang: String? = nil,
-    slot: String? = nil,
-    spellcheck: String? = nil,
-    style: String? = nil,
-    tabindex: String? = nil,
-    title: String? = nil,
-    translate: String? = nil,
-    customAttributes: [String: String] = [:],
-    @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
-) -> Node {
-    var attributes: [String: String] = [:]
-    attributes["accesskey"] = accesskey
-    attributes["autocapitalize"] = autocapitalize
-    attributes["class"] = `class`
-    attributes["contenteditable"] = contenteditable ? "" : nil
-    attributes["contextmenu"] = contextmenu
-    attributes["dir"] = dir
-    attributes["draggable"] = draggable
-    attributes["dropzone"] = dropzone
-    attributes["hidden"] = hidden ? "" : nil
-    attributes["id"] = id
-    attributes["itemprop"] = itemprop
-    attributes["itemscope"] = itemscope ? "" : nil
-    attributes["itemref"] = itemref
-    attributes["itemtype"] = itemtype
-    attributes["lang"] = lang
-    attributes["slot"] = slot
-    attributes["spellcheck"] = spellcheck
-    attributes["style"] = style
-    attributes["tabindex"] = tabindex
-    attributes["title"] = title
-    attributes["translate"] = translate
-
-
-    attributes.merge(customAttributes) { _, b in b }
-
-    return .element("xmp", attributes, children().asNode())
 }
 

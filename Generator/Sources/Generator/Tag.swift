@@ -21,10 +21,13 @@ struct Tag {
         properties.contains(.emptyElement)
     }
 
-    init(name: String, description: String? = nil, attributes: [Attribute] = [], properties: Properties = .none) {
+    init(name: String, description: String? = nil, attributes: Attribute..., properties: Properties = .none) {
+        let tuples = (Attribute.globalAttributes + attributes).map { ($0.name, $0) }
+        let attributes = Dictionary(tuples) { _, b in b }
+
         self.name = name
         self.description = description
-        self.attributes = attributes
+        self.attributes = attributes.values.sorted { $0.name < $1.name }
         self.properties = properties
     }
 }
