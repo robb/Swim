@@ -30,7 +30,7 @@ struct Attribute: Hashable {
         self.attributeType = .optionalOfString
         self.defaultValue = "nil"
     }
-    
+
     init(name: String, description: String?, attributeType: AttributeType, defaultValue: String) {
         self.name = name
         self.description = description
