@@ -1,4 +1,4 @@
-# HTML DSL
+# Swim – Swift Marktup
 
 A DSL for building HTML documents with Swift [function builders].
 

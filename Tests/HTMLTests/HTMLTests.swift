@@ -1,4 +1,6 @@
 import XCTest
+import Swim
+
 @testable import HTML
 
 final class HTMLTests: XCTestCase {
