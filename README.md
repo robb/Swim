@@ -1,10 +1,13 @@
-# HTML DSL
+# Swim – Swift Marktup
 
 A DSL for building HTML documents with Swift [function builders].
 
 Currently in use on [my personal website].
 
 ```swift
+import Swim
+import HTML
+
 let myDocument = html(lang: "en-US") {
     head {
         meta(charset: "utf-8", content: "text/html", httpEquiv: "Content-Type")

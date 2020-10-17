@@ -7,6 +7,9 @@ struct Generator: ParsableCommand {
             .joined(separator: "\n\n\n")
 
         print("// This output is machine generated and should not be edited manually.")
+        print("\n")
+        print("@_exported import Swim")
+        print("\n")
         print(output)
     }
 }

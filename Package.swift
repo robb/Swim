@@ -10,13 +10,22 @@ let package = Package(
         .library(
             name: "HTML",
             targets: ["HTML"]),
+        .library(
+            name: "Swim",
+            targets: ["Swim"]),
     ],
     targets: [
         .target(
             name: "HTML",
-            dependencies: []),
+            dependencies: ["Swim"]),
         .testTarget(
             name: "HTMLTests",
+            dependencies: ["HTML"]),
+        .target(
+            name: "Swim",
+            dependencies: []),
+        .testTarget(
+            name: "SwimTests",
             dependencies: ["HTML"]),
     ]
 )
