@@ -8,7 +8,7 @@ struct Generator: ParsableCommand {
 
         print("// This output is machine generated and should not be edited manually.")
         print("\n")
-        print("import Swim")
+        print("@_exported import Swim")
         print("\n")
         print(output)
     }

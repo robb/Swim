@@ -1,7 +1,7 @@
 // This output is machine generated and should not be edited manually.
 
 
-import Swim
+@_exported import Swim
 
 
 /// a
