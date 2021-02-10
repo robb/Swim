@@ -6010,7 +6010,7 @@ public func li(
 ///      - media: Applicable media.
 ///      - nonce: Cryptographic nonce used in Content Security Policy checks [CSP].
 ///      - referrerpolicy: Referrer policy for fetches initiated by the element.
-///      - rel2: Relationship between the document containing the hyperlink and the destination resource.
+///      - rel: Relationship between the document containing the hyperlink and the destination resource.
 ///      - role: ARIA semantic role.
 ///      - sizes: Sizes of the icons (for `icon`).
 ///      - slot: The element's desired slot.
@@ -6050,7 +6050,7 @@ public func link(
     media: String? = nil,
     nonce: String? = nil,
     referrerpolicy: String? = nil,
-    rel2: String? = nil,
+    rel: String? = nil,
     role: String? = nil,
     sizes: String? = nil,
     slot: String? = nil,
@@ -6092,7 +6092,7 @@ public func link(
     attributes["media"] = media
     attributes["nonce"] = nonce
     attributes["referrerpolicy"] = referrerpolicy
-    attributes["rel2"] = rel2
+    attributes["rel"] = rel
     attributes["role"] = role
     attributes["sizes"] = sizes
     attributes["slot"] = slot

@@ -622,11 +622,6 @@ extension Attribute {
         description: "Relationship between the location in the document containing the hyperlink and the destination resource."
     )
 
-    static let rel2 = Attribute(
-        name: "rel2",
-        description: "Relationship between the document containing the hyperlink and the destination resource."
-    )
-
     static let `required` = Attribute(
         name: "required",
         description: "Whether the control is required for form submission.",
