@@ -623,7 +623,7 @@ extension Attribute {
     )
 
     static let rel2 = Attribute(
-        name: "rel2",
+        name: "rel",
         description: "Relationship between the document containing the hyperlink and the destination resource."
     )
 
