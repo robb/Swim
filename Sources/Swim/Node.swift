@@ -1,6 +1,6 @@
 import Foundation
 
-public enum Node: Equatable {
+public enum Node: Hashable {
     // The `Node`'s name, attribute and children.
     indirect case element(String, [String: String], Node?)
 
