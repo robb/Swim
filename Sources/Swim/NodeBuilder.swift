@@ -22,7 +22,7 @@ extension Array: NodeConvertible where Element: NodeConvertible {
     }
 }
 
-@_functionBuilder
+@resultBuilder
 public struct NodeBuilder {
     public static func buildBlock(_ components: Node...) -> Node {
         .fragment(components)
