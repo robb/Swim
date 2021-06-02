@@ -6,6 +6,8 @@ public protocol Visitor {
     func visitElement(name: String, attributes: [String: String], child: Node?) -> Result
 
     func visitText(text: String) -> Result
+    
+    func visitRaw(raw: String) -> Result
 
     func visitComment(text: String) -> Result
 
@@ -25,6 +27,8 @@ extension Visitor {
             return visitElement(name: name, attributes: attributes, child: child)
         case .text(let text):
             return visitText(text: text)
+        case .raw(let contents):
+            return visitRaw(raw: contents)
         case .comment(let text):
             return visitComment(text: text)
         case .documentType(let name):
@@ -52,6 +56,10 @@ public extension Visitor where Result == Node {
 
     func visitDocumentType(name: String) -> Result {
         .documentType(name)
+    }
+
+    func visitRaw(raw: String) -> Result {
+        .raw(raw)
     }
 
     func visitFragment(children: [Node]) -> Result {

@@ -6,6 +6,9 @@ public enum Node: Hashable {
 
     // The `Node`'s text contents.
     case text(String)
+    
+    // Raw HTML that gets rendered without processing.
+    case raw(String)
 
     // The `Node`'s text contents.
     case comment(String)
@@ -78,6 +81,13 @@ extension Node: TextOutputStreamable {
                 target.write("/>")
             }
         case let .text(value):
+            if !didVisitTrim {
+                target.write("\n")
+                target.write(String(repeating: "\t", count: depth))
+            }
+
+            target.write(value.addingXMLEncoding())
+        case let .raw(value):
             if !didVisitTrim {
                 target.write("\n")
                 target.write(String(repeating: "\t", count: depth))
