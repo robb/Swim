@@ -196,6 +196,10 @@ final class HTMLTests: XCTestCase {
             func visitText(text: String) -> [String] {
                 [ text ]
             }
+            
+            func visitRaw(raw: String) -> [String] {
+                []
+            }
 
             func visitComment(text: String) -> [String] {
                 []
