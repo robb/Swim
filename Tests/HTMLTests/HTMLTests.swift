@@ -259,6 +259,40 @@ final class HTMLTests: XCTestCase {
 
         XCTAssertTrue(String(describing: root).contains("1"))
     }
+
+    func testSanitizing() {
+        struct Sanitizer: Visitor {
+            var denyList: [Tag]
+
+            func visitElement(name: String, attributes: [String : String], child: Node?) -> Node {
+                if denyList.contains(where: { $0.elementName == name }) {
+                    let original = Node.element(name, attributes, child)
+
+                    return %.text(String(describing: original))
+                }
+
+                return .element(name, attributes, child.map(visitNode))
+            }
+        }
+
+        let sanitizer = Sanitizer(denyList: [ title, textarea, style, iframe, script ])
+
+        let document = html {
+            body {
+                div(id: "xss-attempt") {
+                    script {
+                        "alert('XSS!');"
+                    }
+                }
+            }
+        }
+
+        XCTAssertTrue(String(describing: document).contains("<script>"))
+
+        let sanitized = sanitizer.visitNode(document)
+
+        XCTAssertTrue(String(describing: sanitized).contains("&lt;script&gt;"))
+    }
 }
 
 func XCTAssertComponents(_ node: Node, _ components: String..., message: @autoclosure () -> String = "", file: StaticString = #file, line: UInt = #line) {

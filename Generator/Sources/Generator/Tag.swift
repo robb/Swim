@@ -34,7 +34,8 @@ struct Tag {
 
 extension Tag: TextOutputStreamable {
     func write<Target>(to target: inout Target) where Target : TextOutputStream {
-        buildFunction(format: .init()).write(to: &target)
+        buildStruct(format: .init()).write(to: &target)
+        buildDeclaration(format: .init()).write(to: &target)
     }
 }
 
@@ -42,6 +43,10 @@ final class Format {
     var width: Int = 4
 
     var level: Int = 0
+
+    var spaces: String {
+        String(repeating: " ", count: width * level)
+    }
 
     func leading() -> Trivia {
         .spaces(width * level)
@@ -89,6 +94,8 @@ extension Tag {
 
     var `in`: TokenSyntax { SyntaxFactory.makeInKeyword(leadingTrivia: .spaces(1), trailingTrivia: .spaces(1)) }
 
+    var `struct`: TokenSyntax { SyntaxFactory.makeStructKeyword().withTrailingTrivia(.spaces(1)) }
+
     var `return`: TokenSyntax { SyntaxFactory.makeReturnKeyword().withTrailingTrivia(.spaces(1)) }
 
     var `public`: TokenSyntax { SyntaxFactory.makePublicKeyword().withTrailingTrivia(.spaces(1)) }
@@ -97,15 +104,88 @@ extension Tag {
 
     var `var`: TokenSyntax { SyntaxFactory.makeVarKeyword().withTrailingTrivia(.spaces(1)) as TokenSyntax }
 
+    var `let`: TokenSyntax { SyntaxFactory.makeLetKeyword().withTrailingTrivia(.spaces(1)) as TokenSyntax }
+
     var wildcard: TokenSyntax { SyntaxFactory.makeWildcardKeyword(); }
 
     var `nil`: TokenSyntax { SyntaxFactory.makeNilKeyword() }
+
+    func buildStruct(format: Format) -> StructDeclSyntax {
+        return StructDeclSyntax {
+            $0.addAttribute(Syntax(`public`))
+            $0.useStructKeyword(`struct`)
+            $0.useIdentifier(SyntaxFactory.makeIdentifier("\(name)Tag"))
+            $0.useInheritanceClause(TypeInheritanceClauseSyntax {
+                $0.useColon(`colon`)
+                $0.addInheritedType(InheritedTypeSyntax{
+                    $0.useTypeName(SyntaxFactory.makeTypeIdentifier("Tag"))
+                })
+            })
+            $0.useMembers(MemberDeclBlockSyntax { member in
+                member.useLeftBrace(`leftBrace`.withLeadingTrivia([.spaces(1)]).withTrailingTrivia(.newlines(1)))
+
+                format.indent {
+                    let elementNameIdentifier = SyntaxFactory.makeIdentifier("elementName")
+
+                    member.addMember(MemberDeclListItemSyntax {
+                        $0.useDecl(DeclSyntax(VariableDeclSyntax {
+                            $0.addAttribute(Syntax(`public`.withLeadingTrivia(format.leading())))
+                            $0.useLetOrVarKeyword(`let`)
+                            $0.addBinding(PatternBindingSyntax {
+                                $0.usePattern(PatternSyntax(SyntaxFactory.makeIdentifierPattern(identifier: elementNameIdentifier)))
+                                $0.useTypeAnnotation(TypeAnnotationSyntax {
+                                    $0.useColon(colon)
+                                    $0.useType(SyntaxFactory.makeTypeIdentifier("String"))
+                                })
+                                $0.useInitializer(InitializerClauseSyntax {
+                                    $0.useEqual(equal)
+                                    $0.useValue(ExprSyntax(SyntaxFactory.makeStringLiteralExpr(name.lowercased())))
+                                })
+                            })
+                        }))
+                    }.withTrailingTrivia(.newlines(2)))
+
+                    member.addMember(MemberDeclListItemSyntax { memberDecl in
+                        memberDecl.useDecl(DeclSyntax(buildFunction(format: format)))
+                    })
+                }
+
+                member.useRightBrace(
+                    `rightBrace`
+                        .withLeadingTrivia(.newlines(1))
+                        .withTrailingTrivia(.newlines(2))
+                )
+            })
+        }
+    }
+
+    func buildDeclaration(format: Format) -> DeclSyntax {
+        DeclSyntax(VariableDeclSyntax {
+            let elementIdentifier = SyntaxFactory.makeIdentifier(name.lowercased().escapedIfNeeded)
+
+            $0.addAttribute(Syntax(`public`.withLeadingTrivia(format.leading())))
+            $0.useLetOrVarKeyword(`let`)
+            $0.addBinding(PatternBindingSyntax {
+                $0.usePattern(PatternSyntax(SyntaxFactory.makeIdentifierPattern(identifier: elementIdentifier)))
+                $0.useInitializer(InitializerClauseSyntax {
+                    $0.useEqual(equal)
+                    $0.useValue(ExprSyntax(FunctionCallExprSyntax {
+                        $0.useCalledExpression(ExprSyntax(MemberAccessExprSyntax {
+                            $0.useName(SyntaxFactory.makeIdentifier("\(name)Tag"))
+                        }))
+                        $0.useLeftParen(leftParen)
+                        $0.useRightParen(rightParen)
+                    }))
+                })
+            })
+        })
+    }
 
     func buildFunction(format: Format) -> FunctionDeclSyntax {
         return FunctionDeclSyntax {
             $0.addAttribute(Syntax(`public`))
             $0.addAttribute(Syntax(`func`))
-            $0.useIdentifier(SyntaxFactory.makeIdentifier(name.escapedIfNeeded))
+            $0.useIdentifier(SyntaxFactory.makeIdentifier("callAsFunction"))
             $0.useSignature(FunctionSignatureSyntax {
                 $0.useInput(ParameterClauseSyntax { parameters in
                     parameters.useLeftParen(leftParen.withTrailingTrivia(.newlines(1)))
@@ -135,7 +215,7 @@ extension Tag {
                         }
                     }
 
-                    parameters.useRightParen(rightParen)
+                    parameters.useRightParen(rightParen.withLeadingTrivia(format.leading()))
                 })
                 $0.useOutput(ReturnClauseSyntax {
                     $0.useArrow(arrow)
@@ -234,6 +314,8 @@ extension Tag {
 
                     // Return node
                     body.addStatement(CodeBlockItemSyntax {
+                        let elementNameIdentifier = SyntaxFactory.makeIdentifier("elementName")
+
                         $0.useItem(Syntax(ReturnStmtSyntax {
                             $0.useReturnKeyword(`return`)
                             $0.useExpression(ExprSyntax(FunctionCallExprSyntax {
@@ -243,7 +325,9 @@ extension Tag {
                                 }))
                                 $0.useLeftParen(leftParen)
                                 $0.addArgument(TupleExprElementSyntax {
-                                    $0.useExpression(ExprSyntax(SyntaxFactory.makeStringLiteralExpr(name)))
+                                    $0.useExpression(ExprSyntax(IdentifierExprSyntax {
+                                        $0.useIdentifier(elementNameIdentifier)
+                                    }))
                                     $0.useTrailingComma(comma)
                                 })
                                 $0.addArgument(TupleExprElementSyntax {
@@ -260,33 +344,33 @@ extension Tag {
                         }.withLeadingTrivia([.newlines(2), format.leading()])))
                     })
                 }
-                body.useRightBrace(rightBrace.withLeadingTrivia(.newlines(1)).withTrailingTrivia(.newlines(1)))
+                body.useRightBrace(rightBrace.withLeadingTrivia([.newlines(1), format.leading()]))
             })
-        }.withLeadingTrivia(.docBlockComment(buildDocComment(format)))
+        }.withLeadingTrivia([.docBlockComment(buildDocComment(format)), format.leading()])
     }
 
     func buildDocComment(_ format: Format) -> String {
         var comment = """
-        /// \(name)
-        ///\n
+        \(format.spaces)/// \(name.lowercased())
+        \(format.spaces)///\n
         """
 
         if let description = description {
             comment.append("""
-                /// \(description)
-                ///\n
+                \(format.spaces)/// \(description)
+                \(format.spaces)///\n
                 """)
         }
 
         if !attributes.isEmpty {
             comment.append("""
-            /// - Parameters:\n
+            \(format.spaces)/// - Parameters:\n
             """)
         }
 
         for attribute in attributes {
             comment.append("""
-                ///      - \(attribute.name): \(attribute.description ?? "")\n
+                \(format.spaces)///      - \(attribute.name): \(attribute.description ?? "")\n
                 """)
         }
 

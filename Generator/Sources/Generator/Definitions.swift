@@ -882,326 +882,326 @@ extension Tag {
     ]
 
     static let a = Tag(
-        name: "a",
+        name: "A",
         description: "Hyperlink.",
         attributes: .download, .href, .hreflang, .ping, .referrerpolicy, .rel, .target, .type,
         properties: .textLevelSemantics
     )
 
     static let abbr = Tag(
-        name: "abbr",
+        name: "Abbr",
         description: "Abbreviation.",
         attributes: .title2,
         properties: .textLevelSemantics
     )
 
     static let address = Tag(
-        name: "address",
+        name: "Address",
         description: "Contact information for a page or article element."
     )
 
     static let area = Tag(
-        name: "area",
+        name: "Area",
         description: "Hyperlink or dead area on an image map.",
         attributes: .alt, .coords, .download, .href, .ping, .referrerpolicy, .rel, .shape, .target,
         properties: .emptyElement
     )
 
     static let article = Tag(
-        name: "article",
+        name: "Article",
         description: "Self-contained syndicatable or reusable composition."
     )
 
     static let aside = Tag(
-        name: "aside",
+        name: "Aside",
         description: "Sidebar for tangentially related content."
     )
 
     static let audio = Tag(
-        name: "audio",
+        name: "Audio",
         description: "Audio player.",
         attributes: .autoplay, .controls, .crossorigin, .loop, .muted, .preload, .src
     )
 
     static let b = Tag(
-        name: "b",
+        name: "B",
         description: "Keywords.",
         properties: .textLevelSemantics
     )
 
     static let base = Tag(
-        name: "base",
+        name: "Base",
         description: "Base URL and default target browsing context for hyperlinks and forms.",
         attributes: .href3, .target2,
         properties: .emptyElement
     )
 
     static let bdi = Tag(
-        name: "bdi",
+        name: "BDI",
         description: "Text directionality isolation.",
         properties: .textLevelSemantics
     )
 
     static let bdo = Tag(
-        name: "bdo",
+        name: "BDO",
         description: "Text directionality formatting.",
         attributes: .dir2,
         properties: .textLevelSemantics
     )
 
     static let blockquote = Tag(
-        name: "blockquote",
+        name: "Blockquote",
         description: "A section quoted from another source.",
         attributes: .cite
     )
 
     static let body = Tag(
-        name: "body",
+        name: "Body",
         description: "Document body."
     )
 
     static let br = Tag(
-        name: "br",
+        name: "BR",
         description: "Line break, e.g. in poem or postal address.",
         properties: [.emptyElement, .textLevelSemantics]
     )
 
     static let button = Tag(
-        name: "button",
+        name: "Button",
         description: "Button control.",
         attributes: .disabled, .form, .formaction, .formenctype, .formmethod, .formnovalidate, .formtarget, .name, .type2, .value
     )
 
     static let canvas = Tag(
-        name: "canvas",
+        name: "Canvas",
         description: "Scriptable bitmap canvas.",
         attributes: .height, .width
     )
 
     static let caption = Tag(
-        name: "caption",
+        name: "Caption",
         description: "Table caption."
     )
 
     static let cite = Tag(
-        name: "cite",
+        name: "Cite",
         description: "Title of a work.",
         properties: .textLevelSemantics
     )
 
     static let code = Tag(
-        name: "code",
+        name: "Code",
         description: "Computer code.",
         properties: .textLevelSemantics
     )
 
     static let col = Tag(
-        name: "col",
+        name: "Col",
         description: "Table column.",
         attributes: .span,
         properties: .emptyElement
     )
 
     static let colgroup = Tag(
-        name: "colgroup",
+        name: "Colgroup",
         description: "Group of columns in a table.",
         attributes: .span
     )
 
     static let data = Tag(
-        name: "data",
+        name: "Data",
         description: "Machine-readable equivalent.",
         attributes: .value2,
         properties: .textLevelSemantics
     )
 
     static let datalist = Tag(
-        name: "datalist",
+        name: "Datalist",
         description: "Container for options for combo box control."
     )
 
     static let dd = Tag(
-        name: "dd",
+        name: "DD",
         description: "Content for corresponding dt element(s)."
     )
 
     static let del = Tag(
-        name: "del",
+        name: "Del",
         description: "A removal from the document.",
         attributes: .cite, .datetime
     )
 
     static let details = Tag(
-        name: "details",
+        name: "Details",
         description: "Disclosure control for hiding details.",
         attributes: .open
     )
 
     static let dfn = Tag(
-        name: "dfn",
+        name: "DFN",
         description: "Defining instance.",
         attributes: .title2,
         properties: .textLevelSemantics
     )
 
     static let dialog = Tag(
-        name: "dialog",
+        name: "Dialog",
         description: "Dialog box or window.",
         attributes: .open2
     )
 
     static let div = Tag(
-        name: "div",
+        name: "Div",
         description: "Generic flow container, or container for name-value groups in dl elements."
     )
 
     static let dl = Tag(
-        name: "dl",
+        name: "DL",
         description: "Association list consisting of zero or more name-value groups."
     )
 
     static let dt = Tag(
-        name: "dt",
+        name: "DT",
         description: "Legend for corresponding dd element(s)."
     )
 
     static let em = Tag(
-        name: "em",
+        name: "Em",
         description: "Stress emphasis.",
         properties: .textLevelSemantics
     )
 
     static let embed = Tag(
-        name: "embed",
+        name: "Embed",
         description: "Plugin.",
         attributes: .height, .src, .type3, .width,
         properties: .emptyElement
     )
 
     static let fieldset = Tag(
-        name: "fieldset",
+        name: "Fieldset",
         description: "Group of form controls.",
         attributes: .disabled2, .form, .name
     )
 
     static let figcaption = Tag(
-        name: "figcaption",
+        name: "Figcaption",
         description: "Caption for figure."
     )
 
     static let figure = Tag(
-        name: "figure",
+        name: "Figure",
         description: "Figure with optional caption."
     )
 
     static let footer = Tag(
-        name: "footer",
+        name: "Footer",
         description: "Footer for a page or section."
     )
 
     static let form = Tag(
-        name: "form",
+        name: "Form",
         description: "User-submittable form.",
         attributes: .acceptCharset, .action, .autocomplete, .enctype, .method, .name2, .novalidate, .target3
     )
 
     static let h1 = Tag(
-        name: "h1",
+        name: "H1",
         description: "Section heading."
     )
 
     static let h2 = Tag(
-        name: "h2",
+        name: "H2",
         description: "Section heading."
     )
 
     static let h3 = Tag(
-        name: "h3",
+        name: "H3",
         description: "Section heading."
     )
 
     static let h4 = Tag(
-        name: "h4",
+        name: "H4",
         description: "Section heading."
     )
 
     static let h5 = Tag(
-        name: "h5",
+        name: "H5",
         description: "Section heading."
     )
 
     static let h6 = Tag(
-        name: "h6",
+        name: "H6",
         description: "Section heading."
     )
 
     static let head = Tag(
-        name: "head",
+        name: "Head",
         description: "Container for document metadata."
     )
 
     static let header = Tag(
-        name: "header",
+        name: "Header",
         description: "Introductory or navigational aids for a page or section."
     )
 
     static let hgroup = Tag(
-        name: "hgroup",
+        name: "Hgroup",
         description: "heading group."
     )
 
     static let hr = Tag(
-        name: "hr",
+        name: "HR",
         description: "Thematic break.",
         properties: .emptyElement
     )
 
     static let html = Tag(
-        name: "html",
+        name: "HTML",
         description: "Root element.",
         attributes: .manifest
     )
 
     static let i = Tag(
-        name: "i",
+        name: "I",
         description: "Alternate voice.",
         properties: .textLevelSemantics
     )
 
     static let iframe = Tag(
-        name: "iframe",
+        name: "IFrame",
         description: "Nested browsing context.",
         attributes: .allow, .allowfullscreen, .allowpaymentrequest, .height, .name3, .referrerpolicy, .sandbox, .src, .srcdoc, .width
     )
 
     static let img = Tag(
-        name: "img",
+        name: "Img",
         description: "Image.",
         attributes: .alt, .crossorigin, .decoding, .height, .ismap, .loading, .referrerpolicy, .sizes2, .src, .srcset, .usemap, .width,
         properties: .emptyElement
     )
 
     static let input = Tag(
-        name: "input",
+        name: "Input",
         description: "Form control.",
         attributes: .accept, .alt, .autocomplete2, .checked, .dirname, .disabled, .form, .formaction, .formenctype, .formmethod, .formnovalidate, .formtarget, .height, .list, .max, .maxlength, .min, .minlength, .multiple, .name, .pattern, .placeholder, .readonly, .required, .size, .src, .step, .title3, .type4, .type7, .value3, .width,
         properties: .emptyElement
     )
 
     static let ins = Tag(
-        name: "ins",
+        name: "Ins",
         description: "An addition to the document.",
         attributes: .cite, .datetime
     )
 
     static let kbd = Tag(
-        name: "kbd",
+        name: "KBD",
         description: "User input.",
         properties: .textLevelSemantics
     )
 
     static let label = Tag(
-        name: "label",
+        name: "Label",
         description: "Caption for a form control.",
         attributes: .for
     )
@@ -1212,331 +1212,331 @@ extension Tag {
     )
 
     static let li = Tag(
-        name: "li",
+        name: "LI",
         description: "List item.",
         attributes: .value4
     )
 
     static let link = Tag(
-        name: "link",
+        name: "Link",
         description: "Link metadata.",
         attributes: .as, .color, .crossorigin, .href2, .hreflang, .imagesizes, .imagesrcset, .integrity, .media, .referrerpolicy, .rel2, .sizes, .title4, .title5, .type,
         properties: .emptyElement
     )
 
     static let main = Tag(
-        name: "main",
+        name: "Main",
         description: "Container for the dominant contents of the document."
     )
 
     static let map = Tag(
-        name: "map",
+        name: "Map",
         description: "Image map.",
         attributes: .name4
     )
 
     static let mark = Tag(
-        name: "mark",
+        name: "Mark",
         description: "Highlight.",
         properties: .textLevelSemantics
     )
 
     static let math = Tag(
-        name: "math",
+        name: "Math",
         description: "MathML root."
     )
 
     static let menu = Tag(
-        name: "menu",
+        name: "Menu",
         description: "Menu of commands."
     )
 
     static let meta = Tag(
-        name: "meta",
+        name: "Meta",
         description: "Text metadata.",
         attributes: .charset, .content, .httpEquiv, .name5,
         properties: .emptyElement
     )
 
     static let meter = Tag(
-        name: "meter",
+        name: "Meter",
         description: "Gauge.",
         attributes: .high, .low, .max2, .min2, .optimum, .value5
     )
 
     static let nav = Tag(
-        name: "nav",
+        name: "Vav",
         description: "Section with navigational links."
     )
 
     static let noscript = Tag(
-        name: "noscript",
+        name: "Noscript",
         description: "Fallback content for script."
     )
 
     static let object = Tag(
-        name: "object",
+        name: "Object",
         description: "Image, nested browsing context, or plugin.",
         attributes: .data, .form, .height, .name3, .type3, .usemap, .width
     )
 
     static let ol = Tag(
-        name: "ol",
+        name: "OL",
         description: "Ordered list.",
         attributes: .reversed, .start, .type5
     )
 
     static let optgroup = Tag(
-        name: "optgroup",
+        name: "Optgroup",
         description: "Group of options in a list box.",
         attributes: .disabled, .label
     )
 
     static let option = Tag(
-        name: "option",
+        name: "Option",
         description: "Option in a list box or combo box control.",
         attributes: .disabled, .label, .selected, .value
     )
 
     static let output = Tag(
-        name: "output",
+        name: "Output",
         description: "Calculated output value.",
         attributes: .for2, .form, .name
     )
 
     static let p = Tag(
-        name: "p",
+        name: "P",
         description: "Paragraph."
     )
 
     static let param = Tag(
-        name: "param",
+        name: "Param",
         description: "Parameter for object.",
         attributes: .name6, .value6,
         properties: .emptyElement
     )
 
     static let picture = Tag(
-        name: "picture",
+        name: "Picture",
         description: "Image."
     )
 
     static let pre = Tag(
-        name: "pre",
+        name: "Pre",
         description: "Block of preformatted text."
     )
 
     static let progress = Tag(
-        name: "progress",
+        name: "Progress",
         description: "Progress bar.",
         attributes: .max2, .value5
     )
 
     static let q = Tag(
-        name: "q",
+        name: "Q",
         description: "Quotation.",
         attributes: .cite,
         properties: .textLevelSemantics
     )
 
     static let rp = Tag(
-        name: "rp",
+        name: "RP",
         description: "Parenthesis for ruby annotation text.",
         properties: .textLevelSemantics
     )
 
     static let rt = Tag(
-        name: "rt",
+        name: "RT",
         description: "Ruby annotation text.",
         properties: .textLevelSemantics
     )
 
     static let ruby = Tag(
-        name: "ruby",
+        name: "Ruby",
         description: "Ruby annotation(s).",
         properties: .textLevelSemantics
     )
 
     static let s = Tag(
-        name: "s",
+        name: "S",
         description: "Inaccurate text.",
         properties: .textLevelSemantics
     )
 
     static let samp = Tag(
-        name: "samp",
+        name: "Samp",
         description: "Computer output.",
         properties: .textLevelSemantics
     )
 
     static let script = Tag(
-        name: "script",
+        name: "Script",
         description: "Embedded script.",
         attributes: .async, .crossorigin, .defer, .integrity, .nomodule, .referrerpolicy, .src, .type6
     )
 
     static let section = Tag(
-        name: "section",
+        name: "Section",
         description: "Generic document or application section."
     )
 
     static let select = Tag(
-        name: "select",
+        name: "Select",
         description: "List box control.",
         attributes: .autocomplete2, .disabled, .form, .multiple, .name, .required, .size
     )
 
     static let slot = Tag(
-        name: "slot",
+        name: "Slot",
         description: "Shadow tree slot.",
         attributes: .name7
     )
 
     static let small = Tag(
-        name: "small",
+        name: "Small",
         description: "Side comment.",
         properties: .textLevelSemantics
     )
 
     static let source = Tag(
-        name: "source",
+        name: "Source",
         description: "Image source for img or media source for video or audio.",
         attributes: .media, .sizes2, .src, .srcset, .type3,
         properties: .emptyElement
     )
 
     static let span = Tag(
-        name: "span",
+        name: "Span",
         description: "Generic phrasing container.",
         properties: .textLevelSemantics
     )
 
     static let strong = Tag(
-        name: "strong",
+        name: "Strong",
         description: "Importance.",
         properties: .textLevelSemantics
     )
 
     static let style = Tag(
-        name: "style",
+        name: "Style",
         description: "Embedded styling information.",
         attributes: .media, .title5
     )
 
     static let sub = Tag(
-        name: "sub",
+        name: "Sub",
         description: "Subscript.",
         properties: .textLevelSemantics
     )
 
     static let summary = Tag(
-        name: "summary",
+        name: "Summary",
         description: "Caption for details."
     )
 
     static let sup = Tag(
-        name: "sup",
+        name: "Sup",
         description: "Superscript.",
         properties: .textLevelSemantics
     )
 
     static let svg = Tag(
-        name: "svg",
+        name: "SVG",
         description: "SVG root."
     )
 
     static let table = Tag(
-        name: "table",
+        name: "Table",
         description: "Table."
     )
 
     static let tbody = Tag(
-        name: "tbody",
+        name: "TBody",
         description: "Group of rows in a table."
     )
 
     static let td = Tag(
-        name: "td",
+        name: "TD",
         description: "Table cell.",
         attributes: .colspan, .headers, .rowspan
     )
 
     static let template = Tag(
-        name: "template",
+        name: "Template",
         description: "Template."
     )
 
     static let textarea = Tag(
-        name: "textarea",
+        name: "Textarea",
         description: "Multiline text controls.",
         attributes: .autocomplete2, .cols, .dirname, .disabled, .form, .maxlength, .minlength, .name, .placeholder, .readonly, .required, .rows, .wrap
     )
 
     static let tfoot = Tag(
-        name: "tfoot",
+        name: "TFoot",
         description: "Group of footer rows in a table."
     )
 
     static let th = Tag(
-        name: "th",
+        name: "TH",
         description: "Table header cell.",
         attributes: .abbr, .colspan, .headers, .rowspan, .scope
     )
 
     static let thead = Tag(
-        name: "thead",
+        name: "THead",
         description: "Group of heading rows in a table."
     )
 
     static let time = Tag(
-        name: "time",
+        name: "Time",
         description: "Machine-readable equivalent of date- or time-related data.",
         attributes: .datetime2,
         properties: .textLevelSemantics
     )
 
     static let title = Tag(
-        name: "title",
+        name: "Title",
         description: "Document title."
     )
 
     static let tr = Tag(
-        name: "tr",
+        name: "TR",
         description: "Table row."
     )
 
     static let track = Tag(
-        name: "track",
+        name: "Track",
         description: "Timed text track.",
         attributes: .default, .kind, .label, .src, .srclang,
         properties: .emptyElement
     )
 
     static let u = Tag(
-        name: "u",
+        name: "U",
         description: "Unarticulated annotation.",
         properties: .textLevelSemantics
     )
 
     static let ul = Tag(
-        name: "ul",
+        name: "UL",
         description: "List."
     )
 
     static let `var` = Tag(
-        name: "var",
+        name: "Var",
         description: "Variable.",
         properties: .textLevelSemantics
     )
 
     static let video = Tag(
-        name: "video",
+        name: "Video",
         description: "Video player.",
         attributes: .autoplay, .controls, .crossorigin, .height, .loop, .muted, .playsinline, .poster, .preload, .src, .width
     )
 
     static let wbr = Tag(
-        name: "wbr",
+        name: "WBR",
         description: "Line breaking opportunity.",
         properties: [.emptyElement, .textLevelSemantics]
     )
