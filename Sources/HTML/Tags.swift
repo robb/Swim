@@ -7152,10 +7152,10 @@ public struct MeterTag: Tag {
 public let meter = MeterTag()
 
 
-public struct VavTag: Tag {
-    public let elementName: String = "vav"
+public struct NavTag: Tag {
+    public let elementName: String = "nav"
 
-    /// vav
+    /// nav
     ///
     /// Section with navigational links.
     ///
@@ -7251,7 +7251,7 @@ public struct VavTag: Tag {
     }
 }
 
-public let vav = VavTag()
+public let nav = NavTag()
 
 
 public struct NoscriptTag: Tag {

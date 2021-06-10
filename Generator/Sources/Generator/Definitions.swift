@@ -1265,7 +1265,7 @@ extension Tag {
     )
 
     static let nav = Tag(
-        name: "Vav",
+        name: "Nav",
         description: "Section with navigational links."
     )
 
