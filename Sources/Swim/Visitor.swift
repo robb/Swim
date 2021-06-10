@@ -81,6 +81,9 @@ public extension Visitor where Result == Void {
     func visitText(text: String) -> Result {
     }
 
+    func visitRaw(raw: String) -> Result {
+    }
+
     func visitComment(text: String) -> Result {
     }
 
