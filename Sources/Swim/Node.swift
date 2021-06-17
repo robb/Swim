@@ -56,7 +56,7 @@ extension Node: TextOutputStreamable {
                 guard value != "" else { continue }
 
                 target.write("=\"")
-                target.write(value)
+                target.write(value.replacingOccurrences(of: "\"", with: "&quot;"))
                 target.write("\"")
             }
 
