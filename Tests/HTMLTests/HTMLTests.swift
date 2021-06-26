@@ -189,7 +189,7 @@ final class HTMLTests: XCTestCase {
         struct TextExtractionVisitor: Visitor {
             typealias Result = [String]
 
-            func visitElement(name: String, attributes: [String : String], child: Node?) -> [String] {
+            func visitElement(name: String, attributes: [String: AnyHashable], child: Node?) -> [String] {
                 child.map(visitNode) ?? []
             }
 
@@ -264,7 +264,7 @@ final class HTMLTests: XCTestCase {
         struct Sanitizer: Visitor {
             var denyList: [Tag]
 
-            func visitElement(name: String, attributes: [String : String], child: Node?) -> Node {
+            func visitElement(name: String, attributes: [String: AnyHashable], child: Node?) -> Node {
                 if denyList.contains(where: { $0.elementName == name }) {
                     let original = Node.element(name, attributes, child)
 
