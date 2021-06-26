@@ -19,8 +19,5 @@ let package = Package(
         .target(
             name: "SwimBenchmark",
             dependencies: ["Benchmark", "HTML"]),
-        .testTarget(
-            name: "SwimBenchmarkTests",
-            dependencies: ["SwimBenchmark"]),
     ]
 )
