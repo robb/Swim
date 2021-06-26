@@ -68,59 +68,59 @@ benchmark("Build a basic page") {
                     }
                 }
 
-               section {
-                p(class: "lorem-ipsum", id: "p-9") {
+                section {
+                    p(class: "lorem-ipsum", id: "p-9") {
                         "Lorem ipsum, dolor sit amet."
-                    a(href: "https://example.org") {
+                        a(href: "https://example.org") {
                             %"anchor"%
                         }
                     }
 
-                p(class: "lorem-ipsum", id: "p-10") {
+                    p(class: "lorem-ipsum", id: "p-10") {
                         "Lorem ipsum, dolor sit amet."
-                    a(href: "https://example.org") {
+                        a(href: "https://example.org") {
                             %"anchor"%
                         }
                     }
 
-                p(class: "lorem-ipsum", id: "p-11") {
+                    p(class: "lorem-ipsum", id: "p-11") {
                         "Lorem ipsum, dolor sit amet."
-                    a(href: "https://example.org") {
+                        a(href: "https://example.org") {
                             %"anchor"%
                         }
                     }
 
-                p(class: "lorem-ipsum", id: "p-12") {
+                    p(class: "lorem-ipsum", id: "p-12") {
                         "Lorem ipsum, dolor sit amet."
-                    a(href: "https://example.org") {
+                        a(href: "https://example.org") {
                             %"anchor"%
                         }
                     }
 
-                p(class: "lorem-ipsum", id: "p-13") {
+                    p(class: "lorem-ipsum", id: "p-13") {
                         "Lorem ipsum, dolor sit amet."
-                    a(href: "https://example.org") {
+                        a(href: "https://example.org") {
                             %"anchor"%
                         }
                     }
 
-                p(class: "lorem-ipsum", id: "p-14") {
+                    p(class: "lorem-ipsum", id: "p-14") {
                         "Lorem ipsum, dolor sit amet."
-                    a(href: "https://example.org") {
+                        a(href: "https://example.org") {
                             %"anchor"%
                         }
                     }
 
-                p(class: "lorem-ipsum", id: "p-15") {
+                    p(class: "lorem-ipsum", id: "p-15") {
                         "Lorem ipsum, dolor sit amet."
-                    a(href: "https://example.org") {
+                        a(href: "https://example.org") {
                             %"anchor"%
                         }
                     }
 
-                p(class: "lorem-ipsum", id: "p-16") {
+                    p(class: "lorem-ipsum", id: "p-16") {
                         "Lorem ipsum, dolor sit amet."
-                    a(href: "https://example.org") {
+                        a(href: "https://example.org") {
                             %"anchor"%
                         }
                     }
