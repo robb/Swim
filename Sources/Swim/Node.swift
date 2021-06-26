@@ -2,7 +2,7 @@ import Foundation
 
 public enum Node: Hashable {
     // The `Node`'s name, attribute and children.
-    indirect case element(String, [String: String], Node?)
+    indirect case element(String, [String: AnyHashable], Node?)
 
     // The `Node`'s text contents.
     case text(String)
@@ -49,14 +49,26 @@ extension Node: TextOutputStreamable {
             target.write("<")
             target.write(name)
 
-            for (key, value) in attributes.sorted(by: { $0 < $1 }) {
+            for (key, value) in attributes.sorted(by: { $0.0 < $1.0 }) {
                 target.write(" ")
                 target.write(key)
 
-                guard value != "" else { continue }
+                let stringValue: String
+
+                switch value.base {
+                case "" as String:
+                    continue
+                case let string as String:
+                    stringValue = string
+                case let streamable as TextOutputStreamable:
+                    stringValue = String(describing: streamable)
+                default:
+                    stringValue = String(describing: value.base)
+                }
 
                 target.write("=\"")
-                target.write(value.replacingOccurrences(of: "\"", with: "&quot;"))
+                target.write(stringValue.replacingOccurrences(of: "\"", with: "&quot;", options: .literal))
+
                 target.write("\"")
             }
 
