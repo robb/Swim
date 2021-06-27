@@ -216,6 +216,10 @@ final class HTMLTests: XCTestCase {
             func visitTrim() -> [String] {
                 []
             }
+            
+            func visitPreference(_ dict: PreferenceDict, child: Node) -> [String] {
+                visitNode(child)
+            }
         }
 
         let root = body {
