@@ -2,14 +2,27 @@ import Foundation
 
 extension String {
     func addingXMLEncoding() -> String {
-        withCFString { string -> NSString in
-            CFXMLCreateStringByEscapingEntities(nil, string, nil)
-        } as String
+        var result = ""
+        result.reserveCapacity(count)
+        return unicodeScalars.reduce(into: result, { $0.append($1.named_escapingIfNeeded) })
     }
+}
 
-    private func withCFString<Result>(_ body: (CFString) throws -> Result) rethrows -> Result {
-        try withCString { cString in
-            try body(CFStringCreateWithCString(nil, cString, CFStringBuiltInEncodings.UTF8.rawValue))
+extension UnicodeScalar {
+    fileprivate var named_escapingIfNeeded: String {
+        switch value {
+        case ("&" as Unicode.Scalar).value:
+            return "&amp;"
+        case ("<" as Unicode.Scalar).value:
+            return "&lt;"
+        case (">" as Unicode.Scalar).value:
+            return "&gt;"
+        case ("\'" as Unicode.Scalar).value:
+            return "&apos;"
+        case ("\"" as Unicode.Scalar).value:
+            return "&quot;"
+        default:
+            return String(self)
         }
     }
 }
