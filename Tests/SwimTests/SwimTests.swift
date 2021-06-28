@@ -16,6 +16,13 @@ final class SwimTests: XCTestCase {
         XCTAssertEqual(n.rendered, "\n3 &gt; 1")
     }
     
+    func testUnicodeAndEscaping() {
+        let n: Node = "500 €"
+        var result = ""
+        n.write(to: &result)
+        XCTAssertEqual(result, "\n500 €")
+    }
+    
     func testRaw() {
         let n: Node = Node.raw("<marquee>Hello</marquee>")
         XCTAssertEqual(n.rendered, "\n<marquee>Hello</marquee>")
