@@ -3,6 +3,13 @@
 
 @_exported import Swim
 
+extension Node {
+    static func element(_ name: String, _ attributes: [String:String], _ node: Node?) -> Node {
+        Node.element(name, Attributes(attributes: attributes.sorted(by: { $0.key < $1.key }).map(Attribute.init)), node)
+    }
+}
+
+
 
 public struct ATag: Tag {
     public let elementName: String = "a"
