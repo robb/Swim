@@ -159,6 +159,17 @@ final class HTMLTests: XCTestCase {
         XCTAssertComponents(textMode, "<div>", "<p>", "<span><mark>Test</mark></span>", "</p>", "</div>")
     }
 
+    func testTextareaTrimming() {
+        let node = textarea {
+            """
+            Hello
+            World
+            """
+        }
+
+        XCTAssertEqual(String(describing: node), "\n<textarea>Hello\nWorld</textarea>")
+    }
+
     func testVisitorUppercase() {
         struct UppercaseVisitor: Visitor {
             func visitText(text: String) -> Node {
