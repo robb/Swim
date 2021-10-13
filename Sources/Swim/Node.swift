@@ -34,8 +34,15 @@ extension Node: TextOutputStreamable {
 
     private func write<Target>(to target: inout Target, depth: inout Int, didVisitTrim: inout Bool) where Target : TextOutputStream {
         defer {
-            if !isFragment {
-                didVisitTrim = self == .trim
+            switch self {
+            case .fragment:
+                // Don't update `didVisitTrim`, treat fragments as transparent
+                //  for the purpose of whitespace trim preferences.
+                break
+            case .trim:
+                didVisitTrim = true
+            default:
+                didVisitTrim = false
             }
         }
 
@@ -131,16 +138,5 @@ extension Node: ExpressibleByArrayLiteral {
 extension Node: ExpressibleByStringLiteral {
     public init(stringLiteral value: String){
         self = .text(value)
-    }
-}
-
-private extension Node {
-    var isFragment: Bool {
-        switch self {
-        case .fragment:
-            return true
-        default:
-            return false
-        }
     }
 }
