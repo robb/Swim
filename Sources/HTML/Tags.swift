@@ -11001,7 +11001,7 @@ public struct TextareaTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(elementName, attributes, %children().asNode()%)
     }
 }
 

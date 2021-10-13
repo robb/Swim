@@ -1469,7 +1469,8 @@ extension Tag {
     static let textarea = Tag(
         name: "Textarea",
         description: "Multiline text controls.",
-        attributes: .autocomplete2, .cols, .dirname, .disabled, .form, .maxlength, .minlength, .name, .placeholder, .readonly, .required, .rows, .wrap
+        attributes: .autocomplete2, .cols, .dirname, .disabled, .form, .maxlength, .minlength, .name, .placeholder, .readonly, .required, .rows, .wrap,
+        properties: .prenormalizeWhitespace
     )
 
     static let tfoot = Tag(
