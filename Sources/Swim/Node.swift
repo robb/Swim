@@ -50,7 +50,7 @@ extension Node: TextOutputStreamable {
         case let .element(name, attributes, child):
             if !didVisitTrim {
                 target.write("\n")
-                target.write(String(repeating: "\t", count: depth))
+                target.writeWhitespace(indentationLevel: depth)
             }
 
             target.write("<")
@@ -78,7 +78,7 @@ extension Node: TextOutputStreamable {
 
                 if !didVisitTrim {
                     target.write("\n")
-                    target.write(String(repeating: "\t", count: depth))
+                    target.writeWhitespace(indentationLevel: depth)
                 }
 
                 target.write("</")
@@ -90,14 +90,14 @@ extension Node: TextOutputStreamable {
         case let .text(value):
             if !didVisitTrim {
                 target.write("\n")
-                target.write(String(repeating: "\t", count: depth))
+                target.writeWhitespace(indentationLevel: depth)
             }
 
             target.write(value.addingXMLEncoding())
         case let .raw(value):
             if !didVisitTrim {
                 target.write("\n")
-                target.write(String(repeating: "\t", count: depth))
+                target.writeWhitespace(indentationLevel: depth)
             }
 
             target.write(value)
@@ -132,6 +132,27 @@ extension Node: ExpressibleByArrayLiteral {
         }
 
         self = .fragment(flattened)
+    }
+}
+
+extension TextOutputStream {
+    mutating func writeWhitespace(indentationLevel: Int) {
+        switch indentationLevel {
+        case 0:
+            write("")
+        case 1:
+            write("\t")
+        case 2:
+            write("\t\t")
+        case 3:
+            write("\t\t\t")
+        case 4:
+            write("\t\t\t\t")
+        case 5:
+            write("\t\t\t\t\t")
+        default:
+            write(String(repeating: "\t", count: indentationLevel))
+        }
     }
 }
 
