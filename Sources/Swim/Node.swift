@@ -121,17 +121,11 @@ extension Node: TextOutputStreamable {
 
 extension Node: ExpressibleByArrayLiteral {
     public init(arrayLiteral elements: Node...) {
-        let flattened = elements
-            .flatMap { node -> [Node] in
-                switch node {
-                case .fragment(let children):
-                    return children
-                default:
-                    return [node]
-                }
+        if elements.count == 1 {
+            self = elements[0]
+        } else {
+            self = .fragment(elements)
         }
-
-        self = .fragment(flattened)
     }
 }
 
