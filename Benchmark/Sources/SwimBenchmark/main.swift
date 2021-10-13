@@ -68,7 +68,7 @@ benchmark("Build a basic page") {
                     }
                 }
 
-               section {
+                section {
                     p {
                         "Lorem ipsum, dolor sit amet."
                         a {
@@ -179,6 +179,195 @@ benchmark("Build a basic page") {
                     p {
                         "Lorem ipsum, dolor sit amet."
                         a {
+                            %"anchor"%
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    let _ = String(describing: page)
+}
+
+benchmark("Build a advanced page") {
+    let page = html {
+        head {
+            title {
+                "Hello World"
+            }
+        }
+        body {
+            article {
+                section {
+                    p(class: "paragraph first") {
+                        "Lorem ipsum, dolor sit amet."
+                        a(href: "https://example.org") {
+                            %"anchor"%
+                        }
+                    }
+
+                    p(class: "paragraph") {
+                        "Lorem ipsum, dolor sit amet."
+                        a(href: "https://example.org") {
+                            %"anchor"%
+                        }
+                    }
+
+                    p(class: "paragraph") {
+                        "Lorem ipsum, dolor sit amet."
+                        a(href: "https://example.org") {
+                            %"anchor"%
+                        }
+                    }
+
+                    p(class: "paragraph") {
+                        "Lorem ipsum, dolor sit amet."
+                        a(href: "https://example.org") {
+                            %"anchor"%
+                        }
+                    }
+
+                    p(class: "paragraph") {
+                        "Lorem ipsum, dolor sit amet."
+                        a(href: "https://example.org") {
+                            %"anchor"%
+                        }
+                    }
+
+                    p(class: "paragraph") {
+                        "Lorem ipsum, dolor sit amet."
+                        a(href: "https://example.org") {
+                            %"anchor"%
+                        }
+                    }
+
+                    p(class: "paragraph") {
+                        "Lorem ipsum, dolor sit amet."
+                        a(href: "https://example.org") {
+                            %"anchor"%
+                        }
+                    }
+
+                    p(class: "paragraph") {
+                        "Lorem ipsum, dolor sit amet."
+                        a(href: "https://example.org") {
+                            %"anchor"%
+                        }
+                    }
+                }
+
+                section {
+                    p(class: "paragraph first") {
+                        "Lorem ipsum, dolor sit amet."
+                        a(href: "https://example.org") {
+                            %"anchor"%
+                        }
+                    }
+
+                    p(class: "paragraph") {
+                        "Lorem ipsum, dolor sit amet."
+                        a(href: "https://example.org") {
+                            %"anchor"%
+                        }
+                    }
+
+                    p(class: "paragraph") {
+                        "Lorem ipsum, dolor sit amet."
+                        a(href: "https://example.org") {
+                            %"anchor"%
+                        }
+                    }
+
+                    p(class: "paragraph") {
+                        "Lorem ipsum, dolor sit amet."
+                        a(href: "https://example.org") {
+                            %"anchor"%
+                        }
+                    }
+
+                    p(class: "paragraph") {
+                        "Lorem ipsum, dolor sit amet."
+                        a(href: "https://example.org") {
+                            %"anchor"%
+                        }
+                    }
+
+                    p(class: "paragraph") {
+                        "Lorem ipsum, dolor sit amet."
+                        a(href: "https://example.org") {
+                            %"anchor"%
+                        }
+                    }
+
+                    p(class: "paragraph") {
+                        "Lorem ipsum, dolor sit amet."
+                        a(href: "https://example.org") {
+                            %"anchor"%
+                        }
+                    }
+
+                    p(class: "paragraph") {
+                        "Lorem ipsum, dolor sit amet."
+                        a(href: "https://example.org") {
+                            %"anchor"%
+                        }
+                    }
+                }
+
+                section {
+                    p(class: "paragraph first") {
+                        "Lorem ipsum, dolor sit amet."
+                        a(href: "https://example.org") {
+                            %"anchor"%
+                        }
+                    }
+
+                    p(class: "paragraph") {
+                        "Lorem ipsum, dolor sit amet."
+                        a(href: "https://example.org") {
+                            %"anchor"%
+                        }
+                    }
+
+                    p(class: "paragraph") {
+                        "Lorem ipsum, dolor sit amet."
+                        a(href: "https://example.org") {
+                            %"anchor"%
+                        }
+                    }
+
+                    p(class: "paragraph") {
+                        "Lorem ipsum, dolor sit amet."
+                        a(href: "https://example.org") {
+                            %"anchor"%
+                        }
+                    }
+
+                    p(class: "paragraph") {
+                        "Lorem ipsum, dolor sit amet."
+                        a(href: "https://example.org") {
+                            %"anchor"%
+                        }
+                    }
+
+                    p(class: "paragraph") {
+                        "Lorem ipsum, dolor sit amet."
+                        a(href: "https://example.org") {
+                            %"anchor"%
+                        }
+                    }
+
+                    p(class: "paragraph") {
+                        "Lorem ipsum, dolor sit amet."
+                        a(href: "https://example.org") {
+                            %"anchor"%
+                        }
+                    }
+
+                    p(class: "paragraph") {
+                        "Lorem ipsum, dolor sit amet."
+                        a(href: "https://example.org") {
                             %"anchor"%
                         }
                     }
