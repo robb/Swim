@@ -4,9 +4,14 @@ struct Tag {
     struct Properties: OptionSet {
         let rawValue: Int
 
-        static let none               = Properties([])
-        static let emptyElement       = Properties(rawValue: 1 << 0)
-        static let textLevelSemantics = Properties(rawValue: 1 << 1)
+        static let none                   = Properties([])
+        static let emptyElement           = Properties(rawValue: 1 << 0)
+        static let textLevelSemantics     = Properties(rawValue: 1 << 1)
+        static let prenormalizeWhitespace = Properties(rawValue: 1 << 2)
+
+        var trimChildrenWhitepsace: Bool {
+            contains(.textLevelSemantics) || contains(.prenormalizeWhitespace)
+        }
     }
 
     var name: String
@@ -400,7 +405,7 @@ extension Tag {
             $0.useRightParen(rightParen)
         })
 
-        if !properties.contains(.textLevelSemantics) {
+        if !properties.trimChildrenWhitepsace {
             return asNodeCall
         }
 
