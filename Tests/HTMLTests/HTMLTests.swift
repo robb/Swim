@@ -50,11 +50,11 @@ final class HTMLTests: XCTestCase {
     func testEmptyElements() {
         let emptyElement = br()
 
-        XCTAssertEqual(String(describing: emptyElement), "\n<br/>")
+        XCTAssertEqual(String(describing: emptyElement), "<br/>")
 
         let nonEmptyElement = p()
 
-        XCTAssertEqual(String(describing: nonEmptyElement), "\n<p>\n</p>")
+        XCTAssertEqual(String(describing: nonEmptyElement), "<p>\n</p>")
     }
 
     func testIfBlock() {
