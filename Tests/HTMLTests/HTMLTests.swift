@@ -167,7 +167,7 @@ final class HTMLTests: XCTestCase {
             """
         }
 
-        XCTAssertEqual(String(describing: node), "\n<textarea>Hello\nWorld</textarea>")
+        XCTAssertEqual(String(describing: node), "<textarea>Hello\nWorld</textarea>")
     }
 
     func testVisitorUppercase() {
@@ -207,7 +207,7 @@ final class HTMLTests: XCTestCase {
             func visitText(text: String) -> [String] {
                 [ text ]
             }
-            
+
             func visitRaw(raw: String) -> [String] {
                 []
             }
