@@ -26,7 +26,7 @@ public enum Node: Hashable {
 
 extension Node: TextOutputStreamable {
     public func write<Target>(to target: inout Target) where Target : TextOutputStream {
-        var flag = false
+        var flag = true
         var depth = 0
 
         write(to: &target, depth: &depth, didVisitTrim: &flag)
