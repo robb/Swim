@@ -47,7 +47,7 @@ extension Attribute {
             $0.useType(attributeType.buildType(format))
             $0.useDefaultArgument(InitializerClauseSyntax{
                 $0.useEqual(SyntaxFactory.makeEqualToken(leadingTrivia: .spaces(1), trailingTrivia: .spaces(1)))
-                $0.useValue(attributeType.buildDefaultValue(format))
+                $0.useValue(buildDefaultValue(format))
             })
         }
     }
@@ -66,6 +66,10 @@ extension Attribute {
         case .optionalOfString:
             return ExprSyntax(SyntaxFactory.makeIdentifierExpr(identifier: identifier, declNameArguments: nil))
         }
+    }
+
+    func buildDefaultValue(_ format: Format) -> ExprSyntax {
+        attributeType.buildDefaultValue(format)
     }
 }
 

@@ -34,8 +34,15 @@ extension Node: TextOutputStreamable {
 
     private func write<Target>(to target: inout Target, depth: inout Int, didVisitTrim: inout Bool) where Target : TextOutputStream {
         defer {
-            if !isFragment {
-                didVisitTrim = self == .trim
+            switch self {
+            case .fragment:
+                // Don't update `didVisitTrim`, treat fragments as transparent
+                //  for the purpose of whitespace trim preferences.
+                break
+            case .trim:
+                didVisitTrim = true
+            default:
+                didVisitTrim = false
             }
         }
 
@@ -43,7 +50,7 @@ extension Node: TextOutputStreamable {
         case let .element(name, attributes, child):
             if !didVisitTrim {
                 target.write("\n")
-                target.write(String(repeating: "\t", count: depth))
+                target.writeWhitespace(indentationLevel: depth)
             }
 
             target.write("<")
@@ -71,7 +78,7 @@ extension Node: TextOutputStreamable {
 
                 if !didVisitTrim {
                     target.write("\n")
-                    target.write(String(repeating: "\t", count: depth))
+                    target.writeWhitespace(indentationLevel: depth)
                 }
 
                 target.write("</")
@@ -83,14 +90,14 @@ extension Node: TextOutputStreamable {
         case let .text(value):
             if !didVisitTrim {
                 target.write("\n")
-                target.write(String(repeating: "\t", count: depth))
+                target.writeWhitespace(indentationLevel: depth)
             }
 
             target.write(value.addingXMLEncoding())
         case let .raw(value):
             if !didVisitTrim {
                 target.write("\n")
-                target.write(String(repeating: "\t", count: depth))
+                target.writeWhitespace(indentationLevel: depth)
             }
 
             target.write(value)
@@ -114,33 +121,37 @@ extension Node: TextOutputStreamable {
 
 extension Node: ExpressibleByArrayLiteral {
     public init(arrayLiteral elements: Node...) {
-        let flattened = elements
-            .flatMap { node -> [Node] in
-                switch node {
-                case .fragment(let children):
-                    return children
-                default:
-                    return [node]
-                }
+        if elements.count == 1 {
+            self = elements[0]
+        } else {
+            self = .fragment(elements)
         }
+    }
+}
 
-        self = .fragment(flattened)
+extension TextOutputStream {
+    mutating func writeWhitespace(indentationLevel: Int) {
+        switch indentationLevel {
+        case 0:
+            write("")
+        case 1:
+            write("\t")
+        case 2:
+            write("\t\t")
+        case 3:
+            write("\t\t\t")
+        case 4:
+            write("\t\t\t\t")
+        case 5:
+            write("\t\t\t\t\t")
+        default:
+            write(String(repeating: "\t", count: indentationLevel))
+        }
     }
 }
 
 extension Node: ExpressibleByStringLiteral {
     public init(stringLiteral value: String){
         self = .text(value)
-    }
-}
-
-private extension Node {
-    var isFragment: Bool {
-        switch self {
-        case .fragment:
-            return true
-        default:
-            return false
-        }
     }
 }

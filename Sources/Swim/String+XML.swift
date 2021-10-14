@@ -6,38 +6,36 @@ extension String {
             return self
         }
 
-        var result = ""
-        result.reserveCapacity(count)
-        return unicodeScalars.reduce(into: result, { $0.append($1.escapingIfNeeded) })
+        return unicodeScalars.reduce(into: "", { $0.appendEscaped($1) })
     }
 }
 
 extension UnicodeScalar {
     fileprivate var needsEscaping: Bool {
-        switch value {
-        case ("&" as Unicode.Scalar).value, ("<" as Unicode.Scalar).value,
-             (">" as Unicode.Scalar).value, ("\'" as Unicode.Scalar).value,
-             ("\"" as Unicode.Scalar).value:
+        switch self {
+        case "&", "<", ">", "\'", "\"":
             return true
         default:
             return false
         }
     }
+}
 
-    fileprivate var escapingIfNeeded: String {
-        switch value {
-        case ("&" as Unicode.Scalar).value:
-            return "&amp;"
-        case ("<" as Unicode.Scalar).value:
-            return "&lt;"
-        case (">" as Unicode.Scalar).value:
-            return "&gt;"
-        case ("\'" as Unicode.Scalar).value:
-            return "&apos;"
-        case ("\"" as Unicode.Scalar).value:
-            return "&quot;"
+extension String {
+    fileprivate mutating func appendEscaped(_ unicodeScalar: Unicode.Scalar) {
+        switch unicodeScalar {
+        case "&":
+            append("&amp;")
+        case "<":
+            append("&lt;")
+        case ">":
+            append("&gt;")
+        case "\'":
+            append("&apos;")
+        case "\"":
+            append("&quot;")
         default:
-            return String(self)
+            append(Character(unicodeScalar))
         }
     }
 }
