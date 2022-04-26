@@ -85,41 +85,143 @@ public struct ATag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["download"] = download
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["href"] = href
-        attributes["hreflang"] = hreflang
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["ping"] = ping
-        attributes["referrerpolicy"] = referrerpolicy
-        attributes["rel"] = rel
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["target"] = target
-        attributes["title"] = title
-        attributes["translate"] = translate
-        attributes["type"] = type
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if download != nil {
+            attributes["download"] = download
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if href != nil {
+            attributes["href"] = href
+        }
+
+        if hreflang != nil {
+            attributes["hreflang"] = hreflang
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if ping != nil {
+            attributes["ping"] = ping
+        }
+
+        if referrerpolicy != nil {
+            attributes["referrerpolicy"] = referrerpolicy
+        }
+
+        if rel != nil {
+            attributes["rel"] = rel
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if target != nil {
+            attributes["target"] = target
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
+
+        if type != nil {
+            attributes["type"] = type
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -195,33 +297,111 @@ public struct AbbrTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -297,33 +477,111 @@ public struct AddressTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -416,42 +674,147 @@ public struct AreaTag: Tag {
         customAttributes: [String: String] = [:]
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["alt"] = alt
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["coords"] = coords
-        attributes["dir"] = dir
-        attributes["download"] = download
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["href"] = href
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["ping"] = ping
-        attributes["referrerpolicy"] = referrerpolicy
-        attributes["rel"] = rel
-        attributes["role"] = role
-        attributes["shape"] = shape
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["target"] = target
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if alt != nil {
+            attributes["alt"] = alt
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if coords != nil {
+            attributes["coords"] = coords
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if download != nil {
+            attributes["download"] = download
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if href != nil {
+            attributes["href"] = href
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if ping != nil {
+            attributes["ping"] = ping
+        }
+
+        if referrerpolicy != nil {
+            attributes["referrerpolicy"] = referrerpolicy
+        }
+
+        if rel != nil {
+            attributes["rel"] = rel
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if shape != nil {
+            attributes["shape"] = shape
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if target != nil {
+            attributes["target"] = target
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -527,33 +890,111 @@ public struct ArticleTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -629,33 +1070,111 @@ public struct AsideTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -745,40 +1264,139 @@ public struct AudioTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["autoplay"] = autoplay ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["controls"] = controls ? "" : nil
-        attributes["crossorigin"] = crossorigin
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["loop"] = loop ? "" : nil
-        attributes["muted"] = muted ? "" : nil
-        attributes["nonce"] = nonce
-        attributes["preload"] = preload
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["src"] = src
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if autoplay != false {
+            attributes["autoplay"] = autoplay ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if controls != false {
+            attributes["controls"] = controls ? "" : nil
+        }
+
+        if crossorigin != nil {
+            attributes["crossorigin"] = crossorigin
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if loop != false {
+            attributes["loop"] = loop ? "" : nil
+        }
+
+        if muted != false {
+            attributes["muted"] = muted ? "" : nil
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if preload != nil {
+            attributes["preload"] = preload
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if src != nil {
+            attributes["src"] = src
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -854,33 +1472,111 @@ public struct BTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -959,35 +1655,119 @@ public struct BaseTag: Tag {
         customAttributes: [String: String] = [:]
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["href"] = href
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["target"] = target
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if href != nil {
+            attributes["href"] = href
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if target != nil {
+            attributes["target"] = target
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -1063,33 +1843,111 @@ public struct BDITag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -1165,33 +2023,111 @@ public struct BDOTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -1269,34 +2205,115 @@ public struct BlockquoteTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["cite"] = cite
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if cite != nil {
+            attributes["cite"] = cite
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -1372,33 +2389,111 @@ public struct BodyTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -1473,33 +2568,111 @@ public struct BRTag: Tag {
         customAttributes: [String: String] = [:]
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -1595,43 +2768,151 @@ public struct ButtonTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["disabled"] = disabled ? "" : nil
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["form"] = form
-        attributes["formaction"] = formaction
-        attributes["formenctype"] = formenctype
-        attributes["formmethod"] = formmethod
-        attributes["formnovalidate"] = formnovalidate ? "" : nil
-        attributes["formtarget"] = formtarget
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["name"] = name
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
-        attributes["type"] = type
-        attributes["value"] = value
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if disabled != false {
+            attributes["disabled"] = disabled ? "" : nil
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if form != nil {
+            attributes["form"] = form
+        }
+
+        if formaction != nil {
+            attributes["formaction"] = formaction
+        }
+
+        if formenctype != nil {
+            attributes["formenctype"] = formenctype
+        }
+
+        if formmethod != nil {
+            attributes["formmethod"] = formmethod
+        }
+
+        if formnovalidate != false {
+            attributes["formnovalidate"] = formnovalidate ? "" : nil
+        }
+
+        if formtarget != nil {
+            attributes["formtarget"] = formtarget
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if name != nil {
+            attributes["name"] = name
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
+
+        if type != nil {
+            attributes["type"] = type
+        }
+
+        if value != nil {
+            attributes["value"] = value
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -1711,35 +2992,119 @@ public struct CanvasTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["height"] = height
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
-        attributes["width"] = width
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if height != nil {
+            attributes["height"] = height
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
+
+        if width != nil {
+            attributes["width"] = width
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -1815,33 +3180,111 @@ public struct CaptionTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -1917,33 +3360,111 @@ public struct CiteTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -2019,33 +3540,111 @@ public struct CodeTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -2122,34 +3721,115 @@ public struct ColTag: Tag {
         customAttributes: [String: String] = [:]
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["span"] = span
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if span != nil {
+            attributes["span"] = span
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -2227,34 +3907,115 @@ public struct ColgroupTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["span"] = span
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if span != nil {
+            attributes["span"] = span
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -2332,34 +4093,115 @@ public struct DataTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
-        attributes["value"] = value
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
+
+        if value != nil {
+            attributes["value"] = value
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -2435,33 +4277,111 @@ public struct DatalistTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -2537,33 +4457,111 @@ public struct DDTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -2643,35 +4641,119 @@ public struct DelTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["cite"] = cite
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["datetime"] = datetime
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if cite != nil {
+            attributes["cite"] = cite
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if datetime != nil {
+            attributes["datetime"] = datetime
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -2749,34 +4831,115 @@ public struct DetailsTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["open"] = `open` ? "" : nil
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if `open` != false {
+            attributes["open"] = `open` ? "" : nil
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -2852,33 +5015,111 @@ public struct DFNTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -2956,34 +5197,115 @@ public struct DialogTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["open"] = `open` ? "" : nil
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if `open` != false {
+            attributes["open"] = `open` ? "" : nil
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -3059,33 +5381,111 @@ public struct DivTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -3161,33 +5561,111 @@ public struct DLTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -3263,33 +5741,111 @@ public struct DTTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -3365,33 +5921,111 @@ public struct EmTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -3474,37 +6108,127 @@ public struct EmbedTag: Tag {
         customAttributes: [String: String] = [:]
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["height"] = height
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["src"] = src
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
-        attributes["type"] = type
-        attributes["width"] = width
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if height != nil {
+            attributes["height"] = height
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if src != nil {
+            attributes["src"] = src
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
+
+        if type != nil {
+            attributes["type"] = type
+        }
+
+        if width != nil {
+            attributes["width"] = width
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -3586,36 +6310,123 @@ public struct FieldsetTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["disabled2"] = disabled2 ? "" : nil
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["form"] = form
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["name"] = name
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if disabled2 != false {
+            attributes["disabled2"] = disabled2 ? "" : nil
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if form != nil {
+            attributes["form"] = form
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if name != nil {
+            attributes["name"] = name
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -3691,33 +6502,111 @@ public struct FigcaptionTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -3793,33 +6682,111 @@ public struct FigureTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -3895,33 +6862,111 @@ public struct FooterTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -4013,41 +7058,143 @@ public struct FormTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accept-charset"] = acceptCharset
-        attributes["accesskey"] = accesskey
-        attributes["action"] = action
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autocomplete"] = autocomplete
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enctype"] = enctype
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["method"] = method
-        attributes["name"] = name
-        attributes["nonce"] = nonce
-        attributes["novalidate"] = novalidate ? "" : nil
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["target"] = target
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if acceptCharset != nil {
+            attributes["accept-charset"] = acceptCharset
+        }
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if action != nil {
+            attributes["action"] = action
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autocomplete != nil {
+            attributes["autocomplete"] = autocomplete
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enctype != nil {
+            attributes["enctype"] = enctype
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if method != nil {
+            attributes["method"] = method
+        }
+
+        if name != nil {
+            attributes["name"] = name
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if novalidate != false {
+            attributes["novalidate"] = novalidate ? "" : nil
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if target != nil {
+            attributes["target"] = target
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -4123,33 +7270,111 @@ public struct H1Tag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -4225,33 +7450,111 @@ public struct H2Tag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -4327,33 +7630,111 @@ public struct H3Tag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -4429,33 +7810,111 @@ public struct H4Tag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -4531,33 +7990,111 @@ public struct H5Tag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -4633,33 +8170,111 @@ public struct H6Tag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -4735,33 +8350,111 @@ public struct HeadTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -4837,33 +8530,111 @@ public struct HeaderTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -4939,33 +8710,111 @@ public struct HgroupTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -5040,33 +8889,111 @@ public struct HRTag: Tag {
         customAttributes: [String: String] = [:]
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -5144,34 +9071,115 @@ public struct HTMLTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["manifest"] = manifest
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if manifest != nil {
+            attributes["manifest"] = manifest
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -5247,33 +9255,111 @@ public struct ITag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -5369,43 +9455,151 @@ public struct IFrameTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["allow"] = allow
-        attributes["allowfullscreen"] = allowfullscreen ? "" : nil
-        attributes["allowpaymentrequest"] = allowpaymentrequest ? "" : nil
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["height"] = height
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["name"] = name
-        attributes["nonce"] = nonce
-        attributes["referrerpolicy"] = referrerpolicy
-        attributes["role"] = role
-        attributes["sandbox"] = sandbox
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["src"] = src
-        attributes["srcdoc"] = srcdoc
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
-        attributes["width"] = width
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if allow != nil {
+            attributes["allow"] = allow
+        }
+
+        if allowfullscreen != false {
+            attributes["allowfullscreen"] = allowfullscreen ? "" : nil
+        }
+
+        if allowpaymentrequest != false {
+            attributes["allowpaymentrequest"] = allowpaymentrequest ? "" : nil
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if height != nil {
+            attributes["height"] = height
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if name != nil {
+            attributes["name"] = name
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if referrerpolicy != nil {
+            attributes["referrerpolicy"] = referrerpolicy
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if sandbox != nil {
+            attributes["sandbox"] = sandbox
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if src != nil {
+            attributes["src"] = src
+        }
+
+        if srcdoc != nil {
+            attributes["srcdoc"] = srcdoc
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
+
+        if width != nil {
+            attributes["width"] = width
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -5504,45 +9698,159 @@ public struct ImgTag: Tag {
         customAttributes: [String: String] = [:]
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["alt"] = alt
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["crossorigin"] = crossorigin
-        attributes["decoding"] = decoding
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["height"] = height
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["ismap"] = ismap ? "" : nil
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["loading"] = loading
-        attributes["nonce"] = nonce
-        attributes["referrerpolicy"] = referrerpolicy
-        attributes["role"] = role
-        attributes["sizes"] = sizes
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["src"] = src
-        attributes["srcset"] = srcset
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
-        attributes["usemap"] = usemap
-        attributes["width"] = width
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if alt != nil {
+            attributes["alt"] = alt
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if crossorigin != nil {
+            attributes["crossorigin"] = crossorigin
+        }
+
+        if decoding != nil {
+            attributes["decoding"] = decoding
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if height != nil {
+            attributes["height"] = height
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if ismap != false {
+            attributes["ismap"] = ismap ? "" : nil
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if loading != nil {
+            attributes["loading"] = loading
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if referrerpolicy != nil {
+            attributes["referrerpolicy"] = referrerpolicy
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if sizes != nil {
+            attributes["sizes"] = sizes
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if src != nil {
+            attributes["src"] = src
+        }
+
+        if srcset != nil {
+            attributes["srcset"] = srcset
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
+
+        if usemap != nil {
+            attributes["usemap"] = usemap
+        }
+
+        if width != nil {
+            attributes["width"] = width
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -5677,63 +9985,231 @@ public struct InputTag: Tag {
         customAttributes: [String: String] = [:]
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accept"] = accept
-        attributes["accesskey"] = accesskey
-        attributes["alt"] = alt
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autocomplete"] = autocomplete
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["checked"] = checked ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["dirname"] = dirname
-        attributes["disabled"] = disabled ? "" : nil
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["form"] = form
-        attributes["formaction"] = formaction
-        attributes["formenctype"] = formenctype
-        attributes["formmethod"] = formmethod
-        attributes["formnovalidate"] = formnovalidate ? "" : nil
-        attributes["formtarget"] = formtarget
-        attributes["height"] = height
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["list"] = list
-        attributes["max"] = max
-        attributes["maxlength"] = maxlength
-        attributes["min"] = min
-        attributes["minlength"] = minlength
-        attributes["multiple"] = multiple ? "" : nil
-        attributes["name"] = name
-        attributes["nonce"] = nonce
-        attributes["pattern"] = pattern
-        attributes["placeholder"] = placeholder
-        attributes["readonly"] = readonly ? "" : nil
-        attributes["required"] = `required` ? "" : nil
-        attributes["role"] = role
-        attributes["size"] = size
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["src"] = src
-        attributes["step"] = step
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
-        attributes["type"] = type
-        attributes["value"] = value
-        attributes["width"] = width
 
+
+        if accept != nil {
+            attributes["accept"] = accept
+        }
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if alt != nil {
+            attributes["alt"] = alt
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autocomplete != nil {
+            attributes["autocomplete"] = autocomplete
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if checked != false {
+            attributes["checked"] = checked ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if dirname != nil {
+            attributes["dirname"] = dirname
+        }
+
+        if disabled != false {
+            attributes["disabled"] = disabled ? "" : nil
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if form != nil {
+            attributes["form"] = form
+        }
+
+        if formaction != nil {
+            attributes["formaction"] = formaction
+        }
+
+        if formenctype != nil {
+            attributes["formenctype"] = formenctype
+        }
+
+        if formmethod != nil {
+            attributes["formmethod"] = formmethod
+        }
+
+        if formnovalidate != false {
+            attributes["formnovalidate"] = formnovalidate ? "" : nil
+        }
+
+        if formtarget != nil {
+            attributes["formtarget"] = formtarget
+        }
+
+        if height != nil {
+            attributes["height"] = height
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if list != nil {
+            attributes["list"] = list
+        }
+
+        if max != nil {
+            attributes["max"] = max
+        }
+
+        if maxlength != nil {
+            attributes["maxlength"] = maxlength
+        }
+
+        if min != nil {
+            attributes["min"] = min
+        }
+
+        if minlength != nil {
+            attributes["minlength"] = minlength
+        }
+
+        if multiple != false {
+            attributes["multiple"] = multiple ? "" : nil
+        }
+
+        if name != nil {
+            attributes["name"] = name
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if pattern != nil {
+            attributes["pattern"] = pattern
+        }
+
+        if placeholder != nil {
+            attributes["placeholder"] = placeholder
+        }
+
+        if readonly != false {
+            attributes["readonly"] = readonly ? "" : nil
+        }
+
+        if `required` != false {
+            attributes["required"] = `required` ? "" : nil
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if size != nil {
+            attributes["size"] = size
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if src != nil {
+            attributes["src"] = src
+        }
+
+        if step != nil {
+            attributes["step"] = step
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
+
+        if type != nil {
+            attributes["type"] = type
+        }
+
+        if value != nil {
+            attributes["value"] = value
+        }
+
+        if width != nil {
+            attributes["width"] = width
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -5813,35 +10289,119 @@ public struct InsTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["cite"] = cite
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["datetime"] = datetime
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if cite != nil {
+            attributes["cite"] = cite
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if datetime != nil {
+            attributes["datetime"] = datetime
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -5917,33 +10477,111 @@ public struct KBDTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -6021,34 +10659,115 @@ public struct LabelTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["for"] = `for`
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if `for` != nil {
+            attributes["for"] = `for`
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -6124,33 +10843,111 @@ public struct legendTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -6228,34 +11025,115 @@ public struct LITag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
-        attributes["value"] = value
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
+
+        if value != nil {
+            attributes["value"] = value
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -6356,46 +11234,163 @@ public struct LinkTag: Tag {
         customAttributes: [String: String] = [:]
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["as"] = `as`
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["color"] = color
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["crossorigin"] = crossorigin
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["href"] = href
-        attributes["hreflang"] = hreflang
-        attributes["id"] = id
-        attributes["imagesizes"] = imagesizes
-        attributes["imagesrcset"] = imagesrcset
-        attributes["inputmode"] = inputmode
-        attributes["integrity"] = integrity
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["media"] = media
-        attributes["nonce"] = nonce
-        attributes["referrerpolicy"] = referrerpolicy
-        attributes["rel"] = rel
-        attributes["role"] = role
-        attributes["sizes"] = sizes
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
-        attributes["type"] = type
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if `as` != nil {
+            attributes["as"] = `as`
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if color != nil {
+            attributes["color"] = color
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if crossorigin != nil {
+            attributes["crossorigin"] = crossorigin
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if href != nil {
+            attributes["href"] = href
+        }
+
+        if hreflang != nil {
+            attributes["hreflang"] = hreflang
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if imagesizes != nil {
+            attributes["imagesizes"] = imagesizes
+        }
+
+        if imagesrcset != nil {
+            attributes["imagesrcset"] = imagesrcset
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if integrity != nil {
+            attributes["integrity"] = integrity
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if media != nil {
+            attributes["media"] = media
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if referrerpolicy != nil {
+            attributes["referrerpolicy"] = referrerpolicy
+        }
+
+        if rel != nil {
+            attributes["rel"] = rel
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if sizes != nil {
+            attributes["sizes"] = sizes
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
+
+        if type != nil {
+            attributes["type"] = type
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -6471,33 +11466,111 @@ public struct MainTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -6575,34 +11648,115 @@ public struct MapTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["name"] = name
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if name != nil {
+            attributes["name"] = name
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -6678,33 +11832,111 @@ public struct MarkTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -6780,33 +12012,111 @@ public struct MathTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -6882,33 +12192,111 @@ public struct MenuTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -6991,37 +12379,127 @@ public struct MetaTag: Tag {
         customAttributes: [String: String] = [:]
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["charset"] = charset
-        attributes["class"] = `class`
-        attributes["content"] = content
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["http-equiv"] = httpEquiv
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["name"] = name
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if charset != nil {
+            attributes["charset"] = charset
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if content != nil {
+            attributes["content"] = content
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if httpEquiv != nil {
+            attributes["http-equiv"] = httpEquiv
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if name != nil {
+            attributes["name"] = name
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -7109,39 +12587,135 @@ public struct MeterTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["high"] = high
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["low"] = low
-        attributes["max"] = max
-        attributes["min"] = min
-        attributes["nonce"] = nonce
-        attributes["optimum"] = optimum
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
-        attributes["value"] = value
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if high != nil {
+            attributes["high"] = high
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if low != nil {
+            attributes["low"] = low
+        }
+
+        if max != nil {
+            attributes["max"] = max
+        }
+
+        if min != nil {
+            attributes["min"] = min
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if optimum != nil {
+            attributes["optimum"] = optimum
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
+
+        if value != nil {
+            attributes["value"] = value
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -7217,33 +12791,111 @@ public struct NavTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -7319,33 +12971,111 @@ public struct NoscriptTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -7435,40 +13165,139 @@ public struct ObjectTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["data"] = data
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["form"] = form
-        attributes["height"] = height
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["name"] = name
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
-        attributes["type"] = type
-        attributes["usemap"] = usemap
-        attributes["width"] = width
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if data != nil {
+            attributes["data"] = data
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if form != nil {
+            attributes["form"] = form
+        }
+
+        if height != nil {
+            attributes["height"] = height
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if name != nil {
+            attributes["name"] = name
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
+
+        if type != nil {
+            attributes["type"] = type
+        }
+
+        if usemap != nil {
+            attributes["usemap"] = usemap
+        }
+
+        if width != nil {
+            attributes["width"] = width
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -7550,36 +13379,123 @@ public struct OLTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["reversed"] = reversed ? "" : nil
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["start"] = start
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
-        attributes["type"] = type
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if reversed != false {
+            attributes["reversed"] = reversed ? "" : nil
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if start != nil {
+            attributes["start"] = start
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
+
+        if type != nil {
+            attributes["type"] = type
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -7659,35 +13575,119 @@ public struct OptgroupTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["disabled"] = disabled ? "" : nil
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["label"] = label
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if disabled != false {
+            attributes["disabled"] = disabled ? "" : nil
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if label != nil {
+            attributes["label"] = label
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -7771,37 +13771,127 @@ public struct OptionTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["disabled"] = disabled ? "" : nil
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["label"] = label
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["selected"] = selected ? "" : nil
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
-        attributes["value"] = value
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if disabled != false {
+            attributes["disabled"] = disabled ? "" : nil
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if label != nil {
+            attributes["label"] = label
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if selected != false {
+            attributes["selected"] = selected ? "" : nil
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
+
+        if value != nil {
+            attributes["value"] = value
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -7883,36 +13973,123 @@ public struct OutputTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["for2"] = for2
-        attributes["form"] = form
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["name"] = name
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if for2 != nil {
+            attributes["for2"] = for2
+        }
+
+        if form != nil {
+            attributes["form"] = form
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if name != nil {
+            attributes["name"] = name
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -7988,33 +14165,111 @@ public struct PTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -8093,35 +14348,119 @@ public struct ParamTag: Tag {
         customAttributes: [String: String] = [:]
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["name"] = name
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
-        attributes["value"] = value
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if name != nil {
+            attributes["name"] = name
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
+
+        if value != nil {
+            attributes["value"] = value
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -8197,33 +14536,111 @@ public struct PictureTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -8299,33 +14716,111 @@ public struct PreTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -8405,35 +14900,119 @@ public struct ProgressTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["max"] = max
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
-        attributes["value"] = value
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if max != nil {
+            attributes["max"] = max
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
+
+        if value != nil {
+            attributes["value"] = value
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -8511,34 +15090,115 @@ public struct QTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["cite"] = cite
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if cite != nil {
+            attributes["cite"] = cite
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -8614,33 +15274,111 @@ public struct RPTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -8716,33 +15454,111 @@ public struct RTTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -8818,33 +15634,111 @@ public struct RubyTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -8920,33 +15814,111 @@ public struct STag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -9022,33 +15994,111 @@ public struct SampTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -9140,41 +16190,143 @@ public struct ScriptTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["async"] = async ? "" : nil
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["crossorigin"] = crossorigin
-        attributes["defer"] = `defer` ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["integrity"] = integrity
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nomodule"] = nomodule ? "" : nil
-        attributes["nonce"] = nonce
-        attributes["referrerpolicy"] = referrerpolicy
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["src"] = src
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
-        attributes["type"] = type
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if async != false {
+            attributes["async"] = async ? "" : nil
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if crossorigin != nil {
+            attributes["crossorigin"] = crossorigin
+        }
+
+        if `defer` != false {
+            attributes["defer"] = `defer` ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if integrity != nil {
+            attributes["integrity"] = integrity
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nomodule != false {
+            attributes["nomodule"] = nomodule ? "" : nil
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if referrerpolicy != nil {
+            attributes["referrerpolicy"] = referrerpolicy
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if src != nil {
+            attributes["src"] = src
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
+
+        if type != nil {
+            attributes["type"] = type
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -9250,33 +16402,111 @@ public struct SectionTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -9366,40 +16596,139 @@ public struct SelectTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autocomplete"] = autocomplete
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["disabled"] = disabled ? "" : nil
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["form"] = form
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["multiple"] = multiple ? "" : nil
-        attributes["name"] = name
-        attributes["nonce"] = nonce
-        attributes["required"] = `required` ? "" : nil
-        attributes["role"] = role
-        attributes["size"] = size
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autocomplete != nil {
+            attributes["autocomplete"] = autocomplete
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if disabled != false {
+            attributes["disabled"] = disabled ? "" : nil
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if form != nil {
+            attributes["form"] = form
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if multiple != false {
+            attributes["multiple"] = multiple ? "" : nil
+        }
+
+        if name != nil {
+            attributes["name"] = name
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if `required` != false {
+            attributes["required"] = `required` ? "" : nil
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if size != nil {
+            attributes["size"] = size
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -9477,34 +16806,115 @@ public struct SlotTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["name"] = name
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if name != nil {
+            attributes["name"] = name
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -9580,33 +16990,111 @@ public struct SmallTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -9691,38 +17179,131 @@ public struct SourceTag: Tag {
         customAttributes: [String: String] = [:]
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["media"] = media
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["sizes"] = sizes
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["src"] = src
-        attributes["srcset"] = srcset
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
-        attributes["type"] = type
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if media != nil {
+            attributes["media"] = media
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if sizes != nil {
+            attributes["sizes"] = sizes
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if src != nil {
+            attributes["src"] = src
+        }
+
+        if srcset != nil {
+            attributes["srcset"] = srcset
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
+
+        if type != nil {
+            attributes["type"] = type
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -9798,33 +17379,111 @@ public struct SpanTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -9900,33 +17559,111 @@ public struct StrongTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -10004,34 +17741,115 @@ public struct StyleTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["media"] = media
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if media != nil {
+            attributes["media"] = media
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -10107,33 +17925,111 @@ public struct SubTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -10209,33 +18105,111 @@ public struct SummaryTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -10311,33 +18285,111 @@ public struct SupTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -10413,33 +18465,111 @@ public struct SVGTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -10515,33 +18645,111 @@ public struct TableTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -10617,33 +18825,111 @@ public struct TBodyTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -10725,36 +19011,123 @@ public struct TDTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["colspan"] = colspan
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["headers"] = headers
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["rowspan"] = rowspan
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if colspan != nil {
+            attributes["colspan"] = colspan
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if headers != nil {
+            attributes["headers"] = headers
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if rowspan != nil {
+            attributes["rowspan"] = rowspan
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -10830,33 +19203,111 @@ public struct TemplateTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -10958,50 +19409,167 @@ public struct TextareaTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autocomplete"] = autocomplete
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["cols"] = cols
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["dirname"] = dirname
-        attributes["disabled"] = disabled ? "" : nil
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["form"] = form
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["maxlength"] = maxlength
-        attributes["minlength"] = minlength
-        attributes["name"] = name
-        attributes["nonce"] = nonce
-        attributes["placeholder"] = placeholder
-        attributes["readonly"] = readonly ? "" : nil
-        attributes["required"] = `required` ? "" : nil
-        attributes["role"] = role
-        attributes["rows"] = rows
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
-        attributes["wrap"] = wrap
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autocomplete != nil {
+            attributes["autocomplete"] = autocomplete
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if cols != nil {
+            attributes["cols"] = cols
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if dirname != nil {
+            attributes["dirname"] = dirname
+        }
+
+        if disabled != false {
+            attributes["disabled"] = disabled ? "" : nil
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if form != nil {
+            attributes["form"] = form
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if maxlength != nil {
+            attributes["maxlength"] = maxlength
+        }
+
+        if minlength != nil {
+            attributes["minlength"] = minlength
+        }
+
+        if name != nil {
+            attributes["name"] = name
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if placeholder != nil {
+            attributes["placeholder"] = placeholder
+        }
+
+        if readonly != false {
+            attributes["readonly"] = readonly ? "" : nil
+        }
+
+        if `required` != false {
+            attributes["required"] = `required` ? "" : nil
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if rows != nil {
+            attributes["rows"] = rows
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
+
+        if wrap != nil {
+            attributes["wrap"] = wrap
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(elementName, attributes, %children().asNode()%)
     }
 }
 
@@ -11073,33 +19641,111 @@ public struct TFootTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -11185,38 +19831,131 @@ public struct THTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["abbr"] = abbr
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["colspan"] = colspan
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["headers"] = headers
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["rowspan"] = rowspan
-        attributes["scope"] = scope
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if abbr != nil {
+            attributes["abbr"] = abbr
+        }
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if colspan != nil {
+            attributes["colspan"] = colspan
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if headers != nil {
+            attributes["headers"] = headers
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if rowspan != nil {
+            attributes["rowspan"] = rowspan
+        }
+
+        if scope != nil {
+            attributes["scope"] = scope
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -11292,33 +20031,111 @@ public struct THeadTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -11396,34 +20213,115 @@ public struct TimeTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["datetime"] = datetime
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if datetime != nil {
+            attributes["datetime"] = datetime
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -11499,33 +20397,111 @@ public struct TitleTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -11601,33 +20577,111 @@ public struct TRTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -11712,38 +20766,131 @@ public struct TrackTag: Tag {
         customAttributes: [String: String] = [:]
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["default"] = `default` ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["kind"] = kind
-        attributes["label"] = label
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["src"] = src
-        attributes["srclang"] = srclang
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if `default` != false {
+            attributes["default"] = `default` ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if kind != nil {
+            attributes["kind"] = kind
+        }
+
+        if label != nil {
+            attributes["label"] = label
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if src != nil {
+            attributes["src"] = src
+        }
+
+        if srclang != nil {
+            attributes["srclang"] = srclang
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -11819,33 +20966,111 @@ public struct UTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -11921,33 +21146,111 @@ public struct ULTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -12023,33 +21326,111 @@ public struct VarTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -12147,44 +21528,155 @@ public struct VideoTag: Tag {
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["autoplay"] = autoplay ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["controls"] = controls ? "" : nil
-        attributes["crossorigin"] = crossorigin
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["height"] = height
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["loop"] = loop ? "" : nil
-        attributes["muted"] = muted ? "" : nil
-        attributes["nonce"] = nonce
-        attributes["playsinline"] = playsinline ? "" : nil
-        attributes["poster"] = poster
-        attributes["preload"] = preload
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["src"] = src
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
-        attributes["width"] = width
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if autoplay != false {
+            attributes["autoplay"] = autoplay ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if controls != false {
+            attributes["controls"] = controls ? "" : nil
+        }
+
+        if crossorigin != nil {
+            attributes["crossorigin"] = crossorigin
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if height != nil {
+            attributes["height"] = height
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if loop != false {
+            attributes["loop"] = loop ? "" : nil
+        }
+
+        if muted != false {
+            attributes["muted"] = muted ? "" : nil
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if playsinline != false {
+            attributes["playsinline"] = playsinline ? "" : nil
+        }
+
+        if poster != nil {
+            attributes["poster"] = poster
+        }
+
+        if preload != nil {
+            attributes["preload"] = preload
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if src != nil {
+            attributes["src"] = src
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
+
+        if width != nil {
+            attributes["width"] = width
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 
@@ -12259,33 +21751,111 @@ public struct WBRTag: Tag {
         customAttributes: [String: String] = [:]
     ) -> Node {
         var attributes: [String: String] = [:]
-        attributes["accesskey"] = accesskey
-        attributes["autocapitalize"] = autocapitalize
-        attributes["autofocus"] = autofocus ? "" : nil
-        attributes["class"] = `class`
-        attributes["contenteditable"] = contenteditable ? "" : nil
-        attributes["dir"] = dir
-        attributes["draggable"] = draggable ? "" : nil
-        attributes["enterkeyhint"] = enterkeyhint
-        attributes["hidden"] = hidden ? "" : nil
-        attributes["id"] = id
-        attributes["inputmode"] = inputmode
-        attributes["is"] = `is`
-        attributes["itemid"] = itemid
-        attributes["itemprop"] = itemprop
-        attributes["itemref"] = itemref
-        attributes["itemscope"] = itemscope ? "" : nil
-        attributes["itemtype"] = itemtype
-        attributes["lang"] = lang
-        attributes["nonce"] = nonce
-        attributes["role"] = role
-        attributes["slot"] = slot
-        attributes["spellcheck"] = spellcheck ? "" : nil
-        attributes["style"] = style
-        attributes["tabindex"] = tabindex
-        attributes["title"] = title
-        attributes["translate"] = translate
 
+
+        if accesskey != nil {
+            attributes["accesskey"] = accesskey
+        }
+
+        if autocapitalize != nil {
+            attributes["autocapitalize"] = autocapitalize
+        }
+
+        if autofocus != false {
+            attributes["autofocus"] = autofocus ? "" : nil
+        }
+
+        if `class` != nil {
+            attributes["class"] = `class`
+        }
+
+        if contenteditable != false {
+            attributes["contenteditable"] = contenteditable ? "" : nil
+        }
+
+        if dir != nil {
+            attributes["dir"] = dir
+        }
+
+        if draggable != false {
+            attributes["draggable"] = draggable ? "" : nil
+        }
+
+        if enterkeyhint != nil {
+            attributes["enterkeyhint"] = enterkeyhint
+        }
+
+        if hidden != false {
+            attributes["hidden"] = hidden ? "" : nil
+        }
+
+        if id != nil {
+            attributes["id"] = id
+        }
+
+        if inputmode != nil {
+            attributes["inputmode"] = inputmode
+        }
+
+        if `is` != nil {
+            attributes["is"] = `is`
+        }
+
+        if itemid != nil {
+            attributes["itemid"] = itemid
+        }
+
+        if itemprop != nil {
+            attributes["itemprop"] = itemprop
+        }
+
+        if itemref != nil {
+            attributes["itemref"] = itemref
+        }
+
+        if itemscope != false {
+            attributes["itemscope"] = itemscope ? "" : nil
+        }
+
+        if itemtype != nil {
+            attributes["itemtype"] = itemtype
+        }
+
+        if lang != nil {
+            attributes["lang"] = lang
+        }
+
+        if nonce != nil {
+            attributes["nonce"] = nonce
+        }
+
+        if role != nil {
+            attributes["role"] = role
+        }
+
+        if slot != nil {
+            attributes["slot"] = slot
+        }
+
+        if spellcheck != false {
+            attributes["spellcheck"] = spellcheck ? "" : nil
+        }
+
+        if style != nil {
+            attributes["style"] = style
+        }
+
+        if tabindex != nil {
+            attributes["tabindex"] = tabindex
+        }
+
+        if title != nil {
+            attributes["title"] = title
+        }
+
+        if translate != nil {
+            attributes["translate"] = translate
+        }
 
         attributes.merge(customAttributes) { _, b in b }
 

@@ -50,11 +50,11 @@ final class HTMLTests: XCTestCase {
     func testEmptyElements() {
         let emptyElement = br()
 
-        XCTAssertEqual(String(describing: emptyElement), "\n<br/>")
+        XCTAssertEqual(String(describing: emptyElement), "<br/>")
 
         let nonEmptyElement = p()
 
-        XCTAssertEqual(String(describing: nonEmptyElement), "\n<p>\n</p>")
+        XCTAssertEqual(String(describing: nonEmptyElement), "<p>\n</p>")
     }
 
     func testIfBlock() {
@@ -159,6 +159,17 @@ final class HTMLTests: XCTestCase {
         XCTAssertComponents(textMode, "<div>", "<p>", "<span><mark>Test</mark></span>", "</p>", "</div>")
     }
 
+    func testTextareaTrimming() {
+        let node = textarea {
+            """
+            Hello
+            World
+            """
+        }
+
+        XCTAssertEqual(String(describing: node), "<textarea>Hello\nWorld</textarea>")
+    }
+
     func testVisitorUppercase() {
         struct UppercaseVisitor: Visitor {
             func visitText(text: String) -> Node {
@@ -196,7 +207,7 @@ final class HTMLTests: XCTestCase {
             func visitText(text: String) -> [String] {
                 [ text ]
             }
-            
+
             func visitRaw(raw: String) -> [String] {
                 []
             }

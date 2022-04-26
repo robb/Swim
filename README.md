@@ -1,4 +1,4 @@
-# Swim – Swift Marktup
+# Swim – Swift Markup
 
 A DSL for building HTML documents with Swift [function builders].
 

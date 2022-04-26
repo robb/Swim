@@ -76,24 +76,31 @@ public extension Visitor where Result == Void {
         if let child = child {
             visitNode(child)
         }
+        return
     }
 
     func visitText(text: String) -> Result {
+        return
     }
 
     func visitRaw(raw: String) -> Result {
+        return
     }
 
     func visitComment(text: String) -> Result {
+        return
     }
 
     func visitDocumentType(name: String) -> Result {
+        return
     }
 
     func visitFragment(children: [Node]) -> Result {
         children.forEach(visitNode)
+        return
     }
 
     func visitTrim() -> Result {
+        return
     }
 }

@@ -4,9 +4,14 @@ struct Tag {
     struct Properties: OptionSet {
         let rawValue: Int
 
-        static let none               = Properties([])
-        static let emptyElement       = Properties(rawValue: 1 << 0)
-        static let textLevelSemantics = Properties(rawValue: 1 << 1)
+        static let none                   = Properties([])
+        static let emptyElement           = Properties(rawValue: 1 << 0)
+        static let textLevelSemantics     = Properties(rawValue: 1 << 1)
+        static let prenormalizeWhitespace = Properties(rawValue: 1 << 2)
+
+        var trimChildrenWhitepsace: Bool {
+            contains(.textLevelSemantics) || contains(.prenormalizeWhitespace)
+        }
     }
 
     var name: String
@@ -91,6 +96,8 @@ extension Tag {
     var dot: TokenSyntax { SyntaxFactory.makePeriodToken() }
 
     // Keywords
+
+    var `if`: TokenSyntax { SyntaxFactory.makeIfKeyword(trailingTrivia: .spaces(1)) }
 
     var `in`: TokenSyntax { SyntaxFactory.makeInKeyword(leadingTrivia: .spaces(1), trailingTrivia: .spaces(1)) }
 
@@ -252,23 +259,55 @@ extension Tag {
                     // Assign attributes to dictionary
                     for attribute in attributes {
                         body.addStatement(CodeBlockItemSyntax {
-                            $0.useItem(Syntax(SequenceExprSyntax {
-                                $0.addElement(ExprSyntax(SubscriptExprSyntax {
-                                    $0.useCalledExpression(ExprSyntax(IdentifierExprSyntax {
-                                        $0.useIdentifier(attributesIdentifier)
+                            $0.useItem(Syntax(IfStmtSyntax {
+                                $0.useIfKeyword(`if`.withLeadingTrivia(format.leading()))
+
+                                $0.addCondition(ConditionElementSyntax {
+                                    $0.useCondition(Syntax(ExpressionStmtSyntax {
+                                        $0.useExpression(ExprSyntax(SequenceExprSyntax {
+                                            $0.addElement(ExprSyntax(IdentifierExprSyntax {
+                                                $0.useIdentifier(SyntaxFactory.makeIdentifier(attribute.name.escapedIfNeeded))
+                                            }))
+
+                                            $0.addElement(ExprSyntax(BinaryOperatorExprSyntax {
+                                                $0.useOperatorToken(SyntaxFactory.makeBinaryOperator("!=")
+                                                                        .withLeadingTrivia(.spaces(1))
+                                                                        .withTrailingTrivia(.spaces(1)))
+                                            }))
+
+                                            $0.addElement(attribute.buildDefaultValue(format))
+                                        }))
                                     }))
-                                    $0.useLeftBracket(leftBracket)
-                                    $0.addArgument(TupleExprElementSyntax {
-                                        $0.useExpression(ExprSyntax(SyntaxFactory.makeStringLiteralExpr(attribute.name)))
-                                    })
-                                    $0.useRightBracket(rightBracket)
-                                }))
-                                $0.addElement(ExprSyntax(AssignmentExprSyntax {
-                                    $0.useAssignToken(equal)
-                                }))
-                                $0.addElement(attribute.buildValueExpression(format))
-                            }))
-                        }.withLeadingTrivia(format.leading()).withTrailingTrivia(.newlines(1)))
+                                })
+
+                                $0.useBody(CodeBlockSyntax { body in
+                                    body.useLeftBrace(leftBrace.withLeadingTrivia([.spaces(1)]).withTrailingTrivia(.newlines(1)))
+
+                                    format.indent {
+                                        body.addStatement(CodeBlockItemSyntax {
+                                            $0.useItem(Syntax(SequenceExprSyntax {
+                                                $0.addElement(ExprSyntax(SubscriptExprSyntax {
+                                                    $0.useCalledExpression(ExprSyntax(IdentifierExprSyntax {
+                                                        $0.useIdentifier(attributesIdentifier)
+                                                    }))
+                                                    $0.useLeftBracket(leftBracket)
+                                                    $0.addArgument(TupleExprElementSyntax {
+                                                        $0.useExpression(ExprSyntax(SyntaxFactory.makeStringLiteralExpr(attribute.name)))
+                                                    })
+                                                    $0.useRightBracket(rightBracket)
+                                                }))
+                                                $0.addElement(ExprSyntax(AssignmentExprSyntax {
+                                                    $0.useAssignToken(equal)
+                                                }))
+                                                $0.addElement(attribute.buildValueExpression(format))
+                                            }))
+                                        }.withLeadingTrivia(format.leading()).withTrailingTrivia(.newlines(1)))
+                                    }
+
+                                    body.useRightBrace(rightBrace.withLeadingTrivia(format.leading()))
+                                })
+                            }.withLeadingTrivia([.newlines(2), format.leading()])))
+                        })
                     }
 
                     // Merge in custom attributes
@@ -400,7 +439,7 @@ extension Tag {
             $0.useRightParen(rightParen)
         })
 
-        if !properties.contains(.textLevelSemantics) {
+        if !properties.trimChildrenWhitepsace {
             return asNodeCall
         }
 

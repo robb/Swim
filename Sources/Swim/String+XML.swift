@@ -2,27 +2,40 @@ import Foundation
 
 extension String {
     func addingXMLEncoding() -> String {
-        var result = ""
-        result.reserveCapacity(count)
-        return unicodeScalars.reduce(into: result, { $0.append($1.named_escapingIfNeeded) })
+        guard unicodeScalars.contains(where: \.needsEscaping) else {
+            return self
+        }
+
+        return unicodeScalars.reduce(into: "", { $0.appendEscaped($1) })
     }
 }
 
 extension UnicodeScalar {
-    fileprivate var named_escapingIfNeeded: String {
-        switch value {
-        case ("&" as Unicode.Scalar).value:
-            return "&amp;"
-        case ("<" as Unicode.Scalar).value:
-            return "&lt;"
-        case (">" as Unicode.Scalar).value:
-            return "&gt;"
-        case ("\'" as Unicode.Scalar).value:
-            return "&apos;"
-        case ("\"" as Unicode.Scalar).value:
-            return "&quot;"
+    fileprivate var needsEscaping: Bool {
+        switch self {
+        case "&", "<", ">", "\'", "\"":
+            return true
         default:
-            return String(self)
+            return false
+        }
+    }
+}
+
+extension String {
+    fileprivate mutating func appendEscaped(_ unicodeScalar: Unicode.Scalar) {
+        switch unicodeScalar {
+        case "&":
+            append("&amp;")
+        case "<":
+            append("&lt;")
+        case ">":
+            append("&gt;")
+        case "\'":
+            append("&apos;")
+        case "\"":
+            append("&quot;")
+        default:
+            append(Character(unicodeScalar))
         }
     }
 }
