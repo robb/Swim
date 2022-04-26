@@ -81,10 +81,10 @@ public struct ATag: Tag {
         title: String? = nil,
         translate: String? = nil,
         type: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -293,10 +293,10 @@ public struct AbbrTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -473,10 +473,10 @@ public struct AddressTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -671,9 +671,9 @@ public struct AreaTag: Tag {
         target: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:]
+        customAttributes: [AttributeKey: String] = [:]
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -886,10 +886,10 @@ public struct ArticleTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -1066,10 +1066,10 @@ public struct AsideTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -1260,10 +1260,10 @@ public struct AudioTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -1468,10 +1468,10 @@ public struct BTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -1652,9 +1652,9 @@ public struct BaseTag: Tag {
         target: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:]
+        customAttributes: [AttributeKey: String] = [:]
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -1839,10 +1839,10 @@ public struct BDITag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -2019,10 +2019,10 @@ public struct BDOTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -2201,10 +2201,10 @@ public struct BlockquoteTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -2385,10 +2385,10 @@ public struct BodyTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -2565,9 +2565,9 @@ public struct BRTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:]
+        customAttributes: [AttributeKey: String] = [:]
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -2764,10 +2764,10 @@ public struct ButtonTag: Tag {
         translate: String? = nil,
         type: String? = nil,
         value: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -2988,10 +2988,10 @@ public struct CanvasTag: Tag {
         title: String? = nil,
         translate: String? = nil,
         width: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -3176,10 +3176,10 @@ public struct CaptionTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -3356,10 +3356,10 @@ public struct CiteTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -3536,10 +3536,10 @@ public struct CodeTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -3718,9 +3718,9 @@ public struct ColTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:]
+        customAttributes: [AttributeKey: String] = [:]
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -3903,10 +3903,10 @@ public struct ColgroupTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -4089,10 +4089,10 @@ public struct DataTag: Tag {
         title: String? = nil,
         translate: String? = nil,
         value: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -4273,10 +4273,10 @@ public struct DatalistTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -4453,10 +4453,10 @@ public struct DDTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -4637,10 +4637,10 @@ public struct DelTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -4827,10 +4827,10 @@ public struct DetailsTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -5011,10 +5011,10 @@ public struct DFNTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -5193,10 +5193,10 @@ public struct DialogTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -5377,10 +5377,10 @@ public struct DivTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -5557,10 +5557,10 @@ public struct DLTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -5737,10 +5737,10 @@ public struct DTTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -5917,10 +5917,10 @@ public struct EmTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -6105,9 +6105,9 @@ public struct EmbedTag: Tag {
         translate: String? = nil,
         type: String? = nil,
         width: String? = nil,
-        customAttributes: [String: String] = [:]
+        customAttributes: [AttributeKey: String] = [:]
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -6306,10 +6306,10 @@ public struct FieldsetTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -6498,10 +6498,10 @@ public struct FigcaptionTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -6678,10 +6678,10 @@ public struct FigureTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -6858,10 +6858,10 @@ public struct FooterTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -7054,10 +7054,10 @@ public struct FormTag: Tag {
         target: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if acceptCharset != nil {
@@ -7266,10 +7266,10 @@ public struct H1Tag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -7446,10 +7446,10 @@ public struct H2Tag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -7626,10 +7626,10 @@ public struct H3Tag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -7806,10 +7806,10 @@ public struct H4Tag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -7986,10 +7986,10 @@ public struct H5Tag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -8166,10 +8166,10 @@ public struct H6Tag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -8346,10 +8346,10 @@ public struct HeadTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -8526,10 +8526,10 @@ public struct HeaderTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -8706,10 +8706,10 @@ public struct HgroupTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -8886,9 +8886,9 @@ public struct HRTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:]
+        customAttributes: [AttributeKey: String] = [:]
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -9067,10 +9067,10 @@ public struct HTMLTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -9251,10 +9251,10 @@ public struct ITag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -9451,10 +9451,10 @@ public struct IFrameTag: Tag {
         title: String? = nil,
         translate: String? = nil,
         width: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -9695,9 +9695,9 @@ public struct ImgTag: Tag {
         translate: String? = nil,
         usemap: String? = nil,
         width: String? = nil,
-        customAttributes: [String: String] = [:]
+        customAttributes: [AttributeKey: String] = [:]
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -9982,9 +9982,9 @@ public struct InputTag: Tag {
         type: String? = nil,
         value: String? = nil,
         width: String? = nil,
-        customAttributes: [String: String] = [:]
+        customAttributes: [AttributeKey: String] = [:]
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accept != nil {
@@ -10285,10 +10285,10 @@ public struct InsTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -10473,10 +10473,10 @@ public struct KBDTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -10655,10 +10655,10 @@ public struct LabelTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -10839,10 +10839,10 @@ public struct legendTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -11021,10 +11021,10 @@ public struct LITag: Tag {
         title: String? = nil,
         translate: String? = nil,
         value: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -11231,9 +11231,9 @@ public struct LinkTag: Tag {
         title: String? = nil,
         translate: String? = nil,
         type: String? = nil,
-        customAttributes: [String: String] = [:]
+        customAttributes: [AttributeKey: String] = [:]
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -11462,10 +11462,10 @@ public struct MainTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -11644,10 +11644,10 @@ public struct MapTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -11828,10 +11828,10 @@ public struct MarkTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -12008,10 +12008,10 @@ public struct MathTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -12188,10 +12188,10 @@ public struct MenuTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -12376,9 +12376,9 @@ public struct MetaTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:]
+        customAttributes: [AttributeKey: String] = [:]
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -12583,10 +12583,10 @@ public struct MeterTag: Tag {
         title: String? = nil,
         translate: String? = nil,
         value: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -12787,10 +12787,10 @@ public struct NavTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -12967,10 +12967,10 @@ public struct NoscriptTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -13161,10 +13161,10 @@ public struct ObjectTag: Tag {
         type: String? = nil,
         usemap: String? = nil,
         width: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -13375,10 +13375,10 @@ public struct OLTag: Tag {
         title: String? = nil,
         translate: String? = nil,
         type: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -13571,10 +13571,10 @@ public struct OptgroupTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -13767,10 +13767,10 @@ public struct OptionTag: Tag {
         title: String? = nil,
         translate: String? = nil,
         value: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -13969,10 +13969,10 @@ public struct OutputTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -14161,10 +14161,10 @@ public struct PTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -14345,9 +14345,9 @@ public struct ParamTag: Tag {
         title: String? = nil,
         translate: String? = nil,
         value: String? = nil,
-        customAttributes: [String: String] = [:]
+        customAttributes: [AttributeKey: String] = [:]
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -14532,10 +14532,10 @@ public struct PictureTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -14712,10 +14712,10 @@ public struct PreTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -14896,10 +14896,10 @@ public struct ProgressTag: Tag {
         title: String? = nil,
         translate: String? = nil,
         value: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -15086,10 +15086,10 @@ public struct QTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -15270,10 +15270,10 @@ public struct RPTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -15450,10 +15450,10 @@ public struct RTTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -15630,10 +15630,10 @@ public struct RubyTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -15810,10 +15810,10 @@ public struct STag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -15990,10 +15990,10 @@ public struct SampTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -16186,10 +16186,10 @@ public struct ScriptTag: Tag {
         title: String? = nil,
         translate: String? = nil,
         type: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -16398,10 +16398,10 @@ public struct SectionTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -16592,10 +16592,10 @@ public struct SelectTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -16802,10 +16802,10 @@ public struct SlotTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -16986,10 +16986,10 @@ public struct SmallTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -17176,9 +17176,9 @@ public struct SourceTag: Tag {
         title: String? = nil,
         translate: String? = nil,
         type: String? = nil,
-        customAttributes: [String: String] = [:]
+        customAttributes: [AttributeKey: String] = [:]
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -17375,10 +17375,10 @@ public struct SpanTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -17555,10 +17555,10 @@ public struct StrongTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -17737,10 +17737,10 @@ public struct StyleTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -17921,10 +17921,10 @@ public struct SubTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -18101,10 +18101,10 @@ public struct SummaryTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -18281,10 +18281,10 @@ public struct SupTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -18461,10 +18461,10 @@ public struct SVGTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -18641,10 +18641,10 @@ public struct TableTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -18821,10 +18821,10 @@ public struct TBodyTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -19007,10 +19007,10 @@ public struct TDTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -19199,10 +19199,10 @@ public struct TemplateTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -19405,10 +19405,10 @@ public struct TextareaTag: Tag {
         title: String? = nil,
         translate: String? = nil,
         wrap: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -19637,10 +19637,10 @@ public struct TFootTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -19827,10 +19827,10 @@ public struct THTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if abbr != nil {
@@ -20027,10 +20027,10 @@ public struct THeadTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -20209,10 +20209,10 @@ public struct TimeTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -20393,10 +20393,10 @@ public struct TitleTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -20573,10 +20573,10 @@ public struct TRTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -20763,9 +20763,9 @@ public struct TrackTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:]
+        customAttributes: [AttributeKey: String] = [:]
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -20962,10 +20962,10 @@ public struct UTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -21142,10 +21142,10 @@ public struct ULTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -21322,10 +21322,10 @@ public struct VarTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -21524,10 +21524,10 @@ public struct VideoTag: Tag {
         title: String? = nil,
         translate: String? = nil,
         width: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -21748,9 +21748,9 @@ public struct WBRTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:]
+        customAttributes: [AttributeKey: String] = [:]
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {

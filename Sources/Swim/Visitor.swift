@@ -3,7 +3,7 @@ import Foundation
 public protocol Visitor {
     associatedtype Result
 
-    func visitElement(name: String, attributes: [String: AnyHashable], child: Node?) -> Result
+    func visitElement(name: String, attributes: [AttributeKey: AnyHashable], child: Node?) -> Result
 
     func visitText(text: String) -> Result
     
@@ -42,7 +42,7 @@ extension Visitor {
 }
 
 public extension Visitor where Result == Node {
-    func visitElement(name: String, attributes: [String: AnyHashable], child: Node?) -> Result {
+    func visitElement(name: String, attributes: [AttributeKey: AnyHashable], child: Node?) -> Result {
         .element(name, attributes, child.map(visitNode))
     }
 
@@ -72,7 +72,7 @@ public extension Visitor where Result == Node {
 }
 
 public extension Visitor where Result == Void {
-    func visitElement(name: String, attributes: [String: String], child: Node?) -> Result {
+    func visitElement(name: String, attributes: [AttributeKey: String], child: Node?) -> Result {
         if let child = child {
             visitNode(child)
         }

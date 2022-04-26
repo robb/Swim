@@ -244,7 +244,7 @@ extension Tag {
                                 $0.usePattern(PatternSyntax(SyntaxFactory.makeIdentifierPattern(identifier: attributesIdentifier)))
                                 $0.useTypeAnnotation(TypeAnnotationSyntax {
                                     $0.useColon(colon)
-                                    $0.useType(buildStringsToStringsDicitonaryType(format))
+                                    $0.useType(buildAttributeKeyToStringsDicitonaryType(format))
                                 })
                                 $0.useInitializer(InitializerClauseSyntax {
                                     $0.useEqual(equal)
@@ -455,7 +455,7 @@ extension Tag {
         FunctionParameterSyntax {
             $0.useSecondName(SyntaxFactory.makeIdentifier("customAttributes"))
             $0.useColon(colon)
-            $0.useType(buildStringsToStringsDicitonaryType(format))
+            $0.useType(buildAttributeKeyToStringsDicitonaryType(format))
             $0.useDefaultArgument(InitializerClauseSyntax{
                 $0.useEqual(equal)
                 $0.useValue(buildEmptyDictionaryLiteral(format))
@@ -508,14 +508,18 @@ extension Tag {
         ExprSyntax(SyntaxFactory.makeDictionaryExpr(leftSquare: leftBracket, content: Syntax(SyntaxFactory.makeColonToken()), rightSquare: rightBracket))
     }
 
-    func buildStringsToStringsDicitonaryType(_ format: Format) -> TypeSyntax {
+    func buildAttributeKeyToStringsDicitonaryType(_ format: Format) -> TypeSyntax {
+        let attributeKeyType = TypeSyntax(SimpleTypeIdentifierSyntax {
+            $0.useName(SyntaxFactory.makeIdentifier("AttributeKey"))
+        })
+
         let stringType = TypeSyntax(SimpleTypeIdentifierSyntax {
             $0.useName(SyntaxFactory.makeIdentifier("String"))
         })
 
         return TypeSyntax(SyntaxFactory.makeDictionaryType(
             leftSquareBracket: leftBracket,
-            keyType: stringType,
+            keyType: attributeKeyType,
             colon: colon,
             valueType: stringType,
             rightSquareBracket: rightBracket

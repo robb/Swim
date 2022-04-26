@@ -2,7 +2,7 @@ import Foundation
 
 public enum Node: Hashable {
     // The `Node`'s name, attribute and children.
-    indirect case element(String, [String: AnyHashable], Node?)
+    indirect case element(String, [AttributeKey: AnyHashable], Node?)
 
     // The `Node`'s text contents.
     case text(String)
@@ -58,7 +58,8 @@ extension Node: TextOutputStreamable {
 
             for (key, value) in attributes.sorted(by: { $0.0 < $1.0 }) {
                 target.write(" ")
-                target.write(key)
+
+                key.write(to: &target)
 
                 let stringValue: String
 

@@ -42,7 +42,7 @@ final class SwimTests: XCTestCase {
             "color": color
         ], nil)
 
-        XCTAssertEqual(n.rendered, "\n<custom color=\"1.0,0.5,0.5\"/>")
+        XCTAssertEqual(n.rendered, "<custom color=\"1.0,0.5,0.5\"/>")
 
         if case let .element(_, attributes, _) = n {
             XCTAssertEqual(attributes["color"]?.base as? Color, color)
