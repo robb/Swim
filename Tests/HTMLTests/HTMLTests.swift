@@ -276,7 +276,7 @@ final class HTMLTests: XCTestCase {
             var denyList: [Tag]
 
             func visitElement(name: String, attributes: [AttributeKey: AnyHashable], child: Node?) -> Node {
-                if denyList.contains(where: { $0.elementName == name }) {
+                if denyList.contains(where: { type(of: $0).elementName == name }) {
                     let original = Node.element(name, attributes, child)
 
                     return %.text(String(describing: original))

@@ -107,6 +107,8 @@ extension Tag {
 
     var `public`: TokenSyntax { SyntaxFactory.makePublicKeyword().withTrailingTrivia(.spaces(1)) }
 
+    var `static`: TokenSyntax { SyntaxFactory.makeStaticKeyword().withTrailingTrivia(.spaces(1)) }
+
     var `func`: TokenSyntax { SyntaxFactory.makeFuncKeyword().withTrailingTrivia(.spaces(1)) }
 
     var `var`: TokenSyntax { SyntaxFactory.makeVarKeyword().withTrailingTrivia(.spaces(1)) as TokenSyntax }
@@ -137,6 +139,7 @@ extension Tag {
                     member.addMember(MemberDeclListItemSyntax {
                         $0.useDecl(DeclSyntax(VariableDeclSyntax {
                             $0.addAttribute(Syntax(`public`.withLeadingTrivia(format.leading())))
+                            $0.addAttribute(Syntax(`static`.withLeadingTrivia(format.leading())))
                             $0.useLetOrVarKeyword(`let`)
                             $0.addBinding(PatternBindingSyntax {
                                 $0.usePattern(PatternSyntax(SyntaxFactory.makeIdentifierPattern(identifier: elementNameIdentifier)))
@@ -364,8 +367,14 @@ extension Tag {
                                 }))
                                 $0.useLeftParen(leftParen)
                                 $0.addArgument(TupleExprElementSyntax {
-                                    $0.useExpression(ExprSyntax(IdentifierExprSyntax {
-                                        $0.useIdentifier(elementNameIdentifier)
+                                    $0.useExpression(ExprSyntax(FunctionCallExprSyntax {
+                                        $0.useCalledExpression(ExprSyntax(MemberAccessExprSyntax {
+                                            $0.useBase(ExprSyntax(IdentifierExprSyntax {
+                                                $0.useIdentifier(SyntaxFactory.makeIdentifier("Self"))
+                                            }))
+                                            $0.useDot(dot)
+                                            $0.useName(elementNameIdentifier)
+                                        }))
                                     }))
                                     $0.useTrailingComma(comma)
                                 })
