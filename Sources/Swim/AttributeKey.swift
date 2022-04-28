@@ -4,6 +4,7 @@ public struct AttributeKey: Hashable {
     internal enum Storage: Hashable, Comparable {
         case raw(String)
         case scoped(String, String)
+        case ephemeral(ObjectIdentifier)
     }
 
     var storage: Storage
@@ -24,17 +25,31 @@ public struct AttributeKey: Hashable {
         return nil
     }
 
-    public var name: AnyHashable {
+    public var name: String? {
         switch storage {
         case let .raw(string):
             return string
         case let .scoped(_, string):
             return string
+        case .ephemeral:
+            return nil
         }
     }
 
     public static func data(_ value: String) -> Self {
         Self(storage: .scoped("data", value))
+    }
+
+    public static func ephemeral(_ value: ObjectIdentifier) -> Self {
+        Self(storage: .ephemeral(value))
+    }
+
+    internal var isEphemeral: Bool {
+        if case .ephemeral = storage {
+            return true
+        }
+
+        return false
     }
 }
 
@@ -65,6 +80,8 @@ extension AttributeKey: TextOutputStreamable {
             namespace.write(to: &target)
             target.write("-")
             key.write(to: &target)
+        case .ephemeral:
+            fatalError("Ephemeral attribute keys must not be serialized.")
         }
     }
 }

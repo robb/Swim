@@ -57,6 +57,10 @@ extension Node: TextOutputStreamable {
             target.write(name)
 
             for (key, value) in attributes.sorted(by: { $0.0 < $1.0 }) {
+                guard !key.isEphemeral else {
+                    continue
+                }
+
                 target.write(" ")
 
                 key.write(to: &target)

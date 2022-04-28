@@ -304,6 +304,65 @@ final class HTMLTests: XCTestCase {
 
         XCTAssertTrue(String(describing: sanitized).contains("&lt;script&gt;"))
     }
+
+    func testCustomAttributes() {
+        struct Counter: TypedAttributeKey {
+            static var defaultValue: Int = 0
+        }
+
+        func customTag(value: Int = 0, @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }) -> Node {
+            Node.element("custom-tag", [.ephemeral(ObjectIdentifier(Counter.self)): value], children().asNode())
+        }
+
+        struct Incrementor: Visitor {
+            func visitElement(name: String, attributes: [AttributeKey : AnyHashable], child: Node?) -> Node {
+                var attributes = attributes
+                attributes[Counter.self] += 1
+
+                return .element(name, attributes, child.map(visitNode))
+            }
+        }
+
+        struct Converter: Visitor {
+            func visitElement(name: String, attributes: [AttributeKey : AnyHashable], child: Node?) -> Node {
+                var attributes = attributes
+                attributes["data-count"] = attributes[Counter.self]
+
+                return .element(name, attributes, child.map(visitNode))
+            }
+        }
+
+        let document = div {
+            customTag {
+                "Hello"
+            }
+        }
+
+        let incremented = Incrementor().visitNode(document)
+
+        XCTAssertTrue(String(describing: document).contains("<custom-tag>"))
+
+        let converted = Converter().visitNode(incremented)
+
+        XCTAssertTrue(String(describing: converted).contains(###"<custom-tag data-count="1">"###))
+    }
+}
+
+private protocol TypedAttributeKey {
+    associatedtype Value: Hashable
+
+    static var defaultValue: Value { get }
+}
+
+private extension Dictionary where Key == AttributeKey, Value == AnyHashable {
+    subscript<T: TypedAttributeKey>(key: T.Type) -> T.Value {
+        get {
+            (self[.ephemeral(ObjectIdentifier(T.self))] as! T.Value?) ?? T.defaultValue
+        }
+        set {
+            self[.ephemeral(ObjectIdentifier(T.self))] = newValue
+        }
+    }
 }
 
 func XCTAssertComponents(_ node: Node, _ components: String..., message: @autoclosure () -> String = "", file: StaticString = #file, line: UInt = #line) {
