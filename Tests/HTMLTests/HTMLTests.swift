@@ -306,31 +306,39 @@ final class HTMLTests: XCTestCase {
     }
 
     func testCustomAttributes() {
-        struct Counter: TypedAttributeKey {
-            static var defaultValue: Int = 0
-        }
+        struct CustomTag: Tag {
+            static let elementName: String = "custom-tag"
 
-        func customTag(value: Int = 0, @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }) -> Node {
-            Node.element("custom-tag", [.ephemeral(ObjectIdentifier(Counter.self)): value], children().asNode())
-        }
+            private struct Count: TypedAttributeKey {
+                static var defaultValue: Int = 0
+            }
 
-        struct Incrementor: Visitor {
-            func visitElement(name: String, attributes: [AttributeKey : AnyHashable], child: Node?) -> Node {
-                var attributes = attributes
-                attributes[Counter.self] += 1
+            private struct Incrementor: AttributeRewriter {
+                func rewriteElement(name: String, attributes: inout [AttributeKey: AnyHashable]) {
+                    guard name == elementName else { return }
 
-                return .element(name, attributes, child.map(visitNode))
+                    attributes[Count.self] += 1
+                }
+            }
+
+            private struct Converter: AttributeRewriter {
+                func rewriteElement(name: String, attributes: inout [AttributeKey: AnyHashable]) {
+                    guard name == elementName else { return }
+
+                    attributes["data-count"] = attributes[Count.self]
+                }
+            }
+
+            static let incrementor: some AttributeRewriter = Incrementor()
+
+            static let converter: some AttributeRewriter = Converter()
+
+            public func callAsFunction(value: Int = 0, @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }) -> Node {
+                Node.element(Self.elementName, [.ephemeral(ObjectIdentifier(Count.self)): value], children().asNode())
             }
         }
 
-        struct Converter: Visitor {
-            func visitElement(name: String, attributes: [AttributeKey : AnyHashable], child: Node?) -> Node {
-                var attributes = attributes
-                attributes["data-count"] = attributes[Counter.self]
-
-                return .element(name, attributes, child.map(visitNode))
-            }
-        }
+        let customTag = CustomTag()
 
         let document = div {
             customTag {
@@ -338,11 +346,11 @@ final class HTMLTests: XCTestCase {
             }
         }
 
-        let incremented = Incrementor().visitNode(document)
+        let incremented = CustomTag.incrementor.visitNode(document)
 
         XCTAssertTrue(String(describing: document).contains("<custom-tag>"))
 
-        let converted = Converter().visitNode(incremented)
+        let converted = CustomTag.converter.visitNode(incremented)
 
         XCTAssertTrue(String(describing: converted).contains(###"<custom-tag data-count="1">"###))
     }
