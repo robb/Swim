@@ -107,6 +107,8 @@ extension Tag {
 
     var `public`: TokenSyntax { SyntaxFactory.makePublicKeyword().withTrailingTrivia(.spaces(1)) }
 
+    var `static`: TokenSyntax { SyntaxFactory.makeStaticKeyword().withTrailingTrivia(.spaces(1)) }
+
     var `func`: TokenSyntax { SyntaxFactory.makeFuncKeyword().withTrailingTrivia(.spaces(1)) }
 
     var `var`: TokenSyntax { SyntaxFactory.makeVarKeyword().withTrailingTrivia(.spaces(1)) as TokenSyntax }
@@ -137,6 +139,7 @@ extension Tag {
                     member.addMember(MemberDeclListItemSyntax {
                         $0.useDecl(DeclSyntax(VariableDeclSyntax {
                             $0.addAttribute(Syntax(`public`.withLeadingTrivia(format.leading())))
+                            $0.addAttribute(Syntax(`static`.withLeadingTrivia(format.leading())))
                             $0.useLetOrVarKeyword(`let`)
                             $0.addBinding(PatternBindingSyntax {
                                 $0.usePattern(PatternSyntax(SyntaxFactory.makeIdentifierPattern(identifier: elementNameIdentifier)))
@@ -244,7 +247,7 @@ extension Tag {
                                 $0.usePattern(PatternSyntax(SyntaxFactory.makeIdentifierPattern(identifier: attributesIdentifier)))
                                 $0.useTypeAnnotation(TypeAnnotationSyntax {
                                     $0.useColon(colon)
-                                    $0.useType(buildStringsToStringsDicitonaryType(format))
+                                    $0.useType(buildAttributeKeyToStringsDicitonaryType(format))
                                 })
                                 $0.useInitializer(InitializerClauseSyntax {
                                     $0.useEqual(equal)
@@ -364,8 +367,14 @@ extension Tag {
                                 }))
                                 $0.useLeftParen(leftParen)
                                 $0.addArgument(TupleExprElementSyntax {
-                                    $0.useExpression(ExprSyntax(IdentifierExprSyntax {
-                                        $0.useIdentifier(elementNameIdentifier)
+                                    $0.useExpression(ExprSyntax(FunctionCallExprSyntax {
+                                        $0.useCalledExpression(ExprSyntax(MemberAccessExprSyntax {
+                                            $0.useBase(ExprSyntax(IdentifierExprSyntax {
+                                                $0.useIdentifier(SyntaxFactory.makeIdentifier("Self"))
+                                            }))
+                                            $0.useDot(dot)
+                                            $0.useName(elementNameIdentifier)
+                                        }))
                                     }))
                                     $0.useTrailingComma(comma)
                                 })
@@ -455,7 +464,7 @@ extension Tag {
         FunctionParameterSyntax {
             $0.useSecondName(SyntaxFactory.makeIdentifier("customAttributes"))
             $0.useColon(colon)
-            $0.useType(buildStringsToStringsDicitonaryType(format))
+            $0.useType(buildAttributeKeyToStringsDicitonaryType(format))
             $0.useDefaultArgument(InitializerClauseSyntax{
                 $0.useEqual(equal)
                 $0.useValue(buildEmptyDictionaryLiteral(format))
@@ -508,14 +517,18 @@ extension Tag {
         ExprSyntax(SyntaxFactory.makeDictionaryExpr(leftSquare: leftBracket, content: Syntax(SyntaxFactory.makeColonToken()), rightSquare: rightBracket))
     }
 
-    func buildStringsToStringsDicitonaryType(_ format: Format) -> TypeSyntax {
+    func buildAttributeKeyToStringsDicitonaryType(_ format: Format) -> TypeSyntax {
+        let attributeKeyType = TypeSyntax(SimpleTypeIdentifierSyntax {
+            $0.useName(SyntaxFactory.makeIdentifier("AttributeKey"))
+        })
+
         let stringType = TypeSyntax(SimpleTypeIdentifierSyntax {
             $0.useName(SyntaxFactory.makeIdentifier("String"))
         })
 
         return TypeSyntax(SyntaxFactory.makeDictionaryType(
             leftSquareBracket: leftBracket,
-            keyType: stringType,
+            keyType: attributeKeyType,
             colon: colon,
             valueType: stringType,
             rightSquareBracket: rightBracket

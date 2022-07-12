@@ -9,7 +9,7 @@ final class HTMLTests: XCTestCase {
             head {
                 meta(charset: "utf-8", content: "text/html", httpEquiv: "Content-Type")
             }
-            body(customAttributes: [ "data-foo": "bar" ]) {
+            body(customAttributes: [ .data("foo"): "bar" ]) {
                 article(class: "readme modern") {
                     header {
                         h1 {
@@ -200,7 +200,7 @@ final class HTMLTests: XCTestCase {
         struct TextExtractionVisitor: Visitor {
             typealias Result = [String]
 
-            func visitElement(name: String, attributes: [String : String], child: Node?) -> [String] {
+            func visitElement(name: String, attributes: [AttributeKey: AnyHashable], child: Node?) -> [String] {
                 child.map(visitNode) ?? []
             }
 
@@ -275,8 +275,8 @@ final class HTMLTests: XCTestCase {
         struct Sanitizer: Visitor {
             var denyList: [Tag]
 
-            func visitElement(name: String, attributes: [String : String], child: Node?) -> Node {
-                if denyList.contains(where: { $0.elementName == name }) {
+            func visitElement(name: String, attributes: [AttributeKey: AnyHashable], child: Node?) -> Node {
+                if denyList.contains(where: { type(of: $0).elementName == name }) {
                     let original = Node.element(name, attributes, child)
 
                     return %.text(String(describing: original))
@@ -303,6 +303,73 @@ final class HTMLTests: XCTestCase {
         let sanitized = sanitizer.visitNode(document)
 
         XCTAssertTrue(String(describing: sanitized).contains("&lt;script&gt;"))
+    }
+
+    func testCustomAttributes() {
+        struct CustomTag: Tag {
+            static let elementName: String = "custom-tag"
+
+            private struct Count: TypedAttributeKey {
+                static var defaultValue: Int = 0
+            }
+
+            private struct Incrementor: AttributeRewriter {
+                func rewriteElement(name: String, attributes: inout [AttributeKey: AnyHashable]) {
+                    guard name == elementName else { return }
+
+                    attributes[Count.self] += 1
+                }
+            }
+
+            private struct Converter: AttributeRewriter {
+                func rewriteElement(name: String, attributes: inout [AttributeKey: AnyHashable]) {
+                    guard name == elementName else { return }
+
+                    attributes["data-count"] = attributes[Count.self]
+                }
+            }
+
+            static let incrementor: some AttributeRewriter = Incrementor()
+
+            static let converter: some AttributeRewriter = Converter()
+
+            public func callAsFunction(value: Int = 0, @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }) -> Node {
+                Node.element(Self.elementName, [.ephemeral(ObjectIdentifier(Count.self)): value], children().asNode())
+            }
+        }
+
+        let customTag = CustomTag()
+
+        let document = div {
+            customTag {
+                "Hello"
+            }
+        }
+
+        let incremented = CustomTag.incrementor.visitNode(document)
+
+        XCTAssertTrue(String(describing: document).contains("<custom-tag>"))
+
+        let converted = CustomTag.converter.visitNode(incremented)
+
+        XCTAssertTrue(String(describing: converted).contains(###"<custom-tag data-count="1">"###))
+    }
+}
+
+private protocol TypedAttributeKey {
+    associatedtype Value: Hashable
+
+    static var defaultValue: Value { get }
+}
+
+private extension Dictionary where Key == AttributeKey, Value == AnyHashable {
+    subscript<T: TypedAttributeKey>(key: T.Type) -> T.Value {
+        get {
+            (self[.ephemeral(ObjectIdentifier(T.self))] as! T.Value?) ?? T.defaultValue
+        }
+        set {
+            self[.ephemeral(ObjectIdentifier(T.self))] = newValue
+        }
     }
 }
 

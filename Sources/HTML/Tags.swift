@@ -5,7 +5,7 @@
 
 
 public struct ATag: Tag {
-    public let elementName: String = "a"
+    public     static let elementName: String = "a"
 
     /// a
     ///
@@ -81,10 +81,10 @@ public struct ATag: Tag {
         title: String? = nil,
         translate: String? = nil,
         type: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -225,7 +225,7 @@ public struct ATag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, %children().asNode()%)
+        return .element(Self.elementName, attributes, %children().asNode()%)
     }
 }
 
@@ -233,7 +233,7 @@ public let a = ATag()
 
 
 public struct AbbrTag: Tag {
-    public let elementName: String = "abbr"
+    public     static let elementName: String = "abbr"
 
     /// abbr
     ///
@@ -293,10 +293,10 @@ public struct AbbrTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -405,7 +405,7 @@ public struct AbbrTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, %children().asNode()%)
+        return .element(Self.elementName, attributes, %children().asNode()%)
     }
 }
 
@@ -413,7 +413,7 @@ public let abbr = AbbrTag()
 
 
 public struct AddressTag: Tag {
-    public let elementName: String = "address"
+    public     static let elementName: String = "address"
 
     /// address
     ///
@@ -473,10 +473,10 @@ public struct AddressTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -585,7 +585,7 @@ public struct AddressTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -593,7 +593,7 @@ public let address = AddressTag()
 
 
 public struct AreaTag: Tag {
-    public let elementName: String = "area"
+    public     static let elementName: String = "area"
 
     /// area
     ///
@@ -671,9 +671,9 @@ public struct AreaTag: Tag {
         target: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:]
+        customAttributes: [AttributeKey: String] = [:]
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -818,7 +818,7 @@ public struct AreaTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, nil)
+        return .element(Self.elementName, attributes, nil)
     }
 }
 
@@ -826,7 +826,7 @@ public let area = AreaTag()
 
 
 public struct ArticleTag: Tag {
-    public let elementName: String = "article"
+    public     static let elementName: String = "article"
 
     /// article
     ///
@@ -886,10 +886,10 @@ public struct ArticleTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -998,7 +998,7 @@ public struct ArticleTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -1006,7 +1006,7 @@ public let article = ArticleTag()
 
 
 public struct AsideTag: Tag {
-    public let elementName: String = "aside"
+    public     static let elementName: String = "aside"
 
     /// aside
     ///
@@ -1066,10 +1066,10 @@ public struct AsideTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -1178,7 +1178,7 @@ public struct AsideTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -1186,7 +1186,7 @@ public let aside = AsideTag()
 
 
 public struct AudioTag: Tag {
-    public let elementName: String = "audio"
+    public     static let elementName: String = "audio"
 
     /// audio
     ///
@@ -1260,10 +1260,10 @@ public struct AudioTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -1400,7 +1400,7 @@ public struct AudioTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -1408,7 +1408,7 @@ public let audio = AudioTag()
 
 
 public struct BTag: Tag {
-    public let elementName: String = "b"
+    public     static let elementName: String = "b"
 
     /// b
     ///
@@ -1468,10 +1468,10 @@ public struct BTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -1580,7 +1580,7 @@ public struct BTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, %children().asNode()%)
+        return .element(Self.elementName, attributes, %children().asNode()%)
     }
 }
 
@@ -1588,7 +1588,7 @@ public let b = BTag()
 
 
 public struct BaseTag: Tag {
-    public let elementName: String = "base"
+    public     static let elementName: String = "base"
 
     /// base
     ///
@@ -1652,9 +1652,9 @@ public struct BaseTag: Tag {
         target: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:]
+        customAttributes: [AttributeKey: String] = [:]
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -1771,7 +1771,7 @@ public struct BaseTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, nil)
+        return .element(Self.elementName, attributes, nil)
     }
 }
 
@@ -1779,7 +1779,7 @@ public let base = BaseTag()
 
 
 public struct BDITag: Tag {
-    public let elementName: String = "bdi"
+    public     static let elementName: String = "bdi"
 
     /// bdi
     ///
@@ -1839,10 +1839,10 @@ public struct BDITag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -1951,7 +1951,7 @@ public struct BDITag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, %children().asNode()%)
+        return .element(Self.elementName, attributes, %children().asNode()%)
     }
 }
 
@@ -1959,7 +1959,7 @@ public let bdi = BDITag()
 
 
 public struct BDOTag: Tag {
-    public let elementName: String = "bdo"
+    public     static let elementName: String = "bdo"
 
     /// bdo
     ///
@@ -2019,10 +2019,10 @@ public struct BDOTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -2131,7 +2131,7 @@ public struct BDOTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, %children().asNode()%)
+        return .element(Self.elementName, attributes, %children().asNode()%)
     }
 }
 
@@ -2139,7 +2139,7 @@ public let bdo = BDOTag()
 
 
 public struct BlockquoteTag: Tag {
-    public let elementName: String = "blockquote"
+    public     static let elementName: String = "blockquote"
 
     /// blockquote
     ///
@@ -2201,10 +2201,10 @@ public struct BlockquoteTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -2317,7 +2317,7 @@ public struct BlockquoteTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -2325,7 +2325,7 @@ public let blockquote = BlockquoteTag()
 
 
 public struct BodyTag: Tag {
-    public let elementName: String = "body"
+    public     static let elementName: String = "body"
 
     /// body
     ///
@@ -2385,10 +2385,10 @@ public struct BodyTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -2497,7 +2497,7 @@ public struct BodyTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -2505,7 +2505,7 @@ public let body = BodyTag()
 
 
 public struct BRTag: Tag {
-    public let elementName: String = "br"
+    public     static let elementName: String = "br"
 
     /// br
     ///
@@ -2565,9 +2565,9 @@ public struct BRTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:]
+        customAttributes: [AttributeKey: String] = [:]
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -2676,7 +2676,7 @@ public struct BRTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, nil)
+        return .element(Self.elementName, attributes, nil)
     }
 }
 
@@ -2684,7 +2684,7 @@ public let br = BRTag()
 
 
 public struct ButtonTag: Tag {
-    public let elementName: String = "button"
+    public     static let elementName: String = "button"
 
     /// button
     ///
@@ -2764,10 +2764,10 @@ public struct ButtonTag: Tag {
         translate: String? = nil,
         type: String? = nil,
         value: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -2916,7 +2916,7 @@ public struct ButtonTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -2924,7 +2924,7 @@ public let button = ButtonTag()
 
 
 public struct CanvasTag: Tag {
-    public let elementName: String = "canvas"
+    public     static let elementName: String = "canvas"
 
     /// canvas
     ///
@@ -2988,10 +2988,10 @@ public struct CanvasTag: Tag {
         title: String? = nil,
         translate: String? = nil,
         width: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -3108,7 +3108,7 @@ public struct CanvasTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -3116,7 +3116,7 @@ public let canvas = CanvasTag()
 
 
 public struct CaptionTag: Tag {
-    public let elementName: String = "caption"
+    public     static let elementName: String = "caption"
 
     /// caption
     ///
@@ -3176,10 +3176,10 @@ public struct CaptionTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -3288,7 +3288,7 @@ public struct CaptionTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -3296,7 +3296,7 @@ public let caption = CaptionTag()
 
 
 public struct CiteTag: Tag {
-    public let elementName: String = "cite"
+    public     static let elementName: String = "cite"
 
     /// cite
     ///
@@ -3356,10 +3356,10 @@ public struct CiteTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -3468,7 +3468,7 @@ public struct CiteTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, %children().asNode()%)
+        return .element(Self.elementName, attributes, %children().asNode()%)
     }
 }
 
@@ -3476,7 +3476,7 @@ public let cite = CiteTag()
 
 
 public struct CodeTag: Tag {
-    public let elementName: String = "code"
+    public     static let elementName: String = "code"
 
     /// code
     ///
@@ -3536,10 +3536,10 @@ public struct CodeTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -3648,7 +3648,7 @@ public struct CodeTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, %children().asNode()%)
+        return .element(Self.elementName, attributes, %children().asNode()%)
     }
 }
 
@@ -3656,7 +3656,7 @@ public let code = CodeTag()
 
 
 public struct ColTag: Tag {
-    public let elementName: String = "col"
+    public     static let elementName: String = "col"
 
     /// col
     ///
@@ -3718,9 +3718,9 @@ public struct ColTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:]
+        customAttributes: [AttributeKey: String] = [:]
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -3833,7 +3833,7 @@ public struct ColTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, nil)
+        return .element(Self.elementName, attributes, nil)
     }
 }
 
@@ -3841,7 +3841,7 @@ public let col = ColTag()
 
 
 public struct ColgroupTag: Tag {
-    public let elementName: String = "colgroup"
+    public     static let elementName: String = "colgroup"
 
     /// colgroup
     ///
@@ -3903,10 +3903,10 @@ public struct ColgroupTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -4019,7 +4019,7 @@ public struct ColgroupTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -4027,7 +4027,7 @@ public let colgroup = ColgroupTag()
 
 
 public struct DataTag: Tag {
-    public let elementName: String = "data"
+    public     static let elementName: String = "data"
 
     /// data
     ///
@@ -4089,10 +4089,10 @@ public struct DataTag: Tag {
         title: String? = nil,
         translate: String? = nil,
         value: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -4205,7 +4205,7 @@ public struct DataTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, %children().asNode()%)
+        return .element(Self.elementName, attributes, %children().asNode()%)
     }
 }
 
@@ -4213,7 +4213,7 @@ public let data = DataTag()
 
 
 public struct DatalistTag: Tag {
-    public let elementName: String = "datalist"
+    public     static let elementName: String = "datalist"
 
     /// datalist
     ///
@@ -4273,10 +4273,10 @@ public struct DatalistTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -4385,7 +4385,7 @@ public struct DatalistTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -4393,7 +4393,7 @@ public let datalist = DatalistTag()
 
 
 public struct DDTag: Tag {
-    public let elementName: String = "dd"
+    public     static let elementName: String = "dd"
 
     /// dd
     ///
@@ -4453,10 +4453,10 @@ public struct DDTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -4565,7 +4565,7 @@ public struct DDTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -4573,7 +4573,7 @@ public let dd = DDTag()
 
 
 public struct DelTag: Tag {
-    public let elementName: String = "del"
+    public     static let elementName: String = "del"
 
     /// del
     ///
@@ -4637,10 +4637,10 @@ public struct DelTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -4757,7 +4757,7 @@ public struct DelTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -4765,7 +4765,7 @@ public let del = DelTag()
 
 
 public struct DetailsTag: Tag {
-    public let elementName: String = "details"
+    public     static let elementName: String = "details"
 
     /// details
     ///
@@ -4827,10 +4827,10 @@ public struct DetailsTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -4943,7 +4943,7 @@ public struct DetailsTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -4951,7 +4951,7 @@ public let details = DetailsTag()
 
 
 public struct DFNTag: Tag {
-    public let elementName: String = "dfn"
+    public     static let elementName: String = "dfn"
 
     /// dfn
     ///
@@ -5011,10 +5011,10 @@ public struct DFNTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -5123,7 +5123,7 @@ public struct DFNTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, %children().asNode()%)
+        return .element(Self.elementName, attributes, %children().asNode()%)
     }
 }
 
@@ -5131,7 +5131,7 @@ public let dfn = DFNTag()
 
 
 public struct DialogTag: Tag {
-    public let elementName: String = "dialog"
+    public     static let elementName: String = "dialog"
 
     /// dialog
     ///
@@ -5193,10 +5193,10 @@ public struct DialogTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -5309,7 +5309,7 @@ public struct DialogTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -5317,7 +5317,7 @@ public let dialog = DialogTag()
 
 
 public struct DivTag: Tag {
-    public let elementName: String = "div"
+    public     static let elementName: String = "div"
 
     /// div
     ///
@@ -5377,10 +5377,10 @@ public struct DivTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -5489,7 +5489,7 @@ public struct DivTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -5497,7 +5497,7 @@ public let div = DivTag()
 
 
 public struct DLTag: Tag {
-    public let elementName: String = "dl"
+    public     static let elementName: String = "dl"
 
     /// dl
     ///
@@ -5557,10 +5557,10 @@ public struct DLTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -5669,7 +5669,7 @@ public struct DLTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -5677,7 +5677,7 @@ public let dl = DLTag()
 
 
 public struct DTTag: Tag {
-    public let elementName: String = "dt"
+    public     static let elementName: String = "dt"
 
     /// dt
     ///
@@ -5737,10 +5737,10 @@ public struct DTTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -5849,7 +5849,7 @@ public struct DTTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -5857,7 +5857,7 @@ public let dt = DTTag()
 
 
 public struct EmTag: Tag {
-    public let elementName: String = "em"
+    public     static let elementName: String = "em"
 
     /// em
     ///
@@ -5917,10 +5917,10 @@ public struct EmTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -6029,7 +6029,7 @@ public struct EmTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, %children().asNode()%)
+        return .element(Self.elementName, attributes, %children().asNode()%)
     }
 }
 
@@ -6037,7 +6037,7 @@ public let em = EmTag()
 
 
 public struct EmbedTag: Tag {
-    public let elementName: String = "embed"
+    public     static let elementName: String = "embed"
 
     /// embed
     ///
@@ -6105,9 +6105,9 @@ public struct EmbedTag: Tag {
         translate: String? = nil,
         type: String? = nil,
         width: String? = nil,
-        customAttributes: [String: String] = [:]
+        customAttributes: [AttributeKey: String] = [:]
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -6232,7 +6232,7 @@ public struct EmbedTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, nil)
+        return .element(Self.elementName, attributes, nil)
     }
 }
 
@@ -6240,7 +6240,7 @@ public let embed = EmbedTag()
 
 
 public struct FieldsetTag: Tag {
-    public let elementName: String = "fieldset"
+    public     static let elementName: String = "fieldset"
 
     /// fieldset
     ///
@@ -6306,10 +6306,10 @@ public struct FieldsetTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -6430,7 +6430,7 @@ public struct FieldsetTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -6438,7 +6438,7 @@ public let fieldset = FieldsetTag()
 
 
 public struct FigcaptionTag: Tag {
-    public let elementName: String = "figcaption"
+    public     static let elementName: String = "figcaption"
 
     /// figcaption
     ///
@@ -6498,10 +6498,10 @@ public struct FigcaptionTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -6610,7 +6610,7 @@ public struct FigcaptionTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -6618,7 +6618,7 @@ public let figcaption = FigcaptionTag()
 
 
 public struct FigureTag: Tag {
-    public let elementName: String = "figure"
+    public     static let elementName: String = "figure"
 
     /// figure
     ///
@@ -6678,10 +6678,10 @@ public struct FigureTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -6790,7 +6790,7 @@ public struct FigureTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -6798,7 +6798,7 @@ public let figure = FigureTag()
 
 
 public struct FooterTag: Tag {
-    public let elementName: String = "footer"
+    public     static let elementName: String = "footer"
 
     /// footer
     ///
@@ -6858,10 +6858,10 @@ public struct FooterTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -6970,7 +6970,7 @@ public struct FooterTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -6978,7 +6978,7 @@ public let footer = FooterTag()
 
 
 public struct FormTag: Tag {
-    public let elementName: String = "form"
+    public     static let elementName: String = "form"
 
     /// form
     ///
@@ -7054,10 +7054,10 @@ public struct FormTag: Tag {
         target: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if acceptCharset != nil {
@@ -7198,7 +7198,7 @@ public struct FormTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -7206,7 +7206,7 @@ public let form = FormTag()
 
 
 public struct H1Tag: Tag {
-    public let elementName: String = "h1"
+    public     static let elementName: String = "h1"
 
     /// h1
     ///
@@ -7266,10 +7266,10 @@ public struct H1Tag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -7378,7 +7378,7 @@ public struct H1Tag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -7386,7 +7386,7 @@ public let h1 = H1Tag()
 
 
 public struct H2Tag: Tag {
-    public let elementName: String = "h2"
+    public     static let elementName: String = "h2"
 
     /// h2
     ///
@@ -7446,10 +7446,10 @@ public struct H2Tag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -7558,7 +7558,7 @@ public struct H2Tag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -7566,7 +7566,7 @@ public let h2 = H2Tag()
 
 
 public struct H3Tag: Tag {
-    public let elementName: String = "h3"
+    public     static let elementName: String = "h3"
 
     /// h3
     ///
@@ -7626,10 +7626,10 @@ public struct H3Tag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -7738,7 +7738,7 @@ public struct H3Tag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -7746,7 +7746,7 @@ public let h3 = H3Tag()
 
 
 public struct H4Tag: Tag {
-    public let elementName: String = "h4"
+    public     static let elementName: String = "h4"
 
     /// h4
     ///
@@ -7806,10 +7806,10 @@ public struct H4Tag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -7918,7 +7918,7 @@ public struct H4Tag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -7926,7 +7926,7 @@ public let h4 = H4Tag()
 
 
 public struct H5Tag: Tag {
-    public let elementName: String = "h5"
+    public     static let elementName: String = "h5"
 
     /// h5
     ///
@@ -7986,10 +7986,10 @@ public struct H5Tag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -8098,7 +8098,7 @@ public struct H5Tag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -8106,7 +8106,7 @@ public let h5 = H5Tag()
 
 
 public struct H6Tag: Tag {
-    public let elementName: String = "h6"
+    public     static let elementName: String = "h6"
 
     /// h6
     ///
@@ -8166,10 +8166,10 @@ public struct H6Tag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -8278,7 +8278,7 @@ public struct H6Tag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -8286,7 +8286,7 @@ public let h6 = H6Tag()
 
 
 public struct HeadTag: Tag {
-    public let elementName: String = "head"
+    public     static let elementName: String = "head"
 
     /// head
     ///
@@ -8346,10 +8346,10 @@ public struct HeadTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -8458,7 +8458,7 @@ public struct HeadTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -8466,7 +8466,7 @@ public let head = HeadTag()
 
 
 public struct HeaderTag: Tag {
-    public let elementName: String = "header"
+    public     static let elementName: String = "header"
 
     /// header
     ///
@@ -8526,10 +8526,10 @@ public struct HeaderTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -8638,7 +8638,7 @@ public struct HeaderTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -8646,7 +8646,7 @@ public let header = HeaderTag()
 
 
 public struct HgroupTag: Tag {
-    public let elementName: String = "hgroup"
+    public     static let elementName: String = "hgroup"
 
     /// hgroup
     ///
@@ -8706,10 +8706,10 @@ public struct HgroupTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -8818,7 +8818,7 @@ public struct HgroupTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -8826,7 +8826,7 @@ public let hgroup = HgroupTag()
 
 
 public struct HRTag: Tag {
-    public let elementName: String = "hr"
+    public     static let elementName: String = "hr"
 
     /// hr
     ///
@@ -8886,9 +8886,9 @@ public struct HRTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:]
+        customAttributes: [AttributeKey: String] = [:]
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -8997,7 +8997,7 @@ public struct HRTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, nil)
+        return .element(Self.elementName, attributes, nil)
     }
 }
 
@@ -9005,7 +9005,7 @@ public let hr = HRTag()
 
 
 public struct HTMLTag: Tag {
-    public let elementName: String = "html"
+    public     static let elementName: String = "html"
 
     /// html
     ///
@@ -9067,10 +9067,10 @@ public struct HTMLTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -9183,7 +9183,7 @@ public struct HTMLTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -9191,7 +9191,7 @@ public let html = HTMLTag()
 
 
 public struct ITag: Tag {
-    public let elementName: String = "i"
+    public     static let elementName: String = "i"
 
     /// i
     ///
@@ -9251,10 +9251,10 @@ public struct ITag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -9363,7 +9363,7 @@ public struct ITag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, %children().asNode()%)
+        return .element(Self.elementName, attributes, %children().asNode()%)
     }
 }
 
@@ -9371,7 +9371,7 @@ public let i = ITag()
 
 
 public struct IFrameTag: Tag {
-    public let elementName: String = "iframe"
+    public     static let elementName: String = "iframe"
 
     /// iframe
     ///
@@ -9451,10 +9451,10 @@ public struct IFrameTag: Tag {
         title: String? = nil,
         translate: String? = nil,
         width: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -9603,7 +9603,7 @@ public struct IFrameTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -9611,7 +9611,7 @@ public let iframe = IFrameTag()
 
 
 public struct ImgTag: Tag {
-    public let elementName: String = "img"
+    public     static let elementName: String = "img"
 
     /// img
     ///
@@ -9695,9 +9695,9 @@ public struct ImgTag: Tag {
         translate: String? = nil,
         usemap: String? = nil,
         width: String? = nil,
-        customAttributes: [String: String] = [:]
+        customAttributes: [AttributeKey: String] = [:]
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -9854,7 +9854,7 @@ public struct ImgTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, nil)
+        return .element(Self.elementName, attributes, nil)
     }
 }
 
@@ -9862,7 +9862,7 @@ public let img = ImgTag()
 
 
 public struct InputTag: Tag {
-    public let elementName: String = "input"
+    public     static let elementName: String = "input"
 
     /// input
     ///
@@ -9982,9 +9982,9 @@ public struct InputTag: Tag {
         type: String? = nil,
         value: String? = nil,
         width: String? = nil,
-        customAttributes: [String: String] = [:]
+        customAttributes: [AttributeKey: String] = [:]
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accept != nil {
@@ -10213,7 +10213,7 @@ public struct InputTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, nil)
+        return .element(Self.elementName, attributes, nil)
     }
 }
 
@@ -10221,7 +10221,7 @@ public let input = InputTag()
 
 
 public struct InsTag: Tag {
-    public let elementName: String = "ins"
+    public     static let elementName: String = "ins"
 
     /// ins
     ///
@@ -10285,10 +10285,10 @@ public struct InsTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -10405,7 +10405,7 @@ public struct InsTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -10413,7 +10413,7 @@ public let ins = InsTag()
 
 
 public struct KBDTag: Tag {
-    public let elementName: String = "kbd"
+    public     static let elementName: String = "kbd"
 
     /// kbd
     ///
@@ -10473,10 +10473,10 @@ public struct KBDTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -10585,7 +10585,7 @@ public struct KBDTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, %children().asNode()%)
+        return .element(Self.elementName, attributes, %children().asNode()%)
     }
 }
 
@@ -10593,7 +10593,7 @@ public let kbd = KBDTag()
 
 
 public struct LabelTag: Tag {
-    public let elementName: String = "label"
+    public     static let elementName: String = "label"
 
     /// label
     ///
@@ -10655,10 +10655,10 @@ public struct LabelTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -10771,7 +10771,7 @@ public struct LabelTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -10779,7 +10779,7 @@ public let label = LabelTag()
 
 
 public struct legendTag: Tag {
-    public let elementName: String = "legend"
+    public     static let elementName: String = "legend"
 
     /// legend
     ///
@@ -10839,10 +10839,10 @@ public struct legendTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -10951,7 +10951,7 @@ public struct legendTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -10959,7 +10959,7 @@ public let legend = legendTag()
 
 
 public struct LITag: Tag {
-    public let elementName: String = "li"
+    public     static let elementName: String = "li"
 
     /// li
     ///
@@ -11021,10 +11021,10 @@ public struct LITag: Tag {
         title: String? = nil,
         translate: String? = nil,
         value: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -11137,7 +11137,7 @@ public struct LITag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -11145,7 +11145,7 @@ public let li = LITag()
 
 
 public struct LinkTag: Tag {
-    public let elementName: String = "link"
+    public     static let elementName: String = "link"
 
     /// link
     ///
@@ -11231,9 +11231,9 @@ public struct LinkTag: Tag {
         title: String? = nil,
         translate: String? = nil,
         type: String? = nil,
-        customAttributes: [String: String] = [:]
+        customAttributes: [AttributeKey: String] = [:]
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -11394,7 +11394,7 @@ public struct LinkTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, nil)
+        return .element(Self.elementName, attributes, nil)
     }
 }
 
@@ -11402,7 +11402,7 @@ public let link = LinkTag()
 
 
 public struct MainTag: Tag {
-    public let elementName: String = "main"
+    public     static let elementName: String = "main"
 
     /// main
     ///
@@ -11462,10 +11462,10 @@ public struct MainTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -11574,7 +11574,7 @@ public struct MainTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -11582,7 +11582,7 @@ public let main = MainTag()
 
 
 public struct MapTag: Tag {
-    public let elementName: String = "map"
+    public     static let elementName: String = "map"
 
     /// map
     ///
@@ -11644,10 +11644,10 @@ public struct MapTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -11760,7 +11760,7 @@ public struct MapTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -11768,7 +11768,7 @@ public let map = MapTag()
 
 
 public struct MarkTag: Tag {
-    public let elementName: String = "mark"
+    public     static let elementName: String = "mark"
 
     /// mark
     ///
@@ -11828,10 +11828,10 @@ public struct MarkTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -11940,7 +11940,7 @@ public struct MarkTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, %children().asNode()%)
+        return .element(Self.elementName, attributes, %children().asNode()%)
     }
 }
 
@@ -11948,7 +11948,7 @@ public let mark = MarkTag()
 
 
 public struct MathTag: Tag {
-    public let elementName: String = "math"
+    public     static let elementName: String = "math"
 
     /// math
     ///
@@ -12008,10 +12008,10 @@ public struct MathTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -12120,7 +12120,7 @@ public struct MathTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -12128,7 +12128,7 @@ public let math = MathTag()
 
 
 public struct MenuTag: Tag {
-    public let elementName: String = "menu"
+    public     static let elementName: String = "menu"
 
     /// menu
     ///
@@ -12188,10 +12188,10 @@ public struct MenuTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -12300,7 +12300,7 @@ public struct MenuTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -12308,7 +12308,7 @@ public let menu = MenuTag()
 
 
 public struct MetaTag: Tag {
-    public let elementName: String = "meta"
+    public     static let elementName: String = "meta"
 
     /// meta
     ///
@@ -12376,9 +12376,9 @@ public struct MetaTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:]
+        customAttributes: [AttributeKey: String] = [:]
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -12503,7 +12503,7 @@ public struct MetaTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, nil)
+        return .element(Self.elementName, attributes, nil)
     }
 }
 
@@ -12511,7 +12511,7 @@ public let meta = MetaTag()
 
 
 public struct MeterTag: Tag {
-    public let elementName: String = "meter"
+    public     static let elementName: String = "meter"
 
     /// meter
     ///
@@ -12583,10 +12583,10 @@ public struct MeterTag: Tag {
         title: String? = nil,
         translate: String? = nil,
         value: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -12719,7 +12719,7 @@ public struct MeterTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -12727,7 +12727,7 @@ public let meter = MeterTag()
 
 
 public struct NavTag: Tag {
-    public let elementName: String = "nav"
+    public     static let elementName: String = "nav"
 
     /// nav
     ///
@@ -12787,10 +12787,10 @@ public struct NavTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -12899,7 +12899,7 @@ public struct NavTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -12907,7 +12907,7 @@ public let nav = NavTag()
 
 
 public struct NoscriptTag: Tag {
-    public let elementName: String = "noscript"
+    public     static let elementName: String = "noscript"
 
     /// noscript
     ///
@@ -12967,10 +12967,10 @@ public struct NoscriptTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -13079,7 +13079,7 @@ public struct NoscriptTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -13087,7 +13087,7 @@ public let noscript = NoscriptTag()
 
 
 public struct ObjectTag: Tag {
-    public let elementName: String = "object"
+    public     static let elementName: String = "object"
 
     /// object
     ///
@@ -13161,10 +13161,10 @@ public struct ObjectTag: Tag {
         type: String? = nil,
         usemap: String? = nil,
         width: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -13301,7 +13301,7 @@ public struct ObjectTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -13309,7 +13309,7 @@ public let object = ObjectTag()
 
 
 public struct OLTag: Tag {
-    public let elementName: String = "ol"
+    public     static let elementName: String = "ol"
 
     /// ol
     ///
@@ -13375,10 +13375,10 @@ public struct OLTag: Tag {
         title: String? = nil,
         translate: String? = nil,
         type: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -13499,7 +13499,7 @@ public struct OLTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -13507,7 +13507,7 @@ public let ol = OLTag()
 
 
 public struct OptgroupTag: Tag {
-    public let elementName: String = "optgroup"
+    public     static let elementName: String = "optgroup"
 
     /// optgroup
     ///
@@ -13571,10 +13571,10 @@ public struct OptgroupTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -13691,7 +13691,7 @@ public struct OptgroupTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -13699,7 +13699,7 @@ public let optgroup = OptgroupTag()
 
 
 public struct OptionTag: Tag {
-    public let elementName: String = "option"
+    public     static let elementName: String = "option"
 
     /// option
     ///
@@ -13767,10 +13767,10 @@ public struct OptionTag: Tag {
         title: String? = nil,
         translate: String? = nil,
         value: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -13895,7 +13895,7 @@ public struct OptionTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -13903,7 +13903,7 @@ public let option = OptionTag()
 
 
 public struct OutputTag: Tag {
-    public let elementName: String = "output"
+    public     static let elementName: String = "output"
 
     /// output
     ///
@@ -13969,10 +13969,10 @@ public struct OutputTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -14093,7 +14093,7 @@ public struct OutputTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -14101,7 +14101,7 @@ public let output = OutputTag()
 
 
 public struct PTag: Tag {
-    public let elementName: String = "p"
+    public     static let elementName: String = "p"
 
     /// p
     ///
@@ -14161,10 +14161,10 @@ public struct PTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -14273,7 +14273,7 @@ public struct PTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -14281,7 +14281,7 @@ public let p = PTag()
 
 
 public struct ParamTag: Tag {
-    public let elementName: String = "param"
+    public     static let elementName: String = "param"
 
     /// param
     ///
@@ -14345,9 +14345,9 @@ public struct ParamTag: Tag {
         title: String? = nil,
         translate: String? = nil,
         value: String? = nil,
-        customAttributes: [String: String] = [:]
+        customAttributes: [AttributeKey: String] = [:]
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -14464,7 +14464,7 @@ public struct ParamTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, nil)
+        return .element(Self.elementName, attributes, nil)
     }
 }
 
@@ -14472,7 +14472,7 @@ public let param = ParamTag()
 
 
 public struct PictureTag: Tag {
-    public let elementName: String = "picture"
+    public     static let elementName: String = "picture"
 
     /// picture
     ///
@@ -14532,10 +14532,10 @@ public struct PictureTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -14644,7 +14644,7 @@ public struct PictureTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -14652,7 +14652,7 @@ public let picture = PictureTag()
 
 
 public struct PreTag: Tag {
-    public let elementName: String = "pre"
+    public     static let elementName: String = "pre"
 
     /// pre
     ///
@@ -14712,10 +14712,10 @@ public struct PreTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -14824,7 +14824,7 @@ public struct PreTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -14832,7 +14832,7 @@ public let pre = PreTag()
 
 
 public struct ProgressTag: Tag {
-    public let elementName: String = "progress"
+    public     static let elementName: String = "progress"
 
     /// progress
     ///
@@ -14896,10 +14896,10 @@ public struct ProgressTag: Tag {
         title: String? = nil,
         translate: String? = nil,
         value: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -15016,7 +15016,7 @@ public struct ProgressTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -15024,7 +15024,7 @@ public let progress = ProgressTag()
 
 
 public struct QTag: Tag {
-    public let elementName: String = "q"
+    public     static let elementName: String = "q"
 
     /// q
     ///
@@ -15086,10 +15086,10 @@ public struct QTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -15202,7 +15202,7 @@ public struct QTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, %children().asNode()%)
+        return .element(Self.elementName, attributes, %children().asNode()%)
     }
 }
 
@@ -15210,7 +15210,7 @@ public let q = QTag()
 
 
 public struct RPTag: Tag {
-    public let elementName: String = "rp"
+    public     static let elementName: String = "rp"
 
     /// rp
     ///
@@ -15270,10 +15270,10 @@ public struct RPTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -15382,7 +15382,7 @@ public struct RPTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, %children().asNode()%)
+        return .element(Self.elementName, attributes, %children().asNode()%)
     }
 }
 
@@ -15390,7 +15390,7 @@ public let rp = RPTag()
 
 
 public struct RTTag: Tag {
-    public let elementName: String = "rt"
+    public     static let elementName: String = "rt"
 
     /// rt
     ///
@@ -15450,10 +15450,10 @@ public struct RTTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -15562,7 +15562,7 @@ public struct RTTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, %children().asNode()%)
+        return .element(Self.elementName, attributes, %children().asNode()%)
     }
 }
 
@@ -15570,7 +15570,7 @@ public let rt = RTTag()
 
 
 public struct RubyTag: Tag {
-    public let elementName: String = "ruby"
+    public     static let elementName: String = "ruby"
 
     /// ruby
     ///
@@ -15630,10 +15630,10 @@ public struct RubyTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -15742,7 +15742,7 @@ public struct RubyTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, %children().asNode()%)
+        return .element(Self.elementName, attributes, %children().asNode()%)
     }
 }
 
@@ -15750,7 +15750,7 @@ public let ruby = RubyTag()
 
 
 public struct STag: Tag {
-    public let elementName: String = "s"
+    public     static let elementName: String = "s"
 
     /// s
     ///
@@ -15810,10 +15810,10 @@ public struct STag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -15922,7 +15922,7 @@ public struct STag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, %children().asNode()%)
+        return .element(Self.elementName, attributes, %children().asNode()%)
     }
 }
 
@@ -15930,7 +15930,7 @@ public let s = STag()
 
 
 public struct SampTag: Tag {
-    public let elementName: String = "samp"
+    public     static let elementName: String = "samp"
 
     /// samp
     ///
@@ -15990,10 +15990,10 @@ public struct SampTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -16102,7 +16102,7 @@ public struct SampTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, %children().asNode()%)
+        return .element(Self.elementName, attributes, %children().asNode()%)
     }
 }
 
@@ -16110,7 +16110,7 @@ public let samp = SampTag()
 
 
 public struct ScriptTag: Tag {
-    public let elementName: String = "script"
+    public     static let elementName: String = "script"
 
     /// script
     ///
@@ -16186,10 +16186,10 @@ public struct ScriptTag: Tag {
         title: String? = nil,
         translate: String? = nil,
         type: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -16330,7 +16330,7 @@ public struct ScriptTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -16338,7 +16338,7 @@ public let script = ScriptTag()
 
 
 public struct SectionTag: Tag {
-    public let elementName: String = "section"
+    public     static let elementName: String = "section"
 
     /// section
     ///
@@ -16398,10 +16398,10 @@ public struct SectionTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -16510,7 +16510,7 @@ public struct SectionTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -16518,7 +16518,7 @@ public let section = SectionTag()
 
 
 public struct SelectTag: Tag {
-    public let elementName: String = "select"
+    public     static let elementName: String = "select"
 
     /// select
     ///
@@ -16592,10 +16592,10 @@ public struct SelectTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -16732,7 +16732,7 @@ public struct SelectTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -16740,7 +16740,7 @@ public let select = SelectTag()
 
 
 public struct SlotTag: Tag {
-    public let elementName: String = "slot"
+    public     static let elementName: String = "slot"
 
     /// slot
     ///
@@ -16802,10 +16802,10 @@ public struct SlotTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -16918,7 +16918,7 @@ public struct SlotTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -16926,7 +16926,7 @@ public let slot = SlotTag()
 
 
 public struct SmallTag: Tag {
-    public let elementName: String = "small"
+    public     static let elementName: String = "small"
 
     /// small
     ///
@@ -16986,10 +16986,10 @@ public struct SmallTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -17098,7 +17098,7 @@ public struct SmallTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, %children().asNode()%)
+        return .element(Self.elementName, attributes, %children().asNode()%)
     }
 }
 
@@ -17106,7 +17106,7 @@ public let small = SmallTag()
 
 
 public struct SourceTag: Tag {
-    public let elementName: String = "source"
+    public     static let elementName: String = "source"
 
     /// source
     ///
@@ -17176,9 +17176,9 @@ public struct SourceTag: Tag {
         title: String? = nil,
         translate: String? = nil,
         type: String? = nil,
-        customAttributes: [String: String] = [:]
+        customAttributes: [AttributeKey: String] = [:]
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -17307,7 +17307,7 @@ public struct SourceTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, nil)
+        return .element(Self.elementName, attributes, nil)
     }
 }
 
@@ -17315,7 +17315,7 @@ public let source = SourceTag()
 
 
 public struct SpanTag: Tag {
-    public let elementName: String = "span"
+    public     static let elementName: String = "span"
 
     /// span
     ///
@@ -17375,10 +17375,10 @@ public struct SpanTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -17487,7 +17487,7 @@ public struct SpanTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, %children().asNode()%)
+        return .element(Self.elementName, attributes, %children().asNode()%)
     }
 }
 
@@ -17495,7 +17495,7 @@ public let span = SpanTag()
 
 
 public struct StrongTag: Tag {
-    public let elementName: String = "strong"
+    public     static let elementName: String = "strong"
 
     /// strong
     ///
@@ -17555,10 +17555,10 @@ public struct StrongTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -17667,7 +17667,7 @@ public struct StrongTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, %children().asNode()%)
+        return .element(Self.elementName, attributes, %children().asNode()%)
     }
 }
 
@@ -17675,7 +17675,7 @@ public let strong = StrongTag()
 
 
 public struct StyleTag: Tag {
-    public let elementName: String = "style"
+    public     static let elementName: String = "style"
 
     /// style
     ///
@@ -17737,10 +17737,10 @@ public struct StyleTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -17853,7 +17853,7 @@ public struct StyleTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -17861,7 +17861,7 @@ public let style = StyleTag()
 
 
 public struct SubTag: Tag {
-    public let elementName: String = "sub"
+    public     static let elementName: String = "sub"
 
     /// sub
     ///
@@ -17921,10 +17921,10 @@ public struct SubTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -18033,7 +18033,7 @@ public struct SubTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, %children().asNode()%)
+        return .element(Self.elementName, attributes, %children().asNode()%)
     }
 }
 
@@ -18041,7 +18041,7 @@ public let sub = SubTag()
 
 
 public struct SummaryTag: Tag {
-    public let elementName: String = "summary"
+    public     static let elementName: String = "summary"
 
     /// summary
     ///
@@ -18101,10 +18101,10 @@ public struct SummaryTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -18213,7 +18213,7 @@ public struct SummaryTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -18221,7 +18221,7 @@ public let summary = SummaryTag()
 
 
 public struct SupTag: Tag {
-    public let elementName: String = "sup"
+    public     static let elementName: String = "sup"
 
     /// sup
     ///
@@ -18281,10 +18281,10 @@ public struct SupTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -18393,7 +18393,7 @@ public struct SupTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, %children().asNode()%)
+        return .element(Self.elementName, attributes, %children().asNode()%)
     }
 }
 
@@ -18401,7 +18401,7 @@ public let sup = SupTag()
 
 
 public struct SVGTag: Tag {
-    public let elementName: String = "svg"
+    public     static let elementName: String = "svg"
 
     /// svg
     ///
@@ -18461,10 +18461,10 @@ public struct SVGTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -18573,7 +18573,7 @@ public struct SVGTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -18581,7 +18581,7 @@ public let svg = SVGTag()
 
 
 public struct TableTag: Tag {
-    public let elementName: String = "table"
+    public     static let elementName: String = "table"
 
     /// table
     ///
@@ -18641,10 +18641,10 @@ public struct TableTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -18753,7 +18753,7 @@ public struct TableTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -18761,7 +18761,7 @@ public let table = TableTag()
 
 
 public struct TBodyTag: Tag {
-    public let elementName: String = "tbody"
+    public     static let elementName: String = "tbody"
 
     /// tbody
     ///
@@ -18821,10 +18821,10 @@ public struct TBodyTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -18933,7 +18933,7 @@ public struct TBodyTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -18941,7 +18941,7 @@ public let tbody = TBodyTag()
 
 
 public struct TDTag: Tag {
-    public let elementName: String = "td"
+    public     static let elementName: String = "td"
 
     /// td
     ///
@@ -19007,10 +19007,10 @@ public struct TDTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -19131,7 +19131,7 @@ public struct TDTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -19139,7 +19139,7 @@ public let td = TDTag()
 
 
 public struct TemplateTag: Tag {
-    public let elementName: String = "template"
+    public     static let elementName: String = "template"
 
     /// template
     ///
@@ -19199,10 +19199,10 @@ public struct TemplateTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -19311,7 +19311,7 @@ public struct TemplateTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -19319,7 +19319,7 @@ public let template = TemplateTag()
 
 
 public struct TextareaTag: Tag {
-    public let elementName: String = "textarea"
+    public     static let elementName: String = "textarea"
 
     /// textarea
     ///
@@ -19405,10 +19405,10 @@ public struct TextareaTag: Tag {
         title: String? = nil,
         translate: String? = nil,
         wrap: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -19569,7 +19569,7 @@ public struct TextareaTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, %children().asNode()%)
+        return .element(Self.elementName, attributes, %children().asNode()%)
     }
 }
 
@@ -19577,7 +19577,7 @@ public let textarea = TextareaTag()
 
 
 public struct TFootTag: Tag {
-    public let elementName: String = "tfoot"
+    public     static let elementName: String = "tfoot"
 
     /// tfoot
     ///
@@ -19637,10 +19637,10 @@ public struct TFootTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -19749,7 +19749,7 @@ public struct TFootTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -19757,7 +19757,7 @@ public let tfoot = TFootTag()
 
 
 public struct THTag: Tag {
-    public let elementName: String = "th"
+    public     static let elementName: String = "th"
 
     /// th
     ///
@@ -19827,10 +19827,10 @@ public struct THTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if abbr != nil {
@@ -19959,7 +19959,7 @@ public struct THTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -19967,7 +19967,7 @@ public let th = THTag()
 
 
 public struct THeadTag: Tag {
-    public let elementName: String = "thead"
+    public     static let elementName: String = "thead"
 
     /// thead
     ///
@@ -20027,10 +20027,10 @@ public struct THeadTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -20139,7 +20139,7 @@ public struct THeadTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -20147,7 +20147,7 @@ public let thead = THeadTag()
 
 
 public struct TimeTag: Tag {
-    public let elementName: String = "time"
+    public     static let elementName: String = "time"
 
     /// time
     ///
@@ -20209,10 +20209,10 @@ public struct TimeTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -20325,7 +20325,7 @@ public struct TimeTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, %children().asNode()%)
+        return .element(Self.elementName, attributes, %children().asNode()%)
     }
 }
 
@@ -20333,7 +20333,7 @@ public let time = TimeTag()
 
 
 public struct TitleTag: Tag {
-    public let elementName: String = "title"
+    public     static let elementName: String = "title"
 
     /// title
     ///
@@ -20393,10 +20393,10 @@ public struct TitleTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -20505,7 +20505,7 @@ public struct TitleTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -20513,7 +20513,7 @@ public let title = TitleTag()
 
 
 public struct TRTag: Tag {
-    public let elementName: String = "tr"
+    public     static let elementName: String = "tr"
 
     /// tr
     ///
@@ -20573,10 +20573,10 @@ public struct TRTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -20685,7 +20685,7 @@ public struct TRTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -20693,7 +20693,7 @@ public let tr = TRTag()
 
 
 public struct TrackTag: Tag {
-    public let elementName: String = "track"
+    public     static let elementName: String = "track"
 
     /// track
     ///
@@ -20763,9 +20763,9 @@ public struct TrackTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:]
+        customAttributes: [AttributeKey: String] = [:]
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -20894,7 +20894,7 @@ public struct TrackTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, nil)
+        return .element(Self.elementName, attributes, nil)
     }
 }
 
@@ -20902,7 +20902,7 @@ public let track = TrackTag()
 
 
 public struct UTag: Tag {
-    public let elementName: String = "u"
+    public     static let elementName: String = "u"
 
     /// u
     ///
@@ -20962,10 +20962,10 @@ public struct UTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -21074,7 +21074,7 @@ public struct UTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, %children().asNode()%)
+        return .element(Self.elementName, attributes, %children().asNode()%)
     }
 }
 
@@ -21082,7 +21082,7 @@ public let u = UTag()
 
 
 public struct ULTag: Tag {
-    public let elementName: String = "ul"
+    public     static let elementName: String = "ul"
 
     /// ul
     ///
@@ -21142,10 +21142,10 @@ public struct ULTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -21254,7 +21254,7 @@ public struct ULTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -21262,7 +21262,7 @@ public let ul = ULTag()
 
 
 public struct VarTag: Tag {
-    public let elementName: String = "var"
+    public     static let elementName: String = "var"
 
     /// var
     ///
@@ -21322,10 +21322,10 @@ public struct VarTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -21434,7 +21434,7 @@ public struct VarTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, %children().asNode()%)
+        return .element(Self.elementName, attributes, %children().asNode()%)
     }
 }
 
@@ -21442,7 +21442,7 @@ public let `var` = VarTag()
 
 
 public struct VideoTag: Tag {
-    public let elementName: String = "video"
+    public     static let elementName: String = "video"
 
     /// video
     ///
@@ -21524,10 +21524,10 @@ public struct VideoTag: Tag {
         title: String? = nil,
         translate: String? = nil,
         width: String? = nil,
-        customAttributes: [String: String] = [:],
+        customAttributes: [AttributeKey: String] = [:],
         @NodeBuilder children: () -> NodeConvertible = { Node.fragment([]) }
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -21680,7 +21680,7 @@ public struct VideoTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, children().asNode())
+        return .element(Self.elementName, attributes, children().asNode())
     }
 }
 
@@ -21688,7 +21688,7 @@ public let video = VideoTag()
 
 
 public struct WBRTag: Tag {
-    public let elementName: String = "wbr"
+    public     static let elementName: String = "wbr"
 
     /// wbr
     ///
@@ -21748,9 +21748,9 @@ public struct WBRTag: Tag {
         tabindex: String? = nil,
         title: String? = nil,
         translate: String? = nil,
-        customAttributes: [String: String] = [:]
+        customAttributes: [AttributeKey: String] = [:]
     ) -> Node {
-        var attributes: [String: String] = [:]
+        var attributes: [AttributeKey: String] = [:]
 
 
         if accesskey != nil {
@@ -21859,7 +21859,7 @@ public struct WBRTag: Tag {
 
         attributes.merge(customAttributes) { _, b in b }
 
-        return .element(elementName, attributes, nil)
+        return .element(Self.elementName, attributes, nil)
     }
 }
 
