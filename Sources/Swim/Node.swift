@@ -1,8 +1,29 @@
 import Foundation
 
+public struct Attribute: Hashable {
+    public var key: String
+    public var value: String
+    
+    public init(_ pair: (String, String)) {
+        (self.key, self.value) = pair
+    }
+}
+
+public struct Attributes: ExpressibleByDictionaryLiteral, Hashable {
+    public var attributes: [Attribute]
+   
+    public init(attributes: [Attribute]) {
+        self.attributes = attributes
+    }
+    
+    public init(dictionaryLiteral elements: (String, String)...) {
+        self.attributes = elements.map(Attribute.init)
+    }
+}
+
 public enum Node: Hashable {
     // The `Node`'s name, attribute and children.
-    indirect case element(String, [String: String], Node?)
+    indirect case element(String, Attributes, Node?)
 
     // The `Node`'s text contents.
     case text(String)
@@ -56,14 +77,14 @@ extension Node: TextOutputStreamable {
             target.write("<")
             target.write(name)
 
-            for (key, value) in attributes.sorted(by: { $0 < $1 }) {
+            for attribute in attributes.attributes {
                 target.write(" ")
-                target.write(key)
+                target.write(attribute.key)
 
-                guard value != "" else { continue }
+                guard attribute.value != "" else { continue }
 
                 target.write("=\"")
-                target.write(value.replacingOccurrences(of: "\"", with: "&quot;"))
+                target.write(attribute.value.replacingOccurrences(of: "\"", with: "&quot;"))
                 target.write("\"")
             }
 
