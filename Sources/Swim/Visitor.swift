@@ -18,6 +18,8 @@ public protocol Visitor {
     func visitNode(_ node: Node) -> Result
 
     func visitTrim() -> Result
+    
+    func visitPreference(_ dict: PreferenceDict, child: Node) -> Result
 }
 
 extension Visitor {
@@ -37,6 +39,8 @@ extension Visitor {
             return visitFragment(children: children)
         case .trim:
             return visitTrim()
+        case .preference(let p, let child):
+            return visitPreference(p, child: child)
         }
     }
 }
@@ -68,6 +72,10 @@ public extension Visitor where Result == Node {
 
     func visitTrim() -> Result {
         .trim
+    }
+    
+    func visitPreference(_ p: PreferenceDict, child: Node) -> Result {
+        .preference(p, child)
     }
 }
 

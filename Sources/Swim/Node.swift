@@ -18,6 +18,8 @@ public enum Node: Hashable {
 
     // The `Node`'s children.
     case fragment([Node])
+    
+    indirect case preference(PreferenceDict, Node)
 
     // Indicates that no whitespace should be added between the surrounding
     // nodes.
@@ -115,6 +117,8 @@ extension Node: TextOutputStreamable {
             }
         case .trim:
             break
+        case let .preference(_, child):
+            child.write(to: &target, depth: &depth, didVisitTrim: &didVisitTrim)
         }
     }
 }
