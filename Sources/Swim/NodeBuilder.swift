@@ -39,6 +39,10 @@ public struct NodeBuilder {
     public static func buildEither(second: Node) -> Node {
         second
     }
+
+    public static func buildArray(_ components: [Node]) -> Node {
+        .fragment(components)
+    }
 }
 
 extension NodeBuilder {
