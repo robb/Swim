@@ -103,6 +103,16 @@ final class HTMLTests: XCTestCase {
         XCTAssertTrue(String(describing: root).contains("Success"))
     }
 
+    func testForLoop() {
+        let arr = ["a", "b"]
+        let root = ul {
+            for item in arr {
+                li { item }
+            }
+        }
+        XCTAssertComponents(root, "<ul>", "<li>", "a", "</li>", "<li>", "b", "</li>", "</ul>")
+    }
+
     func testAllWhitespaceTrimming() {
         let all = p {
             %div { %"Hallo Welt"% }%
